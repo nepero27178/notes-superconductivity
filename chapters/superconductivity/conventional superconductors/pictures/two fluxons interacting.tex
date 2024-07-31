@@ -1,0 +1,69 @@
+\begin{tikzpicture}[
+    cube/.style={
+        color=lev!30
+    }]
+    \def\xlength{2}
+    \def\ylength{1.7}
+    \def\zlength{1}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis z line=center,
+        axis on top,
+        axis equal image,
+        xlabel={$x$},
+        ylabel={$y$},
+        zlabel=\empty,
+        xlabel style={right},
+        ylabel style={above},
+        zlabel style=\empty,
+        xtick=\empty,
+        ytick=\empty,
+        ytick=\empty,
+        xticklabels=\empty,
+        yticklabel=\empty,
+        zticklabel=\empty,
+        xmin=-\xlength*1.1, xmax=\xlength*1.1,
+        ymin=-\ylength*1.1, ymax=\ylength*1.1,
+        zmin=-\zlength*1.1, zmax=\zlength*1.1,
+        view={0}{90}]
+
+        \newcommand{\modulation}[3]{
+            e^( 
+                -( (x-#1)^2 + (y-#2)^2 ) / #3 % Exponential damping
+            ) / sqrt(
+                (x-#1)^2 + (y-#2)^2 % Normalization
+            )
+        }
+
+        \def\AfluxonX{-1.22}
+        \def\AfluxonY{-0.64}
+        \def\BfluxonX{1.3}
+        \def\BfluxonY{1.1}
+        \def\damping{0.7}
+
+        \shade[outer color=white,inner color=lev!30]
+            (axis cs: \AfluxonX,\AfluxonY) circle (\damping*1.5);
+        \shade[outer color=white,inner color=lev!30]
+            (axis cs: \BfluxonX,\BfluxonY) circle (\damping*1.5);
+
+        \addplot3[
+            color=lev!60,
+            domain=-\xlength:\xlength,
+            domain y=-\ylength:\ylength,
+            quiver={
+                u={
+                    -(y-\AfluxonY)*\modulation{\AfluxonX}{\AfluxonY}{\damping} +
+                    -(y-\BfluxonY)*\modulation{\BfluxonX}{\BfluxonY}{\damping}
+                },
+                v={
+                    (x-\AfluxonX)*\modulation{\AfluxonX}{\AfluxonY}{\damping} +
+                    (x-\BfluxonX)*\modulation{\BfluxonX}{\BfluxonY}{\damping}
+                },
+                scale arrows=0.17
+            },
+            -stealth,
+            samples=16
+        ] {0};
+    \end{axis}
+\end{tikzpicture}

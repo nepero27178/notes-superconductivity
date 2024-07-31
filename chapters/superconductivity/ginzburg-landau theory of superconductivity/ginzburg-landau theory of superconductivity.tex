@@ -1,0 +1,595 @@
+\chapter{Ginzburg-Landau theory of superconductivity}\label{chap:ginzburg-landau theory of superconductivity}\chaptertoc{}
+
+{\color{red}to do: intro}
+
+\section{Ginzburg-Landau theory for classical spins}\label{sec:ginzburg-landau theory for classical spins}
+
+We start with a simple set of $N$ classical spins $s_i = \pm 1$, rigidly fixed to a lattice in position $i$, evolving through the hamiltonian
+\[
+    \mathcal{H}\lrS{s_1, \cdots, s_N}
+\]
+The partition function is
+\[
+    \mathcal{Z} = \Tr\lrS{\sum_{(\forall i) \; s_i} e^{-\beta \mathcal{H} \lrS{s_1, \cdots, s_N}} }
+\]
+We group the lattice sites; each group $\Omega_\alpha$ contains $g \ll N$ spins and is denoted by its position $\mathbf{x}_\alpha$, as represented schematically in Fig.~\ref{fig:coarse graining of lattice}. An average magnetization per unit volume can be defined,
+\[ 
+    m(\mathbf{x}_\alpha) \equiv \frac{1}{g} \sum_{j \in \Omega_\alpha} s_j
+\]
+% The partition function becomes
+% \[
+%     \mathcal{Z} = \int \prod_\alpha dm_\alpha \Tr\lrS{\sum_{(\forall i) \; s_i} e^{-\beta \mathcal{H} \lrS{s_1, \cdots, s_N}} } \delta \lrR{ m_\alpha - \frac{1}{g} \sum_{j \in \Omega_\alpha} s_j }
+% \]
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/ginzburg-landau theory of superconductivity/pictures/coarse graining of lattice}
+    \caption{Coarse graining of a bidimensional square lattice. At each side of the grid, a spin $s_i = \pm 1$ is located. The colored regions represent the grouping of spins.}
+    \label{fig:coarse graining of lattice}
+\end{figure}
+
+Evidently, in the thermodynamic limit we can take $\mathbf{x}_\alpha$ as a continuous variable, thus considering the average magnetization per unit volume $m(\mathbf{x})$ as a field. As a consequence, the partition function takes the form of a functional integral over the field configurations
+\[
+    \mathcal{Z} = \int \mathcal{D}_m e^{-\beta F \lrS{m}}
+\]
+Such a system, in absence of fields, evidently exhibits a $\mathbb{Z}_2$ symmetry. Moreover, we suppose a critical temperature $\beta_c$ exists such that
+\[
+    (\beta < \beta_c)
+    \qquad
+    \ev{m(\mathbf{x})} = \frac{1}{\mathcal{Z}} \int \mathcal{D}_m m(\mathbf{x}) e^{-\beta F \lrS{m}} = 0
+\]
+Evidently, coupling a uniaxial field $h(\mathbf{x})$ to the system
+\[
+    F\lrS{m,h} = F[m] - \int d\mathbf{x} \, h (\mathbf{x}) m (\mathbf{x})
+\]
+the favoured configuration will be the one where, at each point, the product $h (\mathbf{x}) m (\mathbf{x})$ is positive (meaning: the local magnetization is aligned with the field). This is a clear symmetry breaking. We suppose the system exhibits such spontaneous symmetry breaking for low temperatures, described by
+\[
+    (\beta > \beta_c)
+    \qquad
+    \ev{m(\mathbf{x})} = \lim_{h \to 0^\pm} \frac{1}{\mathcal{Z}} \int \mathcal{D}_m m(\mathbf{x}) e^{-\beta F \lrS{m,h}} = \pm m_0 (\mathbf{x})
+\]
+with $m_0(\mathbf{x}) \neq 0$. In essence, for subcritical temperatures we suppose the system to start spontaneously magnetizing, in a manner similar to the application of an infinitesimal field. Then the local magnetization (a physical, therefore continuous quantity) is a order parameter signaling a phase transition. It changes from zero to non-zero undergoing the transition. We are interested in the point $\beta_c$ itself, then we can expand the free energy in even powers (odd powers of expansion are suppressed due to $\mathbb{Z}_2$ symmetry):
+\[ 
+    F\lrS{m} = F_0 + \int d\mathbf{x} \lrS{
+        a m^2 (\mathbf{x}) + \frac{b}{2} m^4 (\mathbf{x}) + c \abs{\grad m(\mathbf{x})}^2 + \cdots
+    }
+\]
+where $a,b$ and $c$ are the expansion coefficients, in general depending on $\beta$. We suppose $b > 0$ for any temperature, in order to keep the free energy positive-defined (for $\beta < 0$ an absolute minimum in this expansion could not be defined). We also require $c>0$: in this system, to have local magnetization oscillations should increase the energy, not decreasing it.
+
+Since the free energy enters the partition function and the configurational probability as an exponential, we perform a stationary phase approximation minimizing the free energy
+\[
+    \fdv{F}{m} = 0
+\]
+
+\subsection{Homogeneous magnetization in absence of fields}
+
+The special case of an homogeneous order parameter,
+\[
+    m(\mathbf{x}) = m_0
+\]
+gives immediately $\grad m(\mathbf{x}) = 0$. Therefore, minimizing the free energy functional,
+\[
+    \fdv{}{m} \int d\mathbf{x} \lrS{ a m^2 (\mathbf{x}) + \frac{b}{2} m^4 (\mathbf{x}) }_{m(\mathbf{x}) = m_0} = 2 \lrR{ am_0 + b m_0^3 } \imp 0
+\]
+which allows for the solutions
+\[
+    m_0 = 0
+    \qquad\text{and}\qquad
+    m_0^2 = -\frac{a}{b} 
+\]
+Since $b>0$, and we assume $m_0 = 0$ to be the solution for $T > T_c$, then $a$ needs to change sign across the transition. In particular, it must be
+\[
+    a > 0 \quad\text{for $T>T_c$}
+    \qquad\qquad
+    a < 0 \quad\text{for $T<T_c$}
+\]
+In order to make the second solution acceptable only in the low-temperatures regime. Finally, $a$ is assumed to be a continuous function of the temperature, since free energy can't be gapped. Then, expanding $a$ around the critical temperature, its expansion must be odd, and the simplest term is the linear one
+\[
+    a \simeq a_0 \lrR{ T - T_c }
+\]
+as confirmed by the general theory of $\Z_2$ phase transitions. The free energy $F$ takes the form sketched in Fig.~\ref{fig:free energy functional magnetization}.
+
+\begin{figure}
+    \centering
+    \subfloat[][Supercritical free energy.]{\input{chapters/superconductivity/ginzburg-landau theory of superconductivity/pictures/free energy functional magnetization supercritical}\label{subfig:free energy functional magnetization supercritical}}
+    \hspace{2em}
+    \subfloat[][Subcritical free energy.]{\input{chapters/superconductivity/ginzburg-landau theory of superconductivity/pictures/free energy functional magnetization subcritical}\label{subfig:free energy functional magnetization subcritical}}
+    \caption{The free energy in Ginzburg-Landau theory for the magnetizable array of classical spins in $\mathbb{Z}_2$ symmetry. The supercritical ($T>T_c$) free energy \ref{subfig:free energy functional magnetization supercritical} only displays a clear minimum for $m=0$. The subcritical ($T<T_c$) free energy \ref{subfig:free energy functional magnetization subcritical} has two minima, $m=\pm m_0$. }
+    \label{fig:free energy functional magnetization}
+\end{figure}
+
+\subsection{Breaking of symmetry through field coupling}\label{subsec:ising model breaking of symmetry through field coupling}
+
+We now consider the coupling of an inhomogeneous field $h(\mathbf{x})$. Of course, now we cannot neglect space variations of the magnetization, $\grad m(\mathbf{x}) \neq 0$. The free energy functional is given by
+\[ 
+    F\lrS{m,h} = F_0 + \int d\mathbf{x} \lrS{
+        a m^2 (\mathbf{x}) + \frac{b}{2} m^4 (\mathbf{x}) + c \abs{\grad m(\mathbf{x})}^2 - h(\mathbf{x}) m(\mathbf{x}) + \cdots
+    }
+\]
+With some calculations, it turns out
+\begin{equation}\label{eq:extremization of free energy due to external field}
+    \fdv{F}{m} = 0
+    \quad\implies\quad
+    2 \lrS{ am_h (\mathbf{x}) + b m_h^3 (\mathbf{x})  - c \laplacian m_h (\mathbf{x}) } = h(\mathbf{x})
+\end{equation}
+where $m_h (\mathbf{x})$ is the magnetization in presence of the field. The great advantage in introducing such field is the following: the magnetization in presence of the field is simply
+\[
+    m_h(\mathbf{x}) = \frac{1}{\mathcal{Z}\lrS{h}} \int \mathcal{D}_m \, m(\mathbf{x}) e^{-\beta F\lrS{m} + \beta \int d\mathbf{x}' \, h(\mathbf{x}') m(\mathbf{x}')}
+\]
+with the new partition function
+\[
+    \mathcal{Z}\lrS{h} \equiv \int \mathcal{D}_m \, e^{-\beta F\lrS{m} + \beta \int d\mathbf{x}' \, h(\mathbf{x}') m(\mathbf{x}')}
+\]
+Evidently
+\begin{multline*}
+    \fdv{m_h (\mathbf{x})}{h(\mathbf{x}')} = \fdv{}{{h(\mathbf{x}')}} \lrS{\frac{1}{\mathcal{Z}\lrS{h}}} \int \mathcal{D}_m \, m(\mathbf{x}) e^{-\beta F\lrS{m} + \beta \int d\mathbf{x}' \, h(\mathbf{x}') m(\mathbf{x}')} \\
+    + \frac{1}{\mathcal{Z}\lrS{h}} \fdv{}{{h(\mathbf{x}')}} \lrS{\int \mathcal{D}_m \, m(\mathbf{x}) e^{-\beta F\lrS{m} + \beta \int d\mathbf{x}' \, h(\mathbf{x}') m(\mathbf{x}')}}
+\end{multline*}
+Performing the calculation, and taking the $h \to 0$ limit, it turns out
+\[
+    \frac{1}{\beta} \fdv{m_h (\mathbf{x})}{h(\mathbf{x}')} = \ev{ m(\mathbf{x}) m(\mathbf{x}') } - \ev{ \vphantom{x'} m(\mathbf{x}) } \ev{ m(\mathbf{x}') } \Big|_{@ h \to 0}
+\]
+The above expression is exactly the \textbf{spatial correlation function} for the order parameter,
+\[
+    \mathcal{C} \lrR{ \mathbf{x} - \mathbf{x}' } \equiv \ev{ m(\mathbf{x}) m(\mathbf{x}') } - \ev{ \vphantom{x'} m(\mathbf{x}) } \ev{ m(\mathbf{x}') } \Big|_{@ h \to 0}
+\]
+which is a measure of how much magnetization is correlated taking two points $\mathbf{x}$, $\mathbf{x}'$. The dependence on the difference of position was included in order to implement assumed translational symmetry in the thermodynamic limit. We consider small fluctuations around the rest magnetization $m_0$,
+\[
+    m_h (\mathbf{x}) = m_0 + \delta m_h (\mathbf{x}) 
+\]
+induced by a small field $\delta h(\mathbf{x})$. Then, linearizing Eq.~\eqref{eq:extremization of free energy due to external field},
+\[
+    \lrR{ a + 3b m_0^2 } \delta m_h (\mathbf{x}) - c \laplacian \delta m_h (\mathbf{x}) = \frac{\delta h(\mathbf{x})}{2} 
+\]
+which translates in Fourier transform as
+\[
+    \lrR{ a + 3b m_0^2 } \delta m_h (\mathbf{q}) + c \abs{\mathbf{q}}^2 \delta m_h (\mathbf{q}) = \frac{\delta h(\mathbf{q})}{2} 
+\]
+Thus
+\[
+    \beta \mathcal{C} (\mathbf{q}) =
+    \fdv{m_h(\mathbf{q})}{h(\mathbf{q})} = \frac{1}{2c} \frac{1}{\xi^{-2} + \abs{\mathbf{q}}^2}
+    \qq{with}
+    \xi^{-2} \equiv \frac{a + 3b m_0^2}{c}
+\]
+which is the Fourier transform of the Yukawa potential, with screening $\xi$. Finally, we have an expression for the correlator
+\[
+    \mathcal{C} (\mathbf{x} - \mathbf{x}') = \int_{\star} d\mathbf{q} \, \mathcal{C} (\mathbf{q}) e^{-i \mathbf{q} \cdot (\mathbf{x} - \mathbf{x}')}
+\]
+The subscript $\star$ indicates the momentum region over which we integrate. Since we are coarse-graining the model (see Fig.~\ref{fig:coarse graining of lattice}) we must impose a cutoff $\Lambda$ to $\abs{\mathbf{q}}$, since for extremely high momenta (which means, extremely small distances) the magnetization field $m(\mathbf{x})$ wouldn't even be properly defined. Then
+\[
+    \mathcal{C} (\mathbf{x} - \mathbf{x}') = \frac{k_B T}{2c} \int_{\abs{\mathbf{q}}<\Lambda} d\mathbf{q} \, \frac{e^{-i \mathbf{q} \cdot (\mathbf{x} - \mathbf{x}')}}{\xi^{-2} + \abs{\mathbf{q}}^2} = (\mathrm{factors}) \frac{e^{-\abs{\mathbf{x}-\mathbf{x}'}/\xi}}{\abs{\mathbf{x}-\mathbf{x}'}}
+\]
+The interpretation of $\xi$ becomes clear: over a distance $\xi$, the order parameter becomes approximately uncorrelated. For such a distance we expect the magnetization (and in the following the superconducting order parameter) to fluctuate significantly. This length will play a fundamental role in understanding the behavior of different classes of superconductors. Most importantly, it can be shown that for low symmetry-breaking fields the transition is a second-order one.
+
+\section{Symmetry breking in superconductors}
+
+We intend to apply all this machinery to superconductors. We know from Chap.~\ref{chap:superconductivity and thermodynamics} that for zero field the superconducting transition is a second order one, just like for the Ising model. The key idea of Landau was the following: the order parameter arising from zero to non-zero in the transition must be somehow connected to $n_s(\mathbf{x})$. From a quantum perspective, it's intuitive to define a pseudo-wavefunction $\Psi(\mathbf{x})$ such that
+\[
+    \abs{\Psi(\mathbf{x})}^2 = n_s (\mathbf{x})
+\]
+Superconductivity is an inherently quantum phenomenon. Then it's most reasonable to assume $\Psi$ itself as the order parameter. Since no measurable quantity can depend on a global sign change of the pseudo-wavefunction (which is e $e^{i\pi}$ phase change), a similar expansion as before must hold for $\Psi$
+\[ 
+    F\lrS{\Psi,\Psi^*} = F_0 + \int d\mathbf{x} \lrS{
+        a \abs{\Psi(\mathbf{x)} }^2 + \frac{b}{2} \abs{ \Psi(\mathbf{x)} }^4 + c \abs{\grad \Psi(\mathbf{x)} }^2 + \cdots
+    }
+\]
+The parameter arguments are $\Psi$, $\Psi^*$, equivalent to $\Re{\Psi}$ and $\Im{\Psi}$. In the homogeneous case the parameter is specified up to a phase, thus giving the free energy sketched in Fig.~\ref{fig:free energy functional wavefunction}. The equilibrium state is now degenerate over a non-countable set of solutions, one for each choice of the phase, lying on the circular minimum of the free energy.
+
+\begin{figure}
+    \centering
+    \subfloat[][Free energy for $T>T_c$]{\input{chapters/superconductivity/ginzburg-landau theory of superconductivity/pictures/free energy functional wavefunction supercritical}\label{subfig:free energy functional wavefunction supercritical}}
+    \subfloat[][Free energy for $T<T_c$]{\input{chapters/superconductivity/ginzburg-landau theory of superconductivity/pictures/free energy functional wavefunction subcritical}\label{subfig:free energy functional wavefunction subcritical}}
+    \caption{In Fig.~\ref{subfig:free energy functional wavefunction supercritical} is represented the supercritical Ginzburg-Landau free-energy expansion for the $U(1)$ order parameter of Quantum Mechanics. As can be seen, the equilibrium condition is given by a single point. In Fig.~\ref{subfig:free energy functional wavefunction subcritical} the subcritical situation is represented. The minimum here is degenerate into a ring. The topology of such equilibrium manifold is the reason of the spontaneous symmetry breaking mechanism in superconductors.}
+    \label{fig:free energy functional wavefunction}
+\end{figure}
+
+The underlying symmetry of Quantum Mechanics is the simple $U(1)$ symmetry of phases, so it is that symmetry that gets broken in the phase transition. We consider a symmetry breaking field $\eta(\mathbf{x})$, conjugated to the order parameter via minimum coupling as follows
+\[
+    F\lrS{\Psi,\Psi^*,\eta,\eta^*} = F\lrS{\Psi,\Psi^*} - \int d\mathbf{x} \, \lrS{ \eta^*(\mathbf{x}) \Psi(\mathbf{x}) + \eta(\mathbf{x}) \Psi^*(\mathbf{x}) }
+\]
+Proceeding as in the previous section, we need to minimize the free energy with respect to the order parameters $\Psi$, $\Psi^*$:
+\begin{align}
+    \fdv{F}{\Psi^*} &\imp 0 &&\implies\hspace{2em}
+    a \Psi(\mathbf{x}) + b \abs{\Psi(\mathbf{x})}^2 \Psi(\mathbf{x}) - c \laplacian \Psi(\mathbf{x}) \nquad&&= \eta(\mathbf{x}) \label{eq:free energy extremization ginzburg landau 1} \\
+    \fdv{F}{\Psi} &\imp 0 &&\implies\hspace{0.67em}
+    a \Psi^* (\mathbf{x}) + b \abs{\Psi(\mathbf{x})}^2 \Psi^* (\mathbf{x}) - c \laplacian \Psi^* (\mathbf{x}) \nquad&&= \eta^* (\mathbf{x}) \label{eq:free energy extremization ginzburg landau 2}
+\end{align}
+If we choose a homogeneous symmetry breaking field with specified phase,
+\[
+    \eta (\mathbf{x}) = \eta_0 e^{i\varphi}
+\]
+and then take the limit $\eta_0 \to 0$, a specific phase for the order parameter gets selected. In fact, the order parameter minimizes the free energy in the homogeneous configuration $\Psi(\mathbf{x}) = \Psi_0 e^{i\varphi}$, with $\Psi_0 \in \R$. This gives rise to the equation
+\[
+    \lrS{ a + b \abs{\Psi_0}^2 } \Psi_0 e^{i\varphi} = \eta_0 e^{i\varphi}
+\]
+Evidently, for $\eta_0 \to 0$, the transition occurs with a homogeneous order parameter
+\[
+    \abs{\Psi_0}^2 = - \frac{a}{b}
+    \qquad\text{with}\qquad
+    a < 0
+\]
+As in the case of the Ising model, we may suppose a linear dependence of $a$ on temperature. In Fig.~\ref{subfig:free energy functional wavefunction subcritical}, of all the equivalent states in the \textit{sombrero} minimum (the ring), the one at angle $\varphi$ becomes the physical state. 
+
+In the general case, the symmetry breaking field has a complex spatial dependence
+\[
+    \eta (\mathbf{x}) = \abs{ \eta (\mathbf{x}) } e^{i \varphi(\mathbf{x})}
+\]
+which incorporates both a magnitude and a phase part. From physical intuition, we can postulate that our complex Ginzburg-Landau system will behave like the classical Ising system of Sec.~\ref{sec:ginzburg-landau theory for classical spins} for fluctuations of the $\eta$ field at a fixed phase. In other terms, the free energy of Fig.~\ref{subfig:free energy functional magnetization subcritical} looks exactly like the one in Fig.~\ref{subfig:free energy functional wavefunction subcritical}, as seen by a specific intersecting plane at a given angle. $\Z_2$ symmetry is incorporated in $U(1)$ symmetry, if we limit ourselves to antipodal phases. In the next section we discuss how the order parameter fluctuates around the rest position.
+
+\section{Fluctuations of the complex order parameter}
+
+How to deal with fluctuations in presence of a complex order parameter? We need to extend the paradigm developed in Sec.~\ref{sec:ginzburg-landau theory for classical spins}. The starting point is the partition function,
+\[
+\begin{aligned}
+    \mathcal{Z} \lrS{\Psi,\Psi^*,\eta,\eta^*} &\equiv \int \mathcal{D}_{\Psi,\Psi^*} \exp{ -\beta F\lrS{\Psi,\Psi^*,\eta,\eta^*} } \\
+    &= \int \mathcal{D}_{\Psi,\Psi^*} \exp \Big\lbrace -\beta F\lrS{\Psi,\Psi^*} \\
+    &\hspace{6em} + \beta \int d\mathbf{x} \, \lrS{ \eta^*(\mathbf{x}) \Psi(\mathbf{x}) + \eta(\mathbf{x}) \Psi^*(\mathbf{x}) }  \Big\rbrace
+\end{aligned}
+\]
+With some fixed field $\eta$, we have
+\[
+    \Psi_\eta (\mathbf{x}) = \frac{1}{\mathcal{Z} \lrS{\Psi,\Psi^*,\eta,\eta^*}} \int \mathcal{D}_{\Psi,\Psi^*} \Psi(\mathbf{x}) \exp{ -\beta F\lrS{\Psi,\Psi^*,\eta,\eta^*} }
+\]
+then, we see that taking the functional derivative
+\[
+    \fdv{\Psi_\eta (\mathbf{x})}{\eta(\mathbf{x}')}
+\]
+this must act both on the partition function and the free energy inside the integral. Skipping some steps, it turns out
+\begin{multline*}
+    \fdv{\Psi_\eta (\mathbf{x})}{\eta(\mathbf{x}')} = \frac{1}{\mathcal{Z}} \int \mathcal{D}_{\Psi,\Psi^*} \Psi(\mathbf{x}) \Psi^* (\mathbf{x}') \exp{-\beta F} \\
+    - \frac{1}{\mathcal{Z}} \int \mathcal{D}_{\Psi,\Psi^*} \Psi(\mathbf{x}) \exp{-\beta F} \frac{1}{\mathcal{Z}} \int \mathcal{D}_{\Psi,\Psi^*} \Psi^*(\mathbf{x}') \exp{-\beta F}
+\end{multline*}
+then, being the correlator a measure of \textit{how much} $\Psi$ changes at point $\mathbf{x}$ if a perturbation $\eta$ acts at point $\mathbf{x}'$, we see that
+\[
+    \mathcal{C} (\mathbf{x} - \mathbf{x}') = \ev{ \Psi(\mathbf{x}) \Psi^* (\mathbf{x}') } - \ev{ \vphantom{x'} \Psi(\mathbf{x}) } \ev{ \Psi^* (\mathbf{x}') } = \ev{ \vphantom{x'} \delta\Psi(\mathbf{x}) \delta\Psi^* (\mathbf{x}') }
+\]
+as can be seen by direct inspection. This will be important in the following.\\
+
+We are now interested in analyzing how correlation acts on a broken-symmetry situation. Without loss of generality, we suppose the system exhibits $U(1)$ symmetry breaking at $\varphi=0$, due to a homogeneous field. Thus a precise state on the degenerate ring in Fig~\ref{subfig:free energy functional wavefunction subcritical} is selected. We want to analyze small fluctuations of the order parameter around the homogeneous mean-field $\Psi(\mathbf{x}) = \Psi_0$ condition. The symmetry breaking field is complex, thus fluctuations can occur both in the magnitude and in the phase of the field. 
+
+\subsection{Magnitude fluctuations}
+
+We now suppose to let the magnitude of the real symmetry breaking field fluctuate space-wise as follows
+\[
+    \eta_0 \to \eta_0 e^{\delta k(\mathbf{x})}
+\]
+The exponential form is the common one for magnitude transformations, like contractions. We suppose the fluctuations $\delta k (\mathbf{x}) \in \R$ to be small, i.e.
+\[
+    \eta_0 \to \eta_0 \lrR{ 1 + \delta k (\mathbf{x}) }
+\]
+For small perturbations, we expect the order parameter to accommodate accordingly
+\[
+    \Psi_0 \to \Psi_0 e^{\delta k(\mathbf{x})} \simeq \Psi_0 \lrR{ 1 + \delta k (\mathbf{x}) }
+\]
+Consider Eq.~\eqref{eq:free energy extremization ginzburg landau 1}. Under a small magnitude perturbation,
+\begin{align}
+     a \Psi(\mathbf{x}) + b \abs{\Psi(\mathbf{x})}^2 \Psi(\mathbf{x}) - c \laplacian \Psi(\mathbf{x}) &= \eta(\mathbf{x}) \label{eq:eq:free energy extremization ginzburg landau / magnitude perturbation 1} \\
+     a \Psi_0 e^{\delta k(\mathbf{x})} + b \lrS{ \Psi_0 e^{\delta k(\mathbf{x})} }^2 \Psi_0 e^{\delta k(\mathbf{x})} - c \laplacian \Psi_0 e^{\delta k(\mathbf{x})} &= \eta_0 e^{\delta k(\mathbf{x})} \label{eq:eq:free energy extremization ginzburg landau / magnitude perturbation 2} \\
+     \lrS{a + b \Psi_0^2} \Psi_0 + \lrS{a + 3b \Psi_0^2} \delta \Psi(\mathbf{x}) - c \laplacian \delta \Psi(\mathbf{x}) &\simeq \eta_0 + \delta\eta (\mathbf{x}) \label{eq:eq:free energy extremization ginzburg landau / magnitude perturbation 3}
+\end{align}
+where we took the linear order in $\delta k$, and
+\[
+    \delta\Psi(\mathbf{x}) = \Psi_0 \delta k(\mathbf{x})
+    \quad\qq{and}\quad
+    \delta\eta(\mathbf{x}) = \eta_0 \delta k(\mathbf{x})
+\]
+The first terms of Eq.~\eqref{eq:eq:free energy extremization ginzburg landau / magnitude perturbation 3} both sides cancel,
+\[
+    \lrS{a + b \Psi_0^2} \Psi_0 = \eta_0
+\]
+representing the rest homogeneous solution. The remaining terms,
+\[
+    \lrS{a + 3b \Psi_0^2} \delta \Psi(\mathbf{x}) - c \laplacian \delta \Psi(\mathbf{x}) = \delta\eta (\mathbf{x})
+\]
+give rise to a solution perfectly analogous to the classical Ising model analyzed in Sec.~\ref{sec:ginzburg-landau theory for classical spins}, with the mapping
+\[
+    \delta \Psi(\mathbf{x}) \to \delta m(\mathbf{x})
+    \quad\qq{and}\quad
+    \delta \eta(\mathbf{x}) \to \delta h(\mathbf{x})
+\]
+which can be done flawlessly because everything is real by assumption. This is rather intuitive, because for any fixed phase $\varphi$, the system is physically equivalent to the above discussed classical system, so no more physics is expected. For such a fluctuation we expect a Yukawa correlation function on a scale $\xi$, as defined above:
+\[
+    \mathcal{C} \lrR{ \mathbf{x} - \mathbf{x}' } \sim \frac{e^{-\abs{\mathbf{x}-\mathbf{x}'}/\xi}}{\abs{\mathbf{x}-\mathbf{x}'}}
+    \quad\qq{with}\quad
+    \xi^{-2} = \frac{a + 3b\Psi_0^2}{c}
+\]
+
+We highlight something important to understand the huge difference arising in the next section. Pay attention to the factor $3$ present in the definition of $\xi$ in the above equation. It emerges from the fact that we are dealing with a \textbf{magnitude} fluctuation: passing from Eq.~\eqref{eq:eq:free energy extremization ginzburg landau / magnitude perturbation 1} to Eq.~\eqref{eq:eq:free energy extremization ginzburg landau / magnitude perturbation 2} we made the following substitution
+\[  
+    \abs{\Psi(\mathbf{x})}^2 \to \lrS{ \Psi_0 e^{\delta k(\mathbf{x})} }^2 = \Psi_0^2 \, e^{2 \delta k(\mathbf{x})}
+\]
+which of course cannot be done if $\delta k \in \C$, as in the next section. Linearizing, the factor $3$ emerges, and prevents $\xi$ from diverging in the subcritical $\eta_0 \to 0$ case: in such a case, in fact, we know that the subcritical rest solution is the real homogeneous one $\Psi(\mathbf{x}) = \Psi_0$ with
+\[
+    \Psi_0^2 = - \frac{a}{b}
+    \quad\qq{for}\quad
+    T < T_c
+\]
+Then, a small magnitude-perturbing field at fixed phase and temperature does \textbf{not} make correlations \textit{go crazy}.
+
+\subsection{Phase fluctuations}
+
+Suppose now the fluctuation occurs in the phase,
+\[
+    \eta_0 \to \eta_0 e^{i \delta \varphi(\mathbf{x})} \simeq \eta_0 + i \eta_0 \delta \varphi(\mathbf{x})
+\]
+then a specular fluctuation in the phase of $\Psi$ emerges,
+\[
+    \Psi(\mathbf{x}) = \Psi_0 + i \Psi_0 \delta \varphi(\mathbf{x})
+\]
+We need to be a bit more cautious here. We start from Eq.~\eqref{eq:free energy extremization ginzburg landau 1} at linear order,
+\begin{align}
+     a \Psi(\mathbf{x}) + b \abs{\Psi(\mathbf{x})}^2 \Psi(\mathbf{x}) - c \laplacian \Psi(\mathbf{x}) &= \eta(\mathbf{x}) \label{eq:eq:free energy extremization ginzburg landau / phase perturbation 1} \\
+     a \Psi_0 e^{i \delta \varphi(\mathbf{x})} + b \lrS{ \Psi_0^2 } \Psi_0 e^{i \delta \varphi(\mathbf{x})} - c \laplacian \Psi_0 e^{i \delta \varphi(\mathbf{x})} &= \eta_0 e^{i \delta \varphi(\mathbf{x})} \label{eq:eq:free energy extremization ginzburg landau / phase perturbation 2} \\
+     \lrS{a + b \Psi_0^2} \Psi_0 + \lrS{a + b \Psi_0^2} \delta \Psi(\mathbf{x}) - c \laplacian \delta \Psi(\mathbf{x}) &\simeq \eta_0 + \delta\eta (\mathbf{x}) \label{eq:eq:free energy extremization ginzburg landau / phase perturbation 3}
+\end{align}
+where $\delta\Psi(\mathbf{x}) = i \Psi_0 \delta \varphi(\mathbf{x})$ and $\delta\eta(\mathbf{x}) = i \eta_0 \delta \varphi(\mathbf{x})$. Eq.~\eqref{eq:eq:free energy extremization ginzburg landau / phase perturbation 3} differs from Eq.~\eqref{eq:eq:free energy extremization ginzburg landau / magnitude perturbation 3} in the absence of the factor $3$. As we'll see, this will have a great impact. From Eq.~\eqref{eq:eq:free energy extremization ginzburg landau / phase perturbation 3}, neglecting the first term both sides (they cancel out) and taking the Fourier transform it's easy to see
+\[
+    \delta\Psi(\mathbf{q}) = \frac{1}{c} \frac{\delta\eta(\mathbf{q})}{\kappa^2 + \abs{\mathbf{q}}^2} \qq{with}
+    \kappa^2 = \frac{a + b\Psi_0^2}{c}
+\]
+We intentionally referred to $\kappa$ with a different notation with respect to $\xi$.
+Notice that, \textbf{for vanishing symmetry breaking fields} $\eta_0 \to 0$ we recover the situation in Fig.~\ref{subfig:free energy functional wavefunction subcritical}, and $\Psi_0^2 \to -a/b$, which means $\kappa \to 0$. As before,
+\[
+    \mathcal{C}(\mathbf{q}) = \frac{1}{\beta} \fdv{\Psi(\mathbf{q})}{\eta(\mathbf{q})} = \frac{k_B T}{c} \frac{1}{\kappa^2 + \abs{\mathbf{q}}^2}
+\]
+We can already see the problem here. If $\kappa\to0$, this is the Fourier transform of the $3D$ Coulomb potential, which presents infrared divergence in low dimensionality. Note that, instead, for non-vanishing symmetry breaking fields $(\eta_0 \neq 0)$ no problem arises at all.\\
+
+What consequences has this? Take the \textbf{local phase fluctuations} of the phase parameter,
+\[
+    \ev{\delta\varphi(\mathbf{x})\delta\varphi(\mathbf{x})} = \ev{\delta\varphi(\mathbf{0})\delta\varphi(\mathbf{0})}
+\]
+where we used the assumption of translational invariance. We will refer to this quantity simply as $\ev{\delta\varphi^2}$. It's not needed to subtract the disconnected component of the fluctuation, $\ev{\delta\varphi(\mathbf{x})}\ev{\delta\varphi(\mathbf{x})}$, since it is assumed to have zero mean. Evidently
+\[
+    \ev{\delta\varphi^2} =  \frac{\ev{ \lrR{i\Psi_0 \delta\varphi(\mathbf{0})} \lrR{-i\Psi_0 \delta\varphi(\mathbf{0})} }}{\Psi_0^2} =  \frac{\ev{ \delta\Psi(\mathbf{0}) \delta\Psi^*(\mathbf{0}) }}{\Psi_0^2}
+\]
+We will use the brief notation $\ev{ \delta\Psi(\mathbf{0}) \delta\Psi^*(\mathbf{0}) } = \ev{ \delta\Psi^2 }$. Now, since
+\[
+    \ev{\delta\Psi(\mathbf{x}) \delta\Psi^*(\mathbf{x}')} = \mathcal{C} \lrR{ \mathbf{x} - \mathbf{x}' }
+\]
+it turns out
+\[
+    \ev{\delta\varphi^2} = \frac{\ev{\delta\Psi^2}}{\Psi_0^2} = \frac{\mathcal{C} (\mathbf{0})}{\Psi_0^2} = \frac{k_B T}{c \Psi_0^2} \int_\star \mathcal{C} (\mathbf{q})
+\]
+Again, the subscript $\star$ indicates we impose an integration cutoff $\abs{\mathbf{q}} < \Lambda$. Skipping some steps, we see
+\[
+    \ev{\delta\varphi^2} \sim \kappa^{D-2} \int_0^{\Lambda/\kappa} dq \frac{q^{D-1}}{1 + q^2}
+\]
+and going under the critical temperature
+\[
+    (@T<T_c) \qquad \ev{\delta\varphi^2} \sim \lim_{\kappa\to0} \kappa^{D-2} \int_0^{\Lambda/\kappa} dq \frac{q^{D-1}}{1 + q^2}
+\]
+Then
+\begin{enumerate}
+    \item For $D=1$,
+    \[
+        \lim_{\kappa\to0} \frac{1}{\kappa} \int_0^{\Lambda/\kappa} dq \frac{1}{1 + q^2} = +\infty
+    \]
+    since the integral is finite, but the $\kappa^{-1}$ prefactor diverges;
+    \item For $D=2$,
+    \[
+        \lim_{\kappa\to0} \int_0^{\Lambda/\kappa} dq \frac{q}{1 + q^2} = +\infty
+    \]
+    since the integral is logarithmic for large $q$.
+    \item For $D>2$,
+    \[
+        \lim_{\kappa\to0} \kappa^{D-2} \int_0^{\Lambda/\kappa} dq \frac{q^{D-1}}{1 + q^2} < \lim_{\kappa\to0} \kappa^{D-2} \int_0^{\Lambda/\kappa} dq \, q^{D-3} = \frac{\Lambda^{D-2}}{D-2}
+    \]
+    which remains finite.
+\end{enumerate}
+Then, at low dimensionality ($D\le2$) phase fluctuations (\textbf{in absence of fields}) are completely disruptive! The symmetry cannot be properly broken, since phase will start fluctuate due to heavy correlations happening in low dimensions. Then we expect, for low-dimensional system, that the system does \textbf{not} exhibit long-range order. This result can be inferred by Mermin-Wagner theorem on spontaneous continuous symmetry breaking.
+
+\section{Superconductivity}
+
+Let's turn now to proper superconductors. All the mechanism we developed lies upon a thermodynamic free energy expansion. We shall do so. 
+
+\subsection{Free energy expansion and Ginzburg-Landau equations}
+
+We need an expression for the free energy. This should be something of the form
+\[
+    F = F^{(\mathrm{n})} + F^{(\mathrm{s})} + F^{(\mathrm{m})}
+\]
+where ${(\mathrm{n})}$ represents the normal state, ${(\mathrm{s})}$ the superconducting one and ${(\mathrm{m})}$ the bare magnetic contribution to free energy. In fact, to find an equilibrium position by minimization of the free energy is to find the equilibrium configuration of the order parameter \textit{and} the fields. In the following we assume $F^{(\mathrm{n})}$ only depends on the temperature. The magnetic energy stored in the field is
+\[
+    E^{(\mathrm{m})} = \int d\mathbf{x} \, \frac{\abs{\mathbf{B}}^2}{2\mu_0}
+\]
+then the free energy is given by
+\[
+    F^{(\mathrm{m})} = \int d\mathbf{x} \, \lrS{ \frac{\abs{\mathbf{B}}^2}{2\mu_0} - \mathbf{B} \cdot \mathbf{H} } = \int d\mathbf{x} \, \lrS{ \frac{\abs{\curl\mathbf{A}}^2}{2\mu_0} - \lrR{ \curl\mathbf{A} } \cdot \mathbf{H} }
+\]
+Note that here $\mathbf{A}$ is a gauge field, no gauge choice has been made.
+
+Let's move to the superconducting part. The key (highly non-trivial) assumption, here, is that the pseudo-wavefunction $\Psi(\mathbf{x})$ actually \textit{is} a proper wavefunction. Of course in this case any gauge choice on $\mathbf{A}$ translates into a gauge transformation of the wavefunction. Then, recovering the expansion of the last section
+\[ 
+    F\lrS{\Psi,\Psi^*} = F_0 + \int d\mathbf{x} \lrS{
+        a \abs{\Psi(\mathbf{x)} }^2 + \frac{b}{2} \abs{ \Psi(\mathbf{x)} }^4 + c \abs{\grad \Psi(\mathbf{x)} }^2
+    }
+\]
+we may interpret the gradient operator as the momentum operator of Quantum Mechanics,
+\[
+    c \abs{\grad \Psi(\mathbf{x)} }^2 = \frac{1}{2m} \abs{-i\hbar\grad \Psi(\mathbf{x)} }^2 = \frac{1}{2m} \abs{\mathbf{p} \Psi(\mathbf{x)} }^2
+\]
+where $m$, \textit{a priori}, is not the electron mass but a just the quantity $m=\hbar^2/2c$. A charge $q$ is coupled to the electromagnetic field via the Peierls substitution,
+\[
+    \mathbf{p} \to \mathbf{p} - q \mathbf{A}
+\]
+then the free energy turns out to be
+\begin{multline*}
+    F \lrS{ \Psi,\Psi^*,\mathbf{A}; \mathbf{H},T } = F^{(\mathrm{n})}[T] + \int d\mathbf{x} \, \lrS{ \frac{\abs{\curl\mathbf{A}}^2}{2\mu_0} - \lrR{ \curl\mathbf{A} } \cdot \mathbf{H} } \\
+    + \int d\mathbf{x} \lrS{
+        a \abs{\Psi(\mathbf{x)} }^2 + \frac{b}{2} \abs{ \Psi(\mathbf{x)} }^4 + \frac{1}{2m} \abs{-i\hbar\grad \Psi(\mathbf{x)} - q \mathbf{A} \Psi(\mathbf{x)} }^2
+    }
+\end{multline*}
+The externally fixed parameters, $\mathbf{H}$ and $T$, are separated from the physical parameters (with respect to which we must differentiate) by a semicolon. Minimal coupling of the field parameter $\Psi$ is implemented, as it is easy to see by the means of a second-order expansion (in powers of the vector potential). Functional derivation (be kind, I can't find the will to perform it) leads to the \textbf{Ginzburg-Landau equations for superconductors}
+\begin{eqbox}
+    \begin{align}
+        a \Psi + b  \abs{\Psi}^2 \Psi + \frac{1}{2m} \lrS{-i\hbar\grad - q \mathbf{A} }^2 \Psi &= 0 \label{eq:ginzburg landau eq 1}\\
+        \frac{q}{2im} \lrS{ \hbar \Psi^* \grad \Psi - \hbar \Psi \grad \Psi^* - 2qi \abs{\Psi}^2 \mathbf{A}  } &= \mathbf{J} \label{eq:ginzburg landau eq 2}
+    \end{align}\vspace{-0.5em}
+\end{eqbox}
+where spatial dependence is intended. Eq.~\eqref{eq:ginzburg landau eq 1} is obtained differentiating with respect to $\Psi^*$, while Eq.~\eqref{eq:ginzburg landau eq 2} with respect to $\mathbf{A}$.
+
+\subsection{The critical field}
+
+We want to determine the critical field $H_c = \abs{\mathbf{H}_c}$ defined as in Sec.~\ref{sec:the critical field}. For the normal state ($T > T_c$), inside the non-magnetic material
+\[
+    \mathbf{B} = \mu_0 \mathbf{H}
+    \qq{,}
+    \Psi = 0
+    \quad\implies\quad
+    f^{(\mathrm{m})} = - \frac{\mu_0}{2} \abs{\mathbf{H}}^2
+    \qq{,}
+    f^{(\mathrm{s})} = 0
+\]
+while in the superconducting state ($T < T_c$)
+\[
+    \mathbf{B} = 0
+    \qq{,}
+    \abs{\Psi}^2 = - \frac{a}{b}
+    \quad\implies\quad
+    f^{(\mathrm{m})} = 0
+    \qq{,}
+    f^{(\mathrm{s})} = a \abs{\Psi}^2 + \frac{b}{2} \abs{\Psi}^4 = - \frac{a^2}{2b} 
+\]
+Of course perfect screening of the magnetic flux density $\mathbf{B}$ is possible only for low external fields $\mathbf{H}$; although superconductivity exists in a large superconducting region, it is not true that \textit{everywhere} the field is perfectly cancelled for large fields, as will become clear in the following sections. Then, requesting at the transition the free energy to be moved from the fields to the superconducting state,
+\[
+     \frac{\mu_0}{2} \abs{\mathbf{H}_c}^2 = \frac{a^2}{2b} 
+\]
+Similarly to the analogous parameter $a$ of Sec.~\ref{sec:ginzburg-landau theory for classical spins}, we assume $a$ to vary linearly with $T-T_c$. This leads to
+\[
+    H_c (T) \sim \abs{T-T_c}
+\]
+This linear dependence seems in contrast with what derived in Sec.~\ref{sec:the critical field}. However, is to be noted that all this argument holds for small external fields, i.e. only in the region $[T_c - \Delta T, T_c + \Delta T] \times [0, 0 + \Delta H]$, where the quadratic dependence of $H_c(T)$ is approximately linear. The reason for that is that we neglected, in $f^{(\mathrm{s})}$, the contribution due to the vector potential $\mathbf{A}$. This is reasonable if $\mathbf{B} \simeq 0$ everywhere, which is true if the superconducting currents expelling the flux occupy a small portion of the sample. This last is true if the field to be expelled is low enough.
+
+\section{Spontaneous symmetry breaking in superconductors}
+
+One of the main features of superconductors, as understood in Ginzburg-Landau theory, is the spontaneous breaking of the natural $U(1)$ symmetry of the complex order parameter. But what \textit{is} spontaneous symmetry breaking? Briefly, it's what happens when the lagrangian of a system exhibits a certain number of symmetries, and the lowest energy state (the equilibrium state) does not. In the case of superconductors, a perfectly homogeneous order parameter is phase-definite, but the free-energy minimum manifold (see Fig.~\ref{fig:free energy functional wavefunction}) is phase-symmetric!
+
+\begin{cit}{altland2010condensed}{6.3}
+    The mechanism encountered here is one of spontaneous symmetry breaking. To understand the general principle, consider an action $S[\psi]$ with a global continuous symmetry under some transformation $g$ (not to be confused with the aforementioned coupling constant of the Bose gas): speciﬁcally, the action remains invariant under a global transformation of the ﬁelds such that $\forall i \in M \colon \psi_i\to g\psi_i$ , where $M$ is the base manifold, i.e. $S[\psi] = S[g\psi]$. The transformation is ``continuous'' in the sense that g takes values in some manifold, typically a group $G$. 
+    
+    Examples: The action of a Heisenberg ferromagnet is invariant under rotation of all spins simultaneously by the same amount, $\mathbf{S}_i \to g\mathbf{S}_i$ . In this case, $g \in G = O(3)$, the three-dimensional group of rotations ($g$ not to be confused with the coupling constant of the interaction). The action of the displacement ﬁelds $\mathbf{u}$ describing elastic deformations of a solid (phonons) is invariant under simultaneous translation of all displacements $\mathbf{u}_i \to \mathbf{u}_i + \mathbf{a}$, i.e. the symmetry manifold is the d-dimensional translation group $G \sim \R^d$ . In the example above, we encountered a $U(1)$ symmetry under phase multiplication $\psi_0 \to \psi_0 e^{i\phi}$. This phase freedom expresses the global gauge symmetry of quantum mechanics under transformation by a phase, a point we discuss in more detail below.
+
+    Now, given a theory with globally $G$ invariant action, two scenarios are conceivable: either the ground states share the invariance properties of the action or they do not [...].
+
+    In spite of the undeniable existence of solids, magnets, and Bose-Einstein condensates of deﬁnite phase, the notion of a ground state that does not share the full symmetry of the theory may appear paradoxical, or at least “unnatural.” For example, even if any particular ground state of the “Mexican hat” potential shown in the ﬁgure above “breaks” the rotational symmetry, should not all these states enter the partition sum with equal statistical weight, such that the net outcome of the theory is again fully symmetric?
+\end{cit}
+
+\subsection{The Goldstone boson of superconductivity}
+
+We go back to the symmetric free energy in absence of fields,
+\[ 
+    F\lrS{\Psi,\Psi^*} = F_0 + \int d\mathbf{x} \lrS{
+        a \abs{\Psi(\mathbf{x)} }^2 + \frac{b}{2} \abs{ \Psi(\mathbf{x)} }^4 + c \abs{\grad \Psi(\mathbf{x)} }^2
+    }
+\]
+and consider a general fluctuation of the order parameter (both in its magnitude and phase)
+\[
+    \Psi(\mathbf{x}) = \Psi_0 e^{\delta k(\mathbf{x}) + i \delta \varphi(\mathbf{x})}
+    \qq{with}
+    \delta k(\mathbf{r}) \ll 1
+    \;,\;
+    \delta \varphi(\mathbf{r}) \ll 1
+    \;,\;
+    \Psi_0 \in \R
+\]
+The reality of $\Psi_0$ can be assumed without loss of generality. We substitute in the free energy expansion, neglecting terms above the second order
+\[
+\begin{aligned}
+    F\lrS{\Psi + \delta\Psi,\Psi^* + \delta\Psi^*} &\simeq F_0 + \int d\mathbf{x} \lrS{
+        a \abs{ \Psi_0 e^{\delta k(\mathbf{x}) + i \delta \varphi(\mathbf{x})} }^2+ c \abs{\grad \Psi_0 e^{\delta k(\mathbf{x}) + i \delta \varphi(\mathbf{x})} }^2
+    } \\
+    &= F_0 + \int \, d\mathbf{x} \Psi_0^2 \lrS{
+        a \abs{ e^{\delta k(\mathbf{x})} }^2+ c \abs{\grad  e^{\delta k(\mathbf{x}) + i \delta \varphi(\mathbf{x})} }^2
+    }
+\end{aligned}
+\]
+We define for simplicity $\delta\lambda(\mathbf{x}) = \delta k(\mathbf{x}) + i \delta\varphi(\mathbf{x})$. Expansion up to second order gives
+\[
+    \abs{ e^{\delta k(\mathbf{x})} }^2 \simeq \abs{ 1 + \delta k (\mathbf{x}) + \half \delta k^2(\mathbf{x}) }^2 \simeq 1 + 2 \delta k (\mathbf{x}) + 2  \delta k^2 (\mathbf{x})
+\]
+and
+\[
+    \abs{ \grad e^{\delta \lambda(\mathbf{x})} }^2 \simeq \abs{\grad \delta \lambda(\mathbf{x})}^2
+    = \lrS{\grad \delta k (\mathbf{x})}^2 + \lrS{\grad \delta \varphi (\mathbf{x})}^2
+\]
+then, since the term with the gradient does not contribute to the rest free energy
+\begin{multline*}
+    F \lrS{\Psi + \delta\Psi,\Psi^* + \delta\Psi^*} \simeq F_0 + F \lrS{\Psi,\Psi^*} + 2 \Psi_0^2 \int d\mathbf{x} \, a \delta k(\mathbf{x}) \\
+    + \int d\mathbf{x} \, \Psi_0^2 \lrS{ 2 a \delta k^2 (\mathbf{x}) + c \abs{\grad \delta k (\mathbf{x})}^2 + c \abs{\grad \delta \varphi (\mathbf{x})}^2 }
+\end{multline*}
+The linear term can be safely neglected, since normal thermal fluctuations are at zero average over the volume. Passing in Fourier transform, and collecting in $F^\star$ all the terms in the first line,
+\begin{multline*}
+    F \lrS{\Psi + \delta\Psi,\Psi^* + \delta\Psi^*} \simeq F^\star \lrS{ \Psi,\Psi^* } \\
+    + \Psi_0^2 \sum_\mathbf{q} \lrS{ c \abs{\mathbf{q}}^2 - 2a } \delta k( \mathbf{q} ) \delta k (-\mathbf{q}) + \Psi_0^2 \sum_\mathbf{q} c \abs{\mathbf{q}}^2 \delta \varphi( \mathbf{q} ) \delta \varphi (-\mathbf{q})
+\end{multline*}
+We use the notation
+\[
+    \delta K_\mathbf{q} = \Psi_0 \delta k (\mathbf{q})
+    \qquad\qquad
+    \delta \Phi_\mathbf{q} = \Psi_0 \delta \varphi (\mathbf{q})
+\]
+Then the above expansion reads
+\[
+    \delta F \simeq \sum_\mathbf{q} \lrS{ c \abs{\mathbf{q}}^2 - 2a } \delta K_\mathbf{q} \delta K_{-\mathbf{q}} +  \sum_\mathbf{q} c \abs{\mathbf{q}}^2 \delta \Phi_\mathbf{q} \delta \Phi_{-\mathbf{q}}
+\]
+This quadratic expression for the free energy allows for interpretation of $K$ and $\Phi$ as normal modes of the system. For a normal particle, energy contributions are of the form
+\[
+    \delta F = \sum_\mathbf{q} \varepsilon_\mathbf{q} n_\mathbf{q} = \sum_\mathbf{q} \lrR{\kappa_\mathbf{q} + m} n_\mathbf{q}
+\]
+with $\kappa_\mathbf{q}$ the kinetic contribution, vanishing for $\mathbf{q} \to \mathbf{0}$. Looking at the expression for $\delta F$, we see that of the $K$ mode is ``massive'' since its coefficient does not vanish in the long wavelength limit (moreover: it's positive, since $a<0$ for $T<T_c$); the $\Phi$ mode is ``massless'', since it does the opposite. This mode is strongly associated with the continuous $U(1)$ symmetry breaking, and is the bosonic manifestation of its existence: it is the Nambu-Goldstone boson for the $U(1)$ symmetry of superconductivity.
+
+\begin{cit}{huang2008statistical}{16.6}
+    We must comment on that most remarkable fact, which underlies Landau's original conception of the order parameter, that macroscopic systems generally have a lesser degree of symmetry manifested at low temperatures than at high temperatures. The symmetry manifested at high temperatures is usually a property if the system's microscopic Hamiltonian. As such, it cannot cease to exist, even when it appears to be violated. The question is, where does it go?
+
+    For example, the microscopic Hamiltonian of a ferromagnet is rotationally invariant. Lowering the temperature of the system surely does not change that. What is changed, however, is the mode in which the symmetry is expressed. One might find it natural to assume (in the best tradition of Aristotelian logic) that in the most perfect expression of symmetry, the ground state should be invariant under the symmetry operation. Nature, alas, is not perfect. In most instances, the system possesses many equivalent ground states that transform into one another under the symmetry operation. But, since the system can actually exists in only one of these states, the symmetry appears to be broken. This phenomenon, that the ground state of the system does not possess the symmetry of the Hamiltonian, is called ``spontaneous symmetry breaking''.
+
+    We have encountered the simplest manifestation of spontaneous symmetry breaking in the two-dimensional Ising model. The total energy is invariant under a simultaneous sign change of all the spins. Yet, the lowest-energy configuration is that in which all spins are aligned. In this case the symmetry is expressed through the fact that the spins could also have aligned themselves in the opposite direction [...].
+
+    When a continuous symmetry is spontaneously broken in a quantum mechanical system, interesting consequences follow. In this case, there is non-countable infinity of ground-states (with energy to be taken as zero) orthogonal to one another. The system must choose one of these. As a consequence of the degeneracy, there emerges a type of excited state in which the local ground states changes very gradually over space, so as to form a ``wave'' of very long wavelength. Such a state is orthogonal to any one ground state, with an energy approaching zero when the wavelength approaches infinity. This is called a ``Goldstone excitation''. The underlying symmetry is said to be realized in the ``Goldstone mode'' [...].
+
+    A new twist occurs when the system is coupled to to a zero-mass vector field such as the photon field. In this case the Goldstone mode gives way to the ``Higgs mode'', wherein the ``photon'' acquires a mass dynamically, and the would-be Goldstone excitation becomes the longitudinal degree of freedom of the massive ``photon''. An example of this is the Meissner effect in superconductivity, in which the photon mass corresponds to the inverse penetration depth.
+\end{cit}
+
+We now pass to the most important section of this chapter, which treats one of the most beautiful mechanisms in Physics (on a \textit{very} introductory level) and makes superconductivity a really unique phenomenon.
+
+\subsection{The Anderson-Higgs mechanism}
+
+Suppose to switch on the field. On a purely euristic level, even with a homogeneous phase-definite field we are now changing actively the lagrangian of the problem, \textit{explicitly} breaking the symmetry. We know that for a given phase-definite symmetry breaking the field $\Psi$ accommodates accordingly. Thus we expect the minimum manifold to collapse into a single point, since there are no more symmetries to be broken. Then the Nambu-Goldstone mode should not arise anymore. This is exactly what happens: the Goldstone mode of superconductivity is ``dressed'' by interactions, and becomes non-vanishing in the long-wavelength limit. It gets \textit{massive}... just like matter does thanks to the Higgs field.
+turns
+The mechanism works as follows. Suppose to turn on the electromagnetic field $\mathbf{A}$,
+\begin{multline*}
+    F \lrS{ \Psi,\Psi^*,\mathbf{A}} = F_0 \\
+    + \int d\mathbf{x} \lrS{
+        a \abs{\Psi(\mathbf{x)} }^2 + \frac{b}{2} \abs{ \Psi(\mathbf{x)} }^4 + \frac{c}{\hbar^2} \abs{-i\hbar\grad \Psi(\mathbf{x)} - q \mathbf{A} \Psi(\mathbf{x)} }^2
+    }
+\end{multline*}
+We will proceed exactly like in the previous section, performing a fluctuations analysis, collecting into $F^\star$ everything below the second order and neglecting everything above. Once again we consider a small fluctuation over the mean-field solution
+\[
+    \Psi(\mathbf{x}) = \Psi_0 e^{\delta \lambda (\mathbf{x})}
+\]
+As always $\Psi_0 \in \R$. Nothing changes for the $a$ term, while for the $c$ term
+\[
+\begin{aligned}
+    \abs{ \lrS{-i \hbar \grad - q \mathbf{A}} \Psi_0 e^{\delta \lambda (\mathbf{x})}}^2 &= \Psi_0^2 \abs{e^{\delta \lambda (\mathbf{x})}}^2 \abs{ \vphantom{A'} -i\hbar \grad \delta \lambda(\mathbf{x}) - q \mathbf{A} }^2 \\
+    &= \Psi_0^2 e^{2\delta k(\mathbf{x})} \lrS{ \abs{\hbar \grad \delta \varphi (\mathbf{x}) - q \mathbf{A}}^2 + \abs{\hbar \grad \delta k(\mathbf{x})}^2 }
+\end{aligned}
+\]
+The astonishing result, here, is that a gauge transformation can be made upon the vector potential without changing any physical result, and making the phase fluctuations field \textbf{disappear}. Notice that, being the gauge-transformation of wavefunctions essentially a multiplication by a phase factor, and since here the order parameter enters everywhere only through its modulus, we can neglect such gauge transformation. The said gauge choice (indicated by the $\star$ superscript) is the following
+\[
+    \mathbf{A}^\star (\mathbf{x}) = \mathbf{A} (\mathbf{x}) - \frac{q}{\hbar} \grad \varphi (\mathbf{x})
+\]
+which finally gives
+\begin{multline*}
+    F \lrS{ \Psi + \delta\Psi,\Psi^* + \delta\Psi^*,\mathbf{A}^\star } \simeq F^\star \lrS{ \Psi,\Psi^*} \\
+    + \int d\mathbf{x} \Psi_0^2 \left\lbrace
+        2a \delta k^2 (\mathbf{x)} + c \lrS{
+            \abs{\grad \delta k(\mathbf{x})}^2 + \abs{\mathbf{A}^\star}^2
+        }
+    \right\rbrace
+\end{multline*}
+Notice that this expansion is somehow incomplete, since we hid inside $F^\star$ a term linear in $\delta k(\mathbf{x})$ and multiplied by $\abs{\mathbf{A}^\star}^2$, which is in general non-trivial and represents interactions between the gauge field and the massive mode of the theory. However, the main feature of this formula is that, if we take its Fourier transform,
+\[
+    \delta F \simeq \sum_\mathbf{q} \lrS{ c \abs{\mathbf{q}}^2 - 2a } \delta K_\mathbf{q} \delta K_{-\mathbf{q}} +  \sum_\mathbf{q} c\Psi_0^2 \abs{\mathbf{A}^\star}_\mathbf{q} \abs{\mathbf{A}^\star}_{-\mathbf{q}}
+\]
+now \textbf{none} of these modes is massive! In fact, taking the long-wavelength limit, all their dispersions remain finite. This is remarkable, \textit{since one of these modes is a photon}. Quite impressive, isn't it? The final majestic detail to notice before moving on to the next chapter, is that the photon ``mass'' is proportional to $\Psi_0^2 \sim n_s$, and we know that $\lambda^{-2} \sim n_s$ as well. Thus the inverse penetration depth is connected to the photon mass: the smallest the path electromagnetic fields travel through the superconductor, the greater the photon mass.

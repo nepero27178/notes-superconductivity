@@ -1,0 +1,93 @@
+\begin{tikzpicture}[
+    cube/.style={
+        color=lev!30
+    }]
+    \def\xlength{0.3}
+    \def\ylength{0.5}
+    \def\zlength{0.5}
+    \def\xrelative{0.45}
+    \def\yrelative{0.8}
+    \def\zrelative{0.8}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis z line=center,
+        axis on top,
+        xlabel={$x$},
+        ylabel={$y$},
+        zlabel={$z$},
+        xlabel style={left},
+        ylabel style={right},
+        zlabel style={above},
+        xtick={-\xlength,\xlength},
+        ytick={-\ylength,\ylength},
+        ytick={-\zlength,\zlength},
+        xticklabels={\small $-\ell$, \small $+\ell$},
+        yticklabel=\empty,
+        zticklabel=\empty,
+        xticklabel style={above},
+        xmin=-\xrelative, xmax=\xrelative,
+        ymin=-\yrelative, ymax=\yrelative,
+        zmin=-\zrelative, zmax=\zrelative,
+        view/h=160,
+        view/v=20,
+        scale=1.5]
+
+        % Volume element
+        % Bottom
+        \draw[cube] (-\xlength,-\ylength,-\zlength) -- (-\xlength,+\ylength,-\zlength)
+                                                 -- (+\xlength,+\ylength,-\zlength)
+                                                 -- (+\xlength,-\ylength,-\zlength)
+                                                 -- cycle;
+        % Negative y plane
+        \draw[cube] (-\xlength,-\ylength,-\zlength) -- (-\xlength,-\ylength,+\zlength)
+                                                 -- (+\xlength,-\ylength,+\zlength)
+                                                 -- (+\xlength,-\ylength,-\zlength)
+                                                 -- cycle;
+        % Negative x plane
+        \draw[cube] (-\xlength,-\ylength,-\zlength) -- (-\xlength,+\ylength,-\zlength)
+                                                 -- (-\xlength,+\ylength,+\zlength)
+                                                 -- (-\xlength,-\ylength,+\zlength)
+                                                 -- cycle;
+        % Positive y plane
+        \draw[cube] (-\xlength,+\ylength,-\zlength) -- (-\xlength,+\ylength,+\zlength)
+                                                 -- (+\xlength,+\ylength,+\zlength)
+                                                 -- (+\xlength,+\ylength,-\zlength)
+                                                 -- cycle;
+        % Positive x plane
+        \draw[cube] (+\xlength,-\ylength,-\zlength) -- (+\xlength,-\ylength,+\zlength)
+                                                 -- (+\xlength,+\ylength,+\zlength)
+                                                 -- (+\xlength,+\ylength,-\zlength)
+                                                 -- cycle;
+
+        % Top
+        \draw[cube] (-\xlength,-\ylength,+\zlength) -- (-\xlength,+\ylength,+\zlength)
+                                                 -- (+\xlength,+\ylength,+\zlength)
+                                                 -- (+\xlength,-\ylength,+\zlength)
+                                                 -- cycle;
+        
+        % Interface
+        % Interface plane
+        \filldraw[opacity=0.5,color=lev!60,fill=lev!30] 
+            (0,+\ylength,-\zlength) -- (0,+\ylength,+\zlength)
+                                  -- (0,-\ylength,+\zlength)
+                                  -- (0,-\ylength,-\zlength)
+                                  -- cycle;
+        % Front
+        \fill[opacity=0.5,color=lev!30]
+            (0,+\ylength,-\zlength) -- (-\xlength,+\ylength,-\zlength)
+                                  -- (-\xlength,+\ylength,+\zlength)
+                                  -- (0,+\ylength,+\zlength)
+                                  -- cycle;
+        % Top
+        \fill[opacity=0.5,color=lev!30]
+            (0,+\ylength,+\zlength) -- (-\xlength,+\ylength,+\zlength)
+                                  -- (-\xlength,-\ylength,+\zlength)
+                                  -- (0,-\ylength,+\zlength)
+                                  -- cycle;
+
+        % Nodes
+        \node (sigma) at (0,+\ylength/2,-\zlength/2-0.1) [anchor=center,color=lev] {\small $\Sigma$};
+        
+    \end{axis}
+\end{tikzpicture}

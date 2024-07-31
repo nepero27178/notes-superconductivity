@@ -1,0 +1,42 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel={$x$},
+        ylabel={$y$},
+        xlabel style=right,
+        ylabel style=above,
+        xmin=-\xlength-0.1, xmax=\xlength+0.1,
+        ymin=-\ylength-0.1, ymax=\ylength+0.1,
+        scale=\vortexscale
+        ]
+
+        % Elements
+        \path[name path=core] (axis cs:0,0) circle (\smallradius);
+        \path[name path=interface] (axis cs:0,0) circle (\bigradius);
+        \path[name path=sample] (axis cs:-\xlength,-\ylength) rectangle (axis cs:\xlength,\ylength);
+
+        % Regions filling
+        \tikzfillbetween[of=core and sample,on layer=ft]{
+            color=lev!30,
+            opacity=0.5
+        };
+        \tikzfillbetween[of=core and interface,on layer=ft]{
+            pattern={Dots[angle=45,distance={3pt/sqrt(2)}]},
+            pattern color=lev!60,
+            opacity=0.75
+        };
+
+        % Nodes
+        \node (bulk) at (axis cs:-\xlength,\ylength) [anchor=north west,color=lev!60]{\tiny Bulk};
+        \node (bulk) at (axis cs:0,0) [anchor=south east,color=lev!60]{\tiny Core};
+        
+        % Radia
+        \draw[dashed,color=lev!60] (axis cs: 0,0) -- (-65:\smallradius) node[anchor=west,xshift=-0.5ex,yshift=0.8ex,midway] {\scriptsize $\sim\xi$};
+        \draw[dashed,color=lev!60] (axis cs: 0,0) -- (35:
+        \bigradius) node[anchor=west,yshift=0.4ex] {\scriptsize $\sim\lambda$};
+    \end{axis}
+\end{tikzpicture}

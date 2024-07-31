@@ -1,0 +1,30 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xlabel={$T$},
+        ylabel={$H$},
+        xlabel style={below right},
+        ylabel style={above left},
+        xtick={0.5},
+        ytick={1},
+        xticklabel={$T_c$},
+        yticklabel={$H_c(0)$},
+        xmin=-0.2,
+        xmax=0.8,
+        ymin=-0.2,
+        ymax=1.2]
+
+        \addplot[draw=none,fill=lev!30,opacity=0.5,domain=0:0.5] {1 - 4*x^2} |- (0,0) -- (0,1);
+        \addplot[color=lev,domain=0:0.5] {1 - 4*x^2};
+        \draw[color=black] (0.35,0) -- (0.6,0) node[
+        	sloped,
+        	pos=0.5,
+        	allow upside down
+        ]{\arrowIn};
+        
+        \filldraw[color=black] (0.35,0) circle (1.2pt) node {};
+        \filldraw[color=black] (0.6,0) circle (1.2pt) node {};
+    \end{axis}
+\end{tikzpicture}

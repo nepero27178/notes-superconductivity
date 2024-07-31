@@ -1,0 +1,22 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        xlabel={$m$},
+        ylabel={$F$},
+        xlabel style={below},
+        ylabel style={left},
+        xtick={-0.353,0.353},
+        ytick=\empty,
+        xticklabels={$-m_0$, $m_0$},
+        yticklabel=\empty,
+        xticklabel style={above,yshift=0.3em},
+        xmin=-0.8,
+        xmax=0.8,
+        ymin=-0.4,
+        ymax=1.2,
+        scale=0.75]
+        \addplot[color=lev,domain=-0.8:0.8,smooth] {-5*x^2 + 20*x^4};
+        \node[color=lev] at (0.34,0.5) {\scriptsize $T<T_c$};
+    \end{axis}
+\end{tikzpicture}

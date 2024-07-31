@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel={$x$},
+        ylabel={$y$},
+        xlabel style=right,
+        ylabel style=above,
+        xmin=-1,
+        xmax=1,
+        ymin=-0.8,
+        ymax=0.8
+        ]
+
+        \def\hole{(axis cs:0,0) circle (0.35)}
+        \def\sample{(axis cs:-0.9,-0.7) rectangle (axis cs:0.9,0.7)}
+
+        \begin{scope}
+            \fill[color=lev!30,opacity=0.5] \sample -- \hole;
+        \end{scope}
+        
+        \node (bulk) at (axis cs:0.45,0.35) [align=center,color=lev!60]{\small Bulk};
+        
+        \node (field-in) at (axis cs:-0.35,0) [anchor=south west,color=black]{\scriptsize $\mathbf{B}\neq\mathbf{0}$};
+        \node (field-out) at (axis cs:-0.35,0) [anchor=south east,color=black]{\scriptsize $\mathbf{B}=\mathbf{0}\vphantom{\neq}$};
+        
+        \fill[color=black] (axis cs:-0.7,-0.6) circle (1pt);
+        \draw[color=black,line width=0.7pt] (axis cs:-0.7,-0.6) circle (2.5pt) node[anchor=east] {\scriptsize$\mathbf{H}\,$};
+
+        \draw[dashed,color=lev!60] (axis cs: 0,0) -- (-65:0.35) node[anchor=south west,midway] {\scriptsize $r_0$};
+    \end{axis}
+\end{tikzpicture}

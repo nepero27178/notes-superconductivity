@@ -1,0 +1,44 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {english}{}\relax 
+\vspace {-\cftbeforepartskip }
+\contentsline {chapter}{\numberline {1}{superconductivity and thermodynamics}}{5}{chapter.1}%
+\etoc@startlocaltoc {2}
+\contentsline {section}{\numberline {1.1}{Macroscopic theory of superconductivity}}{6}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}{The land where electrons do not collide}}{6}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}{The land where magnetic fields are not welcome}}{8}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}{Thermodynamics}}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}{The critical field}}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}{First order transition at non-zero field}}{12}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}{Second order transition at zero field}}{14}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}{Ginzburg-Landau theory of superconductivity}}{17}{chapter.2}%
+\etoc@startlocaltoc {3}
+\contentsline {section}{\numberline {2.1}{Ginzburg-Landau theory for classical spins}}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}{Homogeneous magnetization in absence of fields}}{19}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}{Breaking of symmetry through field coupling}}{19}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}{Symmetry breking in superconductors}}{21}{section.2.2}%
+\contentsline {section}{\numberline {2.3}{Fluctuations of the complex order parameter}}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}{Magnitude fluctuations}}{24}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}{Phase fluctuations}}{25}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}{Superconductivity}}{26}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}{Free energy expansion and Ginzburg-Landau equations}}{27}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}{The critical field}}{28}{subsection.2.4.2}%
+\contentsline {section}{\numberline {2.5}{Spontaneous symmetry breaking in superconductors}}{28}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}{The Goldstone boson of superconductivity}}{29}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}{The Anderson-Higgs mechanism}}{32}{subsection.2.5.2}%
+\contentsline {chapter}{\numberline {3}{Conventional superconductors}}{35}{chapter.3}%
+\etoc@startlocaltoc {4}
+\contentsline {section}{\numberline {3.1}{Superconductors of type I and type II}}{35}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}{Type I}}{37}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}{Type II}}{38}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}{Magnetic properties of superconductors}}{39}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}{Flux quantization}}{39}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}{Nucleation field}}{41}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}{The mixed phase}}{44}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}{The Abrikosov vortex impurity}}{46}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}{Impurities: the Abrikosov vortex}}{46}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}{Phase diagram of Abrikosov superconductors}}{48}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}{The Abrikosov lattice}}{52}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}{Interaction of two static fluxons with same charge}}{52}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}{Interaction of two static fluxons with opposite charge}}{56}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}{Interaction of two moving fluxons with same charge}}{56}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}{Many fluxons with the same charge: the lattice ground state}}{56}{subsection.3.4.4}%

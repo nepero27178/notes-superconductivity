@@ -1,0 +1,744 @@
+\chapter{Conventional superconductors}\label{chap:conventional superconductors}\chaptertoc{}
+
+We now have two length scales: one is the penetration depth $\lambda$, arising from general London theory of superconductivity: it measures the length scale over which electromagnetic field are suppressed in a superconductor. The other is the coherence length $\xi$, which arose from Ginzburg-Landau theory: it measures the length over which correlations of the order field at different points are suppressed. Two situations are possible, both $\xi \gg \lambda$, or $\xi \ll \lambda$ (neglect the one in which they are comparable). On this difference ``type I'' and ``type II'' superconductors are distinguished. These two classes form \textbf{conventional superconductors}.
+
+\section{Superconductors of type I and type II}\label{sec:superconductors of type I and type II}
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/conventional superconductors/pictures/superconducting sample}
+    \caption{A superconducting sample has the interface with vacuum placed at $x=0$, as described in Sec.~\ref{sec:superconductors of type I and type II}. A uniform magnetic field $\mathbf{H} = H \versor{z}$ is applied everywhere.}
+    \label{fig:superconducting sample}
+\end{figure}
+
+Consider a superconducting sample, homogeneous in the $y$ and $z$ directions, with the interface with vacuum placed at $x=0$, as represented in Fig.~\ref{fig:superconducting sample}. The $x>0$ is in superconducting state, the $x<0$ region is in normal state. A homogeneous magnetic field $\mathbf{H} = H \versor{z}$ is applied everywhere. 
+
+Evidently the order parameter $\Psi(\mathbf{x})$ can only depend on $x$, and the magnetic flux density $\mathbf{B}(\mathbf{x})$ only has the $\versor{z}$ component and only depends on $x$. In the region $x \gtrsim 0$, the behavior of the superconductor depends on its type. The general boundary conditions hold anyways
+\[  
+\begin{aligned}
+    x &\le 0 \hspace{1em}&&\Psi(x) = 0 \hspace{1em}&&B(x)=\mu_0 H \\
+    x &\to +\infty \hspace{1em}&&\Psi(x) = \Psi_0 \hspace{1em}&&B(x)=0
+\end{aligned}
+\]
+where $\Psi_0^2 = - a/b$. A good gauge choice for the vector potential (also, only dependent on $x$ due to symmetry) is
+\[
+    \mathbf{A}(x) = A(x) \versor{y}
+    \quad\implies\quad
+    B(x) = \versor{z} \cdot \lrR{\curl\mathbf{A}} = \lrR{\pdv{}{x} \versor{y} \cdot \mathbf{A}(x)} = \pdv{A(x)}{x}
+\]
+Such a choice is coherent with the Coulomb-London gauge $\div\mathbf{A}=0$. Also, since $\Psi(x)$ changes along the $x$ direction, 
+\[
+    \mathbf{A} \cdot \grad\Psi = 0
+\]
+Take now the first Ginzburg-Landau equation, Eq.~\eqref{eq:ginzburg landau eq 1}. Expanding the term $\lrR{ -i\hbar\grad - q \mathbf{A} }^2 \Psi(x)$  it can be recast in the form
+\[
+\begin{aligned}
+    a \Psi(x) + b \abs{\Psi(x)}^2 \Psi(x) + \frac{c}{\hbar^2} \lrR{ -\hbar^2 \laplacian + q^2 A^2(x) } \Psi(x) &= 0 \\
+    - c \laplacian\Psi(x) + \lrS{a + \frac{c}{\hbar^2/q^2} A^2(x)} \Psi(x) + b \abs{\Psi(x)}^2 \Psi(x) &= 0
+\end{aligned}
+\]
+We now define the magnetic flux unity
+\[
+    \Phi_0 = \frac{h}{q} = 2\pi \frac{\hbar}{q}
+\]
+and use the known result for the correlation length,
+\[  
+    \xi^{-2} = \frac{a + 3b\Psi_0^2}{c} = - \frac{2a}{c}
+    \quad\implies\quad
+    -c = 2a \xi^2
+\]
+then, dividing everything by $a$ and substituting the laplacian with $\partial_x^2$ being the order field only dependent on $x$
+\[
+    2\xi^2 \pdv[2]{}{x} \Psi(x) + \lrS{1 - 2\xi^2 \lrR{\frac{2\pi}{\Phi_0}}^2 A^2(x)} \Psi(x) - \frac{ \abs{\Psi(x)}^2 }{\Psi_0^2} \Psi(x) = 0
+\]
+Finally, defining the \textbf{reduced order parameter} $f(x) \equiv \Psi(x)/\Psi_0$, and assuming it real without loss of generality we get
+\begin{equation}\label{eq:reduced ginzburg landau eq 1}
+    2\xi^2 \pdv[2]{}{x} f(x) + \lrS{1 - 2\xi^2 \lrR{\frac{2\pi}{\Phi_0}}^2 A^2(x)} f(x) - f^3(x) = 0
+\end{equation}
+A \textbf{very important specification on notation} is here needed, in order to avoid the terrible confusion the author has gone through when writing these notes. In standard notation, the symbol $\xi$ is used to indicate a quantity closely related to our $\xi$, in particular
+\[
+    \xi^\circledS = \sqrt{2} \xi
+\]
+where $\xi^\circledS$ is the ``standard notation xi''. The reason is that our $\xi$ comes from statistical grounds and indicates the correlation length of the Ising model (extended to a complex order parameter, as seen in Chap.~\ref{chap:ginzburg-landau theory of superconductivity}); instead, $\xi^\circledS$ is defined as the typical length of the differential equation \eqref{eq:reduced ginzburg landau eq 1}, thus substituting $2\xi^2 = {\xi^\circledS}^2$. Of course we could have adapted to the standard notation, however the correlation definition seems just more physically fundamental than the standard definition. This specification is of great importance: in order to avoid useless entropy increasing, we will come back on this later when needed.
+
+For a real order parameter the second Ginzburg-Landau equation, Eq.~\eqref{eq:ginzburg landau eq 2} reads
+\[  
+    - \frac{q^2}{m} \abs{\Psi (x)}^2 \mathbf{A}(x) = \mathbf{J}(x) = \frac{1}{\mu_0} \curl\mathbf{B}(x) = -\frac{1}{\mu_0} \laplacian\mathbf{A}(x)
+\]
+again using $\div\mathbf{A}=0$. Then, since
+\[
+    \lambda^{-2} = \frac{\mu_0}{\Lambda} = \frac{\mu_0 q^2 n_s}{m}
+\]
+and $n_s = \Psi_0^2$
+\begin{equation}\label{eq:reduced ginzburg landau eq 2}
+    \lrS{\pdv[2]{}{x} - \lambda^{-2} f^2(x)} A(x) = 0
+\end{equation}
+To solve these Eq.~\eqref{eq:reduced ginzburg landau eq 1} and Eq.~\eqref{eq:reduced ginzburg landau eq 2} we need boundary conditions. In the bulk, $f=1$ and $A=0$.
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/conventional superconductors/pictures/field in the sample}
+    \caption{Inside a superconducting sample the magnetic flux density decays on a distance $\lambda$. The dotted region represents the interface in which the field is able to penetrate. The ratio $\xi/\lambda$ defines the class of the conventional superconductor.}
+    \label{fig:field in the sample}
+\end{figure}
+
+\subsection{Type I}
+
+Superconductors of the first type are characterized by $\xi \gg \lambda$. Then we select the region $x \sim \xi$, where $f=1$ and $A=0$. The vector potential is given by
+\[
+    A(x) \simeq -Hx \theta (-x)
+\]
+By Eq.~\eqref{eq:reduced ginzburg landau eq 1}, nearly everywhere in the sample (see Fig.~\ref{subfig:type i superconductor})
+\[
+    \lrS{ 2\xi^2 \pdv[2]{}{x} + 1 } f(x) - f^3 (x) = 0
+\]
+Of course in any case $A$ vanishes for $x\to +\infty$ leading to the above equation for $f$, however in this situation such equation is (approximately) true in the whole sample. By the powerful means of Wolfram Alpha\textregistered, it turns out
+\[
+    f(x) = \tanh\lrR{\frac{x}{2\xi}}
+\]
+We see here that $\xi$ is the length over which the order parameter rises from $\Psi=0$ to $\Psi=\Psi_0$, the mean-field solution.
+
+\begin{figure}
+    \centering
+    \subfloat[][Type I superconductor.]{\input{chapters/superconductivity/conventional superconductors/pictures/type i superconductor}\label{subfig:type i superconductor}}
+    \subfloat[][Type II superconductor.]{\input{chapters/superconductivity/conventional superconductors/pictures/type ii superconductor}\label{subfig:type ii superconductor}}
+    \caption{The two classes of conventional superconductors are distinguished by the value of the ratio $\xi/\lambda$. In Fig.~\ref{subfig:type i superconductor} a type I superconductor is represented, with $b(x) \equiv B(x)/\mu_0 H$ and $f(x)=\Psi(x)/\Psi_0$ the reduced order field. In this case $\lambda \ll \xi$ and the order field saturates in a field-free region. In Fig.~\ref{subfig:type ii superconductor} a type II superconductor is represented. In this case, being $\lambda \gg \xi$, the order field saturates in a region where fields penetrate. In both regions, the interface is dotted for clarity.}
+    \label{fig:type i type ii superconductor}
+\end{figure}
+
+\subsection{Type II}
+
+Superconductors of the second type are a little more interesting. They are characterized by $\xi \ll \lambda$, meaning that in the interface (the dotted region of Fig.~\ref{fig:field in the sample}) the order parameter is already saturated, $\Psi=\Psi_0$, but the fields are still non-vanishing  
+\[
+    \pdv[2]{A}{x} - \frac{A}{\lambda^2} = 0
+    \qquad\text{(for $\xi < x < \lambda$)}
+\]
+then the spatial dependence of $A$ is smoother
+\[
+    A(x) = \mu_0 H \lrS{(x-\lambda) \theta(-x) - \lambda e^{-x/\lambda} \theta(x)}
+\]
+(the $\lambda$ term was included for continuity) and the flux density is
+\[
+    B(x) = \mu_0 H \lrS{\theta(-x) + e^{-x/\lambda} \theta(x)}
+\]
+as represented in Fig.~\ref{subfig:type ii superconductor}. In this case the solution for the order parameter $f(x)$ is a little more complex, but being the fields decreasing on a length scale much larger, locally they can be neglected and a step-like solution for $f$ works as a suitable approximation.
+
+\section{Magnetic properties of superconductors}
+
+The process of creating a ``hole'' inside a superconducting sample, meaning a region of space where the material is in normal state or physically a hole, is of great importance. It is characteristic of type II superconductors to have a particular nucleation behavior, with the formation of a triangular lattice of ``holes''. We start here by analyzing the properties of holes in superconducting materials. 
+
+\subsection{Flux quantization}\label{subsec:flux quantization}
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/conventional superconductors/pictures/hole in superconductor}
+    \caption{The hole of radius $r_0$ in the superconductor bulk described in Sec.~\ref{subsec:flux quantization}. The uniform magnetic field $\mathbf{H}=H\versor{z}$ is applied everywhere, and in the bulk is perfectly screened. Magnetic flux density $\mathbf{B}$ is able to penetrate in the hole.}
+    \label{fig:hole in superconductor}
+\end{figure}
+
+Consider the bulk of a conventional superconductor, subject to an external magnetic field $\mathbf{H} = H \versor{z}$. At point $(0,0)$ of the $xy$ plane perpendicular to the field, a hole is present. For the sake of simplicity we consider a round hole of radius $r_0$, as in Fig.~\ref{fig:hole in superconductor}. Due to $z$ symmetry, we may work in cylindrical coordinates $(r,\theta)$. Then the order parameter has spatial dependence
+\[
+    \Psi(r,\theta) = a(r,\theta) e^{ip(r,\theta)}
+\]
+with $a \in \R$ the amplitude and $p \in \R$ the phase. Being $n_s = \abs{\Psi}^2 = a^2$ cylindrical symmetric, $a$ cannot depend on $\theta$.
+
+Consider the flux density in the hole: $B$ cannot depend on $\theta$ due to symmetry. Having only the $z$ component, this means that $\mathbf{A}$ only has the $\Bar{\bm\theta}$ component and depends only on $r$. Therefore, since $\curl\mathbf{B}=\mu_0\mathbf{J}$,
+\[
+    \mu_0\mathbf{J} = \curl\versor{z}B(r) = - \Bar{\bm{\theta}} \pdv{}{z} B(r) = \Bar{\bm{\theta}} J(r)
+\]
+Rather intuitively, current flows in the $\theta$ direction to screen the field in the superconductor. We expect $J(r)$ to decrease rapidly for $r>r_0$. Now, take the second Ginzburg-Landau equation, Eq.~\eqref{eq:ginzburg landau eq 2},
+\[
+\begin{aligned}
+    \mathbf{J}(r) &= \frac{\hbar q}{2im} \lrS{ \Psi^* (r,\theta) \grad \Psi (r,\theta) - \Psi (r,\theta) \grad \Psi^* (r,\theta) } - \frac{q^2}{m} \abs{\Psi (r,\theta)}^2 \mathbf{A} (r) \\
+    &= \frac{\hbar q}{m} a^2(r) \grad p(r,\theta) - \frac{q^2}{m} a^2(r) \mathbf{A} (r) \\
+    &= \frac{q}{m} n_s(r) \lrS{ \hbar \grad p(r,\theta) - q \mathbf{A}(r) }
+\end{aligned}
+\]
+because the gradients of the amplitude cancel out. Since both $\mathbf{J}$ and $\mathbf{A}$ only have the angular component, it must be $\partial_r p = 0$, which means that \textbf{the phase only depends on the angle} $\bm{\theta}$, $p(r,\theta)=p(\theta)$. We must ensure monodromy
+\[
+    \Psi(r,\theta) = a(r) e^{ip(\theta)} \imp a(r) e^{ip(\theta + 2\pi)}
+    \quad\implies\quad
+    p(\theta + 2\pi) - p(\theta) = 2n\pi
+\]
+with $n\in\R$.
+
+We now wish to integrate the current on the path $\partial\Sigma$ represented in Fig.~\ref{fig:hole and path in superconductor}, in order to extract the magnetic flux through the hole and its vicinity. For $r \gg r_0$, deep in the bulk, we expect $\Psi(r,\theta) = \Psi_0$ (the mean-field solution): the region $\Sigma$, delimited by the path $\partial\Sigma$, is chosen large enough to enclose \textbf{all} magnetic flux penetrating in the sample (we expect the magnetic flux density not to drop to zero for $r \simeq r_0^+$). It turns out
+\[
+\begin{aligned}
+    \oint_{\partial\Sigma} d\bm{\ell}\cdot\mathbf{J} &= \oint_{\partial\Sigma} d\bm{\ell}\cdot \lrS{\frac{q}{m} n_s(r) \lrS{ \hbar \grad p(\theta) - q \mathbf{A}(r)}} \\
+    &= \frac{\hbar q}{m} \Psi_0^2 \oint_{\partial\Sigma} d\bm{\ell}\cdot\grad p(\theta) - \frac{q^2}{m} \Psi_0^2 \oint_\Gamma d\bm{\ell}\cdot\mathbf{A}(r) \\
+    &= \frac{q}{m} \Psi_0^2 \int_0^{2\pi} d\theta \pdv{p}{\theta} - \frac{q^2}{m} \Psi_0^2 \int_\Sigma d\bm\Sigma\cdot\mathbf{B}(r) 
+\end{aligned}
+\]
+where we used the Stokes theorem. Now, for $r$ deep in the bulk the current is expected to vanish (supercurrents flow near interfaces). Then
+\[
+    \Phi_\Sigma(B) = \frac{\hbar}{q} \lrS{p(2\pi)-p(0)} = n \Phi_0
+    \hspace{2em}\text{with $n\in\R$ and $\displaystyle\Phi_0=\frac{h}{q}$}
+\]
+We discover that \textbf{when a hole is pierced in a superconductor, the amount of magnetic flux passing through it is quantized in units of} $\bm{\Phi_0}$. The same results holds true for different shapes of the hole, since the spatial dependencies of $p$ and $\mathbf{J}$ far from the hole are kind of independent of the specific local structure of the impurity.
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/conventional superconductors/pictures/hole and path in superconductor}
+    \caption{The deep-bulk integration path $\partial\Sigma$ around the hole described in Sec.~\ref{subsec:flux quantization}.}
+    \label{fig:hole and path in superconductor}
+\end{figure}
+
+\subsection{Nucleation field}\label{subsec:nucleation field}
+
+Given some material in the normal state ($\Psi=0$), on an empirical and thermodynamic level we know that for low enough fields superconducting transition can occur. We now want to find the largest field for which a finite order field $\Psi\neq0$ can arise. Such a process is called \textbf{nucleation}.
+
+Take the first Ginzburg-Landau equation, Eq.~\eqref{eq:ginzburg landau eq 1}. We want to study the transition, so we suppose $\Psi$ to be low enough to ignore the $b$ term, which is cubic. We get
+\[
+\begin{aligned}
+    a \Psi(\mathbf{x}) + \frac{c}{\hbar^2} \lrS{-i\hbar\grad - q \mathbf{A}}^2 \Psi(\mathbf{x}) &\simeq 0 \\
+    \lrS{-i\grad - \frac{q}{\hbar} \mathbf{A}}^2 \Psi(\mathbf{x}) &\simeq -\frac{a}{c} \Psi(\mathbf{x}) \\
+    \lrS{-i\grad - \frac{2\pi}{\Phi_0} \mathbf{A}}^2 \Psi(\mathbf{x}) &\simeq \frac{1}{2\xi^2} \Psi(\mathbf{x})
+\end{aligned}
+\]
+since $-c/a = 2\xi^2$. This is a Schrödinger equation for a particle in a magnetic field, and gives rise to \textbf{Landau levels}. The energy levels of such free system are
+\[
+    E_n(k_z) = \hbar\omega_B \lrR{n+\half} + \frac{\hbar^2k_z^2}{2m}
+    \qq{with}
+    \omega_B = \frac{qB}{m}
+\]
+Since we divided everything by $c=\hbar^2/2m$, we have
+\[
+\begin{aligned}
+    \frac{1}{2\xi^2} &= \frac{2m}{\hbar^2} \hbar\frac{qB}{m}\lrR{n+\half} + k_z^2\\
+    \frac{2\pi}{\Phi_0}B\lrR{n+\half} &= \half\lrR{\frac{1}{2\xi^2}-k_z^2}
+\end{aligned}
+\]
+Evidently the right side is independent of the field. The largest field satisfying this equation is given by $n=0$, $k_z=0$,
+\[
+    (@n=0,k_z=0)
+    \qquad\quad
+    B^\star = \frac{\Phi_0}{\pi\lrR{2\xi}^2}
+\]
+Lowering the external field, symmetry breaking occurs \textbf{when a circle of radius $\bm{2\xi}$ encloses exactly one quantum of flux}. Since for slightly more intense fields the sample is in the normal state, such field $B^\star$ defines a critical external field, usually indicated as $H_{c2}$ and called \textbf{upper critical field}
+\[
+    H_{c2} = \frac{B^\star}{\mu_0}
+\]
+Recall now:
+\[
+    \xi^2 = -\frac{c}{2a} = - \frac{\hbar^2}{4ma}
+    \qquad
+    \lambda^2 = \frac{\Lambda}{\mu_0} = \frac{m}{\mu_0 q^2 \Psi_0^2}
+    \qquad
+    \Psi_0 = \sqrt{\frac{-a}{b}}
+\]
+Then
+\[
+    \lambda^2 \xi^2 = \frac{m}{\mu_0 q^2} \frac{b}{-a} \frac{\hbar^2}{4m (-a)} = \frac{1}{4 \mu_0} \frac{\hbar^2}{q^2} \frac{b}{a^2}
+\]
+From thermodynamic arguments we found out $\mu_0 H_c^2 = a^2/b$. Then
+\[
+    \mu_0 H_c = \frac{1}{\lambda\xi} \frac{\Phi_0}{4\pi} = \frac{\xi}{\lambda} \frac{\Phi_0}{\pi\lrR{2\xi}^2}
+    \quad\implies\quad
+    H_{c2} = \kappa H_c
+    \qq{with} \kappa \equiv \frac{\lambda}{\xi}
+\]
+
+\begin{figure}
+	\centering
+	\def\ratio{1/3}
+	\subfloat[][Type I superconductor.]{\input{chapters/superconductivity/conventional superconductors/pictures/type i superconductor phase diagram}\label{subfig:type i superconductor phase diagram}}
+	\subfloat[][Type II superconductor.]{\input{chapters/superconductivity/conventional superconductors/pictures/type ii superconductor phase diagram}\label{subfig:type ii superconductor phase diagram}}
+	\caption{Phase diagrams for the two types of conventional superconductors described in Sec.~\ref{subsec:nucleation field}. Inside the shaded region the \textbf{uniform} superconducting phase presents a energy gain; inside the dotted region symmetry can be broken and superconductivity can emerge. Regions which are both shaded and dotted are those in which the sample presents the mean-field uniform superconducting solution.}
+	\label{fig:type i type ii superconductor phase diagram}
+\end{figure}
+
+Remember: we are not using the standard notation, in which $\kappa^\circledS = \lambda/\xi^\circledS$. Again, the superscript $\circledS$ here indicates how the symbol ``$\kappa$'' is intended in standard notation. With such a choice of symbols, clearly $H_{c2} = \sqrt{2} \kappa^\circledS H_c$. Now:
+\begin{enumerate}
+    \item For type I superconductors $\kappa \ll 1$. Then the upper critical field lies below the conventional critical field. The phase diagram is the one represented in Fig.~\ref{subfig:type i superconductor phase diagram}. Inside the shaded region in figure, thermodynamics indicates a free energy gain in forming a uniform $\Psi(x)=\Psi_0$ superconducting phase. However nucleation can occur only when one quantum of flux is enclosed by a circle of radius $2\xi$. Then, in the region
+    \[
+        H_{c2}(T) \le H \le H_c (T)
+    \]
+    there is not enough magnetix flux to break symmetry, and the sample remains in a \textbf{uniform, normal and supercooled state}. Such region is the one shaded, but not dotted, in Fig.~\ref{subfig:type i superconductor phase diagram}. For $H<H_{c2}$ nucleation is possible, and since $H<H_c$ the solution is the uniform one. For this reason the transition is a one of the first order: $\Psi$ jumps from $0$ to $\Psi_0$ in a discontinuous manner. In standard notation, type I superconductors are characterized by $\kappa^\circledS \ll 1/\sqrt{2}$.
+    \item For type II superconductors $\kappa\gg1$. Symmetry breaking is \textbf{locally} possible in the region
+    \[
+        H_c(T) \le H \le H_{c2} (T)
+    \]
+    which is the one dotted but not shaded in Fig.~\ref{subfig:type ii superconductor phase diagram}. This means that even if the uniform solution is not thermodynamically favourite everywhere in the sample, local nucleation can in principle occur. As we show in the next section, it actually happens. We expect such a region to be in a \textbf{mixed normal-superconducting phase}. For $H < H_c$ the mean-field solution arises. Then we expect the transition to be one of the second order, since by physical intuition $\Psi$ is expected to vary from $0$ to $\Psi_0$ continuously when lowering the external field. In standard notation, type II superconductors are those where $\kappa^\circledS \gg 1/\sqrt{2}$.
+\end{enumerate}
+Notice that in the mixed phase of type II superconductors it is to be expected an incomplete magnetic flux expulsion. The next section is devoted to justifying this expectation.
+
+\subsection{The mixed phase}\label{subsec:the mixed phase}
+
+A physical state at equilibrium is realized if it minimizes the free energy. We now show that in superconductors of type II in the mixed phase described in the above section, $H_c(T) < H < H_{c2}(T)$ at some fixed sub-critical temperature $T$, forming an interface between a normal and a superconducting region is thermodynamically favourite.
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/conventional superconductors/pictures/interface}
+    \caption{The volume element described in Sec.~\ref{subsec:the mixed phase}. The surface $\Sigma$ is assumed to be part of the interface, and the volume is constructed by extrusion of of a quantity $\pm\ell$. In the mixed phase, the shaded volume is in the superconducting phase.}
+    \label{fig:interface}
+\end{figure}
+
+Since $H < H_{c2}$ nucleation is possible. It can occur homogeneously or it can form normal regions as well as superconducting regions, thus interfaces. We consider one of those ``potential'' interfaces, which is a continuous $2D$ manifold in $3D$ space (not necessarily closed) and focus on a small cubic volume element of surface $\Sigma$ and depth $2\ell$ on it, as the one depicted in Fig.~\ref{fig:interface}. The reference axis are chosen in order to have half of the volume ``before'' the interface and the other half ``after''. Of course, we are assuming here the interface to be locally approximated by a flat surface at sufficiently high length scales in order to neglect the atomic structure of the material. We assume $\ell \gg \lambda,\xi$.
+
+We need to compute the free energy difference for creating a superconducting configuration with respect to the completely normal phase. For the homogeneous mean-field solution such quantity is simply
+\[
+    \Delta F^{(\mathrm{h})}(T,H) = - 2\ell\Sigma \Delta f(T)
+    \quad\qq{with}\quad
+    \Delta f(T) = \frac{\mu_0 H_c^2(T)}{2}
+\]
+where $\Delta f(T)$ is the condensation energy, as derived in Chap.~\ref{chap:superconductivity and thermodynamics}. Instead, considering a normal phase for $0<x<\ell$ and a superconducting phase for $-\ell<x<0$ (see Fig.~\ref{fig:interface}), we need to replace half of the above free energy with a purely magnetic contribution
+\[
+    \Delta F^{(\mathrm{i})}(T,H) = - \mu_0 \ell\Sigma \frac{H_c^2(T)}{2} - \mu_0 \ell\Sigma \frac{H^2}{2} + \delta F
+\]
+plus a correction $\delta F$ accounting for the fact that $\Psi$ and $B$ vary rapidly but somehow continuously across the interface. It can be estimated roughly thinking that fields penetrate the interface on a length $\lambda$ and the order parameter $\Psi$ is different from $\Psi_0$ on a length $\xi$. Then, approximating both behaviors as step-like,
+\[
+    \delta F \simeq \mu_0 \xi \Sigma \frac{H_c^2(T)}{2} - \mu_0 \lambda \Sigma \frac{H^2}{2}
+\]
+The positive sign of the first term is due to the fact that we need to \textbf{remove} a volume $\xi \Sigma$ from the superconducting region. Thus
+\[
+    \Delta F^{(\mathrm{i})}(T,H) = - \mu_0  \lrR{\ell-\xi} \Sigma \frac{H_c^2(T)}{2} - \mu_0 \lrR{\ell+\lambda} \Sigma \frac{H^2}{2}
+\]
+The interface is produced if $\Delta F^{(\mathrm{h})} - \Delta F^{(\mathrm{i})} > 0$. Such difference is given by
+\[  
+    \Delta F^{(\mathrm{h})} - \Delta F^{(\mathrm{i})} = -\mu_0  \lrR{\ell+\xi} \Sigma \frac{H_c^2}{2} + \mu_0 \lrR{\ell+\lambda} \Sigma \frac{H^2}{2}
+\]
+Now we consider $H\simeq H_c(T)$: the first terms in parenthesis cancel out, while we're left with
+\[
+    \Delta F^{(\mathrm{h})} - \Delta F^{(\mathrm{i})} \simeq \mu_0 \lrR{\lambda-\xi} \Sigma \frac{H_c^2}{2} > 0
+\]
+since $\lambda \gg \xi$ in type II superconductors. Then we conclude that when $\kappa \gg 1$, we must expect the system to produce a mixed phase with interfaces between normal and superconducting phase, being \textbf{locally} thermodynamically convenient. At this stage we cannot infer anything about the structure of such interfaces.
+Notice that the same exact argument can be used for type I superconductors, where $\kappa\ll1$: as expected the homogeneous solution is globally and locally convenient and no interfaces are expected.
+
+\begin{cit}{tinkham2004introduction}{4.3}
+    Special consideration is required to show that the exact crossover from positive to negative surface energy occurs for $\kappa = 1 /\sqrt{2}$. This was found by numerical integration by Ginzburg and Landau in their original paper, and they already anticipated that a conventional laminar intermediate state would only occur for lower values of $\kappa$. But until Abrikosov's path-breaking paper, no one fully anticipated the radically different behavior that resulted from the negative surface energy at higher values of $\kappa$. In one stroke, his paper created the study of type II superconductivity, the name he gave to materials with $\kappa > 1/\sqrt{2}$. Since this is the subject of the next chapter, for the present we shall simply remark that the negative surface energy causes the flux-bearing (normal) regions to subdivide until a quantum limit is reached in which each quantum of flux $\Phi_0 = hc/2e$ passes through the sample as a distinct flux tube. These flux tubes form a regular array, and $\Psi\to0$ along the axis of each one.
+\end{cit}
+Notice, in the above citation, that standard notation is used ($\kappa^\circledS$) and the charge unity is $q=2e$, which anticipates the fact that the elementary charged element in superconductors is \textbf{an electron pair}.
+
+\section{The Abrikosov vortex impurity}
+
+% Various definitions
+\def\vortexscale{0.85}
+\def\smallradius{0.25}
+\def\bigradius{0.65}
+\def\xlength{0.9}
+\def\ylength{0.7}
+\def\ratio{2.5}
+\def\smallradiusupdate{\smallradius/\ratio}
+\def\bigradiusupdate{\bigradius/\ratio}
+\def\pathradius{2.2*\bigradiusupdate}
+
+We now turn to one of the most fascinating topics in the physics of conventional superconductivity. In 1957 the breakthrough article of the Soviet Physicist Alexei Abrikosov \citetitle{Abrikosov:1956sx} \cite{Abrikosov:1956sx} laid the foundation for physically interpreting a very special phase of matter in certain temperature-field configurations of type II superconductors. As it turns out, in such phase magnetic flux can penetrate the sample creating a topological excitation, a robust configuration of localized flux density (which consists of exactly one quantum of flux $\Phi_0$), which defines a small core where the sample is in the normal state, and superconducting currents flowing in a vortex around it. This configuration is a quasiparticle excitation of the system.
+
+Alexei Abrikosov was awarded the Nobel Prize in Physics in 2003, altogether with Vitaly Ginzburg and Anthony James Leggett. His theory explained how a sample could maintain a superconducting behavior for fields higher than the critical field $H_c(T)$, and today is of fundamental importance in a broad range of science and technology, from particle accelerators and fusion reactors to topological materials as well as medical instrumentation using nuclear magnetic resonance.
+
+\subsection{Impurities: the Abrikosov vortex}\label{subsec:impurities: the abrikosov vortex}
+
+Consider an infinite sample, with an external field $\mathbf{H}=H \versor{z}$ applied in the $z$ direction. Suppose the sample to be in the homogeneous superconducting state, with exclusion of a certain finite region where the Ginzburg-Landau equations \eqref{eq:ginzburg landau eq 1} and \eqref{eq:ginzburg landau eq 2} admit an inhomogeneous solution. Such a region is an impurity with some geometrical structure. Being non-superconducting, the impurity is expected not to completely exclude magnetic flux density (i.e. non exhibiting a local Meissner effect).
+
+Now, the geometry of the impurity, which is supposed a stable state of the system, must obey the general symmetries of the problem: thus, it must exhibit cylindrical symmetry around the $z$ axis. We then select the center of this symmetric structure as the coordinates origin. The order parameter will obey the same dependence,
+\[
+    \Psi(\mathbf{x}) = \Psi(r)
+\]
+Inside the impurity the sample is in normal state, $\Psi=0$; outside it is in superconducting state, $\Psi\neq0$. The basic cylindrical structure with such behavior has a single cylindrical core of radius $\xi$, since $\mathcal{O}\lrR{\xi}$ is the length scale needed for $\Psi$ to break symmetry. We are dealing with a type II superconductor, so $\lambda>\xi$: we expect the field to penetrate in the sample in a region of radius $\mathcal{O}\lrR{\lambda}$. Then
+\[
+\begin{aligned}
+    &r < \xi \quad&&\text{core of the impurity} \quad&&\Psi=0 \quad&&B\neq0 \\
+    \xi < \;&r < \lambda \quad&&\text{field penetration region}  \quad&&\Psi\neq0 \quad&&B\neq0 \\
+    &r > \lambda \quad&&\text{bulk of the superconductor} \quad&&\Psi\neq0 \quad&&B=0 \\
+\end{aligned}
+\]
+The structure is represented in Fig.~\ref{subfig:vortex structure} (neglecting the $z$ direction). On the $xy$ plane, we denote the surface occupied by the inner core by $\sigma$. We expect currents to circulate in the intermediate region in order to sustain the $B$ flux penetrating inside the impurity inner core. This basic structure is called the Abrikosov vortex.
+
+\begin{figure}
+    \centering
+    % Subfloats
+    \subfloat[][Abrikosov vortex structure.]{\input{chapters/superconductivity/conventional superconductors/pictures/vortex structure}\label{subfig:vortex structure}}
+    \subfloat[][Integration paths.]{\input{chapters/superconductivity/conventional superconductors/pictures/vortex paths}\label{subfig:vortex paths}}
+    \caption{The vortex structure and integration paths described in Sec.~\ref{subsec:impurities: the abrikosov vortex}. The superconducting region extends approximately for $r>\xi$ and is shaded in figure. The dotted region, of radius $\sim \lambda$, is a non-Meissner phase with incomplete expulsion of the magnetic flux density. In Fig.~\ref{subfig:vortex paths} two integration paths are specified: $\partial\sigma$ delimits the inner core, $\sigma$, while $\partial\Sigma$ is a circular path deep in the bulk ($r\gg\lambda$) delimiting the surface $\Sigma$.}
+    \label{fig:vortex}
+\end{figure}
+
+Deep in the bulk, currents are null. Then, considering an integration path $\partial\Sigma$ as in Fig.~\ref{subfig:vortex paths}, we easily get
+\[
+    0 = \oint_{\partial\Sigma} d \bm\ell \cdot \mathbf{J} = \int_\Sigma d \Sigma \, \curl\mathbf{J} = \int_{\Sigma\setminus\sigma} d \Sigma \, \curl\mathbf{J}^{(\mathrm{s})} + \int_\sigma d \sigma \, \curl\mathbf{J}^{(\mathrm{c})}
+\]
+In the last passage we decomposed the surface integral in two parts, being simply $\Sigma = \lrR{\Sigma\setminus\sigma}\cup\sigma$. Moreover, we defined two contributions to the current: the \textbf{core current} $\mathbf{J}^{(\mathrm{c})}$ flowing in the core region $\sigma$ and the \textbf{superconducting current} $\mathbf{J}^{(\mathrm{s})}$ flowing in the remaining region $\Sigma\setminus\sigma$. Clearly only the latter obeys London equation \eqref{eq:London2},
+\[
+    0 = \oint_{\partial\Sigma} d \bm\ell \cdot \mathbf{J} = - \frac{1}{\Lambda} \int_{\Sigma\setminus\sigma} d \Sigma \, \curl\mathbf{A} + \int_\sigma d \sigma \, \curl\mathbf{J}^{(\mathrm{c})}
+\]
+We now work in the \textbf{extreme type II approximation}, $\xi \lll \lambda$. The core is reduced to a point and $\Sigma\setminus\sigma\simeq\Sigma$. Thus
+\[
+    \Phi_\Sigma(B) \simeq \Lambda \int_\sigma d \sigma \, \curl\mathbf{J}^{(\mathrm{c})}
+\]
+We know that magnetic flux is quantized in holes. Since we are dealing with the most basic impurity, which also needs to be the one closest to the transition from the mixed phase to the mean-field solution, it must be
+\[
+    \Phi_\Sigma(B)\imp\Phi_0
+\]
+which is, we assume \textbf{exactly one quantum of flux penetrates the vortex}. This gives a rather simple expression for the core current curl
+\[
+    \curl\mathbf{J}^{(\mathrm{c})} = \versor{z} \frac{\Phi_0}{\Lambda} \delta^{(2)}\lrR{\mathbf{r}}
+    \quad\qq{with}\quad
+    \mathbf{r} = \versor{x} x + \versor{y} y
+\]
+Now, since $\mu_0 \mathbf{J} = \curl\mathbf{B}$ (recall: the material is non-magnetic), taking the rotor of the total current $\mathbf{J}$ and using $\div\mathbf{B}=0$,
+\[
+\begin{aligned}
+    -\frac{1}{\mu_0} \laplacian\mathbf{B} &= \curl\mathbf{J} \\
+    &= \curl\mathbf{J}^{(\mathrm{s})} + \curl\mathbf{J}^{(\mathrm{c})} \\
+    &\simeq - \frac{1}{\Lambda} \curl\mathbf{A} + \versor{z} \frac{\Phi_0}{\Lambda} \delta^{(2)}\lrR{\mathbf{r}} = \frac{1}{\Lambda} \lrS{ \versor{z}\Phi_0 \delta^{(2)}\lrR{\mathbf{r}} - \mathbf{B} }
+\end{aligned}
+\]
+then, since $\Lambda/\mu_0=\lambda^2$
+\[
+\begin{aligned}
+    \lambda^2 \laplacian\mathbf{B} - \mathbf{B} &= - \versor{z}\Phi_0 \delta^{(2)}\lrR{\mathbf{r}} \\
+    \lrS{\lambda^2 \frac{1}{r} \pdv{}{r} \lrR{r \pdv{}{r}} - 1} B(r) &= - \Phi_0 \delta^{(2)}\lrR{\mathbf{r}}
+\end{aligned}
+\]
+where we used the cylindrical symmetry, $\mathbf{B}(\mathbf{r},z)=\versor{z}B(r)$. The mystical power of Bessel's functions solves this equation
+\begin{equation}\label{eq:field inside a vortex}
+    B(r) = \frac{\Phi_0}{2\pi \lambda^2} K_0 \lrR{\frac{r}{\lambda}}
+\end{equation}
+with $K_0$ a zero-th order modified Bessel function of the second kind, or Hanckel's function with imaginary argument, the form of which the author is essentially obscure of. Qualitatively it goes like
+\[
+\begin{aligned}
+    \xi\ll\;&r\ll\lambda \quad&&K_0\lrR{\frac{r}{\lambda}} \simeq \log\lrR{\frac{\lambda}{r}} \\
+    &r\gg\lambda \quad&&K_0\lrR{\frac{r}{\lambda}} \simeq \exp\lrR{-\frac{r}{\lambda}}
+\end{aligned}
+\]
+In the limit we are considering, reducing the impurity to a zero-dimensional object (a single point) the field would logarithmically diverge. In real world, in the central point of the impurity $B(0)=\mu_0 H$.
+
+% \begin{figure}
+%     \centering
+%     \input{chapters/superconductivity/conventional superconductors/pictures/vortex field}
+%     \caption{\color{red} Da fare: sul mio account desmos c'è un'approssimazione con l'accetta: 
+%     "Magnetic impurity in Abrikosov superconductor"}
+%     \label{fig:enter-label}
+% \end{figure}
+
+We now have an expression for the field strength inside each vortex. Taking the rotor of that field gives us the currents circulating in the vortex. Now we turn to some thermodynamics arguments.
+
+\subsection{Phase diagram of Abrikosov superconductors}\label{subsec:phase diagram of Abrikosov superconductors}
+
+As we know from Sec.~\ref{subsec:nucleation field} and Sec.~\ref{subsec:the mixed phase}, the condition $\kappa\gg1$ defines the region $H_c < H < H_{c2}$ represented in Fig.~\ref{subfig:subfig:type ii superconductor phase diagram} in which to produce an interface between a superconducting and a normal phase is thermodynamically convenient. The argument expressed in Sec.~\ref{subsec:the mixed phase} was rather rough and works suitably well in the following scenarios
+\[
+    H \ll H_c
+    \quad\qq{and}\quad
+    H_c \ll H < H_{c2}
+\]
+since in the first case, by physical intuition, the mean-field solution must be preferred, while being the second distant enough from $H_c$ we expect the sample to be essentially in the normal state with some nucleation of local superconductivity.
+
+So, it is natural to expect that the phase diagram in Fig.~\ref{fig: type ii superconductor phase diagram} -- with a mean-field, perfectly homogeneous solution evolving into an interfaced solution by crossing the curve $H_c(T)$ -- is \textbf{not} the real, physical one. To correct this problem, define $F^{(0)}$ as the free energy for the mean-field homogeneous superconductor, and $F^{(1)}$ the free energy for the superconductor \textbf{with one Abrikosov vortex}. By Ginzburg-Landau theory (neglect the thermal contribution to free energy)
+\begin{multline*}
+    F \lrS{ \Psi,\Psi^*,\mathbf{A}; \mathbf{H}} = \int d\mathbf{x} \, \lrS{ \frac{\abs{\curl\mathbf{A}}^2}{2\mu_0} - \lrR{ \curl\mathbf{A} } \cdot \mathbf{H} } \\
+    + \int d\mathbf{x} \lrS{
+        a \abs{\Psi(\mathbf{x)} }^2 + \frac{b}{2} \abs{ \Psi(\mathbf{x)} }^4 + \frac{c}{\hbar^2} \abs{-i\hbar\grad \Psi(\mathbf{x)} - q \mathbf{A} \Psi(\mathbf{x)} }^2
+    }
+\end{multline*}
+We work in the extreme type II approximation: in both cases, we consider $\Psi(\mathbf{x}) = \Psi_0$ everywhere in the sample (therefore neglecting terms arising from $\grad\Psi$). Thus
+\begin{multline*}
+    F \lrS{ \Psi,\Psi^*,\mathbf{A}; \mathbf{H}} = \int_{\R^3} d\mathbf{x} \, \lrS{ \frac{\abs{\curl\mathbf{A}}^2}{2\mu_0} - \lrR{ \curl\mathbf{A} } \cdot \mathbf{H} } \\
+    + \int_{\R^3} d\mathbf{x} \lrS{
+        a \Psi_0^2 + \frac{b}{2} \Psi_0^2 + c\Psi_0^2 \frac{q^2}{\hbar^2} \abs{\mathbf{A}}^2
+    }
+\end{multline*}
+The energy difference is only due to the free magnetic energy penetrating through the vortex and the Peierls contribution in the second line, being for $F^{(1)}$ somewhere $\mathbf{A}\neq\mathbf{0}$:
+\[
+\begin{aligned}
+    F^{(1)} - F^{(0)} &= \int d\mathbf{x} \, \lrS{ \frac{\abs{\curl\mathbf{A}}^2}{2\mu_0} - \lrR{ \curl\mathbf{A} } \cdot \mathbf{H} + c \frac{q^2}{\hbar^2} \abs{\mathbf{A}}^2 \Psi_0^2} \\
+    &= \int d\mathbf{x} \, \lrS{ \frac{\abs{\mathbf{B}}^2}{2\mu_0} - \mathbf{B}\cdot\mathbf{H} + \frac{\lambda^2}{2\mu_0} \abs{\curl\mathbf{B}}^2}
+\end{aligned}
+\]
+The last term is due to the facts
+\[
+    \mathbf{A} = - \Lambda\mathbf{J} = - \frac{\Lambda}{\mu_0} \curl\mathbf{B} = - \lambda^2 \curl\mathbf{B}
+\]
+and
+\[
+    \lambda^2 = \frac{m}{\mu_0 q^2 \Psi_0^2} = \frac{\hbar^2}{q^2} \frac{1}{2 \mu_0 c \Psi_0^2}
+    \quad\implies\quad
+    c\Psi_0^2 \frac{q^2}{\hbar^2} = \frac{1}{2\mu_0 \lambda^2}
+\]
+Now: the system exhibits $z$ translational invariance. The integration is carried out over the sample volume. We assume the sample to have a $xy$ surface $S$ and a $z$ extension $L$. Then the second term can be reduced to
+\[  
+    \int d\mathbf{x} \,\mathbf{B}\cdot\mathbf{H} = LH \int_{S} dS \, \versor{z}\cdot\mathbf{B} = LH \Phi_{S} (B)
+\]
+Finally, defining the \textbf{vortex line energy per unit length} at some fixed $z$
+\[
+    \epsilon^{(1)} \equiv \frac{1}{2\mu_0} \int_S dS \, \lrS{ \abs{\mathbf{B}}^2 + \lambda^2 \abs{\curl\mathbf{B}}^2}
+\]
+and using once again $z$ invariance, the resulting equation reads
+\begin{equation}\label{eq:one fluxon free energy intermediate passage}
+    F^{(1)} - F^{(0)} = L \lrS{\epsilon^{(1)} - H \Phi_{S} (B)}
+\end{equation}
+In order to create one vortex, it must be $F^{(1)} - F^{(0)} < 0$, i.e.
+\[
+    H > \frac{\epsilon^{(1)}}{\Phi_{S} (B)}
+\]
+Since as we know the minimum magnetic flux is one flux quantum, $\Phi_{S} (B) = \Phi_0$, this defines a \textbf{minimum magnetic field to enter the Abrikosov mixed phase} $\mathbf{H_{c1}}$,
+\[
+    H_{c1} \equiv \frac{\epsilon^{(1)}}{\Phi_0}
+\]
+In principle, it is not guaranteed $H_{c1} < H_{c2}$. It is now necessary to calculate $\epsilon^{(1)}$. With some algebraic manipulations we can get
+\[  
+    \epsilon^{(1)} = \frac{\lambda^2}{2\mu_0} \int_{S\setminus\sigma} d\Sigma \, \grad \cdot \lrS{ \mathbf{B} \bm{\times} \lrR{\curl\mathbf{B}} }
+\]
+using the notation of Fig.~\ref{subfig:vortex paths}, with $\sigma$ denoting the surface of the vortex inner core of radius $\xi$. Thanks to the Divergence Theorem and the fact that deep in the bulk the fields are null, the above integral becomes
+\[
+    \epsilon^{(1)} = \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma} d\bm\eta \cdot \lrS{ \mathbf{B} \bm{\times} \lrR{\curl\mathbf{B}} }
+    \quad\qq{where}\quad
+    d\bm\eta = - \versor{r} \xi d\theta 
+\]
+The integral is performed along the closed circuit $\partial\sigma$, but -- accordingly with the Divergence Theorem -- the differential element points outside the boundary. Outside, with respect to $S\setminus\sigma$, means towards the center of the inner core, which justifies the proportionality to $-\versor{r}$. Being $\mathbf{B}\parallel\versor{z}$ and only dependent on $r$, in cylindrical coordinates
+\[  
+    \mathbf{B} \bm{\times} \lrR{\curl\mathbf{B}} = \versor{z} B(r) \bm\times \lrR{-\overline{\bm\theta} \pdv{}{r} B(r)} = \versor{r} B(r) \pdv{}{r} B(r)
+\]
+This quantity is obviously constant along $\partial\sigma$, therefore
+\[
+    \epsilon^{(1)} = - \frac{\lambda^2}{2\mu_0} 2\pi\xi \lrS{B(r) \pdv{}{r} B(r)}_{r=\xi}
+\]
+Using Eq.~\eqref{eq:field inside a vortex}, in the case $r\gtrsim \xi$ (neglect the constant term, due to logarithmic dominance),
+\[
+\begin{aligned}
+    \epsilon^{(1)} &\simeq - \frac{\lambda^2}{2\mu_0} 2\pi\xi \frac{\Phi_0}{2\pi \lambda^2} \log\lrR{\frac{\lambda}{\xi}} \lrS{ \pdv{}{r} \frac{\Phi_0}{2\pi \lambda^2} \log\lrR{\frac{\lambda}{r}} }_{r=\xi} \\
+    &= \frac{\xi \Phi_0^2}{4\pi\mu_0 \lambda^2} \frac{1}{\xi} \log\lrR{\frac{\lambda}{\xi}}
+\end{aligned}
+\]
+then
+\[
+    H_{c1} = \frac{\Phi_0}{4\pi\mu_0 \lambda^2} \log\lrR{\frac{\lambda}{\xi}}
+\]
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/conventional superconductors/pictures/type ii abrikosov superconductor phase diagram}
+	\caption{Phase diagram of an Abrikosov superconductor. The dotted region represents the mixed phase, in which Abrikosov vortices -- impurities carrying each one one quantum of flux -- can exist. Phenomenologically speaking, the field $H_c(T)$ has no particular behavior.}
+	\label{type ii abrikosov superconductor phase diagram}
+\end{figure}
+
+In doing all these calculations the mathematical rigour is acrobatically ignored. One could argue that the last passage is inconsistent with the extreme type II approximation. One could, but that one is not the author. In Sec.~\ref{subsec:nucleation field} we used the identity
+\[
+    \mu_0 H_c = \frac{1}{\lambda\xi} \frac{\Phi_0}{4\pi}
+\]
+then
+\[
+    H_{c1} = \frac{\Phi_0}{4\pi\mu_0 \lambda^2} \log\lrR{\frac{\lambda}{\xi}} = \frac{1}{\mu_0} \lrR{\frac{1}{\lambda\xi} \frac{\Phi_0}{4\pi}} \frac{\xi}{\lambda} \log\lrR{\frac{\lambda}{\xi}}
+\]
+which gives
+\[
+    H_{c1} = \frac{\log\kappa}{\kappa} H_c
+\]
+Being $\kappa\gg1$ by hypothesis, this relation confirms that Abrikosov's mixed phase exists in the window
+\[
+    H_{c1} < H_c < H_{c2}
+\]
+The corrected phase diagram is depicted in Fig.~\ref{type ii abrikosov superconductor phase diagram}, and shows the intermediate region where Abrikosov vortices live.
+
+\section{The Abrikosov lattice}
+
+So, in certain conditions magnetic flux can penetrate the sample in a quantized manner, piercing holes with a specific field-current structure -- the Abrikosov vortices. Each of this vortices carries exactly one quantum of flux $\Phi_0$, its ``charge''. Clearly, inverting the direction of the penetrating field, the sign of the charge inverts. Then two classes of vortices exist -- those with charge $+\Phi_0$ and those with charge $-\Phi_0$. The noun ``charge'' is all but casual: as it turns out, \textbf{vortices with same charge repel each other, while vortices with same charge attract each other}. Impressive, isn't it?
+
+This section is devoted to the study of the so-called Abrikosov lattice. The phenomenology is the following: when many vortices with the same charge nucleate in the superconducting sample (maintaining low the vortices density) they create a regular configuration -- a triangular lattice. These vortices, also called \textbf{fluxons}, behave just like particles with a certain interaction law. As low-energy excited states, they are quasiparticles. First, we take off by studying how two fluxons interact.
+
+\subsection{Interaction of two static fluxons with same charge}
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/conventional superconductors/pictures/two fluxons interacting}
+	\caption{Pictorial representation of two ``distant'' fluxons. The arrows on the $xy$ represent current flows, while the shading (of radius $\sim\lambda$) represents field intensity.}
+	\label{fig:two fluxons interacting}
+\end{figure}
+
+Consider two fluxons with same charge $+\Phi_0$ at positions $\mathbf{r}_1\equiv(x_1,y_1)$ and $\mathbf{r}_2\equiv(x_2,y_2)$. Each structure has an inner core of radius $\xi$ (which we approximate as a dot) and an outer, superconducting core of radius $\lambda$. A pictorial representation of such situation is given in Fig.~\ref{fig:two fluxons interacting}. To keep it simple, we consider the fluxons \textit{distant}. This means
+\[
+	\abs{\mathbf{r}_1-\mathbf{r}_2} \gg \lambda
+\]
+Within this approximation it makes sense to assume that the magnetic flux lines of one vortex do not interact with those of the other. Therefore each vortex has the same field-currents structure a single vortex in the sample would have. We may refer to the field ``in the vortex $j$'' as $\mathbf{B}_j(\mathbf{r})$. Then the total magnetic flux density is given by
+\[
+\begin{aligned}
+	\mathbf{B}_\mathrm{tot}(\mathbf{r}) &= \mathbf{B}_1(\mathbf{r}) + \mathbf{B}_2(\mathbf{r}) \\
+	&= \versor{z} \lrS{B(\abs{\mathbf{r}-\mathbf{r}_1})+B(\abs{\mathbf{r}-\mathbf{r}_2})}
+\end{aligned}
+\]
+where $B(r)$ is the function in Eq.~\eqref{eq:field inside a vortex}. Even if the field lines of one fluxon are not modified by the presence of the other fluxon, the two interact. We want to estimate the free energy due to interaction as
+\[
+	F^{(\mathrm{int})} \equiv F^{(2)} - 2F^{(1)}
+\]
+where $F^{(2)}$ is the total free energy of the sample with two fluxons and $F^{(1)}$ is, as before, the free energy with one fluxon. The latter we know. As in the case of a single fluxon (see the previous section), $F^{(2)}$ is given by
+\begin{align}
+	F^{(2)} - F^{(0)} &= \int d\mathbf{x} \, \lrS{ \frac{\abs{\mathbf{B}_\mathrm{tot}}^2}{2\mu_0} - \mathbf{B}_\mathrm{tot}\cdot\mathbf{H} + \frac{\lambda^2}{2\mu_0} \abs{\curl\mathbf{B}_\mathrm{tot}}^2} \nonumber \\
+	&= L \lrS{\epsilon^{(2)}-H\Phi_S(\mathbf{B}_\mathrm{tot})} \label{eq:two fluxons free energy intermediate passage}
+\end{align}
+where, analogously,
+\[
+\begin{aligned}
+	\epsilon^{(2)} &= \frac{\lambda^2}{2\mu_0} \int_{S\setminus\lrR{\sigma_1\cup\sigma_2}} d\Sigma \, \grad \cdot \lrS{ \mathbf{B}_\mathrm{tot} \bm{\times} \lrR{\curl\mathbf{B}_\mathrm{tot}} } \\
+	&= \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_\mathrm{tot} \bm{\times} \lrR{\curl\mathbf{B}_\mathrm{tot}} } + \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_2} d\bm\eta_2 \cdot \lrS{ \mathbf{B}_\mathrm{tot} \bm{\times} \lrR{\curl\mathbf{B}_\mathrm{tot}} }
+\end{aligned}
+\]
+In the above passages we have worked exactly as in the above section, integrating over the whole sample $S$ except the two cores $\sigma_1$ (around $\mathbf{r}_1$) and $\sigma_2$ (around $\mathbf{r}_2$) and then used the Divergence Theorem to move the integral over the domain boundary $\partial\sigma_1\cup\partial\sigma_2$. Remember that the two differentials $d\bm\eta_1$ and $d\bm\eta_2$ point inward. Let us analyze the first term
+\begin{align}
+	\oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_\mathrm{tot} \bm{\times} \lrR{\curl\mathbf{B}_\mathrm{tot}} } &= \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_1 \bm{\times} \lrR{\curl\mathbf{B}_1 } } \label{eq:two fluxons first term} \\
+	&+ \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_1 \bm{\times} \lrR{\curl\mathbf{B}_2 } } \label{eq:two fluxons second term}\\
+	&+ \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_2 \bm{\times} \lrR{\curl\mathbf{B}_1 } } \label{eq:two fluxons third term}\\
+	&+ \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_2 \bm{\times} \lrR{\curl\mathbf{B}_2 } } \label{eq:two fluxons fourth term}
+\end{align}
+Here we have labeled each line of the equation to refer precisely to each term in the sum. In the first \eqref{eq:two fluxons first term} we recognize an expression proportional to $\epsilon^{(1)}$. Consider the second term, \eqref{eq:two fluxons second term}:
+\[
+	\oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_1 \bm{\times} \lrR{\curl\mathbf{B}_2 } }
+\]
+We are integrating around core $1$. Thus $\mathbf{B}_1 = B(\xi) \versor{z}$ along all the integration path $\partial\sigma_1$. What remains is $\curl\mathbf{B}_2$. We now show
+\[
+	\abs{\oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ B(\xi) \versor{z} \bm\times  \lrR{\curl\mathbf{B}_2} }} = B(\xi)\Phi_{\sigma_1} \lrR{\mathbf{B}_2}
+\]
+This can be seen as follows. Set temporarily the coordinates origin at $(\mathbf{r}_1,0)$ and use cylindrical coordinates. The differential $d\bm\eta_1$ is directed radially, while $B(\xi) \versor{z} \bm\times  \lrR{\curl\mathbf{B}_2}$ is in principle a complicated vector in the $xy$ plane, being $\mathbf{B}_2$ off-center. Due to the vector product with $\versor{z}$, its radial and angular components are interchanged. Then, integrating along $\partial\sigma_1$ with a radial differential is the same as integrating directly $\curl\mathbf{B}_2$ along the same path with an angular differential - that is, computing the circuitation of $\mathbf{B}_2$. Due to Stokes Theorem, we have the result.
+
+An analogous reasoning can be done for the third term, \eqref{eq:two fluxons third term}, now approximating $\mathbf{B}_2 \simeq B(\abs{\mathbf{r}_1-\mathbf{r}_2})$ along $\partial\sigma_1$: the fluxons are distant, so one field is approximately constant over the other's core. Therefore this term is proportional to the ``on site flux'' $\Phi_{\sigma_1} \lrR{\mathbf{B}_1} \gg \Phi_{\sigma_1} \lrR{\mathbf{B}_2}$. Summarizing, we have
+\[
+\begin{aligned}
+	\abs{\oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_1 \bm{\times} \lrR{\curl\mathbf{B}_2 } }} &= B(\xi)\Phi_{\sigma_1} \lrR{\mathbf{B}_2} \\
+	\abs{\oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_2 \bm{\times} \lrR{\curl\mathbf{B}_1 } }} &\simeq B(\abs{\mathbf{r}_1 - \mathbf{r}_2})\Phi_{\sigma_1} \lrR{\mathbf{B}_1}
+\end{aligned}
+\]
+Of course $B(\abs{\mathbf{r}_1 - \mathbf{r}_2}) \ll B(\xi)$. We compare \eqref{eq:two fluxons second term} and \eqref{eq:two fluxons third term} as follows: first, we approximate $\Phi_{\sigma_1} \lrR{\mathbf{B}_2} \simeq \sigma_1 B(\abs{\mathbf{r}_1 - \mathbf{r}_2})$. Then
+\[
+	\frac{B(\xi)\Phi_{\sigma_1} \lrR{\mathbf{B}_2}}{B(\abs{\mathbf{r}_1 - \mathbf{r}_2})\Phi_{\sigma_1} \lrR{\mathbf{B}_1}} \simeq \frac{\sigma_1 B(\xi)}{\Phi_{\sigma_1} \lrR{\mathbf{B}_1}} \ll 1
+\]
+because $B(r)$ is a decreasing function of distance and its minimum value in the core is $B(\xi)$, at its border. Moreover, at the core center the field is much stronger than at the border. Thus \eqref{eq:two fluxons second term} is subleading if confronted with \eqref{eq:two fluxons third term}.
+
+The last term \eqref{eq:two fluxons fourth term} can be safely neglected, since the vortices are distant and $\mathbf{B}_2$ is suppressed on the boundary $\partial\sigma_1$, thus such term is subleading if compared to the second \eqref{eq:two fluxons second term} and the third \eqref{eq:two fluxons third term}. Then
+\[
+\begin{aligned}
+	\oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_\mathrm{tot} \bm{\times} \lrR{\curl\mathbf{B}_\mathrm{tot}} } &\simeq \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_1 \bm{\times} \lrR{\curl\mathbf{B}_1 } } \\
+	&+ \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_2 \bm{\times} \lrR{\curl\mathbf{B}_1 } }
+\end{aligned}
+\]
+
+The same obviously holds for the terms around $\partial\sigma_2$. Putting everything together, we get
+\[
+\begin{aligned}
+	\epsilon^{(2)} = 2 \epsilon^{(1)} &+ \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_2 \bm{\times} \lrR{\curl\mathbf{B}_1 } } \\
+	&+ \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_2} d\bm\eta_2 \cdot \lrS{ \mathbf{B}_1 \bm{\times} \lrR{\curl\mathbf{B}_2 } }
+\end{aligned}
+\]
+The two integrals give the same result due to exchange symmetry. Therefore we can write, finally
+\[
+	\epsilon^{(2)} = 2 \lrS{ \epsilon^{(1)} + \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_2 \bm{\times} \lrR{\curl\mathbf{B}_1 } } }
+\]
+We proceed as before to calculate the integral. First, we get rid of the off-center field,
+\[
+	\frac{\lambda^2}{2\mu_0} B(\abs{\mathbf{r}_1-\mathbf{r}_2}) \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \versor{z}\cdot \lrR{\curl\mathbf{B}_1 } }
+\]
+Without loss of generality we can move the origin of the axis in order to get $\mathbf{r}_1 = \mathbf{0}$. This choice is done to make the following notations simpler. Then, by the same logic exposed in Sec.~\ref{subsec:phase diagram of Abrikosov superconductors}, the field can only have a radial dependence (with respect to the core center, $\mathbf{r}_1$, which is now the coordinate origin $\mathbf{0}$) and thus
+\[
+	\versor{z} \bm{\times} \lrR{\curl\mathbf{B}} = \versor{z} \bm\times \lrR{-\overline{\bm\theta} \pdv{}{r} B(r)} = \versor{r} \pdv{}{r} B(r)
+\]
+This quantity is clearly constant along $\partial\sigma_1$; being $d\bm\eta_1 = -\xi d\theta \versor{r}$ and making use of Eq.~\eqref{eq:field inside a vortex} it turns out
+\[
+\begin{aligned}
+	\frac{\lambda^2}{2\mu_0} &B(\abs{\mathbf{r}_2}) \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \versor{z}\cdot \lrR{\curl\mathbf{B}_1 } } \\
+	&= \frac{\lambda^2}{2\mu_0} \lrS{ \frac{\Phi_0}{2\pi\lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_2}}{\lambda}} } \int_0^{2\pi} (-\xi) d\theta \lrS{\pdv{}{r} \frac{\Phi_0}{2\pi\lambda^2} K_0 \lrR{\frac{r}{\lambda}} }_{r=\xi} \\
+	&\simeq \frac{\Phi_0^2}{8\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_2}}{\lambda}} \int_0^{2\pi} \xi d\theta \lrS{\pdv{}{r} \log\lrR{\frac{r}{\lambda}} }_{r=\xi} \\
+	&= \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_2}}{\lambda}}
+\end{aligned}
+\]
+The obvious, general result for $\mathbf{r}_1 \neq \mathbf{0}$ is simply
+\[
+	\epsilon^{(2)} = 2 \lrS{ \epsilon^{(1)} + \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} }
+\]
+then, going back to Eq.~\eqref{eq:two fluxons free energy intermediate passage}, and noting that the total flux through $S$ is simply $2\Phi_0$ (each vortex carries one quantum of flux),
+\[
+\begin{aligned}
+	F^{(2)} - F^{(0)} &= L \lrS{\epsilon^{(2)}- 2H\Phi_0} \\
+	&= 2L \lrS{\epsilon^{(1)} + \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} - H\Phi_0} \\
+	&= 2 \lrS{F^{(1)} - F^{(0)}} + 2L \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}}
+\end{aligned}
+\]
+where we made use of Eq.~\eqref{eq:one fluxon free energy intermediate passage}. We finally have an expression for the interaction energy $F^{(\mathrm{int})} \equiv F^{(2)} - 2F^{(1)}$,
+\begin{align}
+	F^{(\mathrm{int})} &= - F^{(0)} + \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} \nonumber \\
+	&\simeq - F^{(0)} + \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^2} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} } \label{eq:two fluxons interaction free energy}
+\end{align}
+In the last passage we used the approximation for distant fluxons $\abs{\mathbf{r}_1-\mathbf{r}_2} \gg \lambda$. The term $- F^{(0)}$ is a mere shift and can be neglected. It is evident that two fluxons with the same charge repel each other, being the interaction contribution in Eq.~\eqref{eq:two fluxons interaction free energy} inherently positive and steadily decreasing for increasing distance $\abs{\mathbf{r}_1-\mathbf{r}_2}$.
+
+It is now trivial to compute the force exerted from one vortex onto the other: by defining $\mathbf{r}_{12} \equiv \mathbf{r}_1-\mathbf{r}_2$, $\versor{r}_{12} \equiv \lrR{\mathbf{r}_1-\mathbf{r}_2}/\abs{\mathbf{r}_1-\mathbf{r}_2}$ and $\grad_{12}$ the gradient taken with respect to $\versor{r}_{12}$, it is
+\[
+	\mathbf{f}_{12} = - \grad_{12} F^{(\mathrm{int})} = \versor{r}_{12} \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^3} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} }
+\]
+which is repulsive, correctly.
+
+\subsection{Interaction of two static fluxons with opposite charge}
+
+The computation for two \textbf{distant} fluxons with opposite charge is rather trivial at this point. All that changes is the direction of one of the two penetrating fields (say, the second),
+\[
+\begin{aligned}
+	\mathbf{B}_\mathrm{tot}(\mathbf{r}) &= \mathbf{B}_1(\mathbf{r}) + \mathbf{B}_2(\mathbf{r}) \\
+	&= \versor{z} \lrS{B(\abs{\mathbf{r}-\mathbf{r}_1})-B(\abs{\mathbf{r}-\mathbf{r}_2})}
+\end{aligned}
+\]
+By going through all the above calculation once again, it is easy to see that an \textbf{attractive} force emerges between the two fluxons,
+\[
+	\mathbf{f}_{12} = -\versor{r}_{12} \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^3} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} }
+\]
+We need to be careful. While in the above section two fluxons repel each other, letting us use the distant fluxons approximation all the way through the evolution, in this case all our approximations will break at some point when the two fluxons get near enough. To determine the exact behavior of the fluxons is rather difficult, so we shall not go in that direction.
+
+In certain situations, a vortex and an antivortex can form a bound-state: for example, by separating the sample in two superconducting domains with the field applied in opposite directions, we expect that due to magnetic interaction a repulsive force emerges inhibiting the vortex and the antivortex from crossing the wall; this repulsion can balance with the vortex-antivortex attraction. As shown in the article \citetitle{Simmendinger_2020} \cite{Simmendinger_2020}, this situations leads to a very interesting and special bound state across the domain wall.
+
+\subsection{Interaction of two moving fluxons with same charge}
+
+This short section is largely based on the article by \citeauthor{PhysRevB.102.024506}, \citetitle{PhysRevB.102.024506} \cite{PhysRevB.102.024506}, and rapidly treats how two moving fluxons interact. {\color{red}completa\dots}
+
+\subsection{Many fluxons with the same charge: the lattice ground state}
+
+Consider now a slab with $N$ identical fluxons, in the \textbf{low-density approximation}: any vortex is \textbf{distant} (which means, at a distance larger than $\lambda$) from any other vortex. We work in the thermodynamical limit: the volume is large enough to neglect border effect, while the fluxon density remains finite. Experimentally, it is found that fluxons form a stable lattice: our aim is to prove that a square lattice is energetically unfavorable with respect to a triangular lattice. All this section is intended in two dimensions.
+
+Start by taking the $N$ fluxons free energy, $F^{(N)}$. In principle, are to be expected three-fluxons interactions (and possible higher orders).
+Let's extend what we found for two fluxons. The total magnetic field is
+\[
+	\mathbf{B}_\mathrm{tot} = \sum_i \mathbf{B}_i (\mathbf r) = \sum_i \versor{z} B\lrR{\mathbf{r} - \mathbf{r}_i}
+\]
+where the sum runs over all the fluxons, at positions $\mathbf{r}_i$. The $N$ fluxons free energy is given by
+\[
+	F^{(N)} - F^{(0)} = L \lrS{\epsilon^{(N)} - H \Phi_{S} (B)}
+\]
+The above equation is the simple extension of Eq.~\eqref{eq:one fluxon free energy intermediate passage}. Here we have defined
+\[
+\begin{aligned}
+	\epsilon^{(N)} &= \frac{\lambda^2}{2\mu_0} \sum_i \oint_{\partial\sigma_i} d\bm\eta_i \cdot \lrS{ \mathbf{B}_\mathrm{tot} \bm{\times} \lrR{\curl\mathbf{B}_\mathrm{tot}} } \\
+	&= \frac{\lambda^2}{2\mu_0} \sum_i \sum_{jl} \oint_{\partial\sigma_i} d\bm\eta_i \cdot \lrS{ \mathbf{B}_j \bm{\times} \lrR{\curl\mathbf{B}_l} }
+\end{aligned}
+\]
+The magnetic corrections to free energy involve line integrals around cores $\partial\sigma_i$ of \textbf{two} fields. These fields could be both off-center (which means, fields pinning through vortices $j$ and $l$, with $i\neq j\neq l\neq i$). We neglect such contributions, clearly subleading in the low-density regime, limiting ourselves to two-centers integrals: in the above summation, we ignore all terms where $i$,$j$ and $l$ are all different. By following the same line of reasoning of the above section, only two terms survive
+\[
+\begin{aligned}
+	\epsilon^{(N)} &\simeq \frac{\lambda^2}{2\mu_0} \sum_i \oint_{\partial\sigma_i} d\bm\eta_i \cdot \lrS{ \mathbf{B}_i \bm{\times} \lrR{\curl\mathbf{B}_i } } \\
+	&+ \frac{\lambda^2}{2\mu_0} \sum_{i\neq j} \oint_{\partial\sigma_i} d\bm\eta_i \cdot \lrS{ \mathbf{B}_j \bm{\times} \lrR{\curl\mathbf{B}_i } }
+\end{aligned}
+\]
+In the first one we recognize $N\epsilon^{(1)}$. For the second, defining $f(i,j)$ as
+\[
+	f(i,j) = \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_i} d\bm\eta_i \cdot \lrS{ \mathbf{B}_j \bm{\times} \lrR{\curl\mathbf{B}_i } } + \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_j} d\bm\eta_j \cdot \lrS{ \mathbf{B}_i \bm{\times} \lrR{\curl\mathbf{B}_j } }
+\]
+we get
+\[
+	\epsilon^{(N)} = N\epsilon^{(1)} + \sum_{i<j} f(i,j)
+\]
+Now: each vortex carries a flux $\Phi_0$. Since $F^{(1)} - F^{(0)} = L[ \epsilon^{(1)}-H\Phi_0 ]$, we have
+\[
+	F^{(N)} - F^{(0)} = N \lrS{F^{(1)} - F^{(0)}} + L \sum_{i<j} f(i,j)
+\]
+thus
+\[
+	F^{(\mathrm{int})} \equiv F^{(N)} - N F^{(1)} = - (N-1) F^{(0)} + \frac{L}{2} \sum_{i\neq j} f(i,j)
+\]
+In the last passage the sum was corrected by the factor \half.
+The geometric contribution of the sample to stability enters in the last term in the sum. With the notation $\langle i,j \rangle$ we indicate the set of sites $j$ of the lattice such that $i$ and $j$ are first nearest neighbors: since the interaction is exponentially suppressed with distance, we neglect interaction with neighbors of order higher than first,
+\[
+	F^{(\mathrm{int})} \simeq - (N-1) F^{(0)} + \frac{L}{2} \sum_{\langle i,j \rangle} f(i,j)
+\]
+
+\begin{figure}
+	\centering
+	\subfloat[][ciao]{\input{chapters/superconductivity/conventional superconductors/pictures/square lattice}\label{subfig:square lattice}}
+	\subfloat[][ciao]{\input{chapters/superconductivity/conventional superconductors/pictures/triangular lattice}\label{subfig:triangular lattice}}
+	\caption{ciao}
+	\label{fig:lattices}
+\end{figure}
+
+Now: we

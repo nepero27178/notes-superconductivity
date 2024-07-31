@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel={$x$},
+        ylabel={$y$},
+        xlabel style=right,
+        ylabel style=above,
+        xmin=-1,
+        xmax=1,
+        ymin=-0.8,
+        ymax=0.8
+        ]
+
+        \def\holeradius{0.2}
+        \def\hole{(axis cs:0,0) circle (\holeradius)}
+        \def\sample{(axis cs:-0.9,-0.7) rectangle (axis cs:0.9,0.7)}
+        \def\pathradius{0.6}
+
+        \begin{scope}
+            \fill[color=lev!30,opacity=0.5] \sample -- \hole;
+        \end{scope}
+
+        \draw[color=lev!60] 
+            (axis cs: 0,0) circle (\pathradius);
+        \draw[color=lev!60] 
+        \foreach \angle in {15,75,...,315} {
+            (\angle:\pathradius) 
+            node[rotate=90+\angle] {\arrowIn}
+        };
+        \node[color=lev!60,anchor=south east] at (160:\pathradius) {\scriptsize $\partial\Sigma$};
+        \node[color=lev!60,anchor=north west] at (300:\pathradius) {\scriptsize $\Psi\simeq\Psi_0$};
+        
+        \draw[dashed,color=lev!60]
+            (axis cs: 0,0) -- (-65:\holeradius)
+            node[anchor=west,midway] {\scriptsize $r_0$};
+        \draw[dashed,color=lev!60]
+            (axis cs: 0,0) -- (35:\pathradius)
+            node[anchor=north,midway] {\scriptsize $r$};
+    \end{axis}
+\end{tikzpicture}

@@ -1,0 +1,51 @@
+\begin{tikzpicture}
+    \def\cte{3.5}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xlabel={$T\quad$},
+        ylabel={$H$},
+        xlabel style={right},
+        ylabel style={above},
+        xtick={0.5},
+        ytick={ln(\cte)/\cte,1,\cte},
+        xticklabel={$T_c$},
+        yticklabels={$H_{c1}(0)$,$H_c(0)$,$H_{c2}(0)$},
+        xmin=-0.1, xmax=0.6,
+        ymin=-0.15, ymax=\cte*1.1]
+
+        \path[name path=base] (0,0) -- (0.5,0);
+
+        % Hc2
+        \addplot[color=lev,domain=0:0.5,name path=Hc2]
+            {\cte*(1 - 4*x^2)};
+
+        % Hc
+        \addplot[color=lev,domain=0:0.5,dashed,name path=Hc] 
+            {1 - 4*x^2};
+
+        % Hc1
+        \addplot[color=lev,domain=0:0.5,name path=Hc1]
+            {(ln(\cte)/\cte) * (1 - 4*x^2)};
+
+        % Fill
+        \tikzfillbetween[of=Hc2 and Hc1,on layer=ft] {
+            pattern={Dots[angle=45,distance={3pt/sqrt(2)}]},
+            pattern color=lev!60,
+            opacity=0.75
+        };
+        \tikzfillbetween[of=Hc and base,on layer=ft] {
+            color=lev!30,
+            opacity=0.5
+        };
+
+        % Parameter and nodes
+        \node () at (axis cs: 0.3,\cte*0.8)
+            [anchor=center,color=lev]{\small $H_{c2}(T)$};
+        \node () at (axis cs: 0.25,0.8)   
+            [anchor=south,color=lev] {\small $H_c(T)$};
+        \node () at (axis cs: 0.12,0.35)   
+            [anchor=south,color=lev] {\small $H_{c1}(T)$};
+    \end{axis}
+\end{tikzpicture}

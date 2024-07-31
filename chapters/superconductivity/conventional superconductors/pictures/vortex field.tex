@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel={$x$},
+        ylabel={$y$},
+        xlabel style=right,
+        ylabel style=above,
+        xmin=-\xlength-0.1, xmax=\xlength+0.1,
+        ymin=-\ylength-0.1, ymax=\ylength+0.1,
+        scale=1.5*\vortexscale
+        ]
+
+        % Elements
+        \path[name path=core] (axis cs:0,0) circle (\smallradiusupdate);
+        \path[name path=interface] (axis cs:0,0) circle (\bigradiusupdate);
+        \path (axis cs:0,0) circle (\pathradius);
+        \path[name path=sample] (axis cs:-\xlength,-\ylength) rectangle (axis cs:\xlength,\ylength);
+
+        % Regions filling
+        \tikzfillbetween[of=core and interface]{
+            pattern={Dots[angle=45,distance={3pt/sqrt(2)}]},
+            pattern color=lev
+        };
+    \end{axis}
+\end{tikzpicture}

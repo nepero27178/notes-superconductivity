@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xtick=\empty,
+        ytick=\empty,
+        xlabel={$x$},
+        ylabel={$y$},
+        xlabel style=right,
+        ylabel style=above,
+        xmin=-\xlength-0.1, xmax=\xlength+0.1,
+        ymin=-\ylength-0.1, ymax=\ylength+0.1,
+        scale=\vortexscale
+        ]
+
+        % Elements
+        \draw[name path=core,color=lev!60] (axis cs:0,0) circle (\smallradiusupdate);
+        \path[name path=interface] (axis cs:0,0) circle (\bigradiusupdate);
+        \draw[name path=integration,color=lev!60] (axis cs:0,0) circle (\pathradius);
+        \path[name path=sample] (axis cs:-\xlength,-\ylength) rectangle (axis cs:\xlength,\ylength);
+
+        % Regions filling
+        \tikzfillbetween[of=core and sample,on layer=ft]{
+            color=lev!30,
+            opacity=0.5
+        };
+        \tikzfillbetween[of=core and interface,on layer=ft]{
+            pattern={Dots[angle=45,distance={3pt/sqrt(2)}]},
+            pattern color=lev!60,
+            opacity=0.4
+        };
+
+        % Arrows
+        \def\angle{30}
+        \draw[color=lev!60] (\angle:\smallradiusupdate) node[rotate=90+\angle] {\arrowIn};
+        \draw[color=lev!60] (\angle:\pathradius) node[rotate=90+\angle] {\arrowIn};
+
+        % Nodes
+        \node (inner) at (30:\smallradiusupdate) [anchor=south west,color=lev!60,xshift=-0.5ex,yshift=-0.5ex]{\scriptsize $\partial\sigma$};
+        \node (outer) at (30:\pathradius) [anchor=south west,color=lev!60,xshift=-0.5ex,yshift=-0.5ex]{\scriptsize $\partial\Sigma$};
+    \end{axis}
+\end{tikzpicture}

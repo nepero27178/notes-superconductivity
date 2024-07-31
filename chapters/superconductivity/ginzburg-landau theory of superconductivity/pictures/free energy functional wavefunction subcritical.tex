@@ -1,0 +1,74 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis z line=center,
+        xlabel={$\Re{\Psi}$},
+        ylabel={$\quad\Im{\Psi}$},
+        zlabel={$F$},
+        xlabel style={below},
+        ylabel style={below},
+        zlabel style={above},
+        xtick=\empty,
+        ytick=\empty,
+        ytick=\empty,
+        xticklabel=\empty,
+        yticklabel=\empty,
+        zticklabel=\empty,
+        xmin=-1,
+        xmax=1,
+        ymin=-1,
+        ymax=1,
+        zmin=-0.4,
+        zmax=1.2,
+        view/h=140,
+        view/v=20,
+        colormap name=levmap,
+        scale=1.4]
+
+        \addplot3[
+            domain=0.353:0.6,
+            variable=r,
+            y domain=0:360,
+            variable y=theta,
+            samples=25,
+            smooth,
+            surf,
+            opacity=0.2
+        ] (
+            {r*cos(theta)},
+            {r*sin(theta)},
+            {-5*r^2+20*r^4}
+        );
+
+        \addplot3[
+            % domain=-81:181,
+            domain=0:360,
+            samples y=1,
+            variable=theta,
+            smooth,
+            color=lev,
+            line width=0.25mm
+        ] (
+            {0.353*cos(theta)},
+            {0.353*sin(theta)},
+            {-0.312}
+        );
+
+        \addplot3[
+            domain=0:0.353,
+            variable=r,
+            y domain=0:360,
+            variable y=theta,
+            samples=25,
+            smooth,
+            surf,
+            opacity=0.2
+        ] (
+            {r*cos(theta)},
+            {r*sin(theta)},
+            {-5*r^2+20*r^4}
+        );
+        
+    \end{axis}
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+	\def\xlength{3}
+	\def\ylength{2.3}
+	\begin{axis}[
+		axis x line=center,
+		axis y line=center,
+		%		axis on top,
+		axis equal image,
+		xlabel={$x$},
+		ylabel={$y$},
+		xlabel style={right},
+		ylabel style={above},
+		xtick=\empty,
+		ytick=\empty,
+		xticklabels=\empty,
+		yticklabel=\empty,
+		xmin=-\xlength*1.2, xmax=\xlength*1.2,
+		ymin=-\ylength*1.2, ymax=\ylength*1.2,
+		]
+		
+		\def\damping{0.12}
+		\fill[color=lev!30]
+		\foreach \x in {-\xlength,...,\xlength}
+		\foreach \y in {-\xlength,...,\xlength} {
+		    (\x,\y) circle (\damping)
+		    % CONTINUA
+		};
+	\end{axis}
+\end{tikzpicture}

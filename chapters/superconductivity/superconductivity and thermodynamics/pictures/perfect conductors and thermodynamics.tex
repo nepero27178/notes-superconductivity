@@ -1,0 +1,50 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xlabel={$T$},
+        ylabel={$H$},
+        xlabel style={below right},
+        ylabel style={above left},
+        xtick={0.33,0.6},
+        ytick={1.2},
+        xticklabels={$T_c$,$T_0$},
+        yticklabel={$H_0$},
+        xmin=-0.15,
+        xmax=0.8,
+        ymin=-0.25,
+        ymax=1.75]
+
+        \fill[color=lev!30,opacity=0.5] (0,0) rectangle (0.33,1.7);
+
+        % Path 1
+        \draw[color=lev,dashed] (0.6,1.2) -- (0.25,1.2) node[
+        	sloped,
+        	pos=0.5,
+        	allow upside down
+        ]{\arrowIn};
+        \draw[color=lev,dashed] (0.25,1.2) -- (0.25,0) node[
+        	sloped,
+        	pos=0.5,
+        	allow upside down
+        ]{\arrowIn};
+
+        % Path 2
+        \draw[color=lev] (0.6,1.2) -- (0.6,0) node[
+        	sloped,
+        	pos=0.5,
+        	allow upside down
+        ]{\arrowIn};
+        \draw[color=lev] (0.6,0) -- (0.25,0) node[
+        	sloped,
+        	pos=0.5,
+        	allow upside down
+        ]{\arrowIn};
+
+        \filldraw[color=lev] (0.6,1.2) circle (2pt) node[anchor=south]{\scriptsize Starting state};
+        \filldraw[color=lev] (0.25,0) circle (2pt) node[anchor=north east]{\scriptsize Final state};
+
+        \node (phase) at (axis cs:0.165,1.4) [align=center,color=lev!60]{\tiny Superconducting\\[-1ex] \tiny phase};    
+    \end{axis};
+\end{tikzpicture}

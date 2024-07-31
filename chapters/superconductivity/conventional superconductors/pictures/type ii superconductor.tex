@@ -1,0 +1,46 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xtick={1/16,1},
+        ytick={1},
+        xlabel={$x\quad$},
+        ylabel=\empty,
+        xlabel style=right,
+        ylabel style=above,
+        xticklabels={$\xi$,$\lambda$},
+        xticklabel style=below,
+        yticklabel style=below left,
+        xmin=-0.4, xmax=2,
+        ymin=-0.3, ymax=1.2,
+        scale=0.8
+        ]
+
+        \fill[color=lev!30,opacity=0.5] (axis cs:0,0) rectangle (axis cs:1.9,1.1);
+        
+        \fill[pattern={
+            Dots[angle=45,distance={3pt/sqrt(2)}]
+        }, pattern color=lev!60, opacity=0.75] (axis cs:0,0) rectangle (axis cs:1,1.1);
+        
+        \addplot[color=lev,domain=-1.1:0] {1};
+        
+        \addplot[
+            color=lev,
+            domain=0:1.9,
+            smooth
+        ] {e^(-x)};
+
+        \node[color=lev] (field) at (-0.2,1) [anchor=south] {\small $b(x)$};
+
+        \addplot[color=red,domain=-1.1:0] {0};
+        
+        \addplot[
+            color=red,
+            domain=0:1.9,
+            smooth
+        ] {tanh(8*x)};
+
+        \node[color=red] (order) at (1.5,0.8) [anchor=south] {\small $f(x)$};
+    \end{axis}
+\end{tikzpicture}

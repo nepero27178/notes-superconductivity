@@ -1,0 +1,43 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xlabel={$T\quad$},
+        ylabel={$H$},
+        xlabel style={right},
+        ylabel style={above},
+        xtick={0.5},
+        ytick={\ratio,1},
+        xticklabel={$T_c$},
+        yticklabels={$H_{c2}(0)$,$H_c(0)$},
+        xmin=-0.1, xmax=0.6,
+        ymin=-0.15, ymax=1.1,
+        scale=0.7,
+        height=0.6\textwidth]
+
+        \path[name path=base] (0,0) -- (0.5,0);
+
+        % Hc
+        \addplot[color=lev,domain=0:0.5,name path=Hc] {1 - 4*x^2};
+
+        % Hc2
+        \addplot[color=lev,domain=0:0.5,name path=Hc2] {\ratio*(1 - 4*x^2)};
+
+        % Fill
+        \tikzfillbetween[of=Hc2 and base,on layer=ft] {
+            pattern={Dots[angle=45,distance={3pt/sqrt(2)}]},
+            pattern color=lev!60,
+            opacity=0.75
+        };
+        \tikzfillbetween[of=Hc and base,on layer=ft] {
+            color=lev!30,
+            opacity=0.5
+        };
+
+        % Parameter and nodes
+        \node () at (axis cs: 0.6,1.1) [anchor=north east,color=black]{$\kappa\gg1$};
+        \node () at (axis cs: 0.2,1) [anchor=north west,color=lev]{$H_{c}(T)$};
+        \node () at (axis cs: 0.2,\ratio) [anchor=south,color=lev] {$H_{c2}(T)$};
+    \end{axis}
+\end{tikzpicture}

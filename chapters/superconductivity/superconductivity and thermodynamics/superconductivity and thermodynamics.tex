@@ -1,0 +1,343 @@
+\chapter{superconductivity and thermodynamics}\label{chap:superconductivity and thermodynamics}\chaptertoc{}
+
+Superconductivity is a special state of matter, in which a material exhibits zero resistance and magnetic flux is expelled. It turns out some critical parameters exist, $\mathbf{H}_c$ (critical field) and $T_c$ (critical temperature) separating the normal phase to the superconductive one. Thus, transition to the state of superconductivity is described in the the context of critical phase transition.
+
+Superconductivity involves a wide number of theoretical interesting aspects, from continuous symmetry breaking to condensation of electron pairs, to surprising technological implementations. All in all, it represents an exciting field of physics where thermodynamics, statistical mechanics, quantum mechanics, fluidodynamics and topology collide.
+
+\begin{cit}{tinkham2004introduction}{1.1}
+    What Kamerlingh Onnes observed was that the electrical resistance of various metals such as mercury, lead, and tin disappeared completely in a small temperature range at a critical temperature $T_c$, which is characteristic of the material. The complete disappearance of resistance is most sensitively demonstrated by experiments with persistent currents in superconducting rings [...]. Once set up, such currents have been observed to flow without measurable decrease for a year, and a lower bound of some $10^5$ years for theirs characteristic decay time has been established by using nuclear magnetic resonance to detect any slight decrease in the field produced by the circulating current. In fact [...] under many circumstances we expect absolutely no change in field or current to occur in times less than $10^{10^10}$ years!
+\end{cit}
+
+This first chapter is devoted to phenomenology. We start by the experimental observations, trying to understand what actually a superconductor \textit{is}. Then we move to the realm of thermodynamics, and study the general phase diagram of ideal superconductors. What presented here is pretty much general and many corrections must be understood in order to describe real superconductors.
+
+\section{Macroscopic theory of superconductivity}
+
+In 1935, the brothers Fritz and Heinz London published their macroscopic theory of superconductivity \cite{london-superconductivity}. The key idea is the following: electrons can be in the normal state (subscript $n$) or in the superconductive one (subscript $s$). Then the density is given by
+\[ n = n_n + n_s \]
+A critical temperature $T_c$ exists, such that $n_s \neq 0$ if $T \le T_c$. We aim to find some equations to describe the motion of superconducting currents,
+\[ \mathbf{J}_s = e n_s \mathbf{v}_s \]
+where we consider the electron charge $e=-\abs{e}$ in order to keep the results valid for general charges. Our equations need to exhibit \textbf{perfect conductivity} and \textbf{perfect diamagnetism}. We shall start by the perfect conductivity.
+
+\subsection{The land where electrons do not collide}
+
+Take the Drude theory for the electron motion in crystals,
+\[ m \dv{\mathbf{v}}{t} = e \mathbf{E} - \frac{m}{\tau} \mathbf{v} \]
+with $m$ the electron mass and $\tau$ the mean scattering time. The superconducting electrons move dissipation-less, meaning $\tau_s \to +\infty$. Then
+\[ m e n_s \dv{\mathbf{v}}{t} = e^2 n_s \mathbf{E} \quad\implies\quad \mathbf{E} = \Lambda \pdv{\mathbf{J}_{s}}{t} \qq{with} \Lambda = \frac{m}{e^2 n_s} \]
+Obviously this equation describes a free system accelerated by a uniform field. This is the \textbf{first London equation}, describing perfect conductivity.\\
+
+We momentarily drop the subscript $s$, and take for granted the Drude theory of transport (for reference, check \cite{grosso2000solid}); also, every material parameter can be replaced by its effective version in crystals ($m\to m^\star,\varepsilon_0\to\varepsilon^\star$ and so on). By classical electrodynamics, metals are those material capable of perfectly cancel the electric field inside. By the means of Drude theory, dynamic conductivity for large $\tau$ is given by
+\[
+    \sigma(\omega) = \frac{\sigma_0}{1 - i \omega\tau} \simeq i \frac{\sigma_0}{\omega\tau} \qq{with} \sigma_0 = \frac{ne^2 \tau}{m}
+\]
+thus perfectly imaginary, $\sigma \simeq i y$ with $y \ge 0$. Then, being the dielectric function related to the conductivity by
+\[ 
+    \varepsilon(\omega) = 1 + \frac{4\pi i}{\omega}\sigma(\omega) \simeq 1 - \frac{\omega_p^2}{\omega^2} \qq{with} \omega_p^2 = \frac{n e^2}{\varepsilon_0 m} 
+\]
+we have $\varepsilon(\omega) <0$ for $\omega < \omega_p$. Finally, being the dielectric function related to the complex refraction index by
+\[ 
+    N^2(\omega) = \varepsilon(\omega) \qq{with} N(\omega) = n(\omega) + i k(\omega)
+\]
+for $\omega \le \omega_p$ we expect $N \in i \R$, which means the electromagnetic wave is evanescent in the crystal. In first approximation, in dynamic regime, metals are those materials capable of reflecting low-energy waves.\\
+
+We now justify this conclusion. Take Maxwell's equations,
+\[
+    \begin{aligned}
+        \grad \times \mathbf{B} - \frac{1}{c^{2}} \pdv{\mathbf{E}}{t} &= \mu_{0} \mathbf{J} \\
+        \grad \times \mathbf{E} &= -\pdv{\mathbf{B}}{t}
+    \end{aligned}
+\]
+By taking the time derivative of the first we get
+\[
+    \grad \times \lrR{-\pdv{\mathbf{B}}{t}} + \frac{1}{c^{2}} \pdv[2]{\mathbf{E}}{t} = - \mu_{0} \pdv{\mathbf{J}}{t} 
+\]
+and inserting both the second Maxwell equation and the first London equation, we get
+\[
+    \grad \times \lrR{ \grad \times \mathbf{E} } + \frac{1}{c^{2}} \pdv[2]{\mathbf{E}}{t} = - \frac{\mu_{0}}{\Lambda} \mathbf{E}
+\]
+We define $\lambda^2 \equiv \Lambda/\mu_0$, and use the identity 
+\[ 
+    \grad \times \lrR{ \grad \times \mathbf{A} } = \grad (\grad {\cdot} \mathbf{A}) - \laplacian \mathbf{A} 
+\]
+then
+\begin{equation}
+    - \grad \lrR{ \grad \cdot \mathbf{E} } + \laplacian \mathbf{E}  - \frac{1}{c^2} \pdv[2]{\mathbf{E}}{t} = \frac{\mathbf{E}}{\lambda^2}
+\end{equation}
+Now, consider a purely transversal wave, $\mathbf{E}(\mathbf{x},t) = E_z (x,t) \versor{z}$. Then, Fourier-transforming in frequency domain, we get
+\[
+    \pdv[2]{}{x} E_{z}(x, \omega) - \lrR{ \frac{1}{\lambda^{2}}-\frac{\omega^{2}}{c^{2}} } E_{z}(x, \omega)=0
+\]
+the solution to the above equation is a wave
+\[
+    E_z (x, \omega) = e^{-x / \ell(\omega)} E_z(0,\omega)
+    \qq{with}
+    \frac{1}{\ell^2(\omega)} \equiv \frac{1}{\lambda^2} - \frac{\omega^2}{c^2}
+\]
+If
+\[
+    \frac{1}{\lambda} - \frac{\omega}{c} > 0
+    \quad\implies\quad
+    \omega < \frac{c}{\lambda} = \sqrt{\frac{\mu_0}{\Lambda}} c = \sqrt{\frac{n e^2}{m \varepsilon_0}} = \omega_p
+\]
+then $\ell(\omega) \in \R$, meaning the wave is evanescent and suppressed on a length scale $\ell(\omega)$, as expected. This makes sense because the ability of exciting plasmonic modes is independent of the presence of dissipation modes. For $\omega \le \omega_p$, we shall approximate $\ell(\omega) \simeq \lambda$: thus $\lambda$ is the characteristic length scale over which a static field penetrates the superconductor (\textbf{penetration length}):
+\[
+    \lambda^2 = \frac{m}{\mu_0 e^2 n_s}
+\]
+Evidently, for vanishing superconducting densities $n_s \to 0$, $\lambda$ is divergent. \\
+
+What about magnetic fields? The same procedure yields
+\[
+    \lrS{ \nabla^{2} - \frac{1}{c^2} \pdv[2]{}{t} - \frac{1}{\lambda^{2}} } \pdv{\mathbf{B}}{t} = 0 
+    \quad\Rightarrow\quad
+    \lrS{ \nabla^{2} -  \lrR { \frac{1}{\lambda^2} - \frac{\omega}{c^2} } } (-i\omega) \mathbf{B} (\omega) = 0
+\]
+The same limit, $\omega\to 0$, now poses a difference: any magnetic flux density $\mathbf{B}$ (we shall call it that way not to confuse it with the external magnetic field $\mathbf{H}$) now solves this equation. Then, \textbf{a perfect conductor perfectly cancels any static electric field and traps any static magnetic flux density}. Also, perfect conductors do not exist.
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/superconductivity and thermodynamics/pictures/perfect conductors and thermodynamics}
+    \caption{The sketch of the two processes described in text. The starting state is at temperature $T_0$ and the applied magnetic field is $H_0$. The final state is at temperature below the critical temperature and at zero applied field. In this simple context we are neglecting the fact that for high fields the system escapes the superconducting region.}
+    \label{fig:perfect conductors and thermodynamics}
+\end{figure}
+
+The reason is of thermodynamic stability. Consider the a system at temperature $T_0 > T_c$, under the influence of an external field $H_0$, as sketched in Fig.~\ref{fig:perfect conductors and thermodynamics}. Suppose we work at suitably low fields to neglect the $H$ dependence of the superconducting region (as it will turn out, such a region will exhibit a critical boundary $H_c(T)$). Suppose, also, to change the parameters adiabatically: at any given instant $H$ (and thus $B$) is static. If we follow the solid path, entering the superconducting region at $H=0$: then we expect the final state to show $B=0$. If, instead, we follow the dashed path, we enter the superconducting region at $H\neq 0$; then the magnetic flux density $B\neq 0$ is trapped in the following. Then the final state is ill-defined, being its thermodynamic quantities ambivalent. It follows that a perfect conductor is \textbf{not} a stable state, thus it doesn't exist.
+
+\subsection{The land where magnetic fields are not welcome}
+
+Evidently, our first attempt to describe superconductivity needs some refinement, and superconductors are something more than very good conductors.
+
+\begin{cit}{tinkham2004introduction}{1.1}
+    Thus, \textit{perfect conductivity} is the first traditional hallmark of superconductivity. It is also the prerequisite for the most potential applications, such as high current transmission lines or high-field magnets.
+
+    The next hallmark to be discovered was \textit{perfect diamagnetism}, found in 1933 by Meissner and Ochsenfeld. They found that not only a magnetic field is \textit{excluded} from entering a superconductor [...], as might appear to be explained by perfect conductivity, but also that a field in an originally normal sample is \textit{expelled} as it is cooled through $T_c$. This certainly could \textit{not} be explained by perfect conductivity, which would tend to trap the flux \textit{in}.
+\end{cit}
+
+We take the curl of the first London equation using Faraday's law
+\[
+    \grad\times\mathbf{E} = \grad\times \Lambda \pdv{{\mathbf{J}}_s}{t}
+    \quad\implies\quad
+    \grad \times \Lambda \pdv{\mathbf{J
+    }_s}{t} + \pdv{\mathbf{B}}{t} = 0 
+\]
+Then we postulate this equation holds without the time derivative, from a purely phenomenological perspective. Thus, we got the \textbf{London equations}
+\begin{eqbox}
+    \vspace{-0.4em}
+    \begin{align}
+        \mathbf{E} &= \Lambda \dot{\mathbf{J}}_s \label{eq:London1} \\
+        \mathbf{B} &= \grad\times\lrR{-\Lambda\mathbf{J}_s} \label{eq:London2}
+    \end{align}
+\end{eqbox}
+Notice that the second one, at this stage, is not well-justified. Evidently, it is equivalent to the equation
+\[ 
+    \mathbf{A}_s (\mathbf{x},t) = - \Lambda \mathbf{J}_s (\mathbf{x},t) + \grad F(\mathbf{x},t)
+\]
+with $\mathbf{A}_s$ the electromagnetic vector potential and $F$ some scalar function. Now we can impose physical constraints, to fix the gauge. First, the supercurrent must be zero in the bulk and only flow on the sample boundary $\partial\Omega$. Also, we impose such a boundary supercurrent to flow parallel to the surface $\partial\Omega$ (a perpendicular component would imply charge cumulating on the superconductor surface). Finally, we impose no superconductive charge to cumulate inside the bulk. These conditions read
+\begin{equation}\label{eq:LondonGaugeCurrentConditions}
+    \grad\cdot\mathbf{J}_s = 0
+    \qquad
+    \mathbf{J}_s(\mathbf{x},t) \big|_{\mathbf{x}\not\in\partial\Omega} = 0
+    \qquad
+    \mathbf{J}_s(\mathbf{x},t) \big|_{\mathbf{x}\in\partial\Omega} \perp \partial\Omega \versor{n}
+\end{equation}
+with $\versor{n}$ the surface element versor. Those conditions ensure \textbf{perfect diamagnetism}, thanks to the second London equation \eqref{eq:London2}. In fact, from Maxwell's equation for static fields
+\[
+    \grad\times\mathbf{B} = \mu_0 \mathbf{J}_s
+    \;\Rightarrow\;
+    -\laplacian\mathbf{B} = -\frac{\mu_0}{\Lambda} \grad\times\lrR{-\Lambda\mathbf{J}_s}
+    \;\Rightarrow\;
+    \lrS{\laplacian - \frac{1}{\lambda^2}}\mathbf{B}=0
+\]
+which is solved by an exponentially suppressed field,
+\[
+    \mathbf{B}(\mathbf{x}) = e^{-\abs{\mathbf{x}}/\lambda} \mathbf{B(\mathbf{0})}
+\]
+We can impose the same conditions as Eq.~\eqref{eq:LondonGaugeCurrentConditions} on the vector potential,
+\begin{equation}\label{eq:LondonGauge}
+    \grad\cdot\mathbf{A}_s = 0
+    \qquad
+    \mathbf{A}_s(\mathbf{x},t) \big|_{\mathbf{x}\not\in\partial\Omega} = 0
+    \qquad
+    \mathbf{A}_s(\mathbf{x},t) \big|_{\mathbf{x}\in\partial\Omega} \perp \partial\Omega \versor{n}
+\end{equation}
+thus defining the so-called \textbf{London gauge}. In this gauge we completely identify the vector potential and the superconducting current up to a factor $-\Lambda$. Notice that, in this gauge
+\[
+    - \pdv{\mathbf{A}_s}{t} = \Lambda \pdv{\mathbf{J}_s}{t} = \mathbf{E}
+\]
+which is the correct potential equation for the electric field, provided a null electric potential gradient. Then Eq.~\eqref{eq:London1} and Eq.~\eqref{eq:London2} can be summarized in
+\begin{equation}\label{eq:LondonPotential}
+    \mathbf{A}_s = - \Lambda \mathbf{J}_s
+\end{equation}
+which is coherent because gauge was fixed. London's gauge, essentially, expresses the conservation of the particles number.
+
+\section{Thermodynamics}
+We shall now concentrate on some thermodynamic aspects of the theory. In the absence of electromagnetic contributions, the free energy is given by
+\[
+    F \equiv E - TS
+\]
+In order to include the electromagnetic contributions over a volume $\Omega$, we need to correct its infinitesimal part by
+\[
+    dF_m \equiv dF + \mu_0 \int_{\Omega} d^D \mathbf{r} \, \mathbf{H} \cdot d\mathbf{M}
+\]
+Suppose now no field is applied. Thus we may drop the subscript $m$, being the free energy non magnetic. We indicate with the superscript $(\mathrm{n})$ the normal state and with $(\mathrm{s})$ the superconducting state. The \textbf{condensation energy} $\Delta f$ is given by
+\[
+    \Delta f (T) = f^{(\mathrm{n})}(T) - f^{(\mathrm{s})}(T)
+\]
+Evidently, if $\Delta f_m > 0$, the superconducting phase is favorite. Pay attention to the fact that we are at zero magnetic field.
+
+\subsection{The critical field}\label{sec:the critical field}
+
+$F_m$, the \textbf{magnetic free energy}, has the magnetization as its natural variable. We prefer to work with $\mathbf{H}$ as a natural variable, therefore we define the \textbf{magnetic Gibbs free energy} as its Legendre transform
+\[
+    G_m = F_m - \mu_0 \int_{\Omega} d^D \mathbf{r} \, \mathbf{H} \cdot \mathbf{M}
+    \quad\implies\quad
+    dG_m = dF - \mu_0 \int_{\Omega} d^D \mathbf{r} \, \mathbf{M} \cdot d\mathbf{H}
+\]
+We define the energy densities per unit volume
+\[
+    f = \frac{F}{\Omega}
+    \qquad\qquad
+    g_m = \frac{G_m}{\Omega}
+\]
+Thus at some fixed temperature $T$
+\[
+    g_m (T,\mathbf{H}) = \int_{(T,\,\mathbf{0})}^{(T,\,\mathbf{H})} dg_m (T,\mathbf{H}') = f(T) - \mu_0 \int_{(T,\,\mathbf{0})}^{(T,\,\mathbf{H})} d\mathbf{H}' \cdot \ev{\mathbf{M}(\mathbf{H}')}
+\]
+where
+\[
+    \ev{\mathbf{M}} = \frac{1}{\Omega} \int_\Omega d^D \mathbf{r} \, \mathbf{M}
+\]
+Let us comment briefly the above equations. The integrals are intended as adiabatic along the path connecting the states $(T,\mathbf{0})$ to $(T,\mathbf{H})$. We start from a zero applied field because $g_m$ is to be interpreted as the free energy for establishing a $\mathbf{H}$ field starting from a rest condition. The physical picture could be one of a solenoid embedding a superconductor, with a slowly varying current applying a locally static field $\mathbf{H}'$. Notice that the free enegy part, $f$, is non-magnetic and thus depends only on the temperature.
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/superconductivity and thermodynamics/pictures/critical region}
+    \caption{Sketch of the general critical field dependence on temperature, as depicted in the text.}
+    \label{fig:critical region}
+\end{figure}
+
+Inside a superconductor all the magnetic flux density, $\mathbf{B}$, is expelled. Thus we have $\mathbf{M} = \ev{\mathbf{M}} = - \mathbf{H}$. Substituting this result in the equation for $g_m$ we get
+\begin{equation}\label{eq:critical field preliminary}
+    g_m^{(\mathrm{s})}(T,\mathbf{H}) = f^{(\mathrm{s})}(T) + \mu_0 \int_{(T,\,\mathbf{0})}^{(T,\,\mathbf{H})} d \mathbf{H}' \cdot \mathbf{H}' = f^{(\mathrm{s})}(T) + \frac{\mu_0 H^2}{2} \bigg|_{@T}
+\end{equation}
+We expect a critical field $\mathbf{H}_c(T)$ to exist: it is unphysical to think that any material could expel an arbitrarily large applied magnetic field. This is proved by experiments. Then, we understand that the phase transition occurs whenever
+\[
+    g_m^{(\mathrm{s})}(T,\mathbf{H}) = g_m^{(\mathrm{n})}(T,\mathbf{H})
+\]
+We can neglect the magnetic contribution to $g_m^{(\mathrm{n})}$, considering non-magnetic materials. Then we define the \textbf{critical field} $H_c(T)$ as
+\begin{eqbox}
+    \begin{equation}\label{eq:critical field}
+        H_c^2(T) = \frac{2}{\mu_0} \Delta f(T)
+    \end{equation}
+\end{eqbox}
+delimiting a superconducting region. Experimentally it turns out
+\[
+    H_c(T) \simeq H_c (0) \lrR{1 - \frac{T^2}{T_c^2}}
+\]
+as plotted in Fig.~\ref{fig:critical region}.
+
+In the following, we will always use the variable $H$ instead of $\mathbf{H}$, assuming isotropy and therefore dependence only on the field intensity. We now make use of thermodynamics to analyze the order of the phase transition in the two cases $H\neq0$ and $H=0$.
+
+\subsection{First order transition at non-zero field}\label{sec:first order transition}
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/superconductivity and thermodynamics/pictures/critical region first order}
+    \caption{The phase transition described in Sec.~\ref{sec:first order transition}. $H_0$ is the uniform applied field, kept constant and non-zero. Phase transition occurs at temperature $T_c^\star < T_c$.}
+    \label{fig:critical region first order}
+\end{figure}
+
+First, we consider the transition at finite applied field $H_0 \neq 0$, varying the temperature $T$ as sketched in Fig.~\ref{fig:critical region first order}. We may look at entropy per unit volume, defined as
+\[
+    s(T,H_0) \equiv \frac{S(T,H_0)}{\Omega} = -\lrS{ \pdv{}{T} g_{m}(T, H) }_{H = H_0}
+\]
+Notice that, due to Eq.~\eqref{eq:critical field preliminary},
+\[
+\begin{aligned}
+    g_m^{(\mathrm{s})} (T,H) - g_m^{(\mathrm{s})} (T,0) &= \lrS{ g_m^{(\mathrm{n})} (T,H) + \Delta f(T) + \frac{\mu_0 H^2}{2} }\\
+    &\hspace{7.5em}- \lrS{ g_m^{(\mathrm{n})} (T,0) + \Delta f(T) } \\
+    &= \lrS{ g_m^{(\mathrm{n})} (T,H) - g_m^{(\mathrm{n})} (T,0) } + \frac{\mu_0 H^2}{2} = \frac{\mu_0 H^2}{2}
+\end{aligned}
+\]
+where in the last passage we used that the normal state is non-magnetic, therefore its free energy is independent of the field applied. It follows
+\[
+    g_m^{(\mathrm{s})} (T,H) = g_m^{(\mathrm{s})} (T,0) + \frac{\mu_0 H^2}{2}
+\]
+From Eq.~\eqref{eq:critical field preliminary} it follows
+\[
+    g_m^{(\mathrm{s})}(T,0) = g_m^{(\mathrm{s})}(T,H_c(T)) - \frac{\mu_0 H_c^2(T)}{2}
+\]
+since both sides are equal to $f^{(\mathrm{s})}(T)$, unvaried by the presence of the field. Moreover, $g_m^{(\mathrm{s})}(T,H_c(T)) = g_m^{(\mathrm{n})}(T,H_c(T))$ by the definition of the critical field, Eq.~\eqref{eq:critical field}. Then
+\[
+\begin{aligned}
+    g_m^{(\mathrm{s})} (T,H) &= g_m^{(\mathrm{n})} (T,H_c(T)) + \frac{\mu_0}{2} \lrS{ H^2 - H_c^2(T) } \\
+    &= g_m^{(\mathrm{n})} (T,H) + \frac{\mu_0}{2} \lrS{ H^2 - H_c^2(T) }
+\end{aligned}
+\]
+being, once again, the normal state Gibbs energy independent of the field. Then the entropy difference in following the path in Fig.~\ref{fig:critical region first order} is a function of temperature
+\[
+\begin{aligned}
+    \Delta s(T,H_0) &= s^{(\mathrm{n})}(T,H_0) - s^{(\mathrm{s})}(T,H_0) \\
+                    &= -\lrS{ \pdv{}{T} g_m^{(\mathrm{n})}(T, H) - \pdv{}{T} g_m^{(\mathrm{s})}(T, H) }_{H = H_0} \\
+                    &= \frac{\mu_0}{2} \pdv{}{T} \lrS{ H_c^2(T) - H_0^2 }\\
+                    &= \mu_0 H_c(T) \pdv{}{T} H_c(T)\\
+                    &\simeq \mu_0 H_c^2 (0) \lrR{1 - \frac{T^2}{T_c^2}} \lrR{ - \frac{2T}{T_c^2} } \qq{for} T < T_c
+\end{aligned}
+\]
+since for $T \ge T_c$, evidently, $H_c(T) = 0$ and thus $\Delta s = 0$.
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/superconductivity and thermodynamics/pictures/first order transition entropy}
+    \caption{For an external field $H_0\neq 0$, transition occurs at temperature $T_c^\star < T_c$. Here is sketched entropy per unit volume for the normal phase (n) and the superconducting one (s). The dashed line represents analytic continuation of the function, the solid line represents the physical entropy in the two regimes. Evidently for any $T_c^\star < T_c$, i.e. for any $H_0 \neq 0$, the physical entropy undergoes a discontinuity at the transition.}
+    \label{fig:first order transition entropy}
+\end{figure}
+
+Two things are worth of noticing. As depicted in Fig.~\ref{fig:first order transition entropy},
+\[
+    \Delta s (T_c^\star, H_0 \neq 0) < 0
+\]
+where $T_c^\star$ is the temperature at which transition occurs, as represented in Fig.~\ref{fig:critical region first order}. First, entropy - a first order derivative of a thermodynamic function - suffers a finite discontinuity, making the superconducting transition a one of the \textbf{first order}. Secondly, being $\Delta s < 0$, the transition from normal state to superconducting state increases the global order of the system. This is coherent with what we will find: superconductivity is an essentially collective phenomenon, requiring some notion of long-range order.
+
+\subsection{Second order transition at zero field}\label{sec:second order transition}
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/superconductivity and thermodynamics/pictures/critical region second order}
+    \caption{The transformation described in Sec.~\ref{sec:second order transition}, at zero applied field.}
+    \label{fig:critical region second order}
+\end{figure}
+
+Now we turn to the other case, i.e. $H_0 = 0$. The transition is depicted in Fig.~\ref{fig:critical region second order}: at zero applied field, we adiabatically increase the temperature above $T_c$. Looking to Fig.~\ref{fig:first order transition entropy}, evidently in this case $T_c^\star = T_c$, meaning that entropy does \textbf{not} undergo a discontinuity, but so does its derivative. Then we expect this transition to be one of the second order. The relevant physical quantity involved is the \textbf{specific heat} (per unit volume)
+\[
+    c(T,H) \equiv T \pdv{}{T} s(T,H)
+\]
+then
+\[    
+    \Delta c(T,H) = T \pdv{}{T} \Delta s(T,H)
+\]
+where, as always,
+\[
+    \Delta c(T,H) = c^{(\mathrm{n})}(T,H) - c^{(\mathrm{s})}(T,H) 
+\]
+Recovering the precedent expression for $\Delta s$,
+\[
+\begin{aligned}
+     \Delta c(T,H) &= T \pdv{}{T} \lrS{ \mu_0 H_c(T) \pdv{}{T} H_c(T) } \\
+                 &= \mu_0 T \lrS{ \lrR{ \pdv{}{T} H_c(T) }^2 + H_c (T) \pdv[2]{}{T} H_c(T) } \\
+                 &\simeq \mu_0 T H_c^4(0) \lrS{ \lrR{ - \frac{2}{T_c^2} + \frac{6 T^2}{T_c^4} }^2 + \lrR{1 - \frac{T^2}{T_c^2}} \lrR{ - \frac{2T}{T_c^2} } \frac{12T}{T_c^4} }
+\end{aligned}
+\]
+as can be seen by direct inspection. We now evaluate $\Delta c$ at $T = T_c$ and $H = 0$. The second term drops, and we get immediately
+\[
+    \Delta c(T_c,0) > 0
+\]
+As expected, the transition is one of the \textbf{second order}, being the specific heat essentially a second derivative of free energy. In Fig.~\ref{fig:second order transition specific heat} is represented the specific heat for the normal and superconducting phases. Similar calculations can be carried out for other quantities, leading to analogous conclusions.
+
+\begin{figure}
+    \centering
+    \input{chapters/superconductivity/superconductivity and thermodynamics/pictures/second order transition specific heat}
+    \caption{Specific heat of the normal phase (n) and superconducting phase (s), with zero applied field. The finite discontinuity of $\Delta c$ is the hallmark of the second order transition.}
+    \label{fig:second order transition specific heat}
+\end{figure}
+
+We have discovered, on purely statistical grounds, that superconductivity exhibits many interesting phenomena. The next chapter is devoted to write a formal statistical theory for the phase transition.

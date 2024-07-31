@@ -1,0 +1,399 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{tinkham2004introduction}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=90a8d001d414a2a0393c16501881e7cd}{%
+           family={Tinkham},
+           familyi={T\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{90a8d001d414a2a0393c16501881e7cd}
+      \strng{fullhash}{90a8d001d414a2a0393c16501881e7cd}
+      \strng{fullhashraw}{90a8d001d414a2a0393c16501881e7cd}
+      \strng{bibnamehash}{90a8d001d414a2a0393c16501881e7cd}
+      \strng{authorbibnamehash}{90a8d001d414a2a0393c16501881e7cd}
+      \strng{authornamehash}{90a8d001d414a2a0393c16501881e7cd}
+      \strng{authorfullhash}{90a8d001d414a2a0393c16501881e7cd}
+      \strng{authorfullhashraw}{90a8d001d414a2a0393c16501881e7cd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780486134727}
+      \field{series}{Dover Books on Physics Series}
+      \field{title}{Introduction to Superconductivity}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=VpUk3NfwDIkC
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=VpUk3NfwDIkC
+      \endverb
+    \endentry
+    \entry{Abrikosov:1956sx}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0616697a8ac3d8019811d5840d720d33}{%
+           family={Abrikosov},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{fullhash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{fullhashraw}{0616697a8ac3d8019811d5840d720d33}
+      \strng{bibnamehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authorbibnamehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authornamehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authorfullhash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authorfullhashraw}{0616697a8ac3d8019811d5840d720d33}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sov. Phys. JETP}
+      \field{title}{{On the Magnetic properties of superconductors of the second group}}
+      \field{volume}{5}
+      \field{year}{1957}
+      \field{pages}{1174\bibrangedash 1182}
+      \range{pages}{9}
+    \endentry
+    \entry{Simmendinger_2020}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=7e2be58e56eaf0e5064a57e3bffae993}{%
+           family={Simmendinger},
+           familyi={S\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=974d20b1a4b428f1526a5e14ded8d5bd}{%
+           family={Bihler},
+           familyi={B\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=71fd74adcb5c205acdcc653ea9f8a5fb}{%
+           family={Ionescu},
+           familyi={I\bibinitperiod},
+           given={A\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=64091080431843936179f97bdc55000b}{%
+           family={Weigand},
+           familyi={W\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7c5c3794e0a35951655af6cb55b53264}{%
+           family={Schütz},
+           familyi={S\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=948f7459cdda1c4a1754269a3dca98b0}{%
+           family={Albrecht},
+           familyi={A\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{fullhash}{0bdff611d3367cedea72e36adbf0c5b5}
+      \strng{fullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
+      \strng{bibnamehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{authorbibnamehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{authornamehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{authorfullhash}{0bdff611d3367cedea72e36adbf0c5b5}
+      \strng{authorfullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Bound and stable vortex–antivortex pairs in high-Tc superconductors}
+      \field{volume}{22}
+      \field{year}{2020}
+      \field{pages}{123035}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/abd123
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1367-2630/abd123
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1367-2630/abd123
+      \endverb
+    \endentry
+    \entry{grosso2000solid}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a4191a6fc23a699b6815ed51dcfee186}{%
+           family={Grosso},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=5a2bb77e83c3ca3494980d41b557144a}{%
+           family={Parravicini},
+           familyi={P\bibinitperiod},
+           given={G.P.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science}%
+      }
+      \strng{namehash}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \strng{fullhash}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \strng{fullhashraw}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \strng{bibnamehash}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \strng{authorbibnamehash}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \strng{authornamehash}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \strng{authorfullhash}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \strng{authorfullhashraw}{0131a36ff5f6c742fb17c5162d8a37dd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780080481029}
+      \field{title}{Solid State Physics}
+      \field{year}{2000}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \endverb
+    \endentry
+    \entry{goodstein2014states}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7c1e993c0c5f87f6484e7bcb77b6920e}{%
+           family={Goodstein},
+           familyi={G\bibinitperiod},
+           given={D.L.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{fullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{fullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{bibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorbibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authornamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorfullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorfullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780486795515}
+      \field{series}{Dover Books on Physics}
+      \field{title}{States of Matter}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
+      \endverb
+    \endentry
+    \entry{huang2008statistical}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=96f740e19666bbfccd8e0e7f82b2fdd6}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley India Pvt. Limited}%
+      }
+      \strng{namehash}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \strng{fullhash}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \strng{fullhashraw}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \strng{bibnamehash}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \strng{authorbibnamehash}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \strng{authornamehash}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \strng{authorfullhash}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \strng{authorfullhashraw}{96f740e19666bbfccd8e0e7f82b2fdd6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9788126518494}
+      \field{title}{Statistical Mechanics, 2nd Ed}
+      \field{year}{2008}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=ZHl8HLk-K3AC
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=ZHl8HLk-K3AC
+      \endverb
+    \endentry
+    \entry{altland2010condensed}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=e6745c48552f99e7c7afe9cb0ff36183}{%
+           family={Altland},
+           familyi={A\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2d19b8e3bdfd4f3e3ce4332c9845ef21}{%
+           family={Simons},
+           familyi={S\bibinitperiod},
+           given={B.D.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \strng{fullhash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \strng{fullhashraw}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \strng{bibnamehash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \strng{authorbibnamehash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \strng{authornamehash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \strng{authorfullhash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \strng{authorfullhashraw}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521769754}
+      \field{series}{Cambridge books online}
+      \field{title}{Condensed Matter Field Theory}
+      \field{year}{2010}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=GpF0Pgo8CqAC
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=GpF0Pgo8CqAC
+      \endverb
+    \endentry
+    \entry{london-superconductivity}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=36be484d5dae207db137476478a65a7d}{%
+           family={London},
+           familyi={L\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=dcd9fde464501103c3ea11275fdca332}{%
+           family={London},
+           familyi={L\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8bd0e323e22d10e97e587363bcefa39e}{%
+           family={Lindemann},
+           familyi={L\bibinitperiod},
+           given={Frederick\bibnamedelima Alexander},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{92a1f6e2d48d56130e7401e0d1018920}
+      \strng{fullhash}{92a1f6e2d48d56130e7401e0d1018920}
+      \strng{fullhashraw}{92a1f6e2d48d56130e7401e0d1018920}
+      \strng{bibnamehash}{92a1f6e2d48d56130e7401e0d1018920}
+      \strng{authorbibnamehash}{92a1f6e2d48d56130e7401e0d1018920}
+      \strng{authornamehash}{92a1f6e2d48d56130e7401e0d1018920}
+      \strng{authorfullhash}{92a1f6e2d48d56130e7401e0d1018920}
+      \strng{authorfullhashraw}{92a1f6e2d48d56130e7401e0d1018920}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Electric currents are commonly believed to persist in a supra-conductor without being maintained by an electromagnetic field. Thus the relation between the field strength E and the current density J in a supraconductor has sometimes been described by means of an "acceleration equation," of the form ∆J = E; A = m/ne2. (1) This equation, which might replace Ohm;s law for supraconductors, simply expresses the influence of the electric part of the Lorentz force on freely movable electrons of the mass m and charge e, the number per cm3 being n (we use rational units). By definition the constant A must be positive. As a direct consequence of this equation (1) stationary currents in supraconductors are possible when E = 0. We shall see, however, that actually equation (1), which we will refer to as the "acceleration theory," implies more than is verified by experiment; moreover, presupposing an acceleration without any friction it implies a premature theory, the development of which has presented a hopelessly insoluble problem to mathematical physicist. Apparently a model was wanted which would explain that in its most stable state the supraconductor has always a persistent current. We shall give a formulation which is somewhat more restricted in this respect. On the other had it includes one more important fact, namely, the experiment of Meissner and Ochsenfeld. In this way we get a new description of the electromagnetic field in a supraconductor, which is consistent and, as it eliminates unnecessary statements, is in closer contact with experiment. This new description seems to provide an entirely new point of view for a theoretical explanation.}
+      \field{journaltitle}{Proceedings of the Royal Society of London. Series A - Mathematical and Physical Sciences}
+      \field{number}{866}
+      \field{title}{The electromagnetic equations of the supraconductor}
+      \field{volume}{149}
+      \field{year}{1935}
+      \true{nocite}
+      \field{pages}{71\bibrangedash 88}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1098/rspa.1935.0048
+      \endverb
+      \verb{eprint}
+      \verb https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.1935.0048
+      \endverb
+      \verb{urlraw}
+      \verb https://royalsocietypublishing.org/doi/abs/10.1098/rspa.1935.0048
+      \endverb
+      \verb{url}
+      \verb https://royalsocietypublishing.org/doi/abs/10.1098/rspa.1935.0048
+      \endverb
+    \endentry
+    \entry{PhysRevB.102.024506}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a98b4a71a11fc8feb836f2275c218ab8}{%
+           family={Kogan},
+           familyi={K\bibinitperiod},
+           given={V.\bibnamedelimi G.},
+           giveni={V\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=bc34c2b9293a49d71c06699f9d7232ac}{%
+           family={Prozorov},
+           familyi={P\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \strng{fullhash}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \strng{fullhashraw}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \strng{bibnamehash}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \strng{authorbibnamehash}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \strng{authornamehash}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \strng{authorfullhash}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \strng{authorfullhashraw}{e8ce3264e52d0d97a7d76afe7d632e4d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{2}
+      \field{journaltitle}{Phys. Rev. B}
+      \field{month}{7}
+      \field{title}{Interaction between moving Abrikosov vortices in type-II superconductors}
+      \field{volume}{102}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{024506}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevB.102.024506
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.102.024506
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRevB.102.024506
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

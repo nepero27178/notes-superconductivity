@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis x line=center,
+        axis y line=center,
+        axis on top,
+        xlabel={$T$},
+        ylabel={$c(T,0)$},
+        xlabel style={below right},
+        ylabel style={above left},
+        xtick={0.5},
+        ytick=\empty,
+        xticklabel={$T_c$},
+        xmin=-0.2,
+        xmax=0.8,
+        ymin=-0.2,
+        ymax=0.75]
+
+        \fill[color=lev!30,opacity=0.5] (0,0) rectangle (0.5,0.7);
+        \node (phase) at (axis cs:0.25,0.6) [align=center,color=lev!60]{\tiny Superconducting\\[-1ex] \tiny phase $@H=0$};
+        
+        \node (superconducting specific heat) at (axis cs:0.25,0.38) [anchor=center,color=lev]{$c^{(\mathrm{s})}(T,0)$};
+        \addplot[color=lev,domain=0:0.5] {0.15*x^4 + 0.5*x^3 + 2*x^2};
+        \addplot[dashed,color=lev,domain=0.5:0.55] {0.15*x^4 + 0.5*x^3 + 2*x^2};
+
+        \node (normal specific heat) at (axis cs:0.51,0.35) [anchor=north west,color=red]{$c^{(\mathrm{n})}(T,0)$};
+        \addplot[dashed,color=red,domain=0:0.5] {0.7*x};
+        \addplot[color=red,domain=0.5:0.7] {0.7*x};
+    \end{axis}
+\end{tikzpicture}
