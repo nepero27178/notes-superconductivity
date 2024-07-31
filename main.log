@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.25)  30 JUL 2024 22:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.25)  31 JUL 2024 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2425,15 +2425,26 @@ nteracting.tex)
 e.tex)
 (chapters/superconductivity/conventional superconductors/pictures/triangular la
 ttice.tex)
-Overfull \hbox (53.85251pt too wide) in paragraph at lines 738--740
- [][][] 
- []
-
-)
 
 [57]
 
 [58]
+Overfull \hbox (5.59215pt too wide) detected at line 780
+[][]
+ []
+
+
+(chapters/superconductivity/conventional superconductors/pictures/interaction f
+ree energy square versus triangular.tex))
+
+[59]
+
+[60
+
+
+
+
+]
 LaTeX Font Info:    Trying to load font information for T1+fvm on input line 57
 .
  (/home/nepero27178/.miktex/texmfs/install/tex/latex/bera/t1fvm.fd
@@ -2459,12 +2470,7 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 (/home/nepero27178/.miktex/texmfs/install/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
-[59
-
-
-
-
-] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
+[61] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
 (chapters/superconductivity/superconductivity and thermodynamics/superconductiv
 ity and thermodynamics.aux)
 (chapters/superconductivity/ginzburg-landau theory of superconductivity/ginzbur
@@ -2486,11 +2492,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 66349 strings out of 473905
- 1569092 string characters out of 5733678
- 2776116 words of memory out of 5000000
- 87988 multiletter control sequences out of 15000+600000
- 686769 words of font info for 214 fonts, out of 8000000 for 9000
+ 66432 strings out of 473905
+ 1571682 string characters out of 5733678
+ 2776704 words of memory out of 5000000
+ 88063 multiletter control sequences out of 15000+600000
+ 687927 words of font info for 216 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,23n,138p,10901b,3434s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2614,9 +2620,9 @@ fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/share/miktex-texmf/fonts/type1
 urw/palatino/uplb8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino
 /uplbi8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplr8a.pfb
 ></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (27 pages, 462349 bytes).
+Output written on main.pdf (29 pages, 476086 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 104 named destinations out of 1000 (max. 500000)
+ 558 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
  30371 words of extra memory for PDF output out of 35830 (max. 10000000)
 

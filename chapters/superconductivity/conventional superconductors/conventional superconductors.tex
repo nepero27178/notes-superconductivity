@@ -715,10 +715,15 @@ In the first one we recognize $N\epsilon^{(1)}$. For the second, defining $f(i,j
 \[
 	f(i,j) = \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_i} d\bm\eta_i \cdot \lrS{ \mathbf{B}_j \bm{\times} \lrR{\curl\mathbf{B}_i } } + \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_j} d\bm\eta_j \cdot \lrS{ \mathbf{B}_i \bm{\times} \lrR{\curl\mathbf{B}_j } }
 \]
-we get
+We get
 \[
 	\epsilon^{(N)} = N\epsilon^{(1)} + \sum_{i<j} f(i,j)
 \]
+Check the above section: we already carried out a the calculation for $f$. It is easy to recognize that
+\[
+	f(i,j) = \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_i-\mathbf{r}_j}}{\lambda}}
+\]
+
 Now: each vortex carries a flux $\Phi_0$. Since $F^{(1)} - F^{(0)} = L[ \epsilon^{(1)}-H\Phi_0 ]$, we have
 \[
 	F^{(N)} - F^{(0)} = N \lrS{F^{(1)} - F^{(0)}} + L \sum_{i<j} f(i,j)
@@ -735,10 +740,50 @@ The geometric contribution of the sample to stability enters in the last term in
 
 \begin{figure}
 	\centering
-	\subfloat[][ciao]{\input{chapters/superconductivity/conventional superconductors/pictures/square lattice}\label{subfig:square lattice}}
-	\subfloat[][ciao]{\input{chapters/superconductivity/conventional superconductors/pictures/triangular lattice}\label{subfig:triangular lattice}}
-	\caption{ciao}
+	\def\myscale{0.8}
+	\subfloat[][Square lattice.]{\input{chapters/superconductivity/conventional superconductors/pictures/square lattice}\label{subfig:square lattice}}\hfil
+	\subfloat[][Triangular lattice.]{\input{chapters/superconductivity/conventional superconductors/pictures/triangular lattice}\label{subfig:triangular lattice}}
+	\caption{The square lattice in Fig.~\ref{subfig:square lattice} has a coordination number $k=4$, since $4$ are the first nearest neighbors of a given site. The triangular lattice, represented in Fig.~\ref{subfig:triangular lattice}, has instead $k=6$. The shading is pictorial and has no physical meaning, except indicating the nearest neighbors for a given site.}
 	\label{fig:lattices}
 \end{figure}
 
-Now: we
+Now: we wish to confront two simple two-dimensional lattices: square and triangular, as represented in Fig.~\ref{fig:lattices}. Abrikosov's first guess for the fluxon lattice configuration was a square one. Suppose $d$ to be the lattice spacing: the favorite lattice will be the one with the lowest interaction free energy, since the total single-vortex contribution to energy is fixed by the number of fluxons and independent of the lattice geometry. Neglect the shift $-(N-1) F^{(0)}$: due to lattice symmetry
+\[
+	F^{(\mathrm{int})} = \frac{L}{2} Nk f^\star
+\]
+The factor $N$ comes from translational invariance across the lattice, since the same contribution arises from any of the $N$ sites. Any of those sites will have the same number of nearest neighbors, $k$; finally, for any couple of nearest neighbors $i,j$ the function $f$ has the same value, which we called $f^\star$.
+To calculate $f^\star$, we consider two fluxons at a distance $d$. We have
+\[
+	f^\star = \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{d}{\lambda}} \simeq \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} \exp \lrR{-\frac{d}{\lambda}}
+\]
+At a first sight, a lattice with a lower coordination number $k$ (i.e. the square one) might seem energetically convenient. However we did not specify the value of $d$, and it needs not to be equal in the two situations. In fact, it is not. For a given lattice, we call $s$ the Wigner-Seitz unit cell -- which is, the surface containing exactly one vortex. It is easy to see that its numerical value is
+\[
+\begin{aligned}
+	\abs{s} &= d^2 &&\qquad\qq{for the square lattice}\\
+	\abs{s} &= d^2 \frac{\sqrt{3}}{2} &&\qquad\qq{for the triangular lattice}
+\end{aligned}
+\]
+The density, however, is fixed by the thermodynamic limit. Then
+\[
+	n = \frac{N}{S} = \frac{1}{\abs{s}}
+\]
+We can also connect $n$ with the average flux density per unit surface across the sample:
+\[
+	\ev{B} = n \Phi_0
+\]
+a simpler quantity to be measured with respect to the fluxons number. Then, putting everything together,
+\[
+\begin{aligned}
+	F^{(\mathrm{int})} &= NL \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} \lrS{4\exp \lrR{-\sqrt{\frac{\Phi_0}{\ev{B}\lambda^2}}}} &&\qq{for the square lattice}\\
+	F^{(\mathrm{int})} &= NL \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} \lrS{6\exp \lrR{-\sqrt{\frac{2\Phi_0}{\sqrt{3}\ev{B}\lambda^2}}}} &&\qq{for the triangular lattice}
+\end{aligned}
+\]
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/conventional superconductors/pictures/interaction free energy square versus triangular}
+	\caption{Plot of the interaction free energy $F^{(\mathrm{int})}$ as a function of the mean magnetic flux $\ev{B}$. The general leading order behavior is clear: the triangular lattice has a smaller interaction free energy.}
+	\label{fig:interaction free energy square versus triangular}
+\end{figure}
+
+In Fig.~\ref{fig:interaction free energy square versus triangular} the two functions are plotted. For vanishing average magnetic flux density the two curves collide, as it is to be expected: a ``square lattice'' with one fluxon is identical to a ``triangular lattice'' with one fluxon. For low magnetic fields in the region of interest, $\ev{B} < \Phi_0/\lambda^2$ (approximately one fluxon per a $\lambda^2$ area, which is, low-density) evidently the triangular configuration (see Fig.~\ref{subfig:triangular lattice}) is preferred to the square configuration (see Fig.~\ref{subfig:square lattice}).

@@ -1,0 +1,39 @@
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=center,
+		axis y line=center,
+		axis on top,
+		xtick={1},
+		ytick=\empty,
+		xlabel={$\ev{B}$},
+		ylabel={$F^{(\mathrm{int})}$},
+		xlabel style=right,
+		ylabel style=left,
+		xticklabel={$\Phi_0/\lambda^2$},
+		yticklabel=\empty,
+		xticklabel style=below,
+		yticklabel style=\empty,
+		xmin=-0.12, xmax=1.4,
+		ymin=-0.4, ymax=2.5,
+		width=\textwidth,
+		height=0.45\textwidth
+		]
+		
+		\addplot[
+			color=lev,
+			domain=0:1.3,
+			smooth
+		] {4*e^(-1/sqrt(x))};
+		
+		\node[color=lev] (a) at (1,1) [align=center] {\scriptsize triangular\\[-1ex] \scriptsize lattice};
+		
+		\addplot[
+			color=red,
+			domain=0:1.3,
+			smooth
+		] {6*e^(-sqrt(2/(x*sqrt(3))))};
+		
+        \node[color=red] (b) at (0.6,2.05) [align=center] {\scriptsize square\\[-1ex] \scriptsize lattice};
+		
+	\end{axis}
+\end{tikzpicture}

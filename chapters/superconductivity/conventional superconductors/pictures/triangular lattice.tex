@@ -4,7 +4,6 @@
 	\begin{axis}[
 		axis x line=center,
 		axis y line=center,
-		%		axis on top,
 		axis equal image,
 		xlabel={$x$},
 		ylabel={$y$},
@@ -16,14 +15,28 @@
 		yticklabel=\empty,
 		xmin=-\xlength*1.2, xmax=\xlength*1.2,
 		ymin=-\ylength*1.2, ymax=\ylength*1.2,
+		scale=\myscale
 		]
 		
-		\def\damping{0.12}
-		\fill[color=lev!30]
-		\foreach \x in {-\xlength,...,\xlength}
-		\foreach \y in {-\xlength,...,\xlength} {
-		    (\x,\y) circle (\damping)
-		    % CONTINUA
-		};
+		\def\external{1.2}
+		\def\internal{0.35}
+		\draw[color=lev!60,fill=lev!30,opacity=0.4,rounded corners] 
+			(0:\external)      -- (30:\internal)
+			-- (60:\external)  -- (90:\internal)
+			-- (120:\external) -- (150:\internal)
+			-- (180:\external) -- (210:\internal)
+			-- (240:\external) -- (270:\internal)
+			-- (300:\external) -- (330:\internal)
+			-- cycle;
+			
+		\begin{scope}
+			\clip (-3.1,-2.1) rectangle (3.1,2.1);
+			\fill[lev!30] \foreach \i in {-3,-2,...,3}{
+				\foreach \j in {-3,-2,...,3}{
+					(axis cs: \i,{sqrt(3)*\j}) circle (0.1)
+					++(axis direction cs:{1*cos(60)},{1*sin(60)}) circle (0.1)
+				}
+			};
+		\end{scope}
 	\end{axis}
 \end{tikzpicture}

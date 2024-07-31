@@ -9,10 +9,8 @@
         ylabel={$y$},
         xlabel style=right,
         ylabel style=above,
-        xmin=-1,
-        xmax=1,
-        ymin=-0.8,
-        ymax=0.8
+        xmin=-1,	xmax=1,
+        ymin=-0.8, 	ymax=0.8
         ]
 
         \def\holeradius{0.2}
@@ -28,8 +26,7 @@
             (axis cs: 0,0) circle (\pathradius);
         \draw[color=lev!60] 
         \foreach \angle in {15,75,...,315} {
-            (\angle:\pathradius) 
-            node[rotate=90+\angle] {\arrowIn}
+            (\angle:\pathradius) node[rotate=90+\angle] {\arrowIn}
         };
         \node[color=lev!60,anchor=south east] at (160:\pathradius) {\scriptsize $\partial\Sigma$};
         \node[color=lev!60,anchor=north west] at (300:\pathradius) {\scriptsize $\Psi\simeq\Psi_0$};

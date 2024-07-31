@@ -16,13 +16,25 @@
 		yticklabel=\empty,
 		xmin=-\xlength*1.2, xmax=\xlength*1.2,
 		ymin=-\ylength*1.2, ymax=\ylength*1.2,
+		scale=\myscale
 		]
 		
-		\def\damping{0.12}
-		\fill[color=lev!30]
-		\foreach \x in {-\xlength,...,\xlength}
-			\foreach \y in {-\xlength,...,\xlength} {
-			(\x,\y) circle (\damping)
-		};
+		\def\external{1.2}
+		\def\internal{0.35}
+		\draw[color=lev!60,fill=lev!30,opacity=0.4,rounded corners] 
+			(0:\external)      -- (45:\internal)
+			-- (90:\external)  -- (135:\internal)
+			-- (180:\external) -- (225:\internal)
+			-- (270:\external) -- (315:\internal)
+			-- cycle;
+		
+		\begin{scope}
+			\clip (-3.1,-2.1) rectangle (3.1,2.1);
+			\fill[lev!30] \foreach \i in {-3,-2,...,3}{
+				\foreach \j in {-3,-2,...,3}{
+					(axis cs: \i,\j) circle (0.1)
+				}
+			};
+		\end{scope}
 	\end{axis}
 \end{tikzpicture}
