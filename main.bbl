@@ -19,6 +19,82 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{giuliani2008quantum}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=6e462c4272d83cb759f8ffe2b3fc16bc}{%
+           family={Giuliani},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=68763f3b6092069bd29b0c1ffe205395}{%
+           family={Vignale},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{fullhash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{fullhashraw}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{bibnamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorbibnamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authornamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorfullhash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorfullhashraw}{790343fd4e55380c534d5dd246cde6c2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781139471589}
+      \field{title}{Quantum Theory of the Electron Liquid}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=FFydOyv_r78C
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=FFydOyv_r78C
+      \endverb
+    \endentry
+    \entry{grosso2000solid}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a4191a6fc23a699b6815ed51dcfee186}{%
+           family={Grosso},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=26a049574b11e4b6ade3dc63a7903093}{%
+           family={Pastori\bibnamedelima Parravicini},
+           familyi={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science}%
+      }
+      \strng{namehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{fullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{fullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{bibnamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authorbibnamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authornamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authorfullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authorfullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780080481029}
+      \field{title}{Solid State Physics}
+      \field{year}{2000}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \endverb
+    \endentry
     \entry{tinkham2004introduction}{book}{}{}
       \name{author}{1}{}{%
         {{hash=90a8d001d414a2a0393c16501881e7cd}{%
@@ -38,151 +114,20 @@
       \strng{authornamehash}{90a8d001d414a2a0393c16501881e7cd}
       \strng{authorfullhash}{90a8d001d414a2a0393c16501881e7cd}
       \strng{authorfullhashraw}{90a8d001d414a2a0393c16501881e7cd}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780486134727}
       \field{series}{Dover Books on Physics Series}
       \field{title}{Introduction to Superconductivity}
       \field{year}{2004}
-      \verb{urlraw}
-      \verb https://books.google.it/books?id=VpUk3NfwDIkC
-      \endverb
-      \verb{url}
-      \verb https://books.google.it/books?id=VpUk3NfwDIkC
-      \endverb
-    \endentry
-    \entry{Abrikosov:1956sx}{article}{}{}
-      \name{author}{1}{}{%
-        {{hash=0616697a8ac3d8019811d5840d720d33}{%
-           family={Abrikosov},
-           familyi={A\bibinitperiod},
-           given={A.\bibnamedelimi A.},
-           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
-      }
-      \strng{namehash}{0616697a8ac3d8019811d5840d720d33}
-      \strng{fullhash}{0616697a8ac3d8019811d5840d720d33}
-      \strng{fullhashraw}{0616697a8ac3d8019811d5840d720d33}
-      \strng{bibnamehash}{0616697a8ac3d8019811d5840d720d33}
-      \strng{authorbibnamehash}{0616697a8ac3d8019811d5840d720d33}
-      \strng{authornamehash}{0616697a8ac3d8019811d5840d720d33}
-      \strng{authorfullhash}{0616697a8ac3d8019811d5840d720d33}
-      \strng{authorfullhashraw}{0616697a8ac3d8019811d5840d720d33}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Sov. Phys. JETP}
-      \field{title}{{On the Magnetic properties of superconductors of the second group}}
-      \field{volume}{5}
-      \field{year}{1957}
-      \field{pages}{1174\bibrangedash 1182}
-      \range{pages}{9}
-    \endentry
-    \entry{Simmendinger_2020}{article}{}{}
-      \name{author}{6}{}{%
-        {{hash=7e2be58e56eaf0e5064a57e3bffae993}{%
-           family={Simmendinger},
-           familyi={S\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod}}}%
-        {{hash=974d20b1a4b428f1526a5e14ded8d5bd}{%
-           family={Bihler},
-           familyi={B\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod}}}%
-        {{hash=71fd74adcb5c205acdcc653ea9f8a5fb}{%
-           family={Ionescu},
-           familyi={I\bibinitperiod},
-           given={A\bibnamedelima M},
-           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
-        {{hash=64091080431843936179f97bdc55000b}{%
-           family={Weigand},
-           familyi={W\bibinitperiod},
-           given={M},
-           giveni={M\bibinitperiod}}}%
-        {{hash=7c5c3794e0a35951655af6cb55b53264}{%
-           family={Schütz},
-           familyi={S\bibinitperiod},
-           given={G},
-           giveni={G\bibinitperiod}}}%
-        {{hash=948f7459cdda1c4a1754269a3dca98b0}{%
-           family={Albrecht},
-           familyi={A\bibinitperiod},
-           given={J},
-           giveni={J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {IOP Publishing}%
-      }
-      \strng{namehash}{17450099ffd180f59d72ba0e2231464f}
-      \strng{fullhash}{0bdff611d3367cedea72e36adbf0c5b5}
-      \strng{fullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
-      \strng{bibnamehash}{17450099ffd180f59d72ba0e2231464f}
-      \strng{authorbibnamehash}{17450099ffd180f59d72ba0e2231464f}
-      \strng{authornamehash}{17450099ffd180f59d72ba0e2231464f}
-      \strng{authorfullhash}{0bdff611d3367cedea72e36adbf0c5b5}
-      \strng{authorfullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{New Journal of Physics}
-      \field{month}{12}
-      \field{number}{12}
-      \field{title}{Bound and stable vortex–antivortex pairs in high-Tc superconductors}
-      \field{volume}{22}
-      \field{year}{2020}
-      \field{pages}{123035}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1088/1367-2630/abd123
-      \endverb
-      \verb{urlraw}
-      \verb https://dx.doi.org/10.1088/1367-2630/abd123
-      \endverb
-      \verb{url}
-      \verb https://dx.doi.org/10.1088/1367-2630/abd123
-      \endverb
-    \endentry
-    \entry{grosso2000solid}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=a4191a6fc23a699b6815ed51dcfee186}{%
-           family={Grosso},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=5a2bb77e83c3ca3494980d41b557144a}{%
-           family={Parravicini},
-           familyi={P\bibinitperiod},
-           given={G.P.},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier Science}%
-      }
-      \strng{namehash}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \strng{fullhash}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \strng{fullhashraw}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \strng{bibnamehash}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \strng{authorbibnamehash}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \strng{authornamehash}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \strng{authorfullhash}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \strng{authorfullhashraw}{0131a36ff5f6c742fb17c5162d8a37dd}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780080481029}
-      \field{title}{Solid State Physics}
-      \field{year}{2000}
       \true{nocite}
       \verb{urlraw}
-      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \verb https://books.google.it/books?id=VpUk3NfwDIkC
       \endverb
       \verb{url}
-      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \verb https://books.google.it/books?id=VpUk3NfwDIkC
       \endverb
     \endentry
     \entry{goodstein2014states}{book}{}{}
@@ -346,6 +291,34 @@
       \verb https://royalsocietypublishing.org/doi/abs/10.1098/rspa.1935.0048
       \endverb
     \endentry
+    \entry{Abrikosov:1956sx}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0616697a8ac3d8019811d5840d720d33}{%
+           family={Abrikosov},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{fullhash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{fullhashraw}{0616697a8ac3d8019811d5840d720d33}
+      \strng{bibnamehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authorbibnamehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authornamehash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authorfullhash}{0616697a8ac3d8019811d5840d720d33}
+      \strng{authorfullhashraw}{0616697a8ac3d8019811d5840d720d33}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Sov. Phys. JETP}
+      \field{title}{{On the Magnetic properties of superconductors of the second group}}
+      \field{volume}{5}
+      \field{year}{1957}
+      \true{nocite}
+      \field{pages}{1174\bibrangedash 1182}
+      \range{pages}{9}
+    \endentry
     \entry{PhysRevB.102.024506}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a98b4a71a11fc8feb836f2275c218ab8}{%
@@ -391,6 +364,73 @@
       \endverb
       \verb{url}
       \verb https://link.aps.org/doi/10.1103/PhysRevB.102.024506
+      \endverb
+    \endentry
+    \entry{Simmendinger_2020}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=7e2be58e56eaf0e5064a57e3bffae993}{%
+           family={Simmendinger},
+           familyi={S\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=974d20b1a4b428f1526a5e14ded8d5bd}{%
+           family={Bihler},
+           familyi={B\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=71fd74adcb5c205acdcc653ea9f8a5fb}{%
+           family={Ionescu},
+           familyi={I\bibinitperiod},
+           given={A\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=64091080431843936179f97bdc55000b}{%
+           family={Weigand},
+           familyi={W\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7c5c3794e0a35951655af6cb55b53264}{%
+           family={Schütz},
+           familyi={S\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod}}}%
+        {{hash=948f7459cdda1c4a1754269a3dca98b0}{%
+           family={Albrecht},
+           familyi={A\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{fullhash}{0bdff611d3367cedea72e36adbf0c5b5}
+      \strng{fullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
+      \strng{bibnamehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{authorbibnamehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{authornamehash}{17450099ffd180f59d72ba0e2231464f}
+      \strng{authorfullhash}{0bdff611d3367cedea72e36adbf0c5b5}
+      \strng{authorfullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{New Journal of Physics}
+      \field{month}{12}
+      \field{number}{12}
+      \field{title}{Bound and stable vortex–antivortex pairs in high-Tc superconductors}
+      \field{volume}{22}
+      \field{year}{2020}
+      \true{nocite}
+      \field{pages}{123035}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1367-2630/abd123
+      \endverb
+      \verb{urlraw}
+      \verb https://dx.doi.org/10.1088/1367-2630/abd123
+      \endverb
+      \verb{url}
+      \verb https://dx.doi.org/10.1088/1367-2630/abd123
       \endverb
     \endentry
   \enddatalist

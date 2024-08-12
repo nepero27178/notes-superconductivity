@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.25)  31 JUL 2024 12:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.31)  12 AUG 2024 19:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1966,7 +1966,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 LaTeX Font Info:    Trying to load font information for T1+pplj on input line 4
-4.
+5.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/t1pplj.fd
 File: t1pplj.fd 2004/09/06 font definitions for T1/pplj.
@@ -1981,42 +1981,43 @@ ity and thermodynamics.aux)
 (chapters/superconductivity/ginzburg-landau theory of superconductivity/ginzbur
 g-landau theory of superconductivity.aux)
 (chapters/superconductivity/conventional superconductors/conventional supercond
-uctors.aux))
+uctors.aux) (chapters/superconductivity/the bcs theory/the bcs theory.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-Package scrbase Info: activating english \partname on input line 44.
-Package scrbase Info: activating english \chaptername on input line 44.
-Package scrbase Info: activating english \appendixname on input line 44.
-Package scrbase Info: activating english \figurename on input line 44.
-Package scrbase Info: activating english \tablename on input line 44.
-Package scrbase Info: activating english \contentsname on input line 44.
-Package scrbase Info: activating english \listfigurename on input line 44.
-Package scrbase Info: activating english \listtablename on input line 44.
-Package scrbase Info: activating english \bibname on input line 44.
-Package scrbase Info: activating english \indexname on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+Package scrbase Info: activating english \partname on input line 45.
+Package scrbase Info: activating english \chaptername on input line 45.
+Package scrbase Info: activating english \appendixname on input line 45.
+Package scrbase Info: activating english \figurename on input line 45.
+Package scrbase Info: activating english \tablename on input line 45.
+Package scrbase Info: activating english \contentsname on input line 45.
+Package scrbase Info: activating english \listfigurename on input line 45.
+Package scrbase Info: activating english \listtablename on input line 45.
+Package scrbase Info: activating english \bibname on input line 45.
+Package scrbase Info: activating english \indexname on input line 45.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \Etoc@tf=\read6
- (/usr/local/share/miktex-texmf/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/share/miktex-texmf/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count539
 \scratchdimen=\dimen342
@@ -2037,7 +2038,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (/usr/local/share/miktex-texmf/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 44.
+LaTeX Info: Redefining \microtypecontext on input line 45.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2049,7 +2050,7 @@ Package microtype Info: No adjustment of character kerning.
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-Package hyperref Info: Link coloring ON on input line 44.
+Package hyperref Info: Link coloring ON on input line 45.
 
 (main.out) (main.out)
 \@outlinefile=\write6
@@ -2062,7 +2063,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 44.
+(scrbook)           before \begin{document} on input line 45.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
@@ -2090,7 +2091,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 44.
+or `english'. on input line 45.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
@@ -2108,13 +2109,13 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
-Package biblatex Info: Reference section=0 on input line 44.
-Package biblatex Info: Reference segment=0 on input line 44.
+Package biblatex Info: Reference section=0 on input line 45.
+Package biblatex Info: Reference segment=0 on input line 45.
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
 LaTeX Font Info:    Trying to load font information for T1+iwona on input line 
-53.
+54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/iwona/t1iwona.fd
 File: t1iwona.fd 2008/07/22 v0.995 font definition file for T1/iwona (MW)
@@ -2124,31 +2125,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OT1+pplx on input line 
-53.
+54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-53.
+54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-53.
+54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-53.
+54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-53.
+54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
@@ -2158,54 +2159,54 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 53.
+(Font)              scaled to size 11.40997pt on input line 54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 53.
+(Font)              scaled to size 8.33606pt on input line 54.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 53.
+(Font)              scaled to size 6.25204pt on input line 54.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 53.
+(Font)              scaled to size 11.40997pt on input line 54.
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 53.
+(Font)              scaled to size 8.33606pt on input line 54.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 53.
+(Font)              scaled to size 6.25204pt on input line 54.
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (3.0418pt too wide) in paragraph at lines 53--53
+Overfull \hbox (3.0418pt too wide) in paragraph at lines 54--54
  [][] []\T1/pplj/m/n/10.95 Homogeneous mag-ne-ti-za-tion in ab-sence of fields 
 []  
  []
 
 
-Overfull \hbox (35.33327pt too wide) in paragraph at lines 53--53
+Overfull \hbox (35.33327pt too wide) in paragraph at lines 54--54
  [][] []\T1/pplj/m/n/10.95 Free en-ergy ex-pan-sion and Ginzburg-Landau equa-ti
 ons []  
  []
 
 
-Overfull \hbox (5.08942pt too wide) in paragraph at lines 53--53
+Overfull \hbox (5.08942pt too wide) in paragraph at lines 54--54
  [][] []\T1/pplj/m/n/10.95 Interaction of two static flux-ons with same charge 
 []  
  []
 
 
-Overfull \hbox (21.82095pt too wide) in paragraph at lines 53--53
+Overfull \hbox (21.82095pt too wide) in paragraph at lines 54--54
  [][] []\T1/pplj/m/n/10.95 Interaction of two static flux-ons with op-po-site c
 harge []  
  []
 
 
-Overfull \hbox (16.97012pt too wide) in paragraph at lines 53--53
+Overfull \hbox (16.97012pt too wide) in paragraph at lines 54--54
  [][] []\T1/pplj/m/n/10.95 Interaction of two mov-ing flux-ons with same charge
  []  
  []
@@ -2221,247 +2222,78 @@ Overfull \hbox (16.97012pt too wide) in paragraph at lines 53--53
 o27178/.miktex/texmfs/install/fonts/enc/dvips/iwona/ec-iwona.enc}{/home/nepero2
 7178/.miktex/texmfs/install/fonts/enc/dvips/iwona/ec-iwona-sc.enc}{/usr/local/s
 hare/miktex-texmf/fonts/enc/dvips/base/8r.enc}]
-\openout2 = `"chapters/superconductivity/conventional superconductors/conventio
-nal superconductors.aux"'.
 
+[4]
+\openout2 = `"chapters/superconductivity/the bcs theory/the bcs theory.aux"'.
 
-(chapters/superconductivity/conventional superconductors/conventional supercond
-uctors.tex
-Chapter 3.
+ (chapters/superconductivity/the bcs theory/the bcs theory.tex
+Chapter 4.
 
-
-[34
-
-
-
-
-
-]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 1.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 1.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 1.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 1.
-
-Overfull \hbox (5.08942pt too wide) in paragraph at lines 1--1
- [][] []\T1/pplj/m/n/10.95 Interaction of two static flux-ons with same charge 
-[]  
- []
-
-
-Overfull \hbox (21.82095pt too wide) in paragraph at lines 1--1
- [][] []\T1/pplj/m/n/10.95 Interaction of two static flux-ons with op-po-site c
-harge []  
- []
-
-
-Overfull \hbox (16.97012pt too wide) in paragraph at lines 1--1
- [][] []\T1/pplj/m/n/10.95 Interaction of two mov-ing flux-ons with same charge
- []  
- []
-
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/iwona/m/sc/14.4'.
-(microtype)             Ignoring protrusion settings for this character.
-
-(chapters/superconductivity/conventional superconductors/pictures/superconducti
-ng sample.tex
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 26.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 26.
-)
-Underfull \vbox (badness 1609) has occurred while \output is active []
-
-
-
-[35]
-
-[36]
-Overfull \hbox (4.14996pt too wide) in paragraph at lines 64--65
-[]\T1/pplj/m/n/10.95 For a real or-der pa-ram-e-ter the sec-ond Ginzburg-Landau
- equa-tion, Eq. []
- []
-
-
-(chapters/superconductivity/conventional superconductors/pictures/field in the 
-sample.tex)
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/iwona/b/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for TS1+pplj on input line 
-95.
-
-(/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/ts1pplj.fd
-File: ts1pplj.fd 2004/09/06 font definitions for TS1/pplj.
-)
-
-Package microtype Info: Character `029' is missing
-(microtype)             in font `T1/iwona/m/sc/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-[37]
-(chapters/superconductivity/conventional superconductors/pictures/type i superc
-onductor.tex)
-(chapters/superconductivity/conventional superconductors/pictures/type ii super
-conductor.tex)
-
-[38]
-(chapters/superconductivity/conventional superconductors/pictures/hole in super
-conductor.tex)
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-143.
-
-(/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
-Underfull \vbox (badness 5345) has occurred while \output is active []
-
-
-
-[39]
-Underfull \vbox (badness 2846) has occurred while \output is active []
-
-
-
-[40]
-(chapters/superconductivity/conventional superconductors/pictures/hole and path
- in superconductor.tex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[41]
-(chapters/superconductivity/conventional superconductors/pictures/type i superc
-onductor phase diagram.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-(chapters/superconductivity/conventional superconductors/pictures/type ii super
-conductor phase diagram.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-Overfull \hbox (25.64447pt too wide) in paragraph at lines 245--247
- [][][] 
- []
-
-
-
-[42]
-
-[43]
-(chapters/superconductivity/conventional superconductors/pictures/interface.tex
-)
-
-[44]
-Package mdframed Info: mdframed works in twoside mode on input line 308.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 308.
-
-
-Package mdframed Warning: You got a bad break
-(mdframed)                because the last box will be empty
-(mdframed)                you have to change it manually
-(mdframed)                by changing the text, the space
-(mdframed)                or something else on input line 310.
-
-
-
-[45]
-
-[46]
-(chapters/superconductivity/conventional superconductors/pictures/vortex struct
-ure.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-(chapters/superconductivity/conventional superconductors/pictures/vortex paths.
-tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-
-[47]
-
-LaTeX Warning: Reference `subfig:subfig:type ii superconductor phase diagram' o
-n page 48 undefined on input line 419.
-
-
-
-[48]
-
-LaTeX Warning: Reference `fig: type ii superconductor phase diagram' on page 49
- undefined on input line 427.
-
-
-
-[49]
-
-[50]
-(chapters/superconductivity/conventional superconductors/pictures/type ii abrik
-osov superconductor phase diagram.tex
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-)
-
-[51]
-(chapters/superconductivity/conventional superconductors/pictures/two fluxons i
-nteracting.tex)
-
-[52]
-
-[53]
-
-[54]
-
-[55]
-
-[56]
-(chapters/superconductivity/conventional superconductors/pictures/square lattic
-e.tex)
-(chapters/superconductivity/conventional superconductors/pictures/triangular la
-ttice.tex)
-
-[57]
-
-[58]
-Overfull \hbox (5.59215pt too wide) detected at line 780
-[][]
- []
-
-
-(chapters/superconductivity/conventional superconductors/pictures/interaction f
-ree energy square versus triangular.tex))
-
-[59]
 
 [60
 
 
 
 
+
+
 ]
-LaTeX Font Info:    Trying to load font information for T1+fvm on input line 57
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 1.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 1.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 1.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 1.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/iwona/m/sc/14.4'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/iwona/b/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+
+[61]
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
+77.
+ (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
+
+[62]
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/iwona/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+[63]
+
+[64]
+(chapters/superconductivity/the bcs theory/pictures/fermi sphere and shell.tex
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 7.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 7.
+)
+
+[65]
+
+[66]
+
+[67])
+
+[68]
+LaTeX Font Info:    Trying to load font information for T1+fvm on input line 59
 .
  (/home/nepero27178/.miktex/texmfs/install/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 57.
+(Font)              scaled to size 9.30756pt on input line 59.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (5.33673pt too wide) in paragraph at lines 57--57
-\T1/pplj/m/it/10.95 Royal So-ci-ety of Lon-don. Se-ries A - Math-e-mat-i-cal an
-d Phys-i-cal Sci-ences \T1/pplj/m/n/10.95 149.866
- []
-
 
 
 (/home/nepero27178/.miktex/texmfs/install/tex/generic/stringenc/se-utf8.def
@@ -2470,21 +2302,22 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 (/home/nepero27178/.miktex/texmfs/install/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
-[61] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
+[69
+
+
+
+
+] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
 (chapters/superconductivity/superconductivity and thermodynamics/superconductiv
 ity and thermodynamics.aux)
 (chapters/superconductivity/ginzburg-landau theory of superconductivity/ginzbur
 g-landau theory of superconductivity.aux)
 (chapters/superconductivity/conventional superconductors/conventional supercond
-uctors.aux))
+uctors.aux) (chapters/superconductivity/the bcs theory/the bcs theory.aux))
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2492,24 +2325,76 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 66432 strings out of 473905
- 1571682 string characters out of 5733678
- 2776704 words of memory out of 5000000
- 88063 multiletter control sequences out of 15000+600000
- 687927 words of font info for 216 fonts, out of 8000000 for 9000
+ 64840 strings out of 473905
+ 1527383 string characters out of 5733678
+ 2775290 words of memory out of 5000000
+ 86562 multiletter control sequences out of 15000+600000
+ 665541 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 129i,23n,138p,10901b,3434s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 129i,23n,138p,10901b,2803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-pdfTeX warning (dest): name{equation.1.3} has been referenced but does not exis
-t, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{equation.2.11} has been referenced but does not exi
-st, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.3.4.4} has been referenced but does not 
+exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{equation.2.10} has been referenced but does not exi
-st, replaced by a fixed one
+pdfTeX warning (dest): name{subsection.3.4.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.4.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.3.4} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.3.3} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.3.2} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.3.1} has been referenced but does not exist
+, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter.3} has been referenced but does not exist, 
+replaced by a fixed one
 
 
 pdfTeX warning (dest): name{subsection.2.5.2} has been referenced but does not 
@@ -2599,30 +2484,25 @@ pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
 pdfTeX warning (dest): name{chapter.1} has been referenced but does not exist, 
 replaced by a fixed one
 
-</usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr
-/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local
-/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/share
-/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/share/mikt
-ex-texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/share/miktex-texm
-f/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-texmf/font
-s/type1/public/amsfonts/euler/eurb10.pfb></home/nepero27178/.miktex/texmfs/inst
-all/fonts/type1/public/mathpazo/fplmb.pfb></home/nepero27178/.miktex/texmfs/ins
-tall/fonts/type1/public/mathpazo/fplmbb.pfb></home/nepero27178/.miktex/texmfs/i
-nstall/fonts/type1/public/mathpazo/fplmbi.pfb></home/nepero27178/.miktex/texmfs
-/install/fonts/type1/public/mathpazo/fplmr.pfb></home/nepero27178/.miktex/texmf
-s/install/fonts/type1/public/mathpazo/fplmri.pfb></home/nepero27178/.miktex/tex
-mfs/install/fonts/type1/public/fpl/fplrc8a.pfb></home/nepero27178/.miktex/texmf
-s/install/fonts/type1/public/fpl/fplrij8a.pfb></home/nepero27178/.miktex/texmfs
-/install/fonts/type1/bera/fvmr8a.pfb></home/nepero27178/.miktex/texmfs/install/
-fonts/type1/nowacki/iwona/iwonab.pfb></home/nepero27178/.miktex/texmfs/install/
-fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/share/miktex-texmf/fonts/type1
-/public/amsfonts/symbols/msam10.pfb></usr/local/share/miktex-texmf/fonts/type1/
-urw/palatino/uplb8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino
-/uplbi8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplr8a.pfb
-></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (29 pages, 476086 bytes).
+</usr/local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/
+share/miktex-texmf/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/share/m
+iktex-texmf/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/share/miktex-
+texmf/fonts/type1/public/amsfonts/euler/eurb10.pfb></home/nepero27178/.miktex/t
+exmfs/install/fonts/type1/public/mathpazo/fplmbb.pfb></home/nepero27178/.miktex
+/texmfs/install/fonts/type1/public/mathpazo/fplmr.pfb></home/nepero27178/.mikte
+x/texmfs/install/fonts/type1/public/mathpazo/fplmri.pfb></home/nepero27178/.mik
+tex/texmfs/install/fonts/type1/public/fpl/fplrc8a.pfb></home/nepero27178/.mikte
+x/texmfs/install/fonts/type1/public/fpl/fplrij8a.pfb></home/nepero27178/.miktex
+/texmfs/install/fonts/type1/bera/fvmr8a.pfb></home/nepero27178/.miktex/texmfs/i
+nstall/fonts/type1/nowacki/iwona/iwonab.pfb></home/nepero27178/.miktex/texmfs/i
+nstall/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/share/miktex-texmf/font
+s/type1/urw/palatino/uplb8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/
+palatino/uplr8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/upl
+ri8a.pfb>
+Output written on main.pdf (12 pages, 288725 bytes).
 PDF statistics:
- 558 PDF objects out of 1000 (max. 8388607)
- 107 named destinations out of 1000 (max. 500000)
- 30371 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 317 PDF objects out of 1000 (max. 8388607)
+ 73 named destinations out of 1000 (max. 500000)
+ 25153 words of extra memory for PDF output out of 29859 (max. 10000000)
 

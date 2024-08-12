@@ -1,0 +1,18 @@
+\begin{tikzpicture}
+	\filldraw[color=lev,fill=lev!60,fill opacity=0.5] (0,0) circle (7em);
+	\fill[color=lev,fill=lev!30,fill opacity=0.5] (0,0) circle (8.5em);
+	
+	\fill[color=lev] (-25:7.4em) circle (1.2pt);
+	\draw[color=lev,-stealth] (0,0)--(-25:7.4em);
+	\node[color=lev,anchor=north east] at (-25:6em) {\small $\mathbf{k}$};	
+	
+	\fill[color=lev] (123:8.3em) circle (1.2pt);
+	\draw[color=lev,-stealth] (0,0)--(123:8.3em);
+	\node[color=lev,anchor=north east] at (123:6em) {\small $\mathbf{k}'$};
+	
+	\draw[color=lev!60,stealth-stealth] (0,0)--(72:7em);
+	\node[color=lev!60,anchor=north west] at (72:4.25em) {\small $k_F$};	
+	
+	\draw[color=lev!60,stealth-stealth] (72:7em)--(72:8.5em);
+	\node[color=lev!60,anchor=north west] at (72:8.1em) {\small $\delta k^\star$};	
+\end{tikzpicture}

@@ -42,3 +42,9 @@
 \contentsline {subsection}{\numberline {3.4.2}{Interaction of two static fluxons with opposite charge}}{56}{subsection.3.4.2}%
 \contentsline {subsection}{\numberline {3.4.3}{Interaction of two moving fluxons with same charge}}{56}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}{Many fluxons with the same charge: the lattice ground state}}{56}{subsection.3.4.4}%
+\contentsline {chapter}{\numberline {4}{The BCS theory}}{61}{chapter.4}%
+\etoc@startlocaltoc {5}
+\contentsline {section}{\numberline {4.1}{What if electrons attract?}}{61}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}{Bound states}}{61}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}{Bound states, considering statistics}}{64}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}{The role of phonons in superconductivity}}{67}{section.4.2}%

@@ -1,0 +1,228 @@
+\chapter{The BCS theory}\chaptertoc{}\label{chap: the bcs theory}
+
+{\color{red}intro\dots (saved locally)}
+
+\section{What if electrons attract?}
+
+Many experiments exist, showing that the elementary ``object'' inside a superconductor has charge $q=2e$. This can be verified, for example, measuring the quantization of the magnetic flux inside a superconducting sample. The flux gets quantized as
+\[
+	\Phi = n\frac{h}{\abs{q}} = n \frac{h}{2\abs{e}} 
+\]
+This general rule, that seems to be obeyed flawlessly in the superconducting phase, indicates that such object is \textbf{a pair of electrons}.
+
+Moreover, the superconducting transition exhibits many similarities with the superfluid transition of liquid Helium, which is well known to be a Bose-Einstein condensation process. As it turns out, a superconductor is a condensate state. To produce a condensate, then, we need bosons. Electron pairs, seen as composite objects, are bosons.
+
+Other arguments point in the same direction: superconductivity is the condensation of a system of electrons pairs. This is the corner stone of the BCS theory. To make a pair, we need an \textbf{attractive interaction} between electrons: we know they interact via the (screened) Coulomb interaction and the Pauli principle, so it may seem strange to look for some kind of attraction; we assume they somehow attract, and see if they form bound states -- which are, pairs.
+
+\subsection{Bound states}
+
+Consider two interacting electrons in $D$ dimensions, with hamiltonian
+\[
+	\hat H = \frac{\hat{\mathbf{p}}_1^2}{2m} + \frac{\hat{\mathbf{p}}_2^2}{2m} + V\lrR{\hat{\mathbf{x}}_1-\hat{\mathbf{x}}_2}
+\]
+with obvious notation. The same hamiltonian can be decomposed in the sum of the center of mass part and the relative part,
+\[
+	\hat H = \lrS{\frac{\hat{\mathbf{P}}^2}{2M}} + \lrS{\frac{\hat{\mathbf{p}}^2}{2\mu} + V \lrR{\hat{\mathbf{x}}}}
+\]
+with
+\[
+	\mathbf{P} \equiv \mathbf{p}_1 + \mathbf{p}_2
+	\qquad
+	\mathbf{X} \equiv \frac{\mathbf{x}_1 + \mathbf{x}_2}{2}
+	\qquad
+	\mathbf{p} \equiv \frac{\mathbf{p}_1 - \mathbf{p}_2}{2}
+	\qquad
+	\mathbf{x} \equiv \mathbf{x}_1 - \mathbf{x}_2
+\]
+and
+\[
+	M = 2m
+	\qquad
+	\mu = \frac{m}{2}
+\]
+Assuming overall translational symmetry, the wavefunction can be factorized as
+\[
+	\psi(\mathbf{x}_1,\mathbf{x}_2) = \Phi(\mathbf{X}) \phi(\mathbf{x})
+\]
+where $\Phi$ is the wavefunction of the center of mass, and $\phi$ is the relative wavefunction.
+
+Now, consider a local interaction, on a ``small'' length scale. We may start by considering the perfectly local contact-attractive interaction,
+\[
+	V \lrR{\mathbf{x}} \equiv - V_0 \delta^{(D)} \lrR{\mathbf{x}}
+	\quad\qq{with}\quad
+	V_0 > 0
+\]
+Here we are neglecting the Coulomb interaction. It is reasonable to do so if such interaction is screened, as it commonly is in materials. For the Coulomb interaction to be screened we need the whole electron liquid background: for more details on this subject, check the vast book \citetitle{giuliani2008quantum} \cite{giuliani2008quantum} by \citeauthor{giuliani2008quantum}. Let us forget for a moment both the electron liquid and the Coulomb interaction, and proceed with two locally interacting chargeless fermions. This evidently incoherent argument is necessary to highlight, in the following, the essential collective nature of the attractive interaction.
+
+The Schrödinger's Equation for the relative part of the wavefunction is given by
+\[
+	\lrS{\frac{\hat{\mathbf{p}}^2}{2\mu} + V \lrR{\hat{\mathbf{x}}}} \phi(\mathbf{x}) = - E^{(\mathrm{b})} \phi(\mathbf{x})
+\]
+where the eigenvalue $- E^{(\mathrm{b})} < 0$ indicates the binding energy. Consider now the complete basis of orthonormal plane waves,
+\[
+	w_\mathbf{k} \lrR{\mathbf{x}} = L^{-D/2} e^{i \mathbf{k} \cdot \mathbf{x}}
+\]
+with $L^D$ the total volume. The wavefunction can be decomposed as
+\[
+	\phi\lrR{\mathbf{x}} = \sum_\mathbf{k} \alpha_\mathbf{k} w_\mathbf{k} \lrR{\mathbf{x}}
+\]
+Thus, inserting the above decomposition in the Schrödinger's Equation and projecting onto the plane wave $w_\mathbf{k} \lrR{\mathbf{x}}$, we obtain
+\[
+	\epsilon_\mathbf{k} \alpha_\mathbf{k} + \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \alpha_{\mathbf{k}'} = - E^{(\mathrm{b})} \alpha_\mathbf{k}
+	\quad\qq{with}\quad
+	\epsilon_\mathbf{k} = \frac{\hbar^2 \abs{\mathbf{k}^2}}{2\mu}
+\]
+and where the Fourier transform of the interaction potential is intended,
+\[
+	V_{\mathbf{k}-\mathbf{k}'} = \frac{1}{L^D} \int_{\R^D} d\mathbf{x} \, V \lrR{\mathbf{x}} e^{i(\mathbf{k}-\mathbf{k}') \cdot \mathbf{x}} = - V_0
+\]
+since the potential is \textit{delta-like}.  Then,
+\[
+	\lrR{\epsilon_\mathbf{k} + E^{(\mathrm{b})}} \alpha_\mathbf{k} = V_0 \sum_{\mathbf{k}'} \alpha_{\mathbf{k}'}
+\]
+It follows:
+\[
+	\alpha_\mathbf{k} = \frac{V_0}{\epsilon_\mathbf{k} + E^{(\mathrm{b})}} \sum_{\mathbf{k}'} \alpha_{\mathbf{k}'}
+\]
+then, summing over $\mathbf{k}$, the coefficient $\sum \alpha$ can be simplified both sides, leaving the self-consistency equation
+\[
+	\sum_\mathbf{k} \frac{V_0}{\epsilon_\mathbf{k} + E^{(\mathrm{b})}} = 1
+\]
+Assuming a large volume we can make approximate the momenta as continuous. A little caution is here needed: we approximate the potential as ``perfectly local'', which means that the length scale over which it drops to zero is much smaller than any physical length scale involved in the system. Having neglected the Coulomb long-range interaction, we understand the relevant length here cited is of the order of the particle dimension: our fermions are dimensionless points. Briefly, we should integrate on $\R^D \setminus s(2\pi/\Lambda)$ with $s(r)$ the sphere of radius $r$ in $D$ dimensions and $2\pi/\Lambda$ the said length for a properly defined momentum $\Lambda$.
+
+This is equivalent to integrating over $\R^D$ a potential whose Fourier transform is constant for $\abs{\mathbf{k}} < \Lambda$ and (approximately and continuously) drops to zero for bigger momenta. Such potential is strongly localized, and \textit{delta-like} as seen ``from distant''. Defining $\kappa \equiv (2\pi)^D/ L^D V_0$ we have
+\[
+	\kappa = \int_{\abs{\mathbf{k}}<\Lambda} d^D \mathbf{k} \, \frac{1}{\epsilon_\mathbf{k} + E^{(\mathrm{b})}}
+\]
+The question is: at varying dimensionality $D$, is there a solution for any given $\kappa$?
+
+\begin{enumerate}
+	\item For $D=1$, the integral becomes
+	\[
+		\kappa = \int_{\abs{k}<\Lambda} dk \, \lrS{\frac{\hbar^2 k^2}{2\mu} + E^{(\mathrm{b})}}^{-1}
+	\]
+	The above function is solved by an infinite set of couples $(E^{(\mathrm{b})},\kappa)$; $\kappa$ is a continuous function of $E^{(\mathrm{b})}$. Moreover, for $E^{(\mathrm{b})} \to 0$ the integral presents an hyperbolic divergence, thus allowing for a $\kappa\to\infty$ solution. Then for any choice of $\kappa\in\R$ a solution exists. 
+	
+	The bound state is formed regardless of $\kappa$, which is, regardless of the attraction strength $V_0$.
+	\item For $D=2$, we get
+	\[
+		\kappa = \int_{\abs{\mathbf{k}}<\Lambda} d^2 k \, \lrS{\frac{\hbar^2 k^2}{2\mu} + E^{(\mathrm{b})}}^{-1} = \pi \int_{k^2 < \Lambda^2} d k^2 \, \lrS{\frac{\hbar^2 k^2}{2\mu} + E^{(\mathrm{b})}}^{-1}
+	\]
+	where we used $d^2 k = 2\pi k dk = \pi dk^2$. The same argument of the point above holds: for $E^{(\mathrm{b})} \to 0$ the integral presents a logarithmic divergence, thus allowing for a $\kappa\to\infty$ solution. Then for any choice of $\kappa\in\R$ a solution exists.
+	
+	Also for $D=2$ the bound state is formed regardless of the attraction strength $V_0$.
+	
+	\item For $D>2$, we can use
+	\[
+		d^D \mathbf{k} = \Omega_D k^{D-1} dk
+	\]
+	with $\Omega_D$ the $D$-dimensional solid angle. Thus the integral becomes
+	\[
+		\kappa = \int_{\abs{\mathbf{k}}<\Lambda} d^D \mathbf{k} \, \lrS{\frac{\hbar^2 k^2}{2\mu} + E^{(\mathrm{b})}}^{-1} = \Omega_D \int_{k<\Lambda} dk \, k^{D-1} \lrS{\frac{\hbar^2 k^2}{2\mu} + E^{(\mathrm{b})}}^{-1} 
+	\]
+	Being $D-1 \ge 2$, this integral remains finite for any value of $E^{(\mathrm{b})}$, as long as the cutoff $\Lambda$ is finite. Moreover, the maximum value (which is finite and we denote by $\kappa^\star$) of the integral is recovered for $E^{(\mathrm{b})} \to 0$.
+	
+	For $D=3$ and in higher dimensions, two electrons form a bound state if $\kappa \le \kappa^\star$ -- or, if the interaction potential $V_0$ exceeds a certain threshold value.
+\end{enumerate}
+
+It looks like two chargeless fermions equipped with a local and attractive interaction cannot form a pair in three dimensions. This should limit the phenomenon of superconductivity to two-dimensional materials. Then, why do we have three-dimensional superconductors? 
+
+\subsection{Bound states, considering statistics}
+
+We are missing something. As anticipated, to neglect the Coulomb interaction between electrons we need the whole electron liquid -- which is, we need a great number of electrons plus our two interacting electrons, interacting with all others only by the Pauli principle. This may seem a little modification; it is instead a huge one, because now this kind of attraction allows for bound states also for $D>2$. We may say that the electron pair is an object formed by two electrons directly and all others indirectly -- a collective configuration.
+
+So, consider a system formed by the filled Fermi sphere plus two electrons, as described in the above paragraph. All the ``Fermi electrons'' prevent our two interacting electrons from occupying states inside the Fermi sphere. Another assumption can be made: in any way the attractive interaction arises, it is reasonable to assume that for electrons ``very distant'' from the Fermi surface the kinetic contribution is dominant and the effect of the attraction is negligible; this is equivalent to say that the maximum amount of energy the attraction can absorb for electrons of energy slightly bigger than $\epsilon_F$ is some amount $\delta \epsilon^\star$, and for $\epsilon_\mathbf{k} \gg \epsilon_F + \delta \epsilon^\star$ the potential drops to zero.
+
+We assume that the shell is \textit{thin}, meaning $\delta\epsilon^\star \ll \epsilon_F$. Notice that to say that the potential has no components inside the Fermi sphere means that our pair cannot interact via the potential with the electrons inside, but only through the Pauli principle, thus being passively excluded from the sphere.
+%To be completely correct we should extend the shell inside the sphere for a length $\delta\epsilon^\star$, in order for the potential to be able to extract 
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/the bcs theory/pictures/fermi sphere and shell}
+	\caption{Representation of the Fermi sphere, of radius $k_F$ in darker color, and the interaction shell of width $\delta k^\star$ in lighter color. The solid dots represents the two interacting electrons. The Fermi sphere is to be thought as filled with electrons, and interacting with the couple through Pauli exclusion principle.}
+	\label{fig:fermi sphere and shell}
+\end{figure}
+
+We follow the same argument as the above section. 
+The Schrödinger's Equation for the relative part of the wavefunction is
+\[
+	\lrS{\frac{\hat{\mathbf{p}}^2}{2\mu} + V \lrR{\hat{\mathbf{x}}}} \phi(\mathbf{x}) = \lrR{\epsilon_F - E^{(\mathrm{b})}} \phi(\mathbf{x})
+\]
+where now the eigenvalue is shifted by an amount $\epsilon_F$. In fact we consider a pair bound ``on top of the Fermi surface'', so we consider paired those states outside the Fermi sphere with energy lower than $\epsilon_F$. Proceeding with the plane wave expansion,
+\[
+	\epsilon_\mathbf{k} \alpha_\mathbf{k} + \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \alpha_{\mathbf{k}'} = \lrR{\epsilon_F - E^{(\mathrm{b})}} \alpha_\mathbf{k}
+\]
+where now the potential has nonzero Fourier components only in the shell of width $\epsilon^\star$ around the Fermi sphere. Take Fig.~\ref{fig:fermi sphere and shell}: we approximate the potential as active only for those plane waves $\ket{\mathbf{k}}$ and $\ket{\mathbf{k}'}$ inside the shell of radius $k_F + \delta k^\star$ defined such that
+\[
+	\frac{\hbar^2}{2\mu} \lrR{k_F + \delta k^\star} = \epsilon_F + \delta \epsilon^\star
+\]
+We approximate the potential as
+\[
+	V_{\mathbf{k}-\mathbf{k}'} = - V_0 A\lrR{\mathbf{k}} A\lrR{\mathbf{k}'}
+\]
+where $A$ is the characteristic function of the shell,
+\[
+	A\lrR{\mathbf{k}} \equiv \theta\lrR{\abs{\mathbf{k}}-k_F}\theta\lrR{k_F+\delta k^\star -\abs{\mathbf{k}}} = \begin{cases}
+		0 \quad\text{if}\quad &\abs{\mathbf{k}}<k_F \\
+		1 \quad\text{if}\quad  k_F<\hspace{-0.6em}&\abs{\mathbf{k}}<k_F+\delta k^\star \\
+		0 \quad\text{if}\quad  &\abs{\mathbf{k}}>k_F+\delta k^\star \\
+	\end{cases}
+\]
+Then:
+\[
+	\lrR{\epsilon_\mathbf{k} + E^{(\mathrm{b})} - \epsilon_F} \alpha_\mathbf{k} = V_0 A\lrR{\mathbf{k}} \sum_{\mathbf{k}'} A\lrR{\mathbf{k}'} \alpha_{\mathbf{k}'}
+\]
+It follows:
+\[
+	\alpha_\mathbf{k} = \frac{V_0 A\lrR{\mathbf{k}}}{\epsilon_\mathbf{k} + E^{(\mathrm{b})} - \epsilon_F} \sum_{\mathbf{k}'} A\lrR{\mathbf{k}'} \alpha_{\mathbf{k}'}
+\]
+We multiply both sides by $A\lrR{\mathbf{k}}$ and sum over $\mathbf{k}$. The coefficient $\sum A \alpha$ can be eliminated by simplification, leaving the self-consistency equation
+\[
+	\sum_\mathbf{k} \frac{V_0 A\lrR{\mathbf{k}}}{\epsilon_\mathbf{k} + E^{(\mathrm{b})} - \epsilon_F} = 1
+\]
+
+We define $\kappa$ as in the previous section, $\kappa \equiv (2\pi)^D/ L^D V_0$, and convert the sum in an integral,
+\[
+	\kappa = \int_{\abs{\mathbf{k}}<\Lambda} d^D \mathbf{k} \, \frac{A\lrR{\mathbf{k}}}{\epsilon_\mathbf{k} + E^{(\mathrm{b})} - \epsilon_F}
+\]
+Since $\delta k^\star \ll k_F$ by the assumption of thinness of the shell, to this one the integration domain is limited by the function $A$:
+\[
+	\kappa = \int_{\abs{\mathbf{k}}\ge k_F}^{\abs{\mathbf{k}}\le k_F+\delta k^\star} \frac{d^D \mathbf{k}}{\epsilon_\mathbf{k} + E^{(\mathrm{b})} - \epsilon_F}
+\]
+We make use of the $D$-dimensional density of states $\rho_D(\epsilon)$ to convert this to an energy integral,
+\[
+	\kappa = \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} \frac{d\epsilon \, \rho_D(\epsilon)}{\epsilon + E^{(\mathrm{b})} - \epsilon_F}
+\]
+For $D=3$, the density of states depends on energy as $\sqrt{\epsilon}$, approximately horizontal around the Fermi energy. Then for any energy in the range of interest we can approximate $\rho_3 (\epsilon) \simeq \rho_3 (\epsilon_F) \equiv \rho_0$. It follows
+\[
+	\kappa \simeq \rho_0 \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} \frac{d\epsilon}{\lrR{\epsilon-\epsilon_F} + E^{(\mathrm{b})}}
+\]
+This integral is analogous to the $D=1$ integral of the precedent section. Then for any given $\kappa$ a binding energy $E^{(\mathrm{b})}$ exists such that the above equation is satisfied. The integral can be solved, giving
+\[
+	\kappa \simeq \rho_0 \log \lrR{1+ \frac{\delta\epsilon^\star}{E^{(\mathrm{b})}}}
+\]
+Now: $\delta\epsilon^\star$ represents the maximum energy the pairing can take up from the pair, so in general $E^{(\mathrm{b})} < \delta\epsilon^\star$. It is reasonable to assume that low-lying excited states for which all this description works are formed near the Fermi surface, such that $E^{(\mathrm{b})} \ll \delta\epsilon^\star$. Then
+\[
+	\frac{\kappa}{\rho_0} \simeq \log \lrR{\frac{\delta\epsilon^\star}{E^{(\mathrm{b})}}}
+	\quad\implies\quad
+	E^{(\mathrm{b})} \simeq \delta\epsilon^\star e^{-\eta}
+\]
+where $\eta \equiv \kappa/\rho_0 = (2\pi)^3 / L^3 V_0 \rho_0$. Then the strength of the binding is given by the energy extension of the interaction shell, suppressed exponentially by a factor $\eta \propto V_0^{-1}$. This makes sense: strong interactions produce negligible damping, and the strength of the binding is controlled by how much the shell is thick. On the contrary, weak interactions produce a strong damping, making it much difficult for the shell thickness to compensate. One can think about the shell width as a measure of \textit{how many} states can couple.
+
+The whole argument holds for $D=2$, for which the density of states is a constant, and $D=1$, for which it goes like $\epsilon^{-1/2}$. This section lets us conclude that a ``shell interaction'' of strength $V_0$ creates electron pairs quite independently of $V_0$, as long as it is not too small. This is an astonishing result: not only it effectively corrects the incoherence of the above section, but it also demonstrates that the pairing of electrons observed in superconductors is a collective phenomenon arising from the presence of an entire electron liquid.
+
+Now, the next step is to understand how this interaction comes to life at all. We know we are inside a material, a crystal of some kind: it is necessary to screen the Coulomb interaction. It is natural to look for any kind of \textit{attraction} inside the interactions of electrons with the crystal, instead of interactions of electrons with themselves. Moreover, we need some kind of quantum mechanism capable of storing the binding energy of the pair - which we now start calling a \textbf{Cooper pair}. As the electromagnetic field stores the binding energy of an atom with its electrons (pictorially we say they ``exchange a photon'', although this description is quite misleading), we expect some quantized field of the material to mediate the interaction and store the binding energy of the Cooper pair. In general we may look for any kind of collective excitation of materials -- quasiparticles of any kind -- but the most general, simple and obvious is the phonon, ``the quantum of lattice vibrations''.
+
+\section{The role of phonons in superconductivity}
+
+For simplicity we will consider simple crystals. For such crystals the dispersion of phonons has an energy extension of approximately $\hbar\omega_D$, with $\omega_D$ the Debye frequency; in the language of the above section, $\delta\epsilon^\star = \hbar\omega_D$. For composite crystals, due to the presence of optical bands and polarization effects, the argument must be corrected (sometimes, fatally).
+
+The phononic field is quantized in crystals: a good source about such quantization is \citetitle{grosso2000solid} \cite{grosso2000solid} by \citeauthor{grosso2000solid}. The hamiltonian describing phonons is an harmonic one,
+\[
+	\hat H^{(\mathrm{p})} = \sum_\mathbf{k} \hbar \Omega_\mathbf{k} \lrS{\hat a_\mathbf{k}^\dagger \hat a_\mathbf{k} + \frac{\mathbb{1}}{2}}
+\]
+with $\hat a_\mathbf{k}^\dagger$ the creation operator for a phonon in state $\ket{\mathbf{k}}$, and $\hat a_\mathbf{k}$ the related destruction operator. Such operators obey Bose commutation rules:
+\[
+	\comm{\hat a_\mathbf{k}}{\hat a_{\mathbf{k}'}^\dagger} = \delta_{\mathbf{k}\mathbf{k}'}
+\]
+Atomic displacements can can be written in terms of these operators, [...]
