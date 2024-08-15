@@ -1,18 +1,19 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'main.blg'
-[44] biber:340> INFO - === Mon Aug 12, 2024, 19:36:28
-[55] Biber.pm:420> INFO - Reading 'main.bcf'
-[104] Biber.pm:991> INFO - Using all citekeys in bib section 0
-[114] Biber.pm:4463> INFO - Processing section 0
-[121] Biber.pm:4654> INFO - Looking for bibtex file 'misc/bibliography.bib' for section 0
-[122] bibtex.pm:1713> INFO - LaTeX decoding ...
-[129] bibtex.pm:1519> INFO - Found BibTeX data source 'misc/bibliography.bib'
-[206] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[206] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[206] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
-[206] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[213] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[216] bbl.pm:779> INFO - Output to main.bbl
-[217] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'PhysRevB.102.024506' is not an integer - this will probably not sort properly.
-[217] Biber.pm:131> WARN - legacy month field 'dec' in entry 'Simmendinger_2020' is not an integer - this will probably not sort properly.
-[217] Biber.pm:133> INFO - WARNINGS: 2
+[54] biber:340> INFO - === gio ago 15, 2024, 18:55:49
+[67] Biber.pm:420> INFO - Reading 'main.bcf'
+[121] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[131] Biber.pm:4463> INFO - Processing section 0
+[139] Biber.pm:4654> INFO - Looking for bibtex file 'misc/bibliography.bib' for section 0
+[140] bibtex.pm:1713> INFO - LaTeX decoding ...
+[152] bibtex.pm:1519> INFO - Found BibTeX data source 'misc/bibliography.bib'
+[241] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[242] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[242] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[242] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[250] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[254] bbl.pm:779> INFO - Output to main.bbl
+[254] Biber.pm:131> WARN - legacy month field 'Dec' in entry 'PhysRev.108.1175' is not an integer - this will probably not sort properly.
+[254] Biber.pm:131> WARN - legacy month field 'dec' in entry 'Simmendinger_2020' is not an integer - this will probably not sort properly.
+[254] Biber.pm:131> WARN - legacy month field 'Jul' in entry 'PhysRevB.102.024506' is not an integer - this will probably not sort properly.
+[254] Biber.pm:133> INFO - WARNINGS: 3

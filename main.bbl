@@ -19,42 +19,55 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{giuliani2008quantum}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=6e462c4272d83cb759f8ffe2b3fc16bc}{%
-           family={Giuliani},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=68763f3b6092069bd29b0c1ffe205395}{%
-           family={Vignale},
-           familyi={V\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
+    \entry{PhysRev.108.1175}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=616cd76a955b1fcb011fefbf1af91880}{%
+           family={Bardeen},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=818261d37b65922f250ddf289897eb6c}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi N.},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=c2af9bb5b241e45f3afcb0f87b9e1540}{%
+           family={Schrieffer},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Cambridge University Press}%
+        {American Physical Society}%
       }
-      \strng{namehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{fullhash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{fullhashraw}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{bibnamehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authorbibnamehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authornamehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authorfullhash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authorfullhashraw}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{namehash}{c30a83010c772bf453b99545802834fb}
+      \strng{fullhash}{c30a83010c772bf453b99545802834fb}
+      \strng{fullhashraw}{c30a83010c772bf453b99545802834fb}
+      \strng{bibnamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorbibnamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authornamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorfullhash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorfullhashraw}{c30a83010c772bf453b99545802834fb}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{9781139471589}
-      \field{title}{Quantum Theory of the Electron Liquid}
-      \field{year}{2008}
+      \field{issue}{5}
+      \field{journaltitle}{Phys. Rev.}
+      \field{month}{12}
+      \field{title}{Theory of Superconductivity}
+      \field{volume}{108}
+      \field{year}{1957}
+      \field{pages}{1175\bibrangedash 1204}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1103/PhysRev.108.1175
+      \endverb
       \verb{urlraw}
-      \verb https://books.google.it/books?id=FFydOyv_r78C
+      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
       \endverb
       \verb{url}
-      \verb https://books.google.it/books?id=FFydOyv_r78C
+      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
       \endverb
     \endentry
     \entry{grosso2000solid}{book}{}{}
@@ -81,8 +94,8 @@
       \strng{authornamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
       \strng{authorfullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
       \strng{authorfullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780080481029}
@@ -93,6 +106,44 @@
       \endverb
       \verb{url}
       \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \endverb
+    \endentry
+    \entry{giuliani2008quantum}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=6e462c4272d83cb759f8ffe2b3fc16bc}{%
+           family={Giuliani},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=68763f3b6092069bd29b0c1ffe205395}{%
+           family={Vignale},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{fullhash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{fullhashraw}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{bibnamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorbibnamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authornamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorfullhash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorfullhashraw}{790343fd4e55380c534d5dd246cde6c2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781139471589}
+      \field{title}{Quantum Theory of the Electron Liquid}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=FFydOyv_r78C
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=FFydOyv_r78C
       \endverb
     \endentry
     \entry{tinkham2004introduction}{book}{}{}
@@ -114,8 +165,8 @@
       \strng{authornamehash}{90a8d001d414a2a0393c16501881e7cd}
       \strng{authorfullhash}{90a8d001d414a2a0393c16501881e7cd}
       \strng{authorfullhashraw}{90a8d001d414a2a0393c16501881e7cd}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780486134727}
@@ -343,8 +394,8 @@
       \strng{authornamehash}{e8ce3264e52d0d97a7d76afe7d632e4d}
       \strng{authorfullhash}{e8ce3264e52d0d97a7d76afe7d632e4d}
       \strng{authorfullhashraw}{e8ce3264e52d0d97a7d76afe7d632e4d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{2}
@@ -410,8 +461,8 @@
       \strng{authornamehash}{17450099ffd180f59d72ba0e2231464f}
       \strng{authorfullhash}{0bdff611d3367cedea72e36adbf0c5b5}
       \strng{authorfullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{New Journal of Physics}

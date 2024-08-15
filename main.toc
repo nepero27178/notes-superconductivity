@@ -44,9 +44,9 @@
 \contentsline {subsection}{\numberline {3.4.4}{Many fluxons with the same charge: the lattice ground state}}{56}{subsection.3.4.4}%
 \contentsline {chapter}{\numberline {4}{The BCS theory}}{61}{chapter.4}%
 \etoc@startlocaltoc {5}
-\contentsline {section}{\numberline {4.1}{What if electrons attract?}}{61}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}{Bound states}}{61}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}{Bound states, considering statistics}}{64}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}{The role of phonons in superconductivity}}{67}{section.4.2}%
+\contentsline {section}{\numberline {4.1}{What if electrons attract?}}{62}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}{Bound states}}{62}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}{Bound states, considering statistics}}{65}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}{The role of phonons in superconductivity}}{68}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}{Born-Oppenheimer quantization}}{68}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}{Electron-phonon interactions}}{69}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}{Electron-phonon interactions}}{70}{subsection.4.2.2}%
