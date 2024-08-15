@@ -48,3 +48,5 @@
 \contentsline {subsection}{\numberline {4.1.1}{Bound states}}{61}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}{Bound states, considering statistics}}{64}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}{The role of phonons in superconductivity}}{67}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}{Born-Oppenheimer quantization}}{68}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}{Electron-phonon interactions}}{69}{subsection.4.2.2}%

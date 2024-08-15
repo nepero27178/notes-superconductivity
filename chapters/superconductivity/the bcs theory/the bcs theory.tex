@@ -127,7 +127,7 @@ The question is: at varying dimensionality $D$, is there a solution for any give
 
 It looks like two chargeless fermions equipped with a local and attractive interaction cannot form a pair in three dimensions. This should limit the phenomenon of superconductivity to two-dimensional materials. Then, why do we have three-dimensional superconductors? 
 
-\subsection{Bound states, considering statistics}
+\subsection{Bound states, considering statistics}\label{subsec:bound states, considering statistics}
 
 We are missing something. As anticipated, to neglect the Coulomb interaction between electrons we need the whole electron liquid -- which is, we need a great number of electrons plus our two interacting electrons, interacting with all others only by the Pauli principle. This may seem a little modification; it is instead a huge one, because now this kind of attraction allows for bound states also for $D>2$. We may say that the electron pair is an object formed by two electrons directly and all others indirectly -- a collective configuration.
 
@@ -215,14 +215,132 @@ Now, the next step is to understand how this interaction comes to life at all. W
 
 \section{The role of phonons in superconductivity}
 
-For simplicity we will consider simple crystals. For such crystals the dispersion of phonons has an energy extension of approximately $\hbar\omega_D$, with $\omega_D$ the Debye frequency; in the language of the above section, $\delta\epsilon^\star = \hbar\omega_D$. For composite crystals, due to the presence of optical bands and polarization effects, the argument must be corrected (sometimes, fatally).
+The phononic field is quantized in crystals: a good source about such quantization is \citetitle{grosso2000solid} \cite{grosso2000solid} by \citeauthor{grosso2000solid}; we will just rapidly sketch the essential concepts.
+Consider a general crystal with $n$ atoms per unit cell. The index $\lambda = 1,\cdots,n$ varies over the cell atoms. The ion in position $\lambda$ has mass $M_\lambda$. The hamiltonian describing phonons is an harmonic one, with dispersion $\Omega_{\mathbf{k}\nu}$
+\begin{equation}\label{eq:born-oppenheimer phonon hamiltonian}
+	\hat H^{(\mathrm{p})} = \sum_\mathbf{k} \sum_\nu  \hbar \Omega_{\mathbf{k}\nu} \lrS{\hat a_{\mathbf{k}\nu}^\dagger \hat a_{\mathbf{k}\nu} + \frac{\mathbb{1}}{2}}
+\end{equation}
+with $\hat a_{\mathbf{k}\nu}^\dagger$ the creation operator for an oscillation of wavevector $\mathbf{k}$ in band $\nu$, and $\hat a_{\mathbf{k}\nu}$ the related destruction operator.  Such operators obey Bose commutation rules:
+\[
+	\comm{\hat a_{\mathbf{k}\nu}}{ \hat a_{\mathbf{h}\mu}^\dagger} = \delta_{\mathbf{k}\mathbf{h}}
+	\delta_{\nu\mu}
+\]
+The next section is devoted to a very rapid description of how this hamiltonian is obtained.
 
-The phononic field is quantized in crystals: a good source about such quantization is \citetitle{grosso2000solid} \cite{grosso2000solid} by \citeauthor{grosso2000solid}. The hamiltonian describing phonons is an harmonic one,
+\subsection{Born-Oppenheimer quantization}
+
+In order to recover the hamiltonian in Eq.~\eqref{eq:born-oppenheimer phonon hamiltonian}, \textbf{Born-Oppenheimer approximation} is used: the motion of ions is assumed to be much slower than those of electrons, thus their positions $\mathbf{R}_{i\lambda}$ (with $i$ the index for the $i$-th cell and $\lambda$ the index for the atom inside the cell) are assumed as a parameter for the electronic problem and this last is solved, giving out a parametric solution for the energy $E\lrS{\mathbf{R}}$. Here $\mathbf{R}$ represents the vector collecting all vectors $\mathbf{R}_{i\lambda}$.
+
+Throughout a variational approach over the parametric solution $E\lrS{\mathbf{R}}$ around a energy minimum (a certain ions configuration $\mathbf{
+R}^{(0)}$) the energy is reduced to a quadratic expression in terms of the ions displacement from rest positions, $\mathbf{u}_{i\lambda} \equiv \mathbf{R}_{i\lambda} - \mathbf{R}_{i\lambda}^{(0)}$. Including also the kinetic contribution, the overall result is
 \[
-	\hat H^{(\mathrm{p})} = \sum_\mathbf{k} \hbar \Omega_\mathbf{k} \lrS{\hat a_\mathbf{k}^\dagger \hat a_\mathbf{k} + \frac{\mathbb{1}}{2}}
+	\hat H^{(\mathrm{p})} = \sum_i \sum_\lambda
+	\lrB{
+		\frac{\abs{\hat{\mathbf{p}}_{i\lambda}}^2}{2M_\lambda}
+		+ \half \sqrt{M_\lambda} \hat{\mathbf{u}}_{i\lambda} \cdot \sum_j \sum_\eta 
+		\lrS{
+			\frac{1}{\sqrt{M_\lambda M_\eta}}
+			\pdv[2]{E\lrS{\mathbf{R}}}{\mathbf{R}_{i\lambda}}{\mathbf{R}_{j\eta}}
+		}
+		\cdot
+		\sqrt{M_\eta} \hat{\mathbf{u}}_{j\eta}
+	}
 \]
-with $\hat a_\mathbf{k}^\dagger$ the creation operator for a phonon in state $\ket{\mathbf{k}}$, and $\hat a_\mathbf{k}$ the related destruction operator. Such operators obey Bose commutation rules:
+The mass factors are included to simplify the following steps.
+Now: performing a Discrete Fourier Transform over the above equation and recognizing the dynamical matrix $\mathcal{D}$ in the (transformed) matrix in the quadratic term, one gets
 \[
-	\comm{\hat a_\mathbf{k}}{\hat a_{\mathbf{k}'}^\dagger} = \delta_{\mathbf{k}\mathbf{k}'}
+	\hat H^{(\mathrm{p})} = \sum_\mathbf{k} \sum_\lambda \lrB{
+		\frac{\hat{\mathbf{p}}_{\mathbf{k}\lambda} \cdot \hat{\mathbf{p}}_{-\mathbf{k}\lambda}}{2M_\lambda}
+		+ \half \sqrt{M_\lambda} \hat{\mathbf{u}}_{\mathbf{k}\lambda}\cdot \sum_\eta 
+		\mathcal{D}_{\lambda\eta}\lrR{\mathbf{k}}
+		\cdot
+		\sqrt{M_\eta} \hat{\mathbf{u}}_{-\mathbf{k}\eta}
+	}
 \]
-Atomic displacements can can be written in terms of these operators, [...]
+Diagonalization of $\mathcal{D}$ is possible. Such diagonalization is intended over the sublattice index $\lambda$, and provides a set of bands parameterized by the index $\nu=1,\cdots,n$, 
+\[
+	\mathcal{D}\lrR{\mathbf{k}} \mathbf{w}_{\mathbf{k}}^{(\nu)} = \Omega_{\mathbf{k}\nu}^2 \mathbf{w}_{\mathbf{k}}^{(\nu)}
+\]
+The eigenvectors
+\[
+	\lrS{\mathbf{w}_{\mathbf{k}}^{(\nu)}}_\lambda
+\]
+are $n$ in number, and each one has $n$ components and is a specific mixed oscillations of the sublattices. The eigenvalues at fixed wavevector $\Omega_{\mathbf{k}\nu}^2$ are also $n$ in general. 
+Now: define $\mathrm{U}_{\mathbf{k}\nu}$ such that
+\[
+	\mathrm{U}_{\mathbf{k}\nu} \equiv
+	\sum_\lambda
+	\mathbf{u}_{\mathbf{k}\lambda} \cdot
+	\mathbf{w}_{\mathbf{k}\lambda}^{(\nu)}
+\]
+Remember: two scalar products are involved here. One is the spatial one, indicated by ``$\cdot$``. The other is the $\lambda$ scalar product, indicated by the sum and the index contraction. Then $\mathrm{U}_{\mathbf{k}\nu}$ is defined as the projection of the vector $\mathbf{u}_\mathbf{k}$ (the vector which has as components the displacement of the $\lambda$-th sublattice) onto the eigenvector $\mathbf{w}_{\mathbf{k}}^{(\nu)}$. It follows obviously
+\begin{equation}\label{eq:bcs-definition of U}
+	\mathbf{u}_\mathbf{k} = \sum_\nu \mathrm{U}_{\mathbf{k}\nu} \mathbf{w}_{\mathbf{k}}^{(\nu)}
+\end{equation}
+Analogously
+\[
+	\mathrm{P}_{\mathbf{k}\nu} \equiv
+	\sum_\lambda
+	\mathbf{p}_{\mathbf{k}\lambda} \cdot
+	\mathbf{w}_{\mathbf{k}\lambda}^{(\nu)}
+	\quad\implies\quad
+	\mathbf{p}_\mathbf{k} = \sum_\nu \mathrm{P}_{\mathbf{k}\nu} \mathbf{w}_{\mathbf{k}}^{(\nu)}
+\]
+Using orthonormality of the eigenvectors one gets by substitution
+\[
+	\hat H^{(\mathrm{p})} = \sum_\mathbf{k} \sum_\lambda \lrB{
+		\frac{\hat{\mathrm{P}}_{\mathbf{k}\lambda} \hat{\mathrm{P}}_{-\mathbf{k}\lambda}}{2M_\lambda}
+		+ \half M_\lambda \Omega_{\mathbf{k}\lambda}^2 \hat{\mathrm{U}}_{\mathbf{k}\lambda} \hat{\mathrm{U}}_{-\mathbf{k}\lambda}
+	}
+\]
+
+This one is the hamiltonian of $n$ independent harmonic oscillators. Each oscillator has a specific frequency $\Omega_{\mathbf{k}\lambda}$ at fixed wavevector. Then an expression for the displacements and momenta in terms of the Bose operators is possible,
+\[
+	\hat{\mathrm{U}}_{\mathbf{k}\lambda} = \sqrt{\frac{\hbar}{2M_\lambda \Omega_{\mathbf{k}\lambda}}} \lrR{\hat{a}_{\mathbf{k}\lambda}^\dagger + \hat{a}_{\mathbf{k}\lambda}}
+	\qquad
+	\hat{\mathrm{P}}_{\mathbf{k}\lambda} = \sqrt{\frac{\hbar}{2M_\lambda \Omega_{\mathbf{k}\lambda}}} \lrR{\hat{a}_{\mathbf{k}\lambda}^\dagger - \hat{a}_{\mathbf{k}\lambda}}
+\]
+It is of our particular interest the expression for the three-dimensional displacement, thus we reconstruct $\mathbf{u}_\mathbf{k}$ through Eq.~\eqref{eq:bcs-definition of U},
+\[
+	\hat{\mathbf{u}}_\mathbf{k} = \sum_\lambda \hat{\mathrm{U}}_{\mathbf{k}\lambda} \mathbf{w}_{\mathbf{k}}^{(\lambda)} = \sum_\lambda \sqrt{\frac{\hbar}{2M_\lambda \Omega_{\mathbf{k}\lambda}}} \lrR{\hat{a}_{\mathbf{k}\lambda}^\dagger + \hat{a}_{\mathbf{k}\lambda}} \mathbf{w}_{\mathbf{k}}^{(\lambda)}
+\]
+Notice that for simple crystals ($n=1$) the $\lambda$ sum vanishes. This will be applied later on.
+
+\subsection{Electron-phonon interactions}
+
+The key idea to model electron-phonon interactions is that ions do not get ``too far'' from the equilibrium positions $\mathbf{R}_{i\lambda}^{(0)}$. Then, coherently with Born-Oppenheimer approximation, the total hamiltonian
+\[
+	\hat H = \hat H^{(\mathrm{e})} + \hat H^{(\mathrm{ep})} + \hat H^{(\mathrm{p})}
+\]
+contains an interaction term $H^{(\mathrm{ep})}$ which depends on the electron positions $\mathbf{r}_\alpha$ and the ions positions $\mathbf{R}_{i\lambda}$ and can be expanded as
+\[
+	\hat H^{(\mathrm{ep})} \lrR{\mathbf{r},\mathbf{R}} \simeq \hat H^{(\mathrm{ep})} \lrR{\mathbf{r},\mathbf{R}^{(0)}} + \sum_i \grad_{\mathbf{R}_{i\lambda}} \hat{H}^{(\mathrm{ep})} \big|_{\mathbf{R}_{i\lambda} = \mathbf{R}_{i\lambda}^{(0)}} \cdot \hat{\mathbf{u}}_{i\lambda} + \cdots
+\]
+The above expression includes phonon operators and electron operators, both indicated by the ``hat''. We already have $\hat{\mathbf{u}}_{i\lambda}$ from last section. The first term is identically null, because the contribution arising from rest positions of the ions is already included in the bare phonon hamiltonian. The interaction is Coulomb-like, thus
+\[
+	\grad_{\mathbf{R}_{i\lambda}} \hat{H}^{(\mathrm{ep})}\big|_{\mathbf{R}_{i\lambda} = \mathbf{R}_{i\lambda}^{(0)}} = \grad_{\mathbf{R}_{i\lambda}} \sum_\alpha v \lrR{\abs{\hat{\mathbf{r}}_\alpha - \hat{\mathbf{R}}_{i\lambda}^{(0)}}}
+	\quad\qq{with}\quad
+	v(r) = -\frac{Ze^2}{r}	
+\]
+Moving to a field formalism, this single-particle operator becomes
+\[
+	\sum_\alpha v \lrR{\abs{\hat{\mathbf{r}}_\alpha - \mathbf{R}_{i\lambda}^{(0)}}} \to \int_{\R^D} d^D \mathbf{r} \, \hat{\psi}^\dagger (\mathbf{r}) v \lrR{\abs{\mathbf{r} - \mathbf{R}_{i\lambda}^{(0)}}} \hat{\psi} (\mathbf{r})
+\]
+where $\hat{\psi}$ is the electronic field operator, acting on the electrons Hilbert space. The algebraic notation ``$\dagger$'' now is intended upon such space. Such field can be expanded through a complete set of single particle Bloch spin-wavefunctions,
+\[
+	\hat\psi(\mathbf{r}) = \sum_{\mathbf{k}\sigma} \sum_\lambda \varphi_{\mathbf{k}\lambda}(\mathbf{r}) \hat c_{\mathbf{k}\sigma\lambda}
+	\quad\qq{with}\quad
+	\varphi_{\mathbf{k}\lambda}(\mathbf{r}) = \frac{1}{L^{D/2}} u_{\mathbf{k}\lambda} (\mathbf{r}) e^{i \mathbf{k} \cdot \mathbf{r}}
+\]
+and $u$ a lattice-periodic function.
+For simplicity we consider simple crystals, for which $n=1$. For such crystals the dispersion of phonons has an energy extension of approximately $\hbar\omega_D$, with $\omega_D$ the Debye frequency; in the language of the Sec.~\ref{subsec:bound states, considering statistics}, $\delta\epsilon^\star = \hbar\omega_D$. For composite crystals, due to the presence of optical bands and polarization effects, the argument must be corrected (sometimes, fatally).
+
+A long and tedious calculation no one can convince the author to perform leads the rather simple result
+\begin{equation}\label{eq:H-ep final form}
+	\hat H^{(\mathrm{ep})} = \sum_{\mathbf{k}\sigma} \sum_\mathbf{q} g_\mathbf{k}\lrR{\mathbf{q}} \hat{c}_{\mathbf{k}+\mathbf{q}\sigma}^\dagger \hat{c}_{\mathbf{k}\sigma} \lrR{\hat{a}_\mathbf{q}^\dagger + \hat{a}_\mathbf{q}}
+\end{equation}
+with
+\[
+	g_\mathbf{k}\lrR{\mathbf{q}} \equiv \lrR{-i\mathbf{q} \cdot \mathbf{w}_\mathbf{q} v_\mathbf{q}} \sqrt{\frac{\hbar}{2 N M \Omega_\mathbf{q}}} \ev{u_{\mathbf{k}+\mathbf{q}}^*(\mathbf{r}) u_\mathbf{k}(\mathbf{r})}_c
+\]
+where $v_\mathbf{q}$ is the $\mathbf{q}$ component of the Coulomb potential, $N$ is the number of cells and $\ev{\cdots}_c$ is the spatial mean over a single cell. Aside from how $g$ turns out to be, we are interested in the general form of Eq.~\eqref{eq:H-ep final form}. It is made of two contributions: the first contribution describes the scattering of one electron with creation of a phonon with wavevector $\mathbf{q}$; the second is the same process, but with absorption of one phonon of same wavevector. Both have amplitude $g_\mathbf{k}\lrR{\mathbf{q}}$.
