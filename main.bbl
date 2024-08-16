@@ -94,8 +94,8 @@
       \strng{authornamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
       \strng{authorfullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
       \strng{authorfullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780080481029}
@@ -132,8 +132,8 @@
       \strng{authornamehash}{790343fd4e55380c534d5dd246cde6c2}
       \strng{authorfullhash}{790343fd4e55380c534d5dd246cde6c2}
       \strng{authorfullhashraw}{790343fd4e55380c534d5dd246cde6c2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9781139471589}
@@ -316,11 +316,10 @@
       \strng{authornamehash}{92a1f6e2d48d56130e7401e0d1018920}
       \strng{authorfullhash}{92a1f6e2d48d56130e7401e0d1018920}
       \strng{authorfullhashraw}{92a1f6e2d48d56130e7401e0d1018920}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{Electric currents are commonly believed to persist in a supra-conductor without being maintained by an electromagnetic field. Thus the relation between the field strength E and the current density J in a supraconductor has sometimes been described by means of an "acceleration equation," of the form ∆J = E; A = m/ne2. (1) This equation, which might replace Ohm;s law for supraconductors, simply expresses the influence of the electric part of the Lorentz force on freely movable electrons of the mass m and charge e, the number per cm3 being n (we use rational units). By definition the constant A must be positive. As a direct consequence of this equation (1) stationary currents in supraconductors are possible when E = 0. We shall see, however, that actually equation (1), which we will refer to as the "acceleration theory," implies more than is verified by experiment; moreover, presupposing an acceleration without any friction it implies a premature theory, the development of which has presented a hopelessly insoluble problem to mathematical physicist. Apparently a model was wanted which would explain that in its most stable state the supraconductor has always a persistent current. We shall give a formulation which is somewhat more restricted in this respect. On the other had it includes one more important fact, namely, the experiment of Meissner and Ochsenfeld. In this way we get a new description of the electromagnetic field in a supraconductor, which is consistent and, as it eliminates unnecessary statements, is in closer contact with experiment. This new description seems to provide an entirely new point of view for a theoretical explanation.}
       \field{journaltitle}{Proceedings of the Royal Society of London. Series A - Mathematical and Physical Sciences}
       \field{number}{866}
       \field{title}{The electromagnetic equations of the supraconductor}
@@ -331,9 +330,6 @@
       \range{pages}{18}
       \verb{doi}
       \verb 10.1098/rspa.1935.0048
-      \endverb
-      \verb{eprint}
-      \verb https://royalsocietypublishing.org/doi/pdf/10.1098/rspa.1935.0048
       \endverb
       \verb{urlraw}
       \verb https://royalsocietypublishing.org/doi/abs/10.1098/rspa.1935.0048
@@ -358,8 +354,8 @@
       \strng{authornamehash}{0616697a8ac3d8019811d5840d720d33}
       \strng{authorfullhash}{0616697a8ac3d8019811d5840d720d33}
       \strng{authorfullhashraw}{0616697a8ac3d8019811d5840d720d33}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Sov. Phys. JETP}

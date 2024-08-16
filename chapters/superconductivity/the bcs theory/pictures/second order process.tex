@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+	\begin{feynman}
+		\vertex (x) at (0,0);
+		\vertex (e1) at (150:2) {$\mathbf k_1, \sigma_1$};
+		\vertex (e3) at (30:2) {$\mathbf k_1 + \mathbf q, \sigma_1$};
+		
+		\vertex (y) at (0,-1);
+		\vertex (e2) at ($(y) + (210:2)$) {$\mathbf k_2, \sigma_2$};
+		\vertex (e4) at ($(y) + (330:2)$) {$\mathbf k_2 - \mathbf q, \sigma_2$};
+		
+		\diagram* {
+			(e1) -- [fermion] (x) -- [fermion] (e3);
+			(e2) -- [fermion] (y) -- [fermion] (e4);
+			(y) -- [photon,momentum=$\mathbf q$] (x);   
+		};
+	\end{feynman}
+\end{tikzpicture}

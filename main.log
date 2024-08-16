@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.25)  15 AUG 2024 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.25)  16 AUG 2024 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1667,15 +1667,37 @@ File: pgflibrarypatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 zlibrarypatterns.meta.code.tex
 (/usr/local/share/miktex-texmf/tex/generic/pgf/libraries/pgflibrarypatterns.met
 a.code.tex))
+(/home/nepero27178/.miktex/texmfs/install/tex/latex/tikz-feynman/tikz-feynman.s
+ty
+Package: tikz-feynman 2016/02/05v1.1.0Feynman diagrams with TikZ
+ (/home/nepero27178/.miktex/texmfs/install/tex/latex/pgfopts/pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks59
+\pgfopts@list@add@b@toks=\toks60
+)
+(/home/nepero27178/.miktex/texmfs/install/tex/latex/tikz-feynman/tikzlibraryfey
+nman.code.tex
+(/usr/local/share/miktex-texmf/tex/generic/pgf/frontendlayer/tikz/libraries/gra
+phs/tikzlibrarygraphs.code.tex
+File: tikzlibrarygraphs.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\tikz@lib@auto@number=\count403
+\tikz@qnode@count=\count404
+)
+(/usr/local/share/miktex-texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/nepero27178/.miktex/texmfs/install/tex/latex/tikz-feynman/tikzfeynman.ke
+ys.code.tex)))
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count403
-\csq@gtype=\count404
-\csq@glevel=\count405
-\csq@qlevel=\count406
-\csq@maxlvl=\count407
-\csq@tshold=\count408
-\csq@ltx@everypar=\toks59
+\csq@reset=\count405
+\csq@gtype=\count406
+\csq@glevel=\count407
+\csq@qlevel=\count408
+\csq@maxlvl=\count409
+\csq@tshold=\count410
+\csq@ltx@everypar=\toks61
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
@@ -1694,54 +1716,54 @@ Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count409
+\lrq@indent=\count411
 
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count410
-\c@listtotal=\count411
-\c@listcount=\count412
-\c@liststart=\count413
-\c@liststop=\count414
-\c@citecount=\count415
-\c@citetotal=\count416
-\c@multicitecount=\count417
-\c@multicitetotal=\count418
-\c@instcount=\count419
-\c@maxnames=\count420
-\c@minnames=\count421
-\c@maxitems=\count422
-\c@minitems=\count423
-\c@citecounter=\count424
-\c@maxcitecounter=\count425
-\c@savedcitecounter=\count426
-\c@uniquelist=\count427
-\c@uniquename=\count428
-\c@refsection=\count429
-\c@refsegment=\count430
-\c@maxextratitle=\count431
-\c@maxextratitleyear=\count432
-\c@maxextraname=\count433
-\c@maxextradate=\count434
-\c@maxextraalpha=\count435
-\c@abbrvpenalty=\count436
-\c@highnamepenalty=\count437
-\c@lownamepenalty=\count438
-\c@maxparens=\count439
-\c@parenlevel=\count440
-\blx@tempcnta=\count441
-\blx@tempcntb=\count442
-\blx@tempcntc=\count443
-\c@blx@maxsection=\count444
-\blx@maxsegment@0=\count445
-\blx@notetype=\count446
-\blx@parenlevel@text=\count447
-\blx@parenlevel@foot=\count448
-\blx@sectionciteorder@0=\count449
-\blx@sectionciteorderinternal@0=\count450
-\blx@entrysetcounter=\count451
-\blx@biblioinstance=\count452
+\c@tabx@nest=\count412
+\c@listtotal=\count413
+\c@listcount=\count414
+\c@liststart=\count415
+\c@liststop=\count416
+\c@citecount=\count417
+\c@citetotal=\count418
+\c@multicitecount=\count419
+\c@multicitetotal=\count420
+\c@instcount=\count421
+\c@maxnames=\count422
+\c@minnames=\count423
+\c@maxitems=\count424
+\c@minitems=\count425
+\c@citecounter=\count426
+\c@maxcitecounter=\count427
+\c@savedcitecounter=\count428
+\c@uniquelist=\count429
+\c@uniquename=\count430
+\c@refsection=\count431
+\c@refsegment=\count432
+\c@maxextratitle=\count433
+\c@maxextratitleyear=\count434
+\c@maxextraname=\count435
+\c@maxextradate=\count436
+\c@maxextraalpha=\count437
+\c@abbrvpenalty=\count438
+\c@highnamepenalty=\count439
+\c@lownamepenalty=\count440
+\c@maxparens=\count441
+\c@parenlevel=\count442
+\blx@tempcnta=\count443
+\blx@tempcntb=\count444
+\blx@tempcntc=\count445
+\c@blx@maxsection=\count446
+\blx@maxsegment@0=\count447
+\blx@notetype=\count448
+\blx@parenlevel@text=\count449
+\blx@parenlevel@foot=\count450
+\blx@sectionciteorder@0=\count451
+\blx@sectionciteorderinternal@0=\count452
+\blx@entrysetcounter=\count453
+\blx@biblioinstance=\count454
 \labelnumberwidth=\skip192
 \labelalphawidth=\skip193
 \biblabelsep=\skip194
@@ -1753,9 +1775,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read5
 \blx@bcfout=\write5
 \blx@langwohyphens=\language80
-\c@mincomprange=\count453
-\c@maxcomprange=\count454
-\c@mincompwidth=\count455
+\c@mincomprange=\count455
+\c@maxcomprange=\count456
+\c@mincompwidth=\count457
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1764,74 +1786,74 @@ File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count456
-\c@savedafterword=\count457
-\c@annotator=\count458
-\c@savedannotator=\count459
-\c@author=\count460
-\c@savedauthor=\count461
-\c@bookauthor=\count462
-\c@savedbookauthor=\count463
-\c@commentator=\count464
-\c@savedcommentator=\count465
-\c@editor=\count466
-\c@savededitor=\count467
-\c@editora=\count468
-\c@savededitora=\count469
-\c@editorb=\count470
-\c@savededitorb=\count471
-\c@editorc=\count472
-\c@savededitorc=\count473
-\c@foreword=\count474
-\c@savedforeword=\count475
-\c@holder=\count476
-\c@savedholder=\count477
-\c@introduction=\count478
-\c@savedintroduction=\count479
-\c@namea=\count480
-\c@savednamea=\count481
-\c@nameb=\count482
-\c@savednameb=\count483
-\c@namec=\count484
-\c@savednamec=\count485
-\c@translator=\count486
-\c@savedtranslator=\count487
-\c@shortauthor=\count488
-\c@savedshortauthor=\count489
-\c@shorteditor=\count490
-\c@savedshorteditor=\count491
-\c@labelname=\count492
-\c@savedlabelname=\count493
-\c@institution=\count494
-\c@savedinstitution=\count495
-\c@lista=\count496
-\c@savedlista=\count497
-\c@listb=\count498
-\c@savedlistb=\count499
-\c@listc=\count500
-\c@savedlistc=\count501
-\c@listd=\count502
-\c@savedlistd=\count503
-\c@liste=\count504
-\c@savedliste=\count505
-\c@listf=\count506
-\c@savedlistf=\count507
-\c@location=\count508
-\c@savedlocation=\count509
-\c@organization=\count510
-\c@savedorganization=\count511
-\c@origlocation=\count512
-\c@savedoriglocation=\count513
-\c@origpublisher=\count514
-\c@savedorigpublisher=\count515
-\c@publisher=\count516
-\c@savedpublisher=\count517
-\c@language=\count518
-\c@savedlanguage=\count519
-\c@origlanguage=\count520
-\c@savedoriglanguage=\count521
-\c@pageref=\count522
-\c@savedpageref=\count523
+\c@afterword=\count458
+\c@savedafterword=\count459
+\c@annotator=\count460
+\c@savedannotator=\count461
+\c@author=\count462
+\c@savedauthor=\count463
+\c@bookauthor=\count464
+\c@savedbookauthor=\count465
+\c@commentator=\count466
+\c@savedcommentator=\count467
+\c@editor=\count468
+\c@savededitor=\count469
+\c@editora=\count470
+\c@savededitora=\count471
+\c@editorb=\count472
+\c@savededitorb=\count473
+\c@editorc=\count474
+\c@savededitorc=\count475
+\c@foreword=\count476
+\c@savedforeword=\count477
+\c@holder=\count478
+\c@savedholder=\count479
+\c@introduction=\count480
+\c@savedintroduction=\count481
+\c@namea=\count482
+\c@savednamea=\count483
+\c@nameb=\count484
+\c@savednameb=\count485
+\c@namec=\count486
+\c@savednamec=\count487
+\c@translator=\count488
+\c@savedtranslator=\count489
+\c@shortauthor=\count490
+\c@savedshortauthor=\count491
+\c@shorteditor=\count492
+\c@savedshorteditor=\count493
+\c@labelname=\count494
+\c@savedlabelname=\count495
+\c@institution=\count496
+\c@savedinstitution=\count497
+\c@lista=\count498
+\c@savedlista=\count499
+\c@listb=\count500
+\c@savedlistb=\count501
+\c@listc=\count502
+\c@savedlistc=\count503
+\c@listd=\count504
+\c@savedlistd=\count505
+\c@liste=\count506
+\c@savedliste=\count507
+\c@listf=\count508
+\c@savedlistf=\count509
+\c@location=\count510
+\c@savedlocation=\count511
+\c@organization=\count512
+\c@savedorganization=\count513
+\c@origlocation=\count514
+\c@savedoriglocation=\count515
+\c@origpublisher=\count516
+\c@savedorigpublisher=\count517
+\c@publisher=\count518
+\c@savedpublisher=\count519
+\c@language=\count520
+\c@savedlanguage=\count521
+\c@origlanguage=\count522
+\c@savedoriglanguage=\count523
+\c@pageref=\count524
+\c@savedpageref=\count525
 \shorthandwidth=\skip256
 \shortjournalwidth=\skip257
 \shortserieswidth=\skip258
@@ -1857,19 +1879,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (/usr/local/share/miktex-texmf/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
-\c@textcitecount=\count524
-\c@textcitetotal=\count525
-\c@textcitemaxnames=\count526
-\c@biburlbigbreakpenalty=\count527
-\c@biburlbreakpenalty=\count528
-\c@biburlnumpenalty=\count529
-\c@biburlucpenalty=\count530
-\c@biburllcpenalty=\count531
+\c@textcitecount=\count526
+\c@textcitetotal=\count527
+\c@textcitemaxnames=\count528
+\c@biburlbigbreakpenalty=\count529
+\c@biburlbreakpenalty=\count530
+\c@biburlnumpenalty=\count531
+\c@biburlucpenalty=\count532
+\c@biburllcpenalty=\count533
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count532
+\c@smartand=\count534
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -1881,8 +1903,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (/usr/local/share/miktex-texmf/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count533
-\c@bbx:relatedtotal=\count534
+\c@bbx:relatedcount=\count535
+\c@bbx:relatedtotal=\count536
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -1929,15 +1951,15 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/xstring/xstring.sty
 (/home/nepero27178/.miktex/texmfs/install/tex/generic/xstring/xstring.tex
-\xs_counta=\count535
-\xs_countb=\count536
+\xs_counta=\count537
+\xs_countb=\count538
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/hyperxmp/hyperxmp.sty
 Package: hyperxmp 2024/03/17 v5.13 Store hyperref metadata in XMP format
-\hyxmp@aep@toks=\toks60
-\@hyxmp@count=\count537
+\hyxmp@aep@toks=\toks62
+\@hyxmp@count=\count539
 
 (/usr/local/share/miktex-texmf/tex/latex/oberdiek/ifdraft.sty
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
@@ -1959,10 +1981,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (/usr/local/share/miktex-texmf/tex/generic/xkeyval/xkeyval.tex
 (/usr/local/share/miktex-texmf/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks61
-\XKV@tempa@toks=\toks62
+\XKV@toks=\toks63
+\XKV@tempa@toks=\toks64
 )
-\XKV@depth=\count538
+\XKV@depth=\count540
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )))
 LaTeX Font Info:    Trying to load font information for T1+pplj on input line 4
@@ -2019,17 +2041,17 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/local/share/miktex-texmf/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count539
+\scratchcounter=\count541
 \scratchdimen=\dimen342
 \scratchbox=\box152
-\nofMPsegments=\count540
-\nofMParguments=\count541
-\everyMPshowfont=\toks63
-\MPscratchCnt=\count542
+\nofMPsegments=\count542
+\nofMParguments=\count543
+\everyMPshowfont=\toks65
+\MPscratchCnt=\count544
 \MPscratchDim=\dimen343
-\MPnumerator=\count543
-\makeMPintoPDFobject=\count544
-\everyMPtoPDFconversion=\toks64
+\MPnumerator=\count545
+\makeMPintoPDFobject=\count546
+\everyMPtoPDFconversion=\toks66
 ) (/usr/local/share/miktex-texmf/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -2071,7 +2093,7 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 (/home/nepero27178/.miktex/texmfs/install/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
 )
-\BKM@id=\count545
+\BKM@id=\count547
 ))
 
 Package siunitx Warning: Detected the "physics" package:
@@ -2095,6 +2117,11 @@ or `english'. on input line 45.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
+
+
+Package tikz-feynman Warning: LuaTeX is required if you wish to have vertices a
+utomatically placed. You can disable this warning by setting /tikzfeynman/warn 
+luatex=false on input line 45.
 
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -2303,11 +2330,55 @@ loch spin-wavefunctions,
 
 
 
-[70])
+[70]
+Overfull \hbox (2.7923pt too wide) in paragraph at lines 359--360
+\T1/pplj/m/n/10.95 rea-son-able be-cause in-ter-band spac-ing is of-ten big-ger
+ than any phononic
+ []
+
+(chapters/superconductivity/the bcs theory/pictures/second order process.tex
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 3.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 3.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 3.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/node dis
+tance' requires LuaTeX. It will be ignored. on input line 11.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/level di
+stance' requires LuaTeX. It will be ignored. on input line 11.
+
+
+Package tikz-feynman Warning: The key you tried to use '/graph drawing/sibling 
+distance' requires LuaTeX. It will be ignored. on input line 11.
+
+)
 
 [71]
 
-[72
+[72]
+
+[73]
+Package mdframed Info: mdframed works in twoside mode on input line 498.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 498.
+
+
+[74])
+
+[75]
+
+[76
 
 
 
@@ -2332,7 +2403,7 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 (/home/nepero27178/.miktex/texmfs/install/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
-[73] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
+[77] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
 (chapters/superconductivity/superconductivity and thermodynamics/superconductiv
 ity and thermodynamics.aux)
 (chapters/superconductivity/ginzburg-landau theory of superconductivity/ginzbur
@@ -2343,18 +2414,27 @@ uctors.aux) (chapters/superconductivity/the bcs theory/the bcs theory.aux))
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 64975 strings out of 473905
- 1529900 string characters out of 5733678
- 2776908 words of memory out of 5000000
- 86681 multiletter control sequences out of 15000+600000
- 668886 words of font info for 190 fonts, out of 8000000 for 9000
+ 66426 strings out of 473905
+ 1573632 string characters out of 5733678
+ 2832617 words of memory out of 5000000
+ 88089 multiletter control sequences out of 15000+600000
+ 669244 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,23n,138p,10901b,2803s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2526,9 +2606,9 @@ l/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/share/miktex-texmf/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palat
 ino/uplbi8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplr8a.
 pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (16 pages, 337901 bytes).
+Output written on main.pdf (20 pages, 365809 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 83 named destinations out of 1000 (max. 500000)
- 25681 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
+ 25697 words of extra memory for PDF output out of 29859 (max. 10000000)
 
