@@ -146,6 +146,40 @@
       \verb https://books.google.it/books?id=FFydOyv_r78C
       \endverb
     \endentry
+    \entry{goodstein2014states}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7c1e993c0c5f87f6484e7bcb77b6920e}{%
+           family={Goodstein},
+           familyi={G\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{fullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{fullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{bibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorbibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authornamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorfullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorfullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780486795515}
+      \field{series}{Dover Books on Physics}
+      \field{title}{States of Matter}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
+      \endverb
+    \endentry
     \entry{tinkham2004introduction}{book}{}{}
       \name{author}{1}{}{%
         {{hash=90a8d001d414a2a0393c16501881e7cd}{%
@@ -181,41 +215,6 @@
       \verb https://books.google.it/books?id=VpUk3NfwDIkC
       \endverb
     \endentry
-    \entry{goodstein2014states}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=7c1e993c0c5f87f6484e7bcb77b6920e}{%
-           family={Goodstein},
-           familyi={G\bibinitperiod},
-           given={D.L.},
-           giveni={D\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Dover Publications}%
-      }
-      \strng{namehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{fullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{fullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{bibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authorbibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authornamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authorfullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authorfullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780486795515}
-      \field{series}{Dover Books on Physics}
-      \field{title}{States of Matter}
-      \field{year}{2014}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
-      \endverb
-      \verb{url}
-      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
-      \endverb
-    \endentry
     \entry{huang2008statistical}{book}{}{}
       \name{author}{1}{}{%
         {{hash=96f740e19666bbfccd8e0e7f82b2fdd6}{%
@@ -235,8 +234,8 @@
       \strng{authornamehash}{96f740e19666bbfccd8e0e7f82b2fdd6}
       \strng{authorfullhash}{96f740e19666bbfccd8e0e7f82b2fdd6}
       \strng{authorfullhashraw}{96f740e19666bbfccd8e0e7f82b2fdd6}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9788126518494}
@@ -260,8 +259,8 @@
         {{hash=2d19b8e3bdfd4f3e3ce4332c9845ef21}{%
            family={Simons},
            familyi={S\bibinitperiod},
-           given={B.D.},
-           giveni={B\bibinitperiod}}}%
+           given={B.\bibnamedelimi D.},
+           giveni={B\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Cambridge University Press}%
@@ -274,8 +273,8 @@
       \strng{authornamehash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
       \strng{authorfullhash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
       \strng{authorfullhashraw}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780521769754}

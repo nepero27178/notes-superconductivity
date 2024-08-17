@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.25)  16 AUG 2024 18:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex 2024.7.25)  17 AUG 2024 20:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2289,49 +2289,53 @@ Package microtype Info: Character `029' is missing
 
 
 [62]
-LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-85.
- (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-)
 
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/10.95'.
 (microtype)             Ignoring protrusion settings for this character.
 [63]
+LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
+87.
+ (/home/nepero27178/.miktex/texmfs/install/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+)
 
 [64]
-(chapters/superconductivity/the bcs theory/pictures/fermi sphere and shell.tex
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 7.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 7.
-)
 
 [65]
 
 [66]
+(chapters/superconductivity/the bcs theory/pictures/fermi sphere and shell.tex
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 14.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 14.
+)
 
 [67]
-Overfull \hbox (11.81113pt too wide) in paragraph at lines 242--244
+
+[68]
+
+[69]
+
+[70]
+Overfull \hbox (11.81113pt too wide) in paragraph at lines 302--304
 []\T1/pplj/m/n/10.95 Throughout a vari-a-tional ap-proach over the para-met-ric
  so-lu-tion $\OML/zplm/m/it/10.95 E []$ \T1/pplj/m/n/10.95 around
  []
 
 
 
-[68]
+[71]
 
-[69]
-Overfull \hbox (13.66551pt too wide) in paragraph at lines 336--338
+[72]
+Overfull \hbox (13.66551pt too wide) in paragraph at lines 396--398
 \T1/pplj/m/n/10.95 be ex-panded through a com-plete set of sin-gle par-ti-cle B
 loch spin-wavefunctions, 
  []
 
 
-
-[70]
-Overfull \hbox (2.7923pt too wide) in paragraph at lines 359--360
+Overfull \hbox (2.7923pt too wide) in paragraph at lines 419--420
 \T1/pplj/m/n/10.95 rea-son-able be-cause in-ter-band spac-ing is of-ten big-ger
  than any phononic
  []
@@ -2363,27 +2367,25 @@ distance' requires LuaTeX. It will be ignored. on input line 11.
 
 )
 
-[71]
-
-[72]
-
 [73]
-Package mdframed Info: mdframed works in twoside mode on input line 498.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 498.
 
-
-[74])
+[74]
 
 [75]
 
-[76
+[76]
+Package mdframed Info: mdframed works in twoside mode on input line 568.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 568.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+[77])
 
-]
+[78]
 LaTeX Font Info:    Trying to load font information for T1+fvm on input line 59
 .
  (/home/nepero27178/.miktex/texmfs/install/tex/latex/bera/t1fvm.fd
@@ -2403,7 +2405,12 @@ File: se-utf8.def 2019/11/29 v1.12 stringenc: UTF-8
 (/home/nepero27178/.miktex/texmfs/install/tex/generic/stringenc/se-pdfdoc.def
 File: se-pdfdoc.def 2019/11/29 v1.12 stringenc: PDFDocEncoding
 )
-[77] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
+[79
+
+
+
+
+] (main.aux (misc/cover.aux) (misc/license.aux) (misc/intro.aux)
 (chapters/superconductivity/superconductivity and thermodynamics/superconductiv
 ity and thermodynamics.aux)
 (chapters/superconductivity/ginzburg-landau theory of superconductivity/ginzbur
@@ -2430,10 +2437,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 66426 strings out of 473905
- 1573632 string characters out of 5733678
- 2832617 words of memory out of 5000000
- 88089 multiletter control sequences out of 15000+600000
+ 66460 strings out of 473905
+ 1574353 string characters out of 5733678
+ 2832957 words of memory out of 5000000
+ 88118 multiletter control sequences out of 15000+600000
  669244 words of font info for 191 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,23n,138p,10901b,2803s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2606,9 +2613,9 @@ l/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/share/miktex-texmf/fonts/typ
 e1/urw/palatino/uplb8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palat
 ino/uplbi8a.pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplr8a.
 pfb></usr/local/share/miktex-texmf/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (20 pages, 365809 bytes).
+Output written on main.pdf (22 pages, 382710 bytes).
 PDF statistics:
- 431 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 25697 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 462 PDF objects out of 1000 (max. 8388607)
+ 106 named destinations out of 1000 (max. 500000)
+ 25717 words of extra memory for PDF output out of 29859 (max. 10000000)
 
