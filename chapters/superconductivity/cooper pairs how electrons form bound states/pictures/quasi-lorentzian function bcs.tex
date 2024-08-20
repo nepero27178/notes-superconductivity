@@ -1,0 +1,52 @@
+\def\PhononParameter{2.8}
+\def\ElectronParameter{0}
+\def\KappaParameter{0.4}
+\begin{minipage}{0.6\linewidth}	
+	\begin{tikzpicture}
+		\begin{axis}[
+			axis x line=center,
+			axis y line=center,
+			axis on top,
+			xlabel={$x-x_0$},
+			ylabel={$f(x)$},
+			xlabel style={below,yshift=-0.1em},
+			ylabel style=above,
+			xtick={-\PhononParameter,\PhononParameter},
+			ytick=\empty,
+			xticklabels={$-\Delta$,$\Delta$},
+			yticklabel=\empty,
+			xticklabel style={above,yshift=0.3em},
+			yticklabel style=\empty,
+			xmin=-6, xmax=6,
+			ymin=-2.7, ymax=2.7
+			]
+			\def\BoundaryA{0.707*\PhononParameter}
+			\def\BoundaryB{1.22*\PhononParameter}
+			
+			% Fill
+			\fill[color=lev!60,opacity=0.5]
+				(axis cs:-\BoundaryA,-2.5) rectangle (\BoundaryA,2.5);
+			\fill[color=lev!30,opacity=0.5]
+				(axis cs:-\BoundaryB,-2.5) rectangle (-\BoundaryA,2.5);
+			\fill[color=lev!30,opacity=0.5]
+				(axis cs:\BoundaryA,-2.5) rectangle (\BoundaryB,2.5);
+			
+			% Function
+			\addplot[color=lev,
+			domain=-5.5:5.5,restrict y to domain=-2.5:2.5,
+			name path=function,
+			samples=2000] 
+			{(\KappaParameter*\PhononParameter)^2/((x-\ElectronParameter)^2 - (\PhononParameter)^2)};
+		\end{axis}
+	\end{tikzpicture}
+\end{minipage}
+%
+\begin{minipage}{0.35\linewidth}
+	\[
+	\begin{aligned}
+		f(x) &= \frac{\kappa^2 \Delta^2}{(x-x_0)^2 - \Delta^2} \\
+		f(x_0) &= \kappa^2 \\
+		\kappa &< 1
+	\end{aligned}
+	\]
+\end{minipage}
