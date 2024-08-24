@@ -19,167 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
-    \entry{PhysRev.108.1175}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=616cd76a955b1fcb011fefbf1af91880}{%
-           family={Bardeen},
-           familyi={B\bibinitperiod},
-           given={J.},
-           giveni={J\bibinitperiod}}}%
-        {{hash=818261d37b65922f250ddf289897eb6c}{%
-           family={Cooper},
-           familyi={C\bibinitperiod},
-           given={L.\bibnamedelimi N.},
-           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
-        {{hash=c2af9bb5b241e45f3afcb0f87b9e1540}{%
-           family={Schrieffer},
-           familyi={S\bibinitperiod},
-           given={J.\bibnamedelimi R.},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {American Physical Society}%
-      }
-      \strng{namehash}{c30a83010c772bf453b99545802834fb}
-      \strng{fullhash}{c30a83010c772bf453b99545802834fb}
-      \strng{fullhashraw}{c30a83010c772bf453b99545802834fb}
-      \strng{bibnamehash}{c30a83010c772bf453b99545802834fb}
-      \strng{authorbibnamehash}{c30a83010c772bf453b99545802834fb}
-      \strng{authornamehash}{c30a83010c772bf453b99545802834fb}
-      \strng{authorfullhash}{c30a83010c772bf453b99545802834fb}
-      \strng{authorfullhashraw}{c30a83010c772bf453b99545802834fb}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issue}{5}
-      \field{journaltitle}{Phys. Rev.}
-      \field{month}{12}
-      \field{title}{Theory of Superconductivity}
-      \field{volume}{108}
-      \field{year}{1957}
-      \field{pages}{1175\bibrangedash 1204}
-      \range{pages}{30}
-      \verb{doi}
-      \verb 10.1103/PhysRev.108.1175
-      \endverb
-      \verb{urlraw}
-      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
-      \endverb
-      \verb{url}
-      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
-      \endverb
-    \endentry
-    \entry{grosso2000solid}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=a4191a6fc23a699b6815ed51dcfee186}{%
-           family={Grosso},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=26a049574b11e4b6ade3dc63a7903093}{%
-           family={Pastori\bibnamedelima Parravicini},
-           familyi={P\bibinitperiod\bibinitdelim P\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Elsevier Science}%
-      }
-      \strng{namehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \strng{fullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \strng{fullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \strng{bibnamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \strng{authorbibnamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \strng{authornamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \strng{authorfullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \strng{authorfullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780080481029}
-      \field{title}{Solid State Physics}
-      \field{year}{2000}
-      \verb{urlraw}
-      \verb https://books.google.it/books?id=L5RrQbbvWn8C
-      \endverb
-      \verb{url}
-      \verb https://books.google.it/books?id=L5RrQbbvWn8C
-      \endverb
-    \endentry
-    \entry{giuliani2008quantum}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=6e462c4272d83cb759f8ffe2b3fc16bc}{%
-           family={Giuliani},
-           familyi={G\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-        {{hash=68763f3b6092069bd29b0c1ffe205395}{%
-           family={Vignale},
-           familyi={V\bibinitperiod},
-           given={G.},
-           giveni={G\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Cambridge University Press}%
-      }
-      \strng{namehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{fullhash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{fullhashraw}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{bibnamehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authorbibnamehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authornamehash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authorfullhash}{790343fd4e55380c534d5dd246cde6c2}
-      \strng{authorfullhashraw}{790343fd4e55380c534d5dd246cde6c2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9781139471589}
-      \field{title}{Quantum Theory of the Electron Liquid}
-      \field{year}{2008}
-      \verb{urlraw}
-      \verb https://books.google.it/books?id=FFydOyv_r78C
-      \endverb
-      \verb{url}
-      \verb https://books.google.it/books?id=FFydOyv_r78C
-      \endverb
-    \endentry
-    \entry{goodstein2014states}{book}{}{}
-      \name{author}{1}{}{%
-        {{hash=7c1e993c0c5f87f6484e7bcb77b6920e}{%
-           family={Goodstein},
-           familyi={G\bibinitperiod},
-           given={D.\bibnamedelimi L.},
-           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Dover Publications}%
-      }
-      \strng{namehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{fullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{fullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{bibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authorbibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authornamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authorfullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \strng{authorfullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{9780486795515}
-      \field{series}{Dover Books on Physics}
-      \field{title}{States of Matter}
-      \field{year}{2014}
-      \verb{urlraw}
-      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
-      \endverb
-      \verb{url}
-      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
-      \endverb
-    \endentry
     \entry{tinkham2004introduction}{book}{}{}
       \name{author}{1}{}{%
         {{hash=90a8d001d414a2a0393c16501881e7cd}{%
@@ -215,6 +54,80 @@
       \verb https://books.google.it/books?id=VpUk3NfwDIkC
       \endverb
     \endentry
+    \entry{grosso2000solid}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=a4191a6fc23a699b6815ed51dcfee186}{%
+           family={Grosso},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=26a049574b11e4b6ade3dc63a7903093}{%
+           family={Pastori\bibnamedelima Parravicini},
+           familyi={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science}%
+      }
+      \strng{namehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{fullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{fullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{bibnamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authorbibnamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authornamehash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authorfullhash}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \strng{authorfullhashraw}{8a36c64cf69d8cd78c5c9b3b7657ce2d}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780080481029}
+      \field{title}{Solid State Physics}
+      \field{year}{2000}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=L5RrQbbvWn8C
+      \endverb
+    \endentry
+    \entry{goodstein2014states}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=7c1e993c0c5f87f6484e7bcb77b6920e}{%
+           family={Goodstein},
+           familyi={G\bibinitperiod},
+           given={D.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{fullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{fullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{bibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorbibnamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authornamehash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorfullhash}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \strng{authorfullhashraw}{7c1e993c0c5f87f6484e7bcb77b6920e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780486795515}
+      \field{series}{Dover Books on Physics}
+      \field{title}{States of Matter}
+      \field{year}{2014}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=OfEIBAAAQBAJ
+      \endverb
+    \endentry
     \entry{huang2008statistical}{book}{}{}
       \name{author}{1}{}{%
         {{hash=96f740e19666bbfccd8e0e7f82b2fdd6}{%
@@ -234,8 +147,8 @@
       \strng{authornamehash}{96f740e19666bbfccd8e0e7f82b2fdd6}
       \strng{authorfullhash}{96f740e19666bbfccd8e0e7f82b2fdd6}
       \strng{authorfullhashraw}{96f740e19666bbfccd8e0e7f82b2fdd6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9788126518494}
@@ -273,8 +186,8 @@
       \strng{authornamehash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
       \strng{authorfullhash}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
       \strng{authorfullhashraw}{1bd81c17ce9ce10e89cf0b9320ce1bb7}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{9780521769754}
@@ -287,6 +200,45 @@
       \endverb
       \verb{url}
       \verb https://books.google.it/books?id=GpF0Pgo8CqAC
+      \endverb
+    \endentry
+    \entry{giuliani2008quantum}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=6e462c4272d83cb759f8ffe2b3fc16bc}{%
+           family={Giuliani},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=68763f3b6092069bd29b0c1ffe205395}{%
+           family={Vignale},
+           familyi={V\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{fullhash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{fullhashraw}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{bibnamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorbibnamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authornamehash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorfullhash}{790343fd4e55380c534d5dd246cde6c2}
+      \strng{authorfullhashraw}{790343fd4e55380c534d5dd246cde6c2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781139471589}
+      \field{title}{Quantum Theory of the Electron Liquid}
+      \field{year}{2008}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://books.google.it/books?id=FFydOyv_r78C
+      \endverb
+      \verb{url}
+      \verb https://books.google.it/books?id=FFydOyv_r78C
       \endverb
     \endentry
     \entry{london-superconductivity}{article}{}{}
@@ -315,8 +267,8 @@
       \strng{authornamehash}{92a1f6e2d48d56130e7401e0d1018920}
       \strng{authorfullhash}{92a1f6e2d48d56130e7401e0d1018920}
       \strng{authorfullhashraw}{92a1f6e2d48d56130e7401e0d1018920}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the Royal Society of London. Series A - Mathematical and Physical Sciences}
@@ -353,8 +305,8 @@
       \strng{authornamehash}{0616697a8ac3d8019811d5840d720d33}
       \strng{authorfullhash}{0616697a8ac3d8019811d5840d720d33}
       \strng{authorfullhashraw}{0616697a8ac3d8019811d5840d720d33}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Sov. Phys. JETP}
@@ -389,8 +341,8 @@
       \strng{authornamehash}{e8ce3264e52d0d97a7d76afe7d632e4d}
       \strng{authorfullhash}{e8ce3264e52d0d97a7d76afe7d632e4d}
       \strng{authorfullhashraw}{e8ce3264e52d0d97a7d76afe7d632e4d}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issue}{2}
@@ -456,8 +408,8 @@
       \strng{authornamehash}{17450099ffd180f59d72ba0e2231464f}
       \strng{authorfullhash}{0bdff611d3367cedea72e36adbf0c5b5}
       \strng{authorfullhashraw}{0bdff611d3367cedea72e36adbf0c5b5}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{New Journal of Physics}
@@ -477,6 +429,58 @@
       \endverb
       \verb{url}
       \verb https://dx.doi.org/10.1088/1367-2630/abd123
+      \endverb
+    \endentry
+    \entry{PhysRev.108.1175}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=616cd76a955b1fcb011fefbf1af91880}{%
+           family={Bardeen},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=818261d37b65922f250ddf289897eb6c}{%
+           family={Cooper},
+           familyi={C\bibinitperiod},
+           given={L.\bibnamedelimi N.},
+           giveni={L\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=c2af9bb5b241e45f3afcb0f87b9e1540}{%
+           family={Schrieffer},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Physical Society}%
+      }
+      \strng{namehash}{c30a83010c772bf453b99545802834fb}
+      \strng{fullhash}{c30a83010c772bf453b99545802834fb}
+      \strng{fullhashraw}{c30a83010c772bf453b99545802834fb}
+      \strng{bibnamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorbibnamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authornamehash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorfullhash}{c30a83010c772bf453b99545802834fb}
+      \strng{authorfullhashraw}{c30a83010c772bf453b99545802834fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issue}{5}
+      \field{journaltitle}{Phys. Rev.}
+      \field{month}{12}
+      \field{title}{Theory of Superconductivity}
+      \field{volume}{108}
+      \field{year}{1957}
+      \true{nocite}
+      \field{pages}{1175\bibrangedash 1204}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1103/PhysRev.108.1175
+      \endverb
+      \verb{urlraw}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
+      \endverb
+      \verb{url}
+      \verb https://link.aps.org/doi/10.1103/PhysRev.108.1175
       \endverb
     \endentry
   \enddatalist
