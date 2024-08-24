@@ -1,0 +1,41 @@
+\def\ShellWidth{0.72}
+\def\BindingEnergy{0.36}
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=center,
+		axis y line=center,
+		axis equal image,
+		xlabel={$\xi_\mathbf{k}$},
+		ylabel={$\lambda_\mathbf{k}$},
+		xlabel style=below,
+		ylabel style=above,
+		xtick={-\ShellWidth,\ShellWidth},
+		ytick=\empty,
+		xticklabels={$-\hbar\omega_D\quad$,$\quad\hbar\omega_D$},
+		yticklabel=\empty,
+		xticklabel style=\empty,
+		yticklabel style=\empty,
+		xmin=-1.1, xmax=1.1,
+		ymin=-0.1, ymax=1.1
+		]
+		
+		% Interaction region
+		\fill[color=lev!30,opacity=0.5] 
+			(axis cs:-\ShellWidth,0) rectangle (axis cs:\ShellWidth,1);
+		
+		% Dispersion
+		\addplot[color=lev,domain=-1:-\ShellWidth] 
+			{abs(x)};
+		\addplot[color=lev,dashed,domain=-\ShellWidth:\ShellWidth] 
+			{abs(x)};
+		\addplot[color=lev,domain=\ShellWidth:1] 
+			{abs(x)};
+		\addplot[color=lev,smooth,domain=-\ShellWidth:\ShellWidth] 
+			{sqrt(x^2+\BindingEnergy^2)};
+			
+		% Gap
+		\draw[stealth-stealth]
+			(axis cs:0.03,0) -- (axis cs:0.03,\BindingEnergy) node[midway,anchor=south west]
+				{$\Delta$};
+	\end{axis}
+\end{tikzpicture}

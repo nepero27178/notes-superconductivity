@@ -6,18 +6,23 @@
 		axis y line=center,
 		xlabel={$\xi_\mathbf{k}$},
 		ylabel=\empty,
-		xlabel style=below,
+		xlabel style=right,
 		ylabel style=\empty,
 		xtick={-\ShellWidth,-\BindingEnergy,\BindingEnergy,\ShellWidth},
 		ytick={1},
 		xticklabels={$-\hbar\omega_D\quad$,$-\Delta$,$\Delta$,$\quad\hbar\omega_D$},
 		yticklabel={$1$},
 		xticklabel style=\empty,
-		yticklabel style=\empty,
+		yticklabel style={anchor=south east},
 		xmin=-1.1, xmax=1.1,
 		ymin=-0.1, ymax=1.1
 		]
 		
+		% Interaction region
+		\fill[color=lev!30,opacity=0.5] 
+			(axis cs:-\ShellWidth,0) rectangle (axis cs:\ShellWidth,1);
+		
+		% Blue plot
 		\addplot[color=lev,domain=-1:-\ShellWidth,smooth]
 			{0};
 		\addplot[color=lev,domain=-\ShellWidth:\ShellWidth,smooth]
@@ -27,6 +32,7 @@
 		\node[color=lev,anchor=center] at (0.8,0.85) 
 			{$\abs{u_\mathbf{k}}^2$};
 		
+		% Red plot
 		\addplot[color=red,domain=-1:-\ShellWidth,smooth]
 			{1};
 		\addplot[color=red,domain=-\ShellWidth:\ShellWidth,smooth]
