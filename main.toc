@@ -50,17 +50,25 @@
 \contentsline {subsection}{\numberline {4.1.3}{Bound states, considering statistics}}{68}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}{(In)Stability of the Fermi Sea}}{72}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}{How the phonon pairing works}}{73}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}{Born-Oppenheimer quantization}}{73}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}{Born-Oppenheimer quantization}}{74}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}{Electron-phonon interactions}}{75}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}{The effective interaction hamiltonian: Schrieffer-Wolff transformation}}{76}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}{Effective form of the phonon-assisted interaction}}{78}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}{A few assumptions, and Cooper pairs}}{80}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.3}{The effective interaction hamiltonian: Schrieffer-Wolff transformation}}{77}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}{Effective form of the phonon-assisted interaction}}{79}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}{A few assumptions, and Cooper pairs}}{81}{subsection.4.2.5}%
 \contentsline {chapter}{\numberline {5}{The BCS theory}}{85}{chapter.5}%
 \etoc@startlocaltoc {6}
-\contentsline {section}{\numberline {5.1}{BCS theory}}{85}{section.5.1}%
+\contentsline {section}{\numberline {5.1}{BCS theory: setup}}{85}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}{The BCS hamiltonian and ground state}}{85}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}{How many particles?}}{86}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}{The variational method}}{87}{subsection.5.1.3}%
-\contentsline {subsection}{\numberline {5.1.4}{Self-consistency equation}}{89}{subsection.5.1.4}%
-\contentsline {subsection}{\numberline {5.1.5}{The self-consistent method}}{91}{subsection.5.1.5}%
-\contentsline {section}{\numberline {5.2}{The Importance of Being Gapped \newline \small \add@extra@listi {sml}(a Trivial Comedy for Superconducting People)}}{96}{section.5.2}%
+\contentsline {section}{\numberline {5.2}{The variational method}}{87}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}{The self-consistency equation}}{90}{subsection.5.2.1}%
+\contentsline {section}{\numberline {5.3}{The mean-field method}}{92}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}{Mean-field approach}}{93}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}{Bogoliubov-Vitalin transformation}}{94}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}{The Bogoliubov fermions}}{97}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}{Gap equation}}{98}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}{The condensation energy}}{98}{subsection.5.3.5}%
+\contentsline {section}{\numberline {5.4}{The Importance of Being Gapped}}{99}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}{A closer look to the quasiparticle operators}}{99}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}{Elementary excitations}}{100}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}{Why do we even need a gap?}}{102}{subsection.5.4.3}%

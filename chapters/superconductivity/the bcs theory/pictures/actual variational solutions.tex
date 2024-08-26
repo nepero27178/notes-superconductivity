@@ -1,9 +1,10 @@
-\def\ShellWidth{0.5}
-\def\BindingEnergy{0.5*\ShellWidth}
+\def\ShellWidth{1.5}
+\def\BindingEnergy{\ShellWidth/6}
 \begin{tikzpicture}
 	\begin{axis}[
 		axis x line=center,
 		axis y line=center,
+		axis equal image,
 		xlabel={$\xi_\mathbf{k}$},
 		ylabel=\empty,
 		xlabel style=right,
@@ -14,8 +15,9 @@
 		yticklabel={$1$},
 		xticklabel style=\empty,
 		yticklabel style={anchor=south east},
-		xmin=-1.1, xmax=1.1,
-		ymin=-0.1, ymax=1.1
+		xmin=-\ShellWidth*1.2, xmax=\ShellWidth*1.2,
+		ymin=-0.1, ymax=1.2,
+		width=\textwidth
 		]
 		
 		% Interaction region
@@ -23,23 +25,23 @@
 			(axis cs:-\ShellWidth,0) rectangle (axis cs:\ShellWidth,1);
 		
 		% Blue plot
-		\addplot[color=lev,domain=-1:-\ShellWidth,smooth]
+		\addplot[color=lev,domain=-\ShellWidth*1.1:-\ShellWidth,smooth]
 			{0};
 		\addplot[color=lev,domain=-\ShellWidth:\ShellWidth,smooth]
 			{1/2*(1+(x/sqrt(x^2+\BindingEnergy^2)))};
-		\addplot[color=lev,domain=\ShellWidth:1,smooth]
+		\addplot[color=lev,domain=\ShellWidth:\ShellWidth*1.1,smooth]
 			{1};
-		\node[color=lev,anchor=center] at (0.8,0.85) 
+		\node[color=lev,anchor=center] at (\ShellWidth*0.8,0.85) 
 			{$\abs{u_\mathbf{k}}^2$};
 		
 		% Red plot
-		\addplot[color=red,domain=-1:-\ShellWidth,smooth]
+		\addplot[color=red,domain=-\ShellWidth*1.1:-\ShellWidth,smooth]
 			{1};
 		\addplot[color=red,domain=-\ShellWidth:\ShellWidth,smooth]
 			{1/2*(1-(x/sqrt(x^2+\BindingEnergy^2)))};
-		\addplot[color=red,domain=\ShellWidth:1,smooth]
+		\addplot[color=red,domain=\ShellWidth:\ShellWidth*1.1,smooth]
 			{0};
-		\node[color=red,anchor=center] at (-0.8,0.85) 
+		\node[color=red,anchor=center] at (-\ShellWidth*0.8,0.85) 
 			{$\abs{v_\mathbf{k}}^2$};
 	\end{axis}
 \end{tikzpicture}

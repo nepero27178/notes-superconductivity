@@ -1,0 +1,35 @@
+\begin{tikzpicture}
+	\fill[fill=lev!30,opacity=0.5,rounded corners]
+		(-0.3,-0.3) rectangle (2.3,0.3);
+	\draw[color=lev!60,dashed,rounded corners]
+		(-0.3,0.7) rectangle (2.3,1.3);
+	\draw[color=lev!60,dashed,rounded corners]
+		(-0.3,1.7) rectangle (2.3,2.3);
+	\fill[fill=lev!30,opacity=0.5,rounded corners]
+		(-0.3,2.7) rectangle (2.3,3.3);
+	
+	\filldraw[color=lev,fill=lev]
+		(2,0) circle (2pt)
+		(0,1) circle (2pt)
+		(0,2) circle (2pt)
+		(2,3) circle (2pt);
+		
+	\draw[color=lev]
+		(0,0) circle (2pt)
+		(2,1) circle (2pt)
+		(2,2) circle (2pt)
+		(0,3) circle (2pt);
+		
+	\node[anchor=center] (k-up) at (0,4) {$\ket{\mathbf{k}\uparrow}$};
+	\node[anchor=center] (k-down) at (2,4) {$\ket{-\mathbf{k}\downarrow}$};
+	
+	\node[anchor=center] (+create)  at (1,0) {$+$};
+	\node[anchor=center] (+destroy) at (1,1) {$+$};
+	\node[anchor=center] (-create)  at (1,2) {$-$};
+	\node[anchor=center] (-destroy) at (1,3) {$-$};
+	
+	\node[anchor=center] (gamma+create)  at (-1.5,0) {$\hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger$};
+	\node[anchor=center] (gamma+destroy) at (-1.5,1) {$\hat{\gamma}_{-\mathbf{k}\downarrow}$};
+	\node[anchor=center] (gamma-create)  at (-1.5,2) {$\hat{\gamma}_{\mathbf{k}\uparrow}^\dagger$};
+	\node[anchor=center] (gamma-destroy) at (-1.5,3) {$\hat{\gamma}_{\mathbf{k}\uparrow}$};
+\end{tikzpicture}
