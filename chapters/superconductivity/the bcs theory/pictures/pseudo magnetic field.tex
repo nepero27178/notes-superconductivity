@@ -20,41 +20,41 @@
 		zticklabels={$-\xi_\mathbf{k}$,$\xi_\mathbf{k}$},
 		xticklabel style=\empty,
 		yticklabel style=\empty,
-		zticklabel style={right},
+		zticklabel style=left,
 		xmin=-1, xmax=1,
 		ymin=-0.25, ymax=0.25,
 		zmin=-1, zmax=1,
-		view/h=193,
+		view/h=170,
 		view/v=15,
 		scale=1.5]
 		
 		% Dashed lines
 		\draw[color=gray!70,dashed]
-			(axis cs:\DeltaParameter,0,0) -- (axis cs:\DeltaParameter,0,\XiParameter);
+			(axis cs:-\DeltaParameter,0,0) -- (axis cs:-\DeltaParameter,0,\XiParameter);
 		\draw[color=gray!70,dashed]
-			(axis cs:0,0,\XiParameter) -- (axis cs:\DeltaParameter,0,\XiParameter);
+			(axis cs:0,0,\XiParameter) -- (axis cs:-\DeltaParameter,0,\XiParameter);
 		\draw[color=gray!70,dashed]
-			(axis cs:-\DeltaParameter,0,0) -- (axis cs:-\DeltaParameter,0,-\XiParameter);
+			(axis cs:\DeltaParameter,0,0) -- (axis cs:\DeltaParameter,0,-\XiParameter);
 		\draw[color=gray!70,dashed]
-			(axis cs:0,0,-\XiParameter) -- (axis cs:-\DeltaParameter,0,-\XiParameter);
+			(axis cs:0,0,-\XiParameter) -- (axis cs:\DeltaParameter,0,-\XiParameter);
 		
 		% Eigenstates
 		\filldraw[color=lev] 
-			(axis cs:\DeltaParameter,0,\XiParameter) circle (1.2pt) node[anchor=south east]
-				{$-\lambda_\mathbf{k}$};
-		\filldraw[color=red] 
-			(axis cs:-\DeltaParameter,0,-\XiParameter) circle (1.2pt) node[anchor=north west]
+			(axis cs:-\DeltaParameter,0,\XiParameter) circle (1.2pt) node[anchor=south east]
 				{$\lambda_\mathbf{k}$};
+		\filldraw[color=red] 
+			(axis cs:\DeltaParameter,0,-\XiParameter) circle (1.2pt) node[anchor=north west]
+				{$-\lambda_\mathbf{k}$};
 		
 		% Pseudo field
 		\draw[color=lev,-stealth]
-			(axis cs:0,0,0) -- (axis cs:\DeltaParameter,0,\XiParameter) node[anchor=north east,midway]
+			(axis cs:0,0,0) -- (axis cs:-\DeltaParameter,0,\XiParameter) node[anchor=north west,midway]
 				{$\mathbf{b}_\mathbf{k}$};
 		
 		% Angle
 		\begin{scope}[canvas is zx plane at y=0]
 			\draw[color=lev] 
-				(\XiParameter/2,0) arc [start angle=0,end angle=atan(\DeltaParameter/\XiParameter),radius=\XiParameter/2] node[anchor=south,midway]
+				(\XiParameter/2,0) arc [start angle=0,end angle=-atan(\DeltaParameter/\XiParameter),radius=\XiParameter/2] node[anchor=south,midway]
 					{$2\theta_\mathbf{k}$};
 		\end{scope}
 		

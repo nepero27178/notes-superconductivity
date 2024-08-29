@@ -178,7 +178,7 @@ which means that the global state is not normalized
 \]
 as can be easily checked.
 
-This result, rather intuitive, helps us understand how the exclusion from the sphere works: when adding one electron, its plane waves expansion is made up exclusively of momenta outside the sphere. The price to pay for having electrons all occupying momentum eigenstates is that anything inside the sphere is inaccessible, even as a superposition.
+This result, rather obvious, helps us understand how the exclusion from the sphere works: when adding one electron, its plane waves expansion is made up exclusively of momenta outside the sphere. The price to pay for having electrons all occupying momentum eigenstates is that anything inside the sphere is inaccessible, even as a superposition.
 
 Take now two electrons with zero net momentum. The statement is the following: for a couple built like this, the center of mass part of the wavefunction is a constant (rather obvious) and the relative part is equivalent to a single electron being added to the Fermi sphere -- thus everything said above applies. The reason is: the state of the couple can be expressed as a combination of product states
 \[
@@ -203,26 +203,24 @@ which means: the relative wavefunction has exactly the same Fourier coefficients
 
 Consider a system formed by the filled Fermi sphere plus two electrons, as described in the above paragraph. We want to understand how the ground state is made. All the ``Fermi electrons'' prevent our two interacting electrons from occupying states inside the Fermi sphere, and the Pauli exclusion principle is \textbf{the only way} in which the sphere and the electrons outside interact. We assume to have a \textbf{weak} interaction at work. Here ``weak'' means on energy scales much smaller than $\epsilon_F$, the natural energy scale. This also means that the maximum amount of energy exchange through the interaction is ``small''.
 
-Another assumption can be made: in any way the attractive interaction arises, it is reasonable to assume that for electrons ``very distant'' from the Fermi surface the kinetic contribution is dominant and the effect of the attraction is negligible; similarly, we imagine that electron deep in the sphere are so compressed by statistics that the presence of a weak interaction is completely irrelevant. So we imagine that this interaction is really ```felt'' only by electrons around the Fermi surface.
+The problem we present is known as the Cooper's problem: it is a toy problem of two electrons outside the sphere feeling the mutual attractive interaction. It is reasonable to assume the potential to be active only nearby the Fermi surface, outside of it: from one point of view the two added electrons are surely more responsive to such attraction than those inside, compressed by statistics; on the other hand, for states very distant from the surface the potential must be irrelevant if compared with the kinetic contribution.
 
-Then we have an interaction shell around the Fermi sphere, in the sense that two electrons in the shell can interact via this potential. It is reasonable to assume it extends symmetrically inside and outside the sphere by an amount $\delta k^\star \ll k_F$ and is negligible anywhere outside, so that the shell is \textit{thin}. A pictorial representation of what we are doing is in Fig.~\ref{fig:fermi sphere and shell}. We also define a energy scale $\delta\epsilon^\star$
+Then we have an interaction shell around the Fermi sphere, in the sense that two electrons in the shell can interact via this potential. It is reasonable to assume it extends only outside the sphere by an amount $\delta k^\star \ll k_F$ and is negligible anywhere outside, so that the shell is \textit{thin}. A pictorial representation of what we are doing is in Fig.~\ref{fig:fermi sphere and shell}. We also define a energy scale $\delta\epsilon^\star$
 \[
 	\epsilon_F + \delta\epsilon^\star \equiv \frac{\hbar^2}{2m} \lrR{k_F + \delta k^\star}^2
 	\quad\implies\quad
 	\delta\epsilon^\star \simeq v_F \hbar \delta k^\star
 \]
-with $v_F \equiv \hbar k_F/m$ the Fermi velocity.
+with $v_F \equiv \hbar k_F/m$ the Fermi velocity. Note that this is a toy problem and the real potential we will encounter later on will extend both inside and outside the sphere by the same amount. Don't be confused: both problems have a rigid bulk and an interaction shell, with the difference than now we have $2$ electrons in the shell and we can study their pairing, while later we will have a multitude, and we will need to think in terms of many-body Physics.
 
 \begin{figure}
 	\centering
 	\input{chapters/superconductivity/cooper pairs how electrons form bound states/pictures/fermi sphere and shell}
-	\caption{Representation of the Fermi sphere, of radius $k_F$ in lighter color, and the interaction shell of width $2\delta k^\star$ in darker color. The dotted region represents the inaccessible Fermi sphere. The solid dots with momenta $\mathbf{k}$ and $-\mathbf{k}$ are the electrons added to the filled sphere. The couple is scattered to the states $\mathbf{k}'$, $-\mathbf{k}'$.}
+	\caption{Representation of the Fermi sphere, of radius $k_F$ in lighter color, and the interaction shell of width $\delta k^\star$ in darker color. The dotted region represents the inaccessible Fermi sphere. The solid dots with momenta $\mathbf{k}$ and $-\mathbf{k}$ are the electrons added to the filled sphere. The couple is scattered to the states $\mathbf{k}'$, $-\mathbf{k}'$.}
 	\label{fig:fermi sphere and shell}
 \end{figure}
 
-One could correctly argue that if the potential penetrates the sphere then it is not true that this last interacts with the electrons outside only via the Pauli principle. We assume however that the interaction of the couple outside is more relevant than the interaction of one electron of the couple with the rest of the populated shell. The reason for that is that electrons in the shell ``feel'' a lot more the statistical compression, and so are less likely to interact, while the free electron interacts more easily. The same holds for two electrons in the shell below the surface. The reason for defining the potential like this instead of taking directly a shell outside the sphere is that later on a potential shaped this way will appear!
-
-So: we take two electrons outside the shell. Following the line of reasoning exposed in Sec.~\ref{subsec:adding particles on top of the fermi sphere}, we take them with zero total momentum, and follow an argument similar to the Sec.~\ref{subsec:bound states}. First, take the complete Schrödinger's Equation
+For now, we stick to two electrons outside the shell. Following the line of reasoning exposed in Sec.~\ref{subsec:adding particles on top of the fermi sphere}, we take them with zero total momentum, and follow an argument similar to the Sec.~\ref{subsec:bound states}. First, take the complete Schrödinger's Equation
 \[
 	\lrS{\frac{\hat{\mathbf{p}}_1^2}{2m} + \frac{\hat{\mathbf{p}}_2^2}{2m} + V \lrR{\hat{\mathbf{x}}_1 - \hat{\mathbf{x}}_2}} \psi(\mathbf{x}_1,\mathbf{x}_2) = E \psi(\mathbf{x}_1,\mathbf{x}_2)
 \]
@@ -233,9 +231,9 @@ with $\psi$ the total eigenfunction and $E$ the energy. From what we know from S
 	\phi\lrR{\mathbf{x}} = \sum_\mathbf{k} \alpha_\mathbf{k} w_\mathbf{k} \lrR{\mathbf{x}}
 \]
 since in this situation the kinetic contribution of the center of mass to energy in zero, so all energy enters the relative equation. We take the relative part and proceed with the plane wave expansion and projection, as in Sec.~\ref{subsec:bound states},
-\[
+\begin{equation}\label{eq:energy equation single cooper pair momentum}
 	2 \epsilon_\mathbf{k} \alpha_\mathbf{k} + \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \alpha_{\mathbf{k}'} = E \alpha_\mathbf{k}
-\]
+\end{equation}
 The potential has nonzero Fourier components only in the shell of width $\delta k^\star$ in Fig.~\ref{fig:fermi sphere and shell}. The factor $2$ in front of $\epsilon_\mathbf{k}$, as before, is a consequence of how we defined it. Remember what we discussed in Sec.~\ref{subsec:adding particles on top of the fermi sphere}: this equations makes sense only for components outside the sphere.
 
 Also, given two particles at momenta $\mathbf{k}$ and $-\mathbf{k}$ interact via the potential; the component $V_\mathbf{q}$ is a measure of how much the potential is able to change the states of the couple to $\mathbf{k}+\mathbf{q}$ and $-\mathbf{k}-\mathbf{q}$. Notice that the potential of course is active also for couples with nonzero net momentum, but the ground state is to be searched in coupling particles at antipodal sites outside the sphere.
@@ -247,14 +245,12 @@ Now we select a specific potential. The simplest potential active only in the sh
 where $A$ is the characteristic function of the shell,
 \[
 	A\lrR{\mathbf{k}} \equiv \begin{cases}
-		0 \qq{if} &\abs{\abs{\mathbf{k}}-k_F \vphantom{A^A}} > \delta k^\star \\
-		1 \qq{if} &\abs{\abs{\mathbf{k}}-k_F \vphantom{A^A}} < \delta k^\star	\end{cases}
+		0 \qq{if} &\hphantom{0<{}}\abs{\mathbf{k}} > k_F + \delta k^\star \\
+		1 \qq{if} &0<\abs{\mathbf{k}} < k_F + \delta k^\star \\
+		0 \qq{if} &\hphantom{0<{}}\abs{\mathbf{k}} < k_F
+	\end{cases}
 \]
-null outside the shell and equal to $1$ inside. Almost everywhere in literature this problem (``Cooper's problem'') is exposed with the potential active only outside the sphere. Here we let it act also inside, and by hand impose that only our two electrons feel it. This is a real clown move, but it makes sense: it gives the result of the standard Cooper problem and can be extended intuitively and coherently (more than here, \textit{circus music starts playing}) to the physical situation we will present in Sec.~\ref{subsec:a few assumptions, and cooper pairs}.
-
-Notice something very obvious: this definition does \textbf{not} mean that the potential has Fourier components only inside the shell; instead it means that it has all the components that can be built by any sum of two vectors, $\mathbf{k}$ and $-\mathbf{k}'$, each of which lies inside the interaction shell. This means that the potential is equipped with all and only the components to scatter two particles inside the shell to two positions still inside the shell.
-
-Then:
+null outside the shell and equal to $1$ inside. Notice something very obvious: this definition does \textbf{not} mean that the potential has Fourier components only inside the shell; instead it means that it has all the components that can be built by any sum of two vectors, $\mathbf{k}$ and $-\mathbf{k}'$, each of which lies inside the interaction shell. This means that the potential is equipped with all and only the components to scatter two particles inside the shell to two positions still inside the shell. Then:
 \[
 	\lrR{2 \epsilon_\mathbf{k} - E} \alpha_\mathbf{k} = V_0 A\lrR{\mathbf{k}} \sum_{\mathbf{k}'} A\lrR{\mathbf{k}'} \alpha_{\mathbf{k}'}
 \]
@@ -267,8 +263,6 @@ We multiply both sides by $A\lrR{\mathbf{k}}$ and sum over $\mathbf{k}$. Of cour
 \[
 	\sum_{\abs{\mathbf{k}}>k_F} \frac{V_0 A\lrR{\mathbf{k}}}{2 \epsilon_\mathbf{k} - E} = 1
 \]
-The reason for such sum domain, $\abs{\mathbf{k}}>k_F$, is that considering momenta inside, although apparently mathematically legitimate, is instead critically inconsistent because the equations themselves are ill-defined. No components of the added pair are allowed inside, so all of this makes sense only outside. This is equivalent to saying: take Eq.~\eqref{eq:bound states with statistics intermediate passage, for inconsistency comment} for $\abs{\mathbf{k}}<k_F$: the left side is zero, the right side is nonzero (the sum is not zero by construction, we could not have divided by it in the below passage if it was instead). The solution to the paradox is that it makes no sense to consider the equation inside the sphere, thus it makes no sense to consider contribution to the sum in the below equation from inside the sphere.
-
 We convert the sum in an integral,
 \[
 	1 = \frac{L^D}{(2\pi)^D} \int_{k_F<\abs{\mathbf{k}}<\Lambda} d^D \mathbf{k} \, \frac{V_0 A\lrR{\mathbf{k}}}{2 \epsilon_\mathbf{k} - E}
@@ -306,34 +300,117 @@ and for small potentials $e^{2/V_0 \rho_0}$ dominates, so
 \[
 	E^{(\mathrm{b})} \simeq 2\delta\epsilon^\star e^{-2/V_0 \rho_0}
 \]
-Then the strength of the binding is given by the energy extension of the interaction shell, suppressed exponentially by a factor $V_0^{-1}$. This makes sense: weak interactions produce a strong damping, making it much difficult for the shell thickness to compensate. One can think about the shell width as a measure of \textit{how many} states can couple. On the contrary, strong interactions produce negligible damping, and the strength of the binding is controlled by how much the shell is thick.
+which is the desired expression for the binding energy. The whole argument holds for $D=2$, for which the density of states is a constant, and $D=1$, for which it goes like $\epsilon^{-1/2}$. This section lets us conclude that a ``shell interaction'' of strength $V_0$ creates electron pairs quite independently of $V_0$, as long as it is not too small. This is an astonishing result: not only it effectively corrects the incoherence of the above section, but it also demonstrates that the pairing of electrons observed in superconductors is a collective phenomenon arising from the presence of an entire electron liquid.
+
+\subsection{Some considerations on the single Cooper pair problem}\label{subsec:some considerations on the single Cooper pair problem}
+
+As seen, the strength of the binding is given by the energy extension of the interaction shell, suppressed exponentially by a factor $V_0^{-1}$. This makes sense: weak interactions produce a strong damping, making it much difficult for the shell thickness to compensate. One can think about the shell width as a measure of \textit{how many} states can couple. On the contrary, strong interactions produce negligible damping, and the strength of the binding is controlled by how much the shell is thick.
 In such situation
 \[
 	\frac{2}{V_0 \rho_0} \to 0
 	\quad\implies\quad
 	E^{(\mathrm{b})} \simeq 2\delta\epsilon^\star
 \]
-and this is correct! To break a pair with opposite momenta and just outside the Fermi surface just by pumping energy in the system we must take both electrons outside the shell, which is, give to each of them the same amount of energy $\delta\epsilon^\star$. To imagine to take just one electron outside would require to perturb the system with energy pumping able to distinguish ``up from down'', thus breaking symmetries and introducing chirality.
+and this is correct! To break a pair with opposite momenta and just outside the Fermi surface just by pumping energy in the system we must take both electrons outside the shell, which is, give to each of them the same amount of energy $\delta\epsilon^\star$. To imagine to take just one electron outside would require to perturb the system with energy pumping able to distinguish ``up from down'', thus breaking symmetries.
 
-The whole argument holds for $D=2$, for which the density of states is a constant, and $D=1$, for which it goes like $\epsilon^{-1/2}$. This section lets us conclude that a ``shell interaction'' of strength $V_0$ creates electron pairs quite independently of $V_0$, as long as it is not too small. This is an astonishing result: not only it effectively corrects the incoherence of the above section, but it also demonstrates that the pairing of electrons observed in superconductors is a collective phenomenon arising from the presence of an entire electron liquid.
-
-\subsection{(In)Stability of the Fermi Sea}
-
-So: we understood that for a constant potential built as the shell in Fig.~\ref{fig:fermi sphere and shell}, antipodal electrons outside the Fermi sphere lower their energy by forming pairs -- which we now start calling a \textbf{Cooper pair} -- with binding energy $2\delta\epsilon^\star e^{-2/V_0 \rho_0}$. Those electrons were ``added'' to the filled sphere, and we imagined the sphere to remain static and filled under the action of the potential.
-
-Suppose now no electron is added to the filled Fermi sphere and the interaction is turned on. What happens? We can understand rather intuitively that the electrons more loosely bounded, those at the surface of the Fermi sphere, will tend to couple with the antipodal electron to create a bound state and form a Cooper pair. This means that \textbf{the Fermi sphere is unstable with respect to the interaction}, and for those electrons near the surface feeling the potential it is energetically convenient to find a new configuration. We can expect the ground state to be a mixed beast, a Fermi sphere in its bulk (as commonly defined: with one electron per state) gradually becoming strongly correlated and terminating with a ``soup'' of states at the boundary (where each couple has a wavefunction distributed along the shell in some way). Don't take this picture too seriously, the author is still fighting in the background to conceptualize some sort of graphic physical interpretation of what is happening.
-
-There is, however, a crucial difference with the above section: we have considered a \textbf{rigid} Fermi sphere and two electrons added on top of it, implementing manually the exclusion principle by saying that $\alpha_\mathbf{k} = 0$ for any $\abs{\mathbf{k}} < k_F$. The Fermi sphere is just a statistical background preventing the pair from penetrating the surface. This procedure, although rather unphysical (why would the sphere electron not participate the interaction?) was helpful to understand the general structure and formation of a Cooper pair. Now we turn on the interaction on a realistic Fermi sphere: we understand by the above paragraph and the above section that pairs form, but -- if we repeat the exact same argument as before -- now we can imagine a rigid part of the sphere for $\epsilon_{\mathbf{k}} < \epsilon_F - \delta\epsilon^\star$, working just as a statistical background, and our equations become consistent for $\alpha_\mathbf{k} = 0$ for any $\epsilon_{\mathbf{k}} > \epsilon_F - \delta\epsilon^\star$. Then the consistency equation is
+Identical considerations can be made for $\rho_0$: small densities produce small binding, while big densities strong binding. The reason for that is to searched in Eq.~\eqref{eq:energy equation single cooper pair momentum},
 \[
-	1 \simeq \rho_0 V_0 \int_{\epsilon_F-\delta\epsilon^\star}^{\epsilon_F+\delta\epsilon^\star} \frac{d\epsilon}{2\epsilon - E}
+	2 \epsilon_\mathbf{k} \alpha_\mathbf{k} - V_0 A(\mathbf{k}) \sum_{\mathbf{k}'} A(\mathbf{k}') \alpha_{\mathbf{k}'} = E \alpha_\mathbf{k}
 \]
-Some mathematical subtlety is involved: it does not really make sense to approximate $E \simeq 2\epsilon_F-E^{(\mathrm{b})}$ for all electrons involved (a big fat divergence arises in such case), because those electrons below the surface at an intermediate distance, say $\delta\epsilon^\star/2$, do have a difference in kinetic energy with respect to the electrons on top that is relevant on the energy scale of $E^{(\mathrm{b})}$. But mathematical coherence never has been a limit for us physicists. We can think to this problem as similar to the one before, but with the rigid part reduced to a smaller sphere of radius $\epsilon_F - \delta\epsilon^\star$. Then the binding energy should be doubled,
-\[
-	E^{(\mathrm{b})} \simeq 2\lrS{2\delta\epsilon^\star e^{-2/V_0 \rho_0}} = 2 \Delta
-\]
-where we called $\Delta$ the binding energy per electron of the pair. This notation will come useful later.
+which gives the equation for energy, using wavefunction normalization,
+\begin{equation}\label{eq:energy equation single cooper pair probabilities}
+	E = \sum_\mathbf{k} 2 \epsilon_\mathbf{k} \abs{\alpha_\mathbf{k}}^2 - V_0 \abs{\sum_\mathbf{k} A(\mathbf{k}) \alpha_\mathbf{k}}^2
+\end{equation}
+The first term is the normal kinetic one: the wider the wavefunction is distributed in $\mathbf{k}$ space, the bigger its kinetic energy. The wavefunction expansion probabilities $\abs{\alpha_\mathbf{k}}^2$ are the distribution over which the mean kinetic energy of the wavepacket is calculated. 
 
-Now: the Fourier components of the potential we defined are the same for all processes scattering initial particles to final states around the shell. This helps us understand that what happens really to a pair of antipodal electrons is that they are scattered not a specific state, but to a complicated superposition of all the states of the shell. Here we refer to ``state'' intending the couple of antipodal states occupied by two electrons. From this intuitive picture is clear that the final state of the couple will be spread in momentum on a width $\delta k^\star$ -- so, the couple spatial distribution will be finite in size. Being $\delta k^\star$ ``small'' we expect the final couple to occupy a ``large'' portion of space. We will come back on this.
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/cooper pairs how electrons form bound states/pictures/single cooper pair momentum distribution function}
+	\caption{Plot of the function $f(x)$ as defined in Sec.~\ref{subsec:some considerations on the single Cooper pair problem}.}
+	\label{fig:single cooper pair momentum distribution function}
+\end{figure}
+
+For what concerns the second term, consider Eq.~\eqref{eq:bound states with statistics intermediate passage, for inconsistency comment}: defining $\xi_\mathbf{k} \equiv \epsilon_\mathbf{k} - \epsilon_F$, by what we said it reduces to
+\[
+	\alpha_\mathbf{k} = \frac{V_0 A\lrR{\mathbf{k}}}{2 \xi_\mathbf{k} + E^{(\mathrm{b})}} \sum_{\mathbf{k}'} A\lrR{\mathbf{k}'} \alpha_{\mathbf{k}'}
+\]
+In a narrow shell around the Fermi surface,
+\[
+	\xi_\mathbf{k} = \frac{\hbar^2}{2m} \lrR{(k_F + \delta k)^2 - k_F^2} \simeq v_F \hbar \delta k + \mathcal{O}\lrR{\delta k}^2
+\]
+as long as $\delta k < k_F$, true for the whole shell of extension $\delta k^\star$. Thus we can pass from $\delta k$ space to $\xi_\mathbf{k}$ space, in which the shell has an energy extension of $\delta \epsilon^\star$. Take now the function
+\[
+	f(x) \equiv \frac{1}{2x+x_0}
+\]
+represented in Fig.~\ref{fig:single cooper pair momentum distribution function}. The function is limited in space by a cutoff $L \gg x_0$. There $L$ represents $\delta\epsilon^\star$ and $x_0$ the binding energy $E^{(\mathrm{b})}$. Then by what we said
+\[
+	\frac{L}{x_0} \simeq \frac{L}{2L e^{-\eta}} = \frac{1}{2} e^\eta
+\]
+with $\eta$ some exponent we expect to be bigger than one. The situation in Fig.~\ref{fig:single cooper pair momentum distribution function} is \textit{a posteriori} reasonable, with $L$ arbitrary chosen as $L=6x_0$. Now, for such a function it is easy to demonstrate that the majority of the distribution falls in a range $x < 3x_0$. Moreover, for $x<x_0$ the magnitude of the function increases dramatically. This consideration can be mapped on the coefficients $\alpha_\mathbf{k}$: the pair wavefunction in our solution has chosen to concentrate the occupation of phase space near the Fermi surface, while states much distant from the surface are lesser populated. Remember that the coefficients have normalization constraints: each individual state is very little populated -- practically empty. But those within a range $E^{(\mathrm{b})}$ from $\epsilon_F$ are more relevant than those more distant.
+
+This makes sense, getting back to the second term on the right side of Eq.~\eqref{eq:energy equation single cooper pair probabilities}: at first glance, it might seem that the more states are uniformly occupied, the bigger is the term
+\[
+	\abs{\sum_\mathbf{k} A(\mathbf{k}) \alpha_\mathbf{k}}^2
+\]
+and then the more negative is the potential contribution to energy. But to spread the distribution in momentum space too much costs kinetic energy. So, the ground state we have found is the one optimizing the spreading in momentum space of the pair wavefunction.
+
+We can extract two important heuristic lessons from analysis of the pairing toy-problem: first, a single isolated Cooper pair is nothing more esoteric than the best way for a pair wavefunction to distribute in momentum space in order to get the advantage of a contribution $-V_0$ to energy for any state the pair occupies, weighted by the state occupation probability $\abs{\alpha_\mathbf{k}}^2$, and not get the disadvantage of an increasing kinetic contribution. The more states are available, the stronger the binding: and that's why $\rho_0$ is there. Second, the binding energy is also a good scale for the distribution of the pair wavefunction in $\mathbf{k}$ space. All these consideration are surely beautiful on a physical intuition level but are very dangerous in the context of a real system, with many electrons feeling the potential: the next section is devoted to this.
+
+\subsection{(In)Stability of the Fermi Sea}\label{subsec:(in)stability of the fermi sea}
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/cooper pairs how electrons form bound states/pictures/fermi sphere and shell extended}
+	\caption{Sketch of the potential described in Sec.~\ref{subsec:(in)stability of the fermi sea}.}
+	\label{fig:fermi sphere and shell extended}
+\end{figure}
+
+So far, we have considered two electrons outside a filled Fermi sphere. The Fermi sphere was just a statistical background preventing the pair from penetrating the surface. Now we do something different and try to work our way out: we have $N$ electrons, provided that the potential acts as
+\[
+	V_{\mathbf{k}-\mathbf{k}'} = -V_0 A\lrR{\mathbf{k}} A\lrR{\mathbf{k}'}
+\]
+with
+\[
+	A\lrR{\mathbf{k}} = \begin{cases}
+		1 \qq{if} \mathbf{k} \in \mathcal{S} \\
+		0 \qq{if} \mathbf{k} \not\in \mathcal{S}
+	\end{cases}
+\]
+as in Fig.~\ref{fig:fermi sphere and shell extended}. Now the shell $\mathcal{S}$ extends symmetrically inside and outside the Fermi sphere by the same amount $\delta k^\star = \delta \epsilon^\star / \hbar v_F$. So, the number of electrons feeling the interaction is approximately given by
+\[
+	N \frac{4\pi k_F^2 \delta k^\star}{\displaystyle \frac{4}{3} \pi k_F^3} = 3N \frac{\delta k^\star}{k_F} = 3N \frac{\delta \epsilon^\star}{\epsilon_F} \ll N
+\]
+The system is not so different from the one before: there is a rigid bulk, this time of radius $k_F - \delta k^\star$, and an interaction shell, this time of width $2 \delta k^\star$. If inside the shell the number of electrons was $2$, the binding energy should double. But the number of electrons participating and feeling each other attraction is now very big. What happens?
+
+The ground state must be equivalent to a perfectly degenerate Fermi gas for $\mathbf{k} \not\in \mathcal{S}$: so we expect perfect filling up until the boundary $k_F - \delta k^\star$ and perfect vacuum from $k_F + \delta k^\star$ on. Inside the shell, it is very difficult and misleading to think in terms of individual electrons or isolated couples of electrons, for the phase space availability depends directly on the behavior of all fermions. But some general features of the Cooper pairing mechanism must survive: first, attraction should be enhanced for antipodal electrons. For a single Cooper pair, the best thing to do for the pair was to distribute the wavefunction as much as possible at low wavevector, maintaining a small kinetic contribution to energy and taking the advantage of the many states available in phase space. The resulting wavefunction was made of a distribution spread in momentum space, with major contribution within a range $\Delta = E^{(\mathrm{b})}$ from the Fermi surface. Said distribution ``touched'' a lot of states to get potential gain, but did not \textit{fill} many states due to normalization. This means: if other fermions are added, they should not feel any relevant exclusion from the states the couple is spread over.
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/cooper pairs how electrons form bound states/pictures/fermi sphere and shell extended first onion}
+	\caption{A shell potential slightly penetrating the sphere. Ideally, only those electrons that would be on the surface in the non-interacting system feel it. Proportions are exaggerated for graphic clarity.}
+	\label{fig:fermi sphere and shell extended first onion}
+\end{figure}
+
+Before reaching the situation of Fig.~\ref{fig:fermi sphere and shell extended}, let us try to understand what should happen if we let the potential penetrates the surface by an infinitesimal amount much smaller than $\delta\epsilon^\star$, ideally letting only the surface fermions interact. Take Fig.~\ref{fig:fermi sphere and shell extended first onion} as reference. Here there are plenty of antipodal electrons. The ground state should find the optimal balance in kinetic distribution of pairs and amount of phase space occupied to extract potential gain. And the number of states available are a lot more than the particle to occupy them.
+In terms of occupation probabilities, we expect them to be $1$ inside the bulk and $0$ outside the shell; in the intermediate region, we expect the occupations to be a decreasing function of $\delta k = \abs{\mathbf{k}} - k_F$, due to kinetic optimization. This situation, apart from technicalities, should not be much dissimilar from a system of multiple pairs as we encountered it in Sec.~\ref{subsec:bound states, considering statistics}.
+
+Now, we let the interaction shell penetrate a little more the surface. Other electrons are involved now, and the ground state must enhance their pairing. We can still expect a similar situation, with a certain momentum spread of the collective wavefunction and a denser part at lower $\abs{\mathbf{k}}$. Now, the states just outside the rigid bulk are a little more populated (their occupation probabilities are less than $1$, surely, but closer than before to unity) and the binding energy is a little bigger because all electrons have access to states at lower kinetic contribution.
+
+If we go on, at some point the states just outside the shell will be filled. This can be understood as if each couple occupies a little portion of the state and is spread in momentum space, but there are a lot of couples. When does this point occur? To answer intuitively this question is now an out-of-reach task for the author. The important thing is that the occupation probabilities can change from $1$ to $0$ on an energy range much smaller than $\delta\epsilon^\star$, closely related to how many electrons we have and how many states are available. If we let interact the whole sector of $\mathcal{S}$ for
+\[
+	k_F - \delta k^\star < \abs{\mathbf{k}} \le k_F
+\]
+as in Fig.~\ref{fig:fermi sphere and shell extended}, it is to be expected that only a small portion of electrons on the surface actually create pairs with a distribution spread in momentum space.
+
+This \textit{naive} and intuitive picture is confirmed by BCS theory: it will turn out in Sec.~\ref{sec:the variational method} that the occupation probabilities are significant (not too close to $1$, neither to $0$) over a range
+\[
+	- \Delta < \xi_\mathbf{k} < \Delta
+\]
+with $\xi_\mathbf{k} = \epsilon_\mathbf{k} - \epsilon_F$. Electrons below this shell are compressed by statistics and exclusion, and do not form pair even if they feel the interaction potential. It is interesting to notice that the width of the distribution has doubled, thus if we think about pairs they have lowered their energy both by acceding to lower kinetic state and by occupying more states to gain potential advantage. Then the conclusion that reveals to be correct (see next Chapter) is that the ``binding energy'', or its analogous defined as the amount of energy to be given to the system to get two electrons outside of the ground state, is $2\Delta$ -- as if we had two electrons in a free interaction shell of double width compared to the one of Fig.~\ref{fig:fermi sphere and shell} analyzed in Sec.~\ref{subsec:bound states, considering statistics}.
+
+Even if we cannot see intuitively why the binding energy should be doubled, the fact that it is indeed is a very important clue in the direction of interpreting the role of pairing in this problem. In fact, if the problem could have thought as a system of many independent isolated Cooper pairs (as the one of Sec.~\ref{subsec:bound states, considering statistics}) plus a rigid bulk, the binding energy should have remained approximately the same. Instead the way the collective wavefunction is spread in momentum space, and the way the occupation numbers turn out to be, demonstrate that the binding energy is bigger than the one of the single Cooper pair because two mechanisms occur: the Cooper mechanism for allowing pairs populating many states and take advantage of the energy gain, and the self-interacting exclusion principle that shapes the occupation probabilities of the low-momentum states in such a way to let a big number of pairs lower their kinetic energy by an additional amount of order $-\Delta$. It is very difficult and rather futile to search for more intuitive explanations: the key point is that for the collective system is more convenient to have many pairs a little more distributed, but with a lower global kinetic contribution, than a little pairs distributed in the best way possible by themselves.
+
+\subsection{Some final remarks}
 
 The next step is to understand how this interaction comes to life at all. We know we are inside a material, a crystal of some kind: it is necessary to screen the Coulomb interaction. It is natural to look for any kind of \textit{attraction} inside the interactions of electrons with the crystal, instead of interactions of electrons within themselves. Moreover, we need some kind of quantum mechanism capable of storing the binding energy of the Cooper pair. As the electromagnetic field stores the binding energy of an atom with its electrons (pictorially we say they ``exchange a photon'', although this description is quite misleading), we expect some quantized field of the material to mediate the interaction and store the binding energy of the Cooper pair. In general we may look for any kind of collective excitation of materials -- quasiparticles of any kind -- but the most general, simple and obvious is the phonon, ``the quantum of lattice vibrations''.
 
@@ -629,7 +706,7 @@ Now it is the right time to ask: what does this all mean? How phonons actually l
 	Pursuing the idea further, the electrons in the metal do not stand still but rather zip through the lattice at something like the Fermi velocity. The ions are attracted to the electrons but, owing to their large mass, move very slowly compared to the much lighter electrons. By the time the ions respond the electron is long gone, but it has, in effect, left behind a trail of positive charge, which is the lattice distortion we mentioned above. Another electron, traversing the same path, would find that its way had been prepared with the positive charge that it finds so attractive. We can imagine, if we wish, that the first electron created a phonon, which the second happily absorbs. This is the nature of the interaction between the two electrons. Notice that the interaction is strongest if the two electrons traverse exactly the same path -- that is, if they have, say, equal and opposite momenta.
 \end{cit}
 
-To imagine what a Cooper pair looks like, we should not think about a strongly localized particle-like object. A Cooper pair is a large object containing two quasi-free electrons with opposite momenta, moving apparently as unbounded, but correlated on a statistical level -- which means, the two change their momentum due to lattice interaction maintaining a zero net momentum. In the next section we discuss briefly the spatial structure of a Cooper pair.
+To imagine what a single, isolated Cooper pair looks like, we should not think about a strongly localized particle-like object. A Cooper pair is a large object containing two quasi-free electrons with opposite momenta, moving apparently as unbounded, but correlated on a statistical level -- which means, the two change their momentum due to lattice interaction maintaining a zero net momentum. This description works for the single pair of Sec.~\ref{subsec:bound states, considering statistics}.
 
 Getting back to the Schrieffer-Wolff transformation used, the most important point to understand about this whole procedure is that we assumed the phononic populations to be negligible, which means, the lattice to vibrate in a few controlled ways, those supporting the passage of Cooper pairs. If the temperature rises we expect the thermal contribution to increase, thus the number of ``free'' phonons to get bigger. Then the first order contributions (energy loss by phonon emission, energy gain by phonon absorption) and spurious second order contributions (electron-phonon scattering with electronic propagator) are no longer negligible and the superconducting contributions lose importance.
 
@@ -695,13 +772,32 @@ With such approximation the amplitude becomes
 	}
 \end{aligned}
 \]
-where $V_0 \equiv \kappa^2 \hbar\omega_D \ll \epsilon_F$ and $\xi_\mathbf{k} \equiv \epsilon_\mathbf{k} - \epsilon_F$. This quantity measures the deviation from the Fermi energy of the state's energy. Now we make an assumption: the ground state of the system is made up of Cooper pairs, each one in a state that is a superposition mostly made of states just outside the Fermi surface. By this, we mean: we only consider those states with $\xi_\mathbf{k} \ll \hbar\omega_D$. [...] {\color{red}mmm I need to understand better here, I move on for a moment}
+where $V_0 \equiv \kappa^2 \hbar\omega_D \ll \epsilon_F$ and $\xi_\mathbf{k} \equiv \epsilon_\mathbf{k} - \epsilon_F$. This quantity measures the deviation from the Fermi energy of the state's energy. If we take a closer look, this expression $V_{\mathbf{k}-\mathbf{k}'}$ could be approximated as constant for couple of states whose distance in energy is smaller than $\hbar\omega_D$.
 
-Then, by what we know from Sec.~\ref{subsec:bound states, considering statistics}, the Cooper pair has a binding energy of
+Now we make an assumption: the ground state of the system is made up of Cooper pairs (not isolated), and the collective state is mostly made of states just outside the Fermi surface. By this, we mean: we only consider for pairing those states with $\xi_\mathbf{k} \ll \hbar\omega_D$. In other words, an underlying structure exists in the pairing mechanism that privileges the states near the surface for creating a pair. To justify it we shall wait until Sec.~\ref{subsec:the pairing amplitude}; it is coherent with the pictorial description of Sec.~\ref{subsec:(in)stability of the fermi sea}, which predicts pairing only in a range
 \[
-	E^{(\mathrm{b})} \simeq 2 \hbar\omega_D e^{-2/\kappa^2 \rho_0 \hbar\omega_D}
+	-\hbar \omega_D \ll -\Delta < \xi_\mathbf{k} < \Delta \ll \hbar\omega_D
 \]
-having set $\delta\epsilon^\star = \hbar\omega_D$. What remains to couple is the spin of the particles. For two spin \half particles, the possible states are the singlet and the triplet
+as we will see. Then, if the relevant states are all around the Fermi energy and must be less distant than $\hbar\omega_D$, feeling a constants potential, the potential may as well be approximated by
+\[
+	V_{\mathbf{k}-\mathbf{k}'} = -V_0 A\lrR{\mathbf{k}} A\lrR{\mathbf{k}'}
+\]
+with
+\[
+	A\lrR{\mathbf{k}} = \begin{cases}
+		1 \qq{if} \mathbf{k} \in \mathcal{S} \\
+		0 \qq{if} \mathbf{k} \not\in \mathcal{S}
+	\end{cases}
+\]
+as in Sec.~\ref{subsec:(in)stability of the fermi sea}. Then, by what we know from Sec.~\ref{subsec:bound states, considering statistics}, the Cooper pair has a binding energy of
+\[
+	E^{(\mathrm{b})} \simeq 2\Delta = 4 \hbar\omega_D e^{-2/\rho_0 \lrR{\kappa^2 \hbar\omega_D}}
+\]
+having set $\delta\epsilon^\star = \hbar\omega_D$. What remains to couple is the spin of the particles. We shall do it in the next section.
+
+\subsection{What does a Cooper pair look like?}\label{subsec:what does a cooper pair look like}
+
+For two spin \half particles, the possible states are the singlet and the triplet
 \[
 	\ket{s} = \frac{\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow}}{\sqrt{2}}
 	\hspace{5em}
@@ -711,7 +807,11 @@ having set $\delta\epsilon^\star = \hbar\omega_D$. What remains to couple is the
 		\ket{t_{-1}} &= \ket{\downarrow\downarrow}
 	\end{aligned}
 \]
-The singlet state exhibits anti-symmetry, while the triplet states are symmetric. Due to natural rotational invariance, it is reasonable to expect the pair to be formed preferentially in states $\ket{s}$ and $\ket{t_0}$. In the book \citetitle{grosso2000solid} (\cite{grosso2000solid} @ 18.2) a by \citeauthor{grosso2000solid} a calculation is performed, showing that the singlet state is energetically favorite in our situation. We are in the context of the so-called $s$-wave superconductivity. This is not valid in general, many materials exhibiting different Cooper coupling exist: continuing on the atomic physics derived terminology, $p$-wave pairing or $d$-wave pairing exist in those materials.
+The singlet state exhibits anti-symmetry, while the triplet states are symmetric. Due to natural rotational invariance, it is reasonable to expect the pair to be formed preferentially in states $\ket{s}$ and $\ket{t_0}$. In the book \citetitle{grosso2000solid} (\cite{grosso2000solid} @ 18.2) a by \citeauthor{grosso2000solid} a calculation is performed, showing that the singlet state is energetically favorite in our situation. The reason is essentially the spherical symmetry of the potential:
+\[
+	V_{\mathbf{k}-\mathbf{k}'} = V_{\mathcal{R}\mathbf{k}-\mathcal{R}\mathbf{k}'}
+\]
+with $\mathcal{R}$ a rotation matrix. The potential can scatter with equal amplitude $\mathbf{k}$ to $\mathbf{k}'$ and $\mathcal{R}\mathbf{k}$ to $\mathcal{R}\mathbf{k}'$. Then the natural state must exhibit the same spherical symmetry. We are in the context of the so-called $s$-wave superconductivity. This is not valid in general, many materials exhibiting different Cooper coupling exist: continuing on the atomic physics derived terminology, $p$-wave pairing or $d$-wave pairing exist in those materials.
 
 With this spin pairing we can finally write the effective hamiltonian:
 \[
@@ -727,7 +827,8 @@ and in order to implement symmetry it must be $\alpha_\mathbf{k} = \alpha_{-\mat
 \[
 	\psi(\mathbf{x}_1,\mathbf{x}_2) = L^{-D} {\sum_\mathbf{k}^{}}^{(\star)} 2 \alpha_\mathbf{k} \cos\lrR{\mathbf{k}\cdot\mathbf{x}}
 \]
-The wavefunction is really a one-variable function, and is a real superposition of plane waves distributed in momentum all over the interaction shell. We may estimate the momentum (magnitude) dispersion of the wavepacket,
+{\color{red}The wavefunction is really a one-variable function, and is a real superposition of plane waves distributed in momentum all over the interaction shell. We may estimate the momentum (magnitude) dispersion of the wavepacket,
+{\color{red}not so sure!}
 \[
 	\Delta \abs{\mathbf{k}} \simeq \delta k^\star \simeq \frac{\delta\epsilon^\star}{\hbar v_F}
 \]
@@ -745,4 +846,4 @@ having assumed isotropy, and calling $v_S$ the sound velocity on the phononic br
 \]
 But $1/q^\star$ is roughly the lattice spacing, and $v_F \gg v_S$ in materials. Then we understand: a Cooper pair is \textit{big}, compared to the ions of the crystal. This makes sense intuitively: the attraction is quite weak, the electrons move fast, and being separated enough in space the couple can explore a larger portion of the phononic band (in the sense that they become sensible to lattice vibration on larger scales than a single cell).
 
-So, over all this chapter we have derived an effective mechanism for the pairing of electrons. We never talked about superconductors, however; the next chapter treats the central part of BCS theory, and explains how all this infernal machinery allows for charges to flow with zero resistance and expel magnetic fields.
+So, over all this chapter we have derived an effective mechanism for the pairing of electrons. We never talked about superconductors, however; the next chapter treats the central part of BCS theory, and explains how all this infernal machinery allows for charges to flow with zero resistance and expel magnetic fields.}

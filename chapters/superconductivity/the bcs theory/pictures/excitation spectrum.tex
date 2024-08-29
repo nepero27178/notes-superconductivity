@@ -1,5 +1,5 @@
-\def\ShellWidth{0.72}
-\def\BindingEnergy{0.36}
+\def\ShellWidth{1.2}
+\def\BindingEnergy{0.2}
 \begin{tikzpicture}
 	\begin{axis}[
 		axis x line=center,
@@ -15,27 +15,28 @@
 		yticklabel=\empty,
 		xticklabel style=\empty,
 		yticklabel style=\empty,
-		xmin=-1.1, xmax=1.1,
-		ymin=-0.1, ymax=1.1
+		xmin=-1.5, xmax=1.5,
+		ymin=-0.1, ymax=1.5,
+		width=0.8\textwidth
 		]
 		
 		% Interaction region
 		\fill[color=lev!30,opacity=0.5] 
-			(axis cs:-\ShellWidth,0) rectangle (axis cs:\ShellWidth,1);
+			(axis cs:-\ShellWidth,0) rectangle (axis cs:\ShellWidth,1.4);
 		
 		% Dispersion
-		\addplot[color=lev,domain=-1:-\ShellWidth] 
+		\addplot[color=lev,domain=-1.4:-\ShellWidth] 
 			{abs(x)};
 		\addplot[color=lev,dashed,domain=-\ShellWidth:\ShellWidth] 
 			{abs(x)};
-		\addplot[color=lev,domain=\ShellWidth:1] 
+		\addplot[color=lev,domain=\ShellWidth:1.4] 
 			{abs(x)};
 		\addplot[color=lev,smooth,domain=-\ShellWidth:\ShellWidth] 
 			{sqrt(x^2+\BindingEnergy^2)};
 			
 		% Gap
 		\draw[stealth-stealth]
-			(axis cs:0.03,0) -- (axis cs:0.03,\BindingEnergy) node[midway,anchor=south west]
+			(axis cs:0.03,0) -- (axis cs:0.03,\BindingEnergy) node[midway,anchor=west,xshift=0.5em]
 				{$\Delta$};
 	\end{axis}
 \end{tikzpicture}

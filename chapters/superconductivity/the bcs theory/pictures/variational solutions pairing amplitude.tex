@@ -1,0 +1,24 @@
+\def\ShellWidth{0.25}
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=center,
+		axis y line=center,
+		xlabel={$\xi_\mathbf{k}$},
+		ylabel=\empty,
+		xlabel style=right,
+		ylabel style=\empty,
+		xtick={-\ShellWidth,\ShellWidth},
+		ytick={1},
+		xticklabels={$-\Delta$,$\Delta$},
+		yticklabel={$1$},
+		xticklabel style=\empty,
+		yticklabel style=\empty,
+		xmin=-1.1, xmax=1.1,
+		ymin=-0.1, ymax=1.1
+		]
+		\addplot[color=lev,domain=-1:1,smooth]
+			{0.5*\ShellWidth/sqrt(x^2+\ShellWidth^2)};
+		\node[color=lev,anchor=south east] at (-0.25,0.35) 
+			{$u_\mathbf{k} v_\mathbf{k}$};
+	\end{axis}
+\end{tikzpicture}

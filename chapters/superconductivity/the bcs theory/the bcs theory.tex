@@ -94,7 +94,7 @@ The key idea is: the energy is a functional of $u_\mathbf{k}$, $v_\mathbf{k}$. T
 \begin{aligned}
 	\braket{\Psi}{\Psi} &= \bigotimes_\mathbf{k} \bra{\Omega} \lrS{
 		\vphantom{c^\dagger}
-		u_\mathbf{k}^* + v_\mathbf{k}^* \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow}
+		u_\mathbf{k} + v_\mathbf{k}^* \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow}
 	} \bigotimes_{\mathbf{k}'} \lrS{
 		u_{\mathbf{k}'} + v_{\mathbf{k}'} \hat{c}_{\mathbf{k}'\uparrow}^\dagger \hat{c}_{-\mathbf{k}'\downarrow}^\dagger
 	} \ket{\Omega} \\
@@ -126,6 +126,9 @@ This definition is equivalent to taking both complex and collecting a global pha
 	\quad\qq{and}\quad
 	v_\mathbf{k} \equiv \sin\theta_\mathbf{k}
 \end{equation}
+
+\subsection{The variational solutions for the BCS parameters}\label{subsec:the variational solutions for the bcs parameters}
+
 Now we want to find some expression for the functional $E\lrS{\theta_\mathbf{k}}$. We consider shifting the energies up to $\epsilon_F$, thus considering the operator
 \[
 	\hat{\bm H} - \epsilon_F \hat{N}
@@ -142,13 +145,13 @@ and define the functional as
 	&\hspace{5em} + \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \mel{\Psi}{\lrS{\hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger} \lrS{\vphantom{c^\dagger} \hat{c}_{-\mathbf{k}'\downarrow} \hat{c}_{\mathbf{k}'\uparrow}}}{\Psi}
 \end{aligned}
 \]
-with $\xi_{\mathbf{k}} \equiv \epsilon_{\mathbf{k}} - \epsilon_F$, and where some fermionic rules have been used. Some straightforward calculations leads us to
+with $\xi_{\mathbf{k}} \equiv \epsilon_{\mathbf{k}} - \epsilon_F$, and where some fermionic rules have been used. Some straightforward calculations lead us to
 \[
 \begin{aligned}
 	E\lrS{\lrB{\theta_\mathbf{q}}} &= 2 \sum_{\mathbf{k}} \xi_{\mathbf{k}} \abs{v_\mathbf{k}}^2 + \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \lrS{v_\mathbf{k}^* u_\mathbf{k}} \lrS{u_{\mathbf{k}'}^* v_{\mathbf{k}'}} \\
 	&= 2 \sum_{\mathbf{k}} \xi_{\mathbf{k}} \sin^2\theta_\mathbf{k} + \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}
-	\sin\theta_\mathbf{k} \cos\theta_\mathbf{k}
-	\cos\theta_{\mathbf{k}'} \sin\theta_{\mathbf{k}'} \\
+	\cos\theta_\mathbf{k} \sin\theta_\mathbf{k}
+	\sin\theta_{\mathbf{k}'} \cos\theta_{\mathbf{k}'} \\
 	&= 2 \sum_{\mathbf{k}} \xi_{\mathbf{k}} \sin^2\theta_\mathbf{k} + \frac{1}{4} \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}
 	\sin2\theta_\mathbf{k} \sin2\theta_{\mathbf{k}'}
 \end{aligned}
@@ -168,7 +171,7 @@ Then, deriving with respect to one precise angle $\theta_\mathbf{q}$,
 \]
 since $\partial_\theta \sin^2 \theta = \sin2\theta$ and $\partial_\theta \sin 2\theta = 2 \cos 2\theta$. In the last passage we used the relation $V_{\mathbf{k}-\mathbf{q}} = V_{\mathbf{q}-\mathbf{k}}^*$. Time-reversal symmetry, as well as what we said in the previous chapter about the interaction potential, allows us to conclude $V_\mathbf{q} = V_\mathbf{q}^*$. Then the last two sums in the above equation are equal and sum up. We change label to conform to standard notation, $\mathbf{q} \to \mathbf{k}$, and get
 \[
-	2 \xi_\mathbf{k} \sin2\theta_\mathbf{q} + 
+	2 \xi_\mathbf{k} \sin2\theta_\mathbf{k} + 
 	\cos2\theta_\mathbf{k} \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \sin2\theta_{\mathbf{k}'} = 0
 \]
 We define
@@ -206,25 +209,53 @@ and due to normalization
 	\label{fig:variational solutions}
 \end{figure}
 
-In Fig.~\ref{fig:variational solutions} the two solutions are plotted as functions of the energy $\xi_\mathbf{k}$ in the special case $\Delta_\mathbf{k} = \Delta$. We do not expect this to be the actual solution, but it is a good starting point to understand the general behavior of these functions. As evident, deep inside the sphere (for $\xi_\mathbf{k}\le0$) we have $v_\mathbf{k} \simeq 1$, and $u_\mathbf{k} \simeq 0$, leading to a state similar to the non-interacting perfect Fermi sphere. Far outside the situation is the opposite, $v_\mathbf{k} \simeq 0$, and $u_\mathbf{k} \simeq 1$, which correctly means that far states are not populated. Overall the state is pretty similar to the Fermi sphere, with significant variations only in the energy range
+In Fig.~\ref{fig:variational solutions} the two solutions are plotted as functions of the energy $\xi_\mathbf{k}$ in the special case $\Delta_\mathbf{k} = \Delta$. The actual solution will be very similar. As evident, deep inside the sphere (for $\xi_\mathbf{k}\le0$) we have $v_\mathbf{k} \simeq 1$, and $u_\mathbf{k} \simeq 0$, leading to a state similar to the non-interacting perfect Fermi sphere. Far outside the situation is the opposite, $v_\mathbf{k} \simeq 0$, and $u_\mathbf{k} \simeq 1$, which correctly means that far states are not populated. Overall the state is pretty similar to the Fermi sphere, with significant variations only in the energy range
 \[
 	- \Delta < \xi_\mathbf{k} < \Delta
 \]
+This observation is quite important in understating the nature of the collective state. We anticipated in Chap.~\ref{chap: cooper pairs how electrons form bound states} that the relevant states for pairing are those within a range $\pm\Delta$ from the Fermi energy. This result, although obtained for $\Delta_\mathbf{k} = \Delta$ (constant) holds very well for the weak coupling in general. We will come back on this in a moment, in Sec.~\ref{subsec:the pairing amplitude}.
+
+It is useful to understand the relative sign of $u_\mathbf{k}$, $v_\mathbf{k}$. From Eq.~\eqref{eq:delta variational definition},
+\[
+	\frac{\Delta_\mathbf{k}}{\xi_\mathbf{k}} = \tan 2\theta_\mathbf{k} = \frac{2 \tan\theta_\mathbf{k}}{1 - \tan^2\theta_\mathbf{k}}
+\]
+We anticipate $\Delta_\mathbf{k} > 0$, as we are going to see in Sec.~\ref{subsec:the self consistency equation} Take $\xi_\mathbf{k}>0$, the right part of the graph in Fig.~\ref{fig:variational solutions}. Here
+\[
+	\abs{v_\mathbf{k}}^2 > \abs{u_\mathbf{k}}^2
+	\quad\implies\quad
+	\tan^2\theta_\mathbf{k} < 1
+\]
+It follows
+\[
+	\tan\theta_\mathbf{k} = \lrR{1-\tan^2\theta_\mathbf{k}} \frac{\Delta_\mathbf{k}}{2\xi_\mathbf{k}} > 0
+\]
+which means that $u_\mathbf{k}$ and $v_\mathbf{k}$ have equal sign. The same holds for $\xi_\mathbf{k}<0$. Then we know
+\begin{align}
+	u_\mathbf{k} v_\mathbf{k} &= \sqrt{\abs{u_\mathbf{k}}^2 \abs{v_\mathbf{k}}^2} \nonumber \\
+	&= \lrS{\frac{1}{4} \lrR{1 + \frac{\xi_\mathbf{k}}{\sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}}} \lrR{1 - \frac{\xi_\mathbf{k}}{\sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}}} }^{1/2} \nonumber \\
+	&= \frac{1}{2} \frac{\Delta_\mathbf{k}}{\sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}} \label{eq:pairing amplitude vk uk}
+\end{align}
+This quantity is often referred to as the \textbf{pairing amplitude}. Although now unclear, soon the reason for such a name will be explained. A plot is reported in Fig.~\ref{fig:variational solutions pairing amplitude}.
+We use this result immediately.
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/the bcs theory/pictures/variational solutions pairing amplitude}
+	\caption{}
+	\label{fig:variational solutions pairing amplitude}
+\end{figure}
+
 
 \subsection{The self-consistency equation}\label{subsec:the self consistency equation}
 
 We aim to find an expression for $\Delta_\mathbf{k}$, using the found solutions. Substituting the obtained solutions in the definition of $\Delta_\mathbf{k}$, we get
-\[
-\begin{aligned}
+\begin{align}
 	\Delta_\mathbf{k} &\equiv - \frac{1}{2} 
-	\sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \sin2\theta_{\mathbf{k}'} \\
-	&= - \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} v_{\mathbf{k}'} u_{\mathbf{k}'} \\
-	&= - \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \lrS{\frac{1}{4} \lrR{1 - \frac{\xi_{\mathbf{k}'}}{\sqrt{\xi_{\mathbf{k}'}^2 + \Delta_{\mathbf{k}'}^2}}} \lrR{1 + \frac{\xi_{\mathbf{k}'}}{\sqrt{\xi_{\mathbf{k}'}^2 + \Delta_{\mathbf{k}'}^2}}} }^{1/2} \\
-	&= - \frac{1}{2} \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \frac{\Delta_{\mathbf{k}'}}{\sqrt{\xi_{\mathbf{k}'}^2 + \Delta_{\mathbf{k}'}^2}}
-\end{aligned}
-\]
-This is the so-called \textbf{self-consistency equation}.
-Consider now the potential analyzed in Sec.~\ref{subsec:bound states, considering statistics}. The phonon effective potential of Sec.~\ref{subsec:a few assumptions, and cooper pairs} is well approximated by
+	\sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \sin2\theta_{\mathbf{k}'} \nonumber \\
+	&= - \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} v_{\mathbf{k}'} u_{\mathbf{k}'} \nonumber \\
+	&= - \frac{1}{2} \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \frac{\Delta_{\mathbf{k}'}}{\sqrt{\xi_{\mathbf{k}'}^2 + \Delta_{\mathbf{k}'}^2}} \label{eq:mean field self consistency equation}
+\end{align}
+having we used Eq.~\eqref{eq:pairing amplitude vk uk}. This is the so-called \textbf{self-consistency equation}. Consider now the potential analyzed in Sec.~\ref{subsec:bound states, considering statistics}. The phonon effective potential of Sec.~\ref{subsec:a few assumptions, and cooper pairs} is well approximated by
 \[
 	V_{\mathbf{k}-\mathbf{k}'} = - V_0 A\lrR{\mathbf{k}} A\lrR{\mathbf{k}'}
 \]
@@ -274,9 +305,17 @@ which finally gives
 \[
 	\Delta = 2 \hbar\omega_D e^{-2/\rho_0 V_0}
 \]
-Familiar? That is precisely half the binding energy of the Cooper pair of Sec.~\ref{subsec:a few assumptions, and cooper pairs}. The binding energy of the pair, in our problem, is $2\Delta$. We omit for a second more comments about the meaning of $\Delta$, which becomes clear enough in the following section.
+Familiar? That is precisely half the binding energy of the Cooper pair of Sec.~\ref{subsec:(in)stability of the fermi sea} and Sec.~\ref{subsec:a few assumptions, and cooper pairs}. We interpret as the binding energy of the pair, in the many body problem, $2\Delta$. The reason may seem obscure: we omit for a second more comments about the meaning of $\Delta$, which becomes clear enough in Sec.~\ref{subsec:a few assumptions, and cooper pairs}.
 
-Now: since $\Delta_\mathbf{k} = \Delta A\lrR{\mathbf{k}}$, we have
+\subsection{Cooper pairs in the collective state}\label{subsec:cooper pairs in the collective state}
+
+Take the BCS ground state:
+\[
+	\ket{\Psi} \equiv \bigotimes_\mathbf{k} \lrS{u_\mathbf{k} + v_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger} \ket{\Omega}
+\]
+Evidently the quantity $\abs{u_\mathbf{k}}^2$ measures the probability for a given couple of states, $\ket{\mathbf{k}\uparrow}$ and $\ket{-\mathbf{k}\downarrow}$, of being unoccupied. Complementarily $\abs{v_\mathbf{k}}^2$ measures the probability of finding them both occupied. Both them being occupied clearly is not enough to declare both electrons to be participating in a pairing via the Cooper mechanism: after all, the states deep in the sphere have perfect couple occupation. Then, were are Cooper pairs in the BCS state?
+
+For the BCS ground state, inserting what we know from last section about $\Delta_\mathbf{k} = \Delta A\lrR{\mathbf{k}}$, we have
 \begin{equation}\label{eq:u actual variational solution}
 	\abs{u_\mathbf{k}}^2 = \begin{cases}
 		0 &\hphantom{-\hbar\omega <{}}\xi_\mathbf{k} < -\hbar\omega_D\\
@@ -292,7 +331,8 @@ and
 		0 &\hphantom{-\hbar\omega <{}}\xi_\mathbf{k} > \hbar\omega_D
 	\end{cases}
 \end{equation}
-Notice that $\Delta < 2\hbar\omega_D$, but in principle it is not guaranteed $\Delta < \hbar\omega_D$. Check Fig.~\ref{fig:actual variational solutions}: the above functions are there plotted, with the arbitrary choice $\Delta = \hbar\omega_D/6$. Such choice was made for reasons of graphic clarity. Don't take too seriously the discontinuities at the boundaries of the shaded region: those are generated by the approximation $\Delta_\mathbf{k} = \Delta A(\mathbf{k})$.
+Notice that $\Delta < 2\hbar\omega_D$, but in principle it is not guaranteed $\Delta < \hbar\omega_D$. However weak phononic coupling, necessary for the whole procedure to work, implies small interactions and thus $\Delta \ll 2\hbar\omega_D$.
+Check Fig.~\ref{fig:actual variational solutions}: the above functions are there plotted, with the arbitrary choice $\Delta = \hbar\omega_D/6$. Such choice was made for reasons of graphic clarity. Don't take too seriously the discontinuities at the boundaries of the shaded region: those are generated by the approximation $\Delta_\mathbf{k} = \Delta A(\mathbf{k})$.
 
 \begin{figure}
 	\centering
@@ -301,13 +341,57 @@ Notice that $\Delta < 2\hbar\omega_D$, but in principle it is not guaranteed $\D
 	\label{fig:actual variational solutions}
 \end{figure}
 
-\section{The mean-field method}
+We comment now the nature of these amplitudes. First, recall what we already said at the end of Sec.~\ref{subsec:the variational solutions for the bcs parameters}: all the relevant differences from the free Fermi amplitudes occur in the shell
+\[
+	- \Delta < \xi_\mathbf{k} < \Delta
+\]
+Pursuing the very pictorial ideas of Sec.~\ref{subsec:(in)stability of the fermi sea}, we see that the BCS solution is indeed the optimal distribution of occupation probabilities in the situation of many paired electrons. Being
+\[
+\begin{aligned}
+	E &= 2 \sum_{\mathbf{k}} \xi_{\mathbf{k}} \abs{v_\mathbf{k}}^2 + \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \lrS{v_\mathbf{k}^* u_\mathbf{k}} \lrS{u_{\mathbf{k}'}^* v_{\mathbf{k}'}} \\
+	&=  2 \sum_{\mathbf{k}} \xi_{\mathbf{k}} \abs{v_\mathbf{k}}^2 - V_0 \lrS{\sum_\mathbf{k} A \lrR{\mathbf{k}} \frac{\Delta_\mathbf{k}^2}{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}}^2
+\end{aligned}
+\]
+having we used Eq.~\eqref{eq:pairing amplitude vk uk}, we see that the variational approach to BCS theory is ultimately the task of finding a balance between two behaviors: decreasing the kinetic contribution by enhancing occupation of states with smaller $\xi_{\mathbf{k}}$ (which would tend to accumulate all the occupation for $\xi_{\mathbf{k}}<0$) and increasing the width of the distribution, $\Delta$, in order to fill many states and gaining from each one the potential gain $-V_0$. To balance these trends is precisely the task of the variational approach. In the following extract, the notation is a little different than here: replace $v_\mathbf{k} \leftrightarrow b_\mathbf{q}$, $-V_0 \leftrightarrow -V$ and $\Delta \leftrightarrow \Delta_0$.
 
-We have seen in Sec.\ref{sec:the variational method} that how to build self-consistently the BCS ground state via a variational approach -- which is, minimizing the energy functional. To do so we assumed a certain parametric form for the BCS ground state, in terms of $u_\mathbf{k}$ and $v_\mathbf{k}$, which we were able to identify. Now we turn to a somewhat more sophisticated method, which relies on mean-field theory and Bogoliubov transformations for quadratic fermionic hamiltonian. This method allows for a crystalline interpretation of $\Delta$, and shows the emergence of a gap in the energy spectrum. The existence itself of said gap is the quintessence of superconductivity. We will work our way through. 
+\begin{cit}{goodstein2014states}{5.3.d}
+	\[
+	2 b_\mathbf{q}^2 = 1 - \frac{\xi_\mathbf{q}}{\sqrt{\xi_\mathbf{q}^2 + \Delta_0^2}}
+	\]
+	The $b_\mathbf{q}^2$'s are the probabilities that the original single-particle states are occupied. Obviously, for $\xi_\mathbf{q} \ll 0$, $b_\mathbf{q}^2 = 1$ and for $\xi_\mathbf{q} \gg 0$, $b_\mathbf{q}^2 = 0$. Between these limits, over a region whose width is of order $\Delta_0$, $b_\mathbf{q}^2$ changes smoothly from $1$ to $0$ The distribution [...] is reminiscent of that [...] for the thermal probability of the occupation of these same states for normal electrons at finite temperature. The $b_\mathbf{q}^2$'s, however, are quantum probabilities in the ground state, at $T=0$. In retrospect, it is not hard to see why this form has occurred. The influence of the interaction, $-V$, depends intimately on the number of unoccupied states nearby into which a pair might be scattered. [...] a weak potential caused pairs to be bound simply because many states were available. The effect of the interaction is to cause some states that are unoccupied in the normal ground state (those above the Fermi level) to have some amplitude for being occupied and to leave states below the Fermi level with some amplitude for being unoccupied. This result, in turn, enhances the effect of $-V$ on other pairs, wince there are now more electrons within $\hbar\omega_D$ of states with at least some amplitude for being unoccupied and therefore available for scattering into. The more the distribution spreads out to lower its energy by taking advantage of $-V$ operating between pairs of electrons, the more it raises its kinetic energy. The calculation we have done has found the optimum compromise, the delicate balance.
+\end{cit}
+
+So, lastly: where are Cooper pairs? We begun by saying that to have a couple of antipodal states filled is not enough to declare them actually part of a Cooper pair. And this is sensate: otherwise, we should think about the filled bulk part of the sphere, unaltered by interaction, as filled by pairs. The key point is that in this many-body context the pairing is more a property of the states rather than specific couples of electrons. This means: for electrons, to be in some states enhances to probability to be scattered to some other states. And that is what defines a pair as we know it: the optimal distribution of the couple state in momentum space in order to minimize energy. The trivial distribution, a couple stable in its state, is not a pair. It's not interacting. The reason is that states deep below the surface, $-\hbar\omega_D < \xi_\mathbf{k} < -\Delta$, are very compressed by statistics and should increase their kinetic energy a lot to scatter to far states; states far from the surface, $\Delta < \xi_\mathbf{k} < \hbar\omega_D$ may easily couple to many states, but are difficult to reach in the first place due to the great kinetic cost. The following example quantifies this trend.
+
+We now indicate as $\ket{\mathbf{k}}$ the state of an antipodal couple
+\[
+	\ket{\mathbf{k}} \equiv \ket{\mathbf{k}\uparrow} \otimes \ket{-\mathbf{k}\downarrow}
+\]
+The amplitude for the process $\ket{\mathbf{k}'} \to \ket{\mathbf{k}}$ is given by
+\[
+	\mel{\mathbf{k}}{\hat{\bm H} - \epsilon_F \hat{N}}{\mathbf{k}'} = V_{\mathbf{k}-\mathbf{k}'} \lrS{u_\mathbf{k} v_\mathbf{k}} \lrS{u_{\mathbf{k}'} v_{\mathbf{k}'}}
+\]
+being the parameters real. Two pairing amplitudes appear: the one of the starting state, $\lrS{u_{\mathbf{k}'} v_{\mathbf{k}'}}$, and the one for the target state, $\lrS{u_\mathbf{k} v_\mathbf{k}}$. Consider now the plot of Fig.~\ref{fig:variational solutions pairing amplitude}: the pairing amplitude is significantly different from zero only within a range $\pm\Delta$ from the Fermi energy. So, if the starting couple $\lrS{u_{\mathbf{k}'} v_{\mathbf{k}'}}$ is deep below the surface, $-\hbar\omega_D < \xi_{\mathbf{k}'} < -\Delta$, the state it occupies is poorly connected to other states via the potential. The same holds if the target state is below the surface, $-\hbar\omega_D < \xi_\mathbf{k} < -\Delta$: it is almost filled, so by exclusion principle it is difficult to reach via the potential. And the same holds for starting and target states at high energy.
+
+So: we may say that, if we start with a non-interacting filled sphere, turn on the interaction and wait for the system to collapse on its ground state, we will find a smeared distribution of occupation probabilities, confronted with the starting $T=0$ Fermi-Dirac distribution, and that really only the fraction of the electrons initially in the range
+\[
+	- \Delta < \xi_\mathbf{k} < 0
+\]
+is now \textit{de facto} in a complicated state with a significant distribution in momentum space via the Cooper potential, while for the others the situation is pretty similar to before. And this can be pictorially interpreted, finally, as if only those electrons are actually using the Cooper pairing mechanism (in a collective way).
+
+Finally, the point here is that the global state presents couple symmetry in a certain region of single-particle momentum space. This means, it is more likely to scatter a pair from a couple of antipodal states to another couple, than single electrons. For those electrons deep below the Fermi energy, in the ground state, that likelihood is zero via the kinetic part of the hamiltonian and very low as well for the potential part. When saying that Cooper pairs form in the range
+\[
+	- \Delta < \xi_\mathbf{k} < \Delta
+\]
+this is what we mean. This is as far as Cooper pair can be imagined in the many-body context. Now we turn to a very beautiful approach to BCS theory, a little abstract but with the capability of giving some important intuition on how the BCS state is made.
+
+\section{The mean-field method}\label{sec:the mean-field method}
+
+We have seen in Sec.~\ref{sec:the variational method} that how to build self-consistently the BCS ground state via a variational approach -- which is, minimizing the energy functional. To do so we assumed a certain parametric form for the BCS ground state, in terms of $u_\mathbf{k}$ and $v_\mathbf{k}$, which we were able to identify. Now we turn to a somewhat more sophisticated method, which relies on mean-field theory and Bogoliubov transformations for quadratic fermionic hamiltonian. This method allows for a crystalline interpretation of $\Delta$, and shows the emergence of a gap in the energy spectrum. The existence itself of said gap is the quintessence of superconductivity. We will work our way through. 
 
 First, define the \textbf{un-pairing operator}
 \[
-	\hat{\phi}_\mathbf{k} \equiv  \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow}
+	\hat{\phi}_\mathbf{k} \equiv \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow}
 \]
 that un-pairs a pair with opposite momenta and spins. The order of the operators in the definition is important. Its conjugate is the \textbf{pairing operator} often encountered in literature
 \[
@@ -321,6 +405,50 @@ with $\hat{n}_\mathbf{k} \equiv \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\m
 \begin{equation}\label{eq:bcs ground state pairing operator form}
 	\ket{\Psi} \equiv \bigotimes_\mathbf{k} \lrS{u_\mathbf{k} + v_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger} \ket{\Omega}
 \end{equation}
+
+\subsection{The pairing amplitude}\label{subsec:the pairing amplitude}
+
+Let us spend some words about the un-pairing operator,
+\[
+	\hat{\phi}_\mathbf{k} \equiv  \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow}
+\]
+We see that, applying it on the BCS state,
+\[
+	\hat{\phi}_\mathbf{k} \ket{\Psi} = \hat{\phi}_\mathbf{k} \bigotimes_{\mathbf{k}'} \lrS{u_{\mathbf{k}'} + v_{\mathbf{k}'} \hat{\phi}_{\mathbf{k}'}^\dagger} \ket{\Omega} = v_\mathbf{k} \hat{\phi}_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger \bigotimes_{\mathbf{k}' \neq \mathbf{k}} \lrS{u_{\mathbf{k}'} + v_{\mathbf{k}'} \hat{\phi}_{\mathbf{k}'}^\dagger} \ket{\Omega}
+\]
+Using anti-commutation relations for fermionic operators, it is easy to see
+\[
+	\hat{\phi}_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger = \lrR{1 - \hat{n}_{\mathbf{k}\uparrow}} \lrR{1 - \hat{n}_{-\mathbf{k}\downarrow}}
+	\quad\qq{with}\quad
+	\hat{n}_{\mathbf{k}\sigma} = \hat{c}_{\mathbf{k}\sigma}^\dagger \hat{c}_{\mathbf{k}\sigma}
+\]
+This means
+\[
+	\hat{\phi}_\mathbf{k} \ket{\Psi} = v_\mathbf{k} \ket{\Omega}
+\]
+So, at first glance, this operator extracts information on how much a given couple of antipodal state is occupied. It's expectation value, however, tells us something more:
+\[
+\begin{aligned}
+	\mel{\Psi}{\hat{\phi}_\mathbf{k}}{\Psi} &= \bra{\Omega} \bigotimes_\mathbf{q} \lrS{u_\mathbf{q}^* + v_\mathbf{q}^* \hat{\phi}_\mathbf{q}} \hat{\phi}_\mathbf{k}^\dagger \bigotimes_{\mathbf{q}'} \lrS{u_{\mathbf{q}'} + v_{\mathbf{q}'} \hat{\phi}_{\mathbf{q}'}^\dagger} \ket{\Omega} \\
+	&= \bra{\Omega} \lrS{\vphantom{\hat{\phi}_\mathbf{k}^\dagger} u_\mathbf{k}^* + v_\mathbf{k}^* \hat{\phi}_\mathbf{k}} \hat{\phi}_\mathbf{k} \lrS{u_\mathbf{k} + v_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger} \ket{\Omega} \\
+	&= \bra{\Omega} \lrS{\vphantom{\hat{\phi}_\mathbf{k}^\dagger} u_\mathbf{k}^* + v_\mathbf{k}^* \hat{\phi}_\mathbf{k}} v_\mathbf{k} \ket{\Omega}
+	=  u_\mathbf{k}^* v_\mathbf{k}
+\end{aligned}
+\]
+We are using real parameters. So, it turns out
+\[
+	\ev{\hat{\phi}_\mathbf{k}} = \big\langle\hat{\phi}_\mathbf{k}^\dagger\big\rangle = u_\mathbf{k} v_\mathbf{k}
+\]
+and we have already encountered this product back in Sec.~\ref{subsec:the variational solutions for the bcs parameters}! We called it the \textbf{pairing amplitude}, and argued back in Sec.~\ref{subsec:the pairing amplitude} that it is a sort of measure of how much a given couple of antipodal states is connected to other pairs around the interaction shell via the potential. {\color{red}Here we understand completely that comment: to compute the expectation value
+\[
+	\ev{\hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow}}
+\]
+is a measure of how effective we expect the couple of operators $\hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow}$ to be on the antipodal states. This has to be explained better: for a general system if we consider
+\[
+	\ev{\hat{c}_{\mathbf{k}\sigma}}
+\]
+if this expectation value is zero, the state is meanly empty; if not, the state has in mean some occupation.}
+
 
 \subsection{Mean-field approach}
 We substitute the pairing operator by its fluctuation around the mean value,
@@ -343,35 +471,35 @@ The next step is quite of a turnaround: substituting only in the linear terms th
 \]
 This kind of argument may seem circular, as it is, and it only holds if higher-than-linear terms are in effect negligible. This kind of approach falls under \textbf{mean-field theory}. We get
 \begin{multline*}
-	\hat{\bm H} - \mu\hat{N} \simeq \sum_{\mathbf{k}} \xi_{\mathbf{k}} \hat n_\mathbf{k} + 
-	\sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \hat{\phi}_\mathbf{k}^\dagger \ev{\hat{\phi}_{\mathbf{k}'}} \\ + \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}  \big\langle\hat{\phi}_\mathbf{k}^\dagger \big\rangle \hat{\phi}_{\mathbf{k}'} + \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}  \big\langle\hat{\phi}_\mathbf{k}^\dagger \big\rangle \ev{\hat{\phi}_{\mathbf{k}'}}
+	\hat{\bm H} - \mu\hat{N} \simeq \sum_{\mathbf{k}} \xi_{\mathbf{k}} \hat n_\mathbf{k} - \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}  \big\langle\hat{\phi}_\mathbf{k}^\dagger \big\rangle \ev{\hat{\phi}_{\mathbf{k}'}} \\
+	+ \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \hat{\phi}_\mathbf{k}^\dagger \ev{\hat{\phi}_{\mathbf{k}'}} + \sum_{\mathbf{k}\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}  \big\langle\hat{\phi}_\mathbf{k}^\dagger \big\rangle \hat{\phi}_{\mathbf{k}'}
 \end{multline*}
 Now we define
 \begin{equation}\label{eq:delta mean field definition}
-	\Delta_\mathbf{k} \equiv \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \ev{\hat{\phi}_{\mathbf{k}'}}
+	\Delta_\mathbf{k} \equiv - \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \ev{\hat{\phi}_{\mathbf{k}'}}
 	\quad\implies\quad
-	\Delta_\mathbf{k}^* = \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}^* \big\langle\hat{\phi}_{\mathbf{k}'}^\dagger\big\rangle
+	\Delta_\mathbf{k}^* = - \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}^* \big\langle\hat{\phi}_{\mathbf{k}'}^\dagger\big\rangle
 \end{equation}
-Note that $V_{\mathbf{k}-\mathbf{k}'}^* = V_{\mathbf{k}'-\mathbf{k}}$. Thanks to this we have
+being $V_{\mathbf{k}-\mathbf{k}'}^* = V_{\mathbf{k}'-\mathbf{k}}$. {\color{red}Defined this way, based on how we interpret the pairing operator from Sec.~\ref{subsec:the pairing amplitude}, we can already understand the meaning of $\Delta_\mathbf{k}$:} Going on, we have
 \[
-	\hat{\bm H} - \mu\hat{N} \simeq \sum_{\mathbf{k}} \xi_{\mathbf{k}} \hat n_\mathbf{k} + 
-	\sum_\mathbf{k} \Delta_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger + \sum_\mathbf{k} \Delta_\mathbf{k}^* \hat{\phi}_\mathbf{k} + \sum_\mathbf{k} \Delta_\mathbf{k} \big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle
+	\hat{\bm H} - \mu\hat{N} \simeq \sum_{\mathbf{k}} \xi_{\mathbf{k}} \hat n_\mathbf{k} - 
+	\sum_\mathbf{k} \Delta_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger - \sum_\mathbf{k} \Delta_\mathbf{k}^* \hat{\phi}_\mathbf{k} + \sum_\mathbf{k} \Delta_\mathbf{k} \big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle
 \]
 where in the last term relabeling $\mathbf{k}' \to \mathbf{k}$ has been used. We now define the shifted hamiltonian $\hat{\mathcal{H}} \equiv \hat{\bm H} - \mu\hat{N} - \sum \Delta \ev{\hat{\phi}^\dagger}$. Getting the equation compact,
 \[
-	\hat{\mathcal{H}} = \sum_\mathbf{k} \lrS{\xi_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow} + \xi_\mathbf{k} \hat{c}_{\mathbf{k}\downarrow}^\dagger \hat{c}_{\mathbf{k}\downarrow} + \Delta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger + \Delta_\mathbf{k}^*	 \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow} }
+	\hat{\mathcal{H}} = \sum_\mathbf{k} \lrS{\xi_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow} + \xi_\mathbf{k} \hat{c}_{\mathbf{k}\downarrow}^\dagger \hat{c}_{\mathbf{k}\downarrow} - \Delta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger - \Delta_\mathbf{k}^*	 \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow} }
 \]
 We now use some fermionic commutation relations and the symmetry of the dispersion relation $\xi_\mathbf{k} = \xi_{-\mathbf{k}}$,
 \[
 \begin{aligned}
-	\hat{\mathcal{H}} &= \sum_\mathbf{k} \lrS{\xi_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow} + \xi_\mathbf{k} \lrR{1-\hat{c}_{\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\downarrow}^\dagger} + \Delta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger + \Delta_\mathbf{k}^*	 \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow} } \\
+	\hat{\mathcal{H}} &= \sum_\mathbf{k} \lrS{\xi_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow} + \xi_\mathbf{k} \lrR{1-\hat{c}_{\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\downarrow}^\dagger} - \Delta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger - \Delta_\mathbf{k}^*	 \hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{\mathbf{k}\uparrow} } \\
 	&= \sum_\mathbf{k} \lrS{\xi_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow} - \xi_\mathbf{k}
-	\hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{-\mathbf{k}\downarrow}^\dagger + \Delta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger + \Delta_\mathbf{k}^* \hat{c}_{\mathbf{k}\uparrow} \hat{c}_{-\mathbf{k}\downarrow} } + \sum_\mathbf{k} \xi_\mathbf{k} \\
+	\hat{c}_{-\mathbf{k}\downarrow} \hat{c}_{-\mathbf{k}\downarrow}^\dagger - \Delta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger - \Delta_\mathbf{k}^* \hat{c}_{\mathbf{k}\uparrow} \hat{c}_{-\mathbf{k}\downarrow} } + \sum_\mathbf{k} \xi_\mathbf{k} \\
 	&= \sum_\mathbf{k} \begin{bmatrix}
 		\hat{c}_{\mathbf{k}\uparrow}^\dagger & \hat{c}_{-\mathbf{k}\downarrow}
 	\end{bmatrix} \begin{bmatrix}
-		\xi_\mathbf{k} & \Delta_\mathbf{k} \\
-		\Delta_\mathbf{k}^* & - \xi_\mathbf{k}
+		\xi_\mathbf{k} & - \Delta_\mathbf{k} \\
+		- \Delta_\mathbf{k}^* & - \xi_\mathbf{k}
 	\end{bmatrix} \begin{bmatrix}
 		\hat{c}_{\mathbf{k}\uparrow} \\
 		\hat{c}_{-\mathbf{k}\downarrow}^\dagger
@@ -390,12 +518,12 @@ We work with the new hamiltonian $\hat{\mathcal{K}}$. The (infinite) energy shif
 
 Rewrite $D_\mathbf{k}$ in terms of Pauli matrices,
 \[
-	D_\mathbf{k} = \Re{\Delta_\mathbf{k}} \sigma^1 + \Im{\Delta_\mathbf{k}} \sigma^2 + \xi_\mathbf{k} \sigma^3
+	D_\mathbf{k} = - \Re{\Delta_\mathbf{k}} \sigma^1 - \Im{\Delta_\mathbf{k}} \sigma^2 + \xi_\mathbf{k} \sigma^3
 \]
 with $\sigma^i$ the $i$-th Pauli matrix. Thus this hamiltonian is the one for a spin in a (pseudo)magnetic field $\mathbf{b}_\mathbf{k}$ given by
 \[
 	\mathbf{b}_\mathbf{k} = \begin{bmatrix}
-		\Re{\Delta_\mathbf{k}} \\ \Im{\Delta_\mathbf{k}} \\ \xi_\mathbf{k}
+		- \Re{\Delta_\mathbf{k}} \\ - \Im{\Delta_\mathbf{k}} \\ \xi_\mathbf{k}
 	\end{bmatrix}
 \]
 Analogously we define the (pseudo)spin components as
@@ -406,13 +534,12 @@ and the hamiltonian is reduced to the simple form
 \[
 	\hat{\mathcal{K}} \equiv \sum_\mathbb{k} \mathbf{b}_\mathbf{k} \cdot \hat{\bm{\sigma}}_\mathbf{k}
 \]
-This is the problem of a spin of magnitude $1$ in a field.
-The eigenvalues are well-known to be plus or minus the intensity of the field,
+This is the problem of a spin of magnitude $1$ in a magnetic field (with a general $-$ sign, responsible of exchanging the eigenstates if compared to a real spin in a real field). The eigenvalues are well-known to be plus or minus the intensity of the field,
 \[
 	\pm \lambda_\mathbf{k} = \pm \sqrt{\xi_\mathbf{k}^2 + \abs{\Delta_\mathbf{k}}^2}
 \]
 as can be seen easily starting from $D_\mathbf{k}$.
-Now $\lambda_\mathbf{k}^\pm$ represent the spectrum of the system. We will dedicate the next section to comment the result. First, indicating by $U_\mathbf{k}$ the matrix that diagonalizes $D_\mathbf{k}$,
+Now $\pm \lambda_\mathbf{k}$ represent the spectrum of the system. We will dedicate the next section to comment the result. First, indicating by $U_\mathbf{k}$ the matrix that diagonalizes $D_\mathbf{k}$,
 \[
 	\Lambda_\mathbf{k} \equiv
 	U_\mathbf{k} D_\mathbf{k} U_\mathbf{k}^\dagger = \begin{bmatrix}
@@ -434,33 +561,33 @@ Now: the matrix $U_\mathbf{k}$ will surely mix up the operators $\hat{c}_{\mathb
 \begin{figure}
 	\centering
 	\input{chapters/superconductivity/the bcs theory/pictures/pseudo magnetic field}
-	\caption{Representation of the (pseudo)magnetic field $\mathbf{b}_\mathbf{k}$. Obviously the notation $xyz$ is unphysical and in any way related to real space. The dots represent the eigenvectors of the problem, and the relative eigenvalue is indicated. As in any problem of this kind, the lowest eigenvalue $-\lambda_\mathbf{k}$ is reached for a combination of spinors perfectly aligned with the field, while the highest eigenvalue is its antipodal point.}
+	\caption{Representation of the (pseudo)magnetic field $\mathbf{b}_\mathbf{k}$. Obviously the notation $xyz$ is unphysical and in any way related to real space. The dots represent the eigenvectors of the problem, and the relative eigenvalue is indicated. As in any problem of this kind, the highest eigenvalue $\lambda_\mathbf{k}$ is reached for a combination of spinors perfectly aligned with the field, while the lowest eigenvalue is its antipodal point.}
 	\label{fig:pseudo magnetic field}
 \end{figure}
 
-So, we need $U_\mathbf{k}$. Since this problem is physically equivalent to finding the eigenstates of a spin in tilted magnetic field, we already know that the diagonal form of the matrix is obtained by applying a rotation that aligns the $z$ axis with the field. To write the rotation, we use the result of Sec.~\ref{subsec:the variational method}, which embeds a real $\Delta_\mathbf{k}$. Then the (pseudo)magnetic field is rotated on the $zx$ plane by an angle $2\theta_\mathbf{k}$ with respect to the $z$ axis, such that
+So, we need $U_\mathbf{k}$. Since this problem is physically equivalent to finding the eigenstates of a spin in tilted magnetic field, we already know that the diagonal form of the matrix is obtained by applying a rotation that aligns the $z$ axis with the field. To write the rotation, we use the result of Sec.~\ref{sec:the variational method}, which embeds a real $\Delta_\mathbf{k}$. Then the (pseudo)magnetic field is rotated on the $zx$ plane by an angle $\zeta_\mathbf{k}$ with respect to the $z$ axis, defined such that
 \begin{equation}\label{eq:tangent self consistent definition}
 	\frac{\Delta_\mathbf{k}}{\xi_\mathbf{k}} \equiv  \tan 2\theta_\mathbf{k}
 \end{equation}
-\textit{A priori} $\theta_\mathbf{k}$ defined here is not related to the BCS parameters $u_\mathbf{k}$ and $v_\mathbf{k}$ seen before. But we have already seen this relation, in Eq.~\eqref{eq:delta variational definition}! In Fig.~\ref{fig:pseudo magnetic field} a sketch of the field and its eigenvectors is reported. To align the $z$ axis with the field we need to rotate the $zx$ plane by an angle $2\theta_\mathbf{k}$ clockwise; this is equivalent to rotating the vectors by the same angle anti-clockwise.
+The notation choice is not casual. We have already seen a similar relation, in Eq.~\eqref{eq:delta variational definition}! In Fig.~\ref{fig:pseudo magnetic field} a sketch of the field and its eigenvectors is reported. To align the $z$ axis with the field we need to rotate the $zx$ plane by an angle $2\theta_\mathbf{k}$ clockwise; this is equivalent to rotating the vectors by the same angle anti-clockwise, which is, by a positive amount $2\theta_\mathbf{k}$.
 The $\mathrm{SO}(3)$ representation of this rotation is
 \[
 	U_\mathbf{k}^{\mathrm{SO}(3)} = \begin{bmatrix}
-		\cos 2\theta_\mathbf{k} & 0 & \sin 2\theta_\mathbf{k} \\
+		\cos 2\theta_\mathbf{k} & 0 & - \sin 2\theta_\mathbf{k} \\
 		0 & 1 & 0 \\
-		- \sin 2\theta_\mathbf{k} & 0 & \cos 2\theta_\mathbf{k}
+		\sin 2\theta_\mathbf{k} & 0 & \cos 2\theta_\mathbf{k}
 	\end{bmatrix}
 \]
 We need its mapping onto its $\mathrm{SU}(2)$ version. In general, a rotation of angle $\alpha$ around the versor $\versor{n}$ is represented in the group by
 \[
 	\exp{- i \frac{\alpha}{2} \versor{n} \cdot \bm{\sigma}}
 \]
-and for us $\versor{n} = \versor{y}$, $\alpha = -2\theta_\mathbf{k}$; expanding:
+and for us $\versor{n} = \versor{y}$, $\alpha = 2\theta_\mathbf{k}$; expanding:
 \[
 \begin{aligned}
-	U_\mathbf{k}^{\mathrm{SU}(2)} &= \mathbb{1} \cos \theta_\mathbf{k} + i \versor{n} \cdot \bm{\sigma} \sin \theta_\mathbf{k}\\
-	&= \mathbb{1} \cos \theta_\mathbf{k} + i \sigma^2 \sin \theta_\mathbf{k} = \begin{bmatrix}
-		\cos \theta_\mathbf{k} & -\sin \theta_\mathbf{k} \\
+	U_\mathbf{k}^{\mathrm{SU}(2)} &= \exp{- i \theta_\mathbf{k} \sigma^2} \\
+	&= \mathbb{1} \cos \theta_\mathbf{k} - i \sigma^2 \sin \theta_\mathbf{k} = \begin{bmatrix}
+		\cos \theta_\mathbf{k} & - \sin \theta_\mathbf{k} \\
 		\sin \theta_\mathbf{k} & \cos \theta_\mathbf{k}
 	\end{bmatrix}
 \end{aligned}
@@ -468,16 +595,16 @@ and for us $\versor{n} = \versor{y}$, $\alpha = -2\theta_\mathbf{k}$; expanding:
 We omit now the representation superscript. It can be checked easily that
 \[
 	\begin{bmatrix}
-		\cos \theta_\mathbf{k} & \sin \theta_\mathbf{k} \\
-		- \sin \theta_\mathbf{k} & \cos \theta_\mathbf{k}
+		\cos \theta_\mathbf{k} & - \sin \theta_\mathbf{k} \\
+		\sin \theta_\mathbf{k} & \cos \theta_\mathbf{k}
 	\end{bmatrix} 
 	\begin{bmatrix}
-		\xi_\mathbf{k} & \Delta_\mathbf{k} \\
-		\Delta_\mathbf{k}^* & - \xi_\mathbf{k}
+		\xi_\mathbf{k} & - \Delta_\mathbf{k} \\
+		- \Delta_\mathbf{k} & - \xi_\mathbf{k}
 	\end{bmatrix}
 	\begin{bmatrix}
-		\cos \theta_\mathbf{k} & -\sin \theta_\mathbf{k} \\
-		\sin \theta_\mathbf{k} & \cos \theta_\mathbf{k}
+		\cos \theta_\mathbf{k} & \sin \theta_\mathbf{k} \\
+		- \sin \theta_\mathbf{k} & \cos \theta_\mathbf{k}
 	\end{bmatrix} =
 	\begin{bmatrix}
 		\lambda_\mathbf{k} & \\
@@ -490,14 +617,14 @@ Then we can read the spinor in the eigenvectors basis just by applying the rotat
 \begin{aligned}
 	\hat{\Gamma}_\mathbf{k} &= U_\mathbf{k} \hat{\Phi}_\mathbf{k} \\
 	&= \begin{bmatrix}
-		\cos \theta_\mathbf{k} & -\sin \theta_\mathbf{k} \\
-		\sin \theta_\mathbf{k} & \cos \theta_\mathbf{k}
+		  \cos \theta_\mathbf{k} & - \sin \theta_\mathbf{k} \\
+		  \sin \theta_\mathbf{k} & \cos \theta_\mathbf{k}
 	\end{bmatrix} \begin{bmatrix}
 		\hat{c}_{\mathbf{k}\uparrow} \\
 		\hat{c}_{-\mathbf{k}\downarrow}^\dagger
 	\end{bmatrix} \\
 	&= \begin{bmatrix}
-		\cos \theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} -\sin \theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger \\
+		\cos \theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} - \sin \theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger \\
 		\sin \theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} + \cos \theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger
 	\end{bmatrix} \equiv \begin{bmatrix}
 		\hat{\gamma}_{\mathbf{k}\uparrow} \\
@@ -507,7 +634,7 @@ Then we can read the spinor in the eigenvectors basis just by applying the rotat
 \]
 where in the last step we defined a pair of new fermionic operators, $\hat{\gamma}_{\mathbf{k}\uparrow}$ and $\hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger$. It makes sense to define them this way, because in
 \[
-	\hat{\gamma}_{\mathbf{k}\uparrow} \equiv \cos \theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} -\sin \theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger
+	\hat{\gamma}_{\mathbf{k}\uparrow} \equiv \cos \theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} - \sin \theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger
 \]
 to create an excitation with momentum $-\mathbf{k}$ and spin $\downarrow$ is kind of equivalent to annihilating an excitation with momentum $\mathbf{k}$ and spin $\uparrow$. The two operations are not equivalent with respect to the number of electrons in the system, however the change in total momentum and spin is the same. An analogous consideration holds for
 \[
@@ -524,8 +651,14 @@ Thanks to these transformations the hamiltonian reads
 \end{equation}
 Next section is devoted to commenting and further developing this hamiltonian.
 
-\subsection{The Bogoliubov fermions}
+\subsection{The Bogoliubov fermions}\label{subsec:the bogoliubov fermions}
 
+We adopt the following notation to indicate sums over the shell and outside of it
+\[
+	\sum_\mathcal{S} \equiv \sum_{\abs{\xi_\mathbf{k}} < \hbar\omega_D}
+	\quad\qq{and}\quad
+	\sum_{\R^D\setminus\mathcal{S}} \equiv \sum_{\abs{\xi_\mathbf{k}} < \hbar\omega_D}
+\]
 Take Eq.~\eqref{eq:bogoliubov kamiltonian final form}. Using fermionic rules ($\hat{\gamma}_{-\mathbf{k}\downarrow}\hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger = 1 - \hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger\hat{\gamma}_{-\mathbf{k}\downarrow}$), the dispersion symmetry ($\lambda_\mathbf{k} = \lambda_{-\mathbf{k}}$), and recalling the definition of $\hat{\mathcal{K}}$ in Eq.~\eqref{eq:definition of bogoliubov kamiltonian} we have
 \[
 	\hat{\mathcal{H}} - \sum_\mathbf{k} \xi_\mathbf{k}  = -\sum_\mathbf{k} \lambda_\mathbf{k} + \sum_\mathbf{k} \lambda_\mathbf{k} \lrS{ \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{\mathbf{k}\uparrow} + \hat{\gamma}_{\mathbf{k}\downarrow}^\dagger\hat{\gamma}_{\mathbf{k}\downarrow}}
@@ -533,33 +666,31 @@ Take Eq.~\eqref{eq:bogoliubov kamiltonian final form}. Using fermionic rules ($\
 Since:
 \[
 \begin{aligned}
-	\sum_\mathbf{k} \xi_\mathbf{k} &= \sum_{\abs{\xi_\mathbf{k}}>\hbar\omega_D} \xi_\mathbf{k} + \sum_{\abs{\xi_\mathbf{k}}<\hbar\omega_D} \xi_\mathbf{k} \\
-	\sum_\mathbf{k} \lambda_\mathbf{k} &= \sum_{\abs{\xi_\mathbf{k}}>\hbar\omega_D} \xi_\mathbf{k} + \sum_{\abs{\xi_\mathbf{k}}<\hbar\omega_D} \sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}
+	\sum_\mathbf{k} \xi_\mathbf{k} &= \sum_{\R^D\setminus\mathcal{S}} \xi_\mathbf{k} + \sum_\mathcal{S} \xi_\mathbf{k} \\
+	\sum_\mathbf{k} \lambda_\mathbf{k} &= \sum_{\R^D\setminus\mathcal{S}} \xi_\mathbf{k} + \sum_\mathcal{S} \sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}
 \end{aligned}
 \]
 the final form of the hamiltonian is
 \[
-	\hat{\mathcal{H}} = \sum_{\abs{\xi_\mathbf{k}}<\hbar\omega_D} \lrS{\xi_\mathbf{k} - \sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}} + \sum_\mathbf{k} \lambda_\mathbf{k} \lrS{ \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{\mathbf{k}\uparrow} + \hat{\gamma}_{\mathbf{k}\downarrow}^\dagger\hat{\gamma}_{\mathbf{k}\downarrow}}
+	\hat{\mathcal{H}} = \sum_\mathcal{S} \lrS{\xi_\mathbf{k} - \sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}} + \sum_\mathbf{k} \lambda_\mathbf{k} \lrS{ \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{\mathbf{k}\uparrow} + \hat{\gamma}_{\mathbf{k}\downarrow}^\dagger\hat{\gamma}_{\mathbf{k}\downarrow}}
 \]
 
 Now everything is clear. To use the solemn and inspiring words of one of the major art pieces of the author's country, ``Nessuno è più basito, chiaro? Nessuno è più basito, nessuno è sorpreso, ognuno di voi ha capito tutto. Nei primi piani fate sì con la testa, che avete capito e state sereni''. As long as the un-pairing operator fluctuates negligibly, the BCS hamiltonian can be mapped on a system of free fermions described by the $\hat{\gamma}$ operators. Those fermions are divided in two classes, $\uparrow$ and $\downarrow$, distinguished by the change in total spin the system obtains when one of these fermions is added or removed. Both classes have dispersion
 \[
 	\lambda_\mathbf{k} = \sqrt{\xi_\mathbf{k}^2 + \Delta_\mathbf{k}^2}
 \]
-
-Note that the orientation in abstract space of the (pseudo)field obviously depends on $\mathbf{k}$. Take Fig.~\ref{fig:pseudo magnetic field}: we use the known value
+These fermions are collective excitations, \textbf{quasiparticles}. Note that the orientation in abstract space of the (pseudo)field obviously depends on $\mathbf{k}$. Take Fig.~\ref{fig:pseudo magnetic field}: if we use the known value
 \[
 	\Delta_\mathbf{k} = \Delta A\lrR{\mathbf{k}}
 	\quad\qq{with}\quad
 	\Delta = 2 \hbar\omega_D e^{-2/\rho_0 V_0}
 \]
-Be careful! We need to justify the identification of this $\Delta_\mathbf{k}$ with the self-consistent parameter derived in the above section via the variational approach. We will do this in Sec.~\ref{subsec:gap equation}.
-Inside the interaction shell $\Delta_\mathbf{k} = \Delta$, while the $\xi_\mathbf{k}$ component will increase in magnitude as move $\mathbf{k}$ away from the Fermi surface, in both directions. Eventually we exit the shell: for $\abs{\xi_\mathbf{k}} > \hbar\omega_D$, we have $\Delta_\mathbf{k} = 0$ and therefore the magnetic field has only the $z$ component and $\theta_\mathbf{k}=0$.  This means, as it is evident from the beginning, that the Bogoliubov $\hat{\gamma}$ operators coincide with the electron $\hat{c}$ operators, and the hamiltonian can be written as
+(be careful! We need to justify the identification of this $\Delta_\mathbf{k}$ with the self-consistent parameter derived in the above section via the variational approach; we will do this in Sec.~\ref{subsec:gap equation}) inside the interaction shell $\Delta_\mathbf{k} = \Delta$, while the $\xi_\mathbf{k}$ component will increase in magnitude as move $\mathbf{k}$ away from the Fermi surface, in both directions. Eventually we exit the shell: for $\abs{\xi_\mathbf{k}} > \hbar\omega_D$, we have $\Delta_\mathbf{k} = 0$ and therefore the magnetic field has only the $z$ component and $\theta_\mathbf{k}=0$.  This means, as it is evident from the beginning, that the Bogoliubov $\hat{\gamma}$ operators coincide with the electron $\hat{c}$ operators, and the hamiltonian can be written as
 \[
 \begin{aligned}
-	\hat{\mathcal{H}} = \sum_{\abs{\xi_\mathbf{k}} > \hbar\omega_D} \xi_\mathbf{k} \lrS{ \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow}
-	+ \hat{c}_{\mathbf{k}\downarrow}^\dagger \hat{c}_{\mathbf{k}\downarrow}} &- \sum_{\abs{\xi_\mathbf{k}}<\hbar\omega_D} \lrS{\xi_\mathbf{k} - \sqrt{\xi_\mathbf{k}^2 + \Delta}} \\ 		
-	&+ \sum_{\abs{\xi_\mathbf{k}} < \hbar\omega_D} \sqrt{\xi_\mathbf{k}^2 + \Delta^2} \lrS{ \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{\mathbf{k}\uparrow} + \hat{\gamma}_{\mathbf{k}\downarrow}^\dagger \hat{\gamma}_{\mathbf{k}\downarrow}}
+	\hat{\mathcal{H}} = \sum_{\R^D\setminus\mathcal{S}} \xi_\mathbf{k} \lrS{ \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow}
+	+ \hat{c}_{\mathbf{k}\downarrow}^\dagger \hat{c}_{\mathbf{k}\downarrow}} &+ \sum_\mathcal{S} \lrS{\xi_\mathbf{k} - \sqrt{\xi_\mathbf{k}^2 + \Delta^2}} \\ 		
+	&+ \sum_\mathcal{S} \sqrt{\xi_\mathbf{k}^2 + \Delta^2} \lrS{ \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{\mathbf{k}\uparrow} + \hat{\gamma}_{\mathbf{k}\downarrow}^\dagger \hat{\gamma}_{\mathbf{k}\downarrow}}
 \end{aligned}
 \]
 It is not necessary and sometime confusing to distinguish $c$ particles from $\gamma$ particles, but the above equation allows us to note that the mean-field approach really has some effect only inside the interaction shell, as it makes sense to. Outside the interaction shell the Sommerfeld free electron model works well.
@@ -568,9 +699,9 @@ It is not necessary and sometime confusing to distinguish $c$ particles from $\g
 
 Recall how we defined $\Delta_\mathbf{k}$, back in Eq.~\eqref{eq:delta mean field definition}:
 \[
-	\Delta_\mathbf{k} \equiv \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \ev{\hat{\phi}_{\mathbf{k}'}}
+	\Delta_\mathbf{k} \equiv - \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'} \ev{\hat{\phi}_{\mathbf{k}'}}
 \]
-We need to get $\ev{\hat{\phi}_{\mathbf{k}'}}$. We defined the (pseudo)spin components as
+We already know $\ev{\hat{\phi}_{\mathbf{k}'}}$ from Sec.~\ref{subsec:the pairing amplitude}, but we go now through an equivalent and instructive derivation. We defined the (pseudo)spin components as
 \[
 	\lrS{\hat{\bm{\sigma}}_\mathbf{k}}^i \equiv \hat{\Phi}_\mathbf{k}^\dagger \sigma^i \hat{\Phi}_\mathbf{k}
 \]
@@ -581,16 +712,60 @@ and it is easy to check
 	\hat{\sigma}_\mathbf{k}^2 = -i \hat{\phi}_\mathbf{k}^\dagger + i \hat{\phi}_\mathbf{k}
 \]
 This implies:
-\[
-	\ev{\hat{\phi}_\mathbf{k}} = \frac{1}{2} \lrS{ \big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle - i \ev{\hat{\sigma}_\mathbf{k}^2} }
-\]
+\begin{align}
+	\ev{\hat{\phi}_\mathbf{k}} = \frac{1}{2} \lrS{ \big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle - i \ev{\hat{\sigma}_\mathbf{k}^2} } \label{eq:pairing expectation value via pseudospin} \\
+	\big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle = \frac{1}{2} \lrS{ \big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle + i \ev{\hat{\sigma}_\mathbf{k}^2} } \label{eq:unpairing expectation value via pseudospin}
+\end{align}
 We also know the transformed version of the spinors,
 \[
 	\hat{\Gamma}_\mathbf{k} = U_\mathbf{k} \hat{\Phi}_\mathbf{k}
 	\quad\implies\quad
 	\lrS{\hat{\bm{\sigma}}_\mathbf{k}}^i \equiv \hat{\Gamma}_\mathbf{k}^\dagger U_\mathbf{k} \sigma^i U_\mathbf{k}^\dagger \hat{\Gamma}_\mathbf{k}
 \]
-Being $U_\mathbf{k} = e^{-i \theta_\mathbf{k} \sigma^2}$, [...]
+Being $U_\mathbf{k} = e^{-i \theta_\mathbf{k} \sigma^2}$, we have
+\[
+\begin{aligned}
+	U_\mathbf{k} \sigma^1 U_\mathbf{k}^\dagger &= e^{-i \theta_\mathbf{k} \sigma^2} \sigma^1 e^{i \theta_\mathbf{k} \sigma^2} \\
+	&= \lrR{\cos\theta_\mathbf{k}-i\sin\theta_\mathbf{k}\sigma^2} \sigma^1 \lrR{\cos\theta_\mathbf{k}+i\sin\theta_\mathbf{k}\sigma^2} \\
+	&= \cos^2 \theta_\mathbf{k} \sigma^1 + \sin^2 \theta_\mathbf{k} \sigma^2 \sigma^1 \sigma^2 - i \sin\theta_\mathbf{k} \cos\theta_\mathbf{k} \comm{\sigma^2}{\sigma^1} \\
+	&= \lrR{\cos^2 \theta_\mathbf{k} - \sin^2 \theta_\mathbf{k}} \sigma^1 - 2 \sin \theta_\mathbf{k} \cos \theta_\mathbf{k} \sigma^3 \\
+	&= \cos 2\theta_\mathbf{k} \sigma^1 - \sin 2\theta_\mathbf{k} \sigma^3
+\end{aligned}
+\]
+having used commutation and anti-commutations properties of the Pauli matrices. It follows
+\[
+	\big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle = \cos 2\theta_\mathbf{k} \big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^1 \hat{\Gamma}_\mathbf{k} \big\rangle - \sin 2\theta_\mathbf{k} \big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^3 \hat{\Gamma}_\mathbf{k} \big\rangle
+\]
+
+As $\big\langle \hat{\Phi}_\mathbf{k}^\dagger \sigma^i \hat{\Phi}_\mathbf{k} \big\rangle$ represents the $i$-th component of the (pseudo)spin in the original frame (the one in Fig.~\ref{fig:pseudo magnetic field}), now $\big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^i \hat{\Gamma}_\mathbf{k} \big\rangle$ does the same in the tilted frame, with the $z$ axis aligned to the (pseudo)magnetic field $\mathbf{b}_\mathbf{k}$. Then
+\[
+\begin{aligned}
+	\big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^1 \hat{\Gamma}_\mathbf{k} \big\rangle &= \big\langle \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger \big\rangle + \big\langle \hat{\gamma}_{-\mathbf{k}\downarrow} \hat{\gamma}_{\mathbf{k}\uparrow} \big\rangle \\
+	\big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^2 \hat{\Gamma}_\mathbf{k} \big\rangle &= -i \big\langle \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger \big\rangle + i\big\langle \hat{\gamma}_{-\mathbf{k}\downarrow} \hat{\gamma}_{\mathbf{k}\uparrow} \big\rangle \\
+	\big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^3 \hat{\Gamma}_\mathbf{k} \big\rangle &= \big\langle \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{\mathbf{k}\uparrow} \big\rangle - \big\langle \hat{\gamma}_{-\mathbf{k}\downarrow} \hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger \big\rangle
+\end{aligned}
+\]
+We are working now at $T=0$. Calculations at finite temperature will be drawn later. Making use of Fermionic rules and performing all calculations on the BCS ground state, it is easy to see
+\[
+\begin{aligned}
+	\big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^1 \hat{\Gamma}_\mathbf{k} \big\rangle &= 0 \\
+	\big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^2 \hat{\Gamma}_\mathbf{k} \big\rangle &= 0 \\
+	\big\langle \hat{\Gamma}_\mathbf{k}^\dagger \sigma^3 \hat{\Gamma}_\mathbf{k} \big\rangle &= - 1
+\end{aligned}
+\]
+In Sec.~\ref{subsec:a closer look the quasiparticle operators} we will see in detail how the $\hat{\gamma}$ quasiparticles operators act on $\ket{\Psi}$; for now, it suffices to see that the quasiparticle populations are zero in the ground state, and the pairing and un-pairing amplitude of quasiparticles is therefore zero. Then,
+\[
+	\big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle = \sin 2\theta_\mathbf{k} = \frac{\Delta_\mathbf{k}}{\lambda_\mathbf{k}}
+\]
+Heuristically, this makes sense. Recalling Fig.~\ref{fig:pseudo magnetic field}, the lowest energy state for a real spin in a real magnetic field with such coupling (remember the $+$ sign in the hamiltonian, implementing anti-ferromagnetic coupling) is the one with this expectation value for the $x$ component. By the same identical arguments one shows
+\[
+	\big\langle \hat{\sigma}_\mathbf{k}^2 \big\rangle = 0
+\]
+By inserting these result in Eq.~\eqref{eq:pairing expectation value via pseudospin} and then in Eq.~\eqref{eq:delta mean field definition}, we have
+\[
+	\Delta_\mathbf{k} = - \frac{1}{2} \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}  \frac{\Delta_{\mathbf{k}'}}{\lambda_{\mathbf{k}'}}
+\]
+and this is precisely Eq.~\eqref{eq:mean field self consistency equation}. From now on, the calculation is the same and leads to the identical result as the variational solution. This argument allows us to perfectly identify the two procedures and use them interchangeably. It represents also a important self-consistency check of the mean-field approach.
 
 \subsection{The condensation energy}
 
@@ -598,23 +773,76 @@ Take $\hat{\mathcal{H}}$: we reintroduce the mean-field constant contribution to
 \[
 	\hat{\mathcal{H}} + \sum_\mathbf{k} \Delta_\mathbf{k} \big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle = \hat{\bm H} - \mu\hat{N}
 \]
-The expectation value for the pairing operator is simply given by
+Then, based on our knowledge of $\big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle$ from last section and Sec.~\ref{subsec:the pairing amplitude}, we expand
+\[
+	\sum_\mathbf{k} \Delta_\mathbf{k} \big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle = \sum_\mathbf{k} \frac{\Delta_\mathbf{k}^2}{2\lambda_\mathbf{k}} = \sum_\mathcal{S} \frac{\Delta^2}{2\sqrt{\xi_\mathbf{k}^2 + \Delta^2}}
+\]
+It follows:
 \[
 \begin{aligned}
-	\mel{\Psi}{\hat{\phi}_\mathbf{k}^\dagger}{\Psi} &= \bra{\Omega} \bigotimes_\mathbf{q} \lrS{u_\mathbf{q}^* + v_\mathbf{q}^* \hat{\phi}_\mathbf{q}} \hat{\phi}_\mathbf{k}^\dagger \bigotimes_{\mathbf{q}'} \lrS{u_{\mathbf{q}'} + v_{\mathbf{q}'} \hat{\phi}_{\mathbf{q}'}^\dagger} \ket{\Omega} \\
-	&= \bra{\Omega} \lrS{u_\mathbf{k}^* + v_\mathbf{k}^* \hat{\phi}_\mathbf{k}} \hat{\phi}_\mathbf{k}^\dagger \lrS{u_\mathbf{k} + v_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger} \ket{\Omega} = v_\mathbf{k}^* u_\mathbf{k}
+	\hat{\bm H} - \mu\hat{N} &= \sum_\mathcal{S} \lrS{\xi_\mathbf{k} - \sqrt{\xi_\mathbf{k}^2 + \Delta^2} + \frac{\Delta^2}{2\sqrt{\xi_\mathbf{k}^2 + \Delta^2}}} \\ 		
+	&+ \sum_{\R^D\setminus\mathcal{S}} \xi_\mathbf{k} \lrS{ \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow}
+	+ \hat{c}_{\mathbf{k}\downarrow}^\dagger \hat{c}_{\mathbf{k}\downarrow}}
+	+ \sum_\mathcal{S} \sqrt{\xi_\mathbf{k}^2 + \Delta^2} \lrS{ \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \hat{\gamma}_{\mathbf{k}\uparrow} + \hat{\gamma}_{\mathbf{k}\downarrow}^\dagger \hat{\gamma}_{\mathbf{k}\downarrow}}
 \end{aligned}
 \]
-as can be easily checked by expanding the pairing operators and using fermionic rules. Here we make use of the variational solutions, Eqns.~\eqref{eq:u actual variational solution} and \eqref{eq:v actual variational solution}
+If we evaluate over the BCS ground-state, we get the superconductor ground-state energy $E^{(\mathrm{s})}$
+\[
+\begin{aligned}
+	E^{(\mathrm{s})} &\equiv \ev{\hat{\bm H} - \mu\hat{N}} \\
+	&= \sum_\mathcal{S} \lrS{\xi_\mathbf{k} - \sqrt{\xi_\mathbf{k}^2 + \Delta^2} + \frac{\Delta^2}{2\sqrt{\xi_\mathbf{k}^2 + \Delta^2}}}
+	+ 2 \sum_{\mathcal{F}\setminus\mathcal{S}} \xi_\mathbf{k}
+\end{aligned}
+\]
+where $\mathcal{F}\setminus\mathcal{S}$ indicates the internal portion of the Fermi sphere, obtained by excluding from the full sphere $\mathcal{F}$ the internal part of the shell.
+For a normal metal the ground state energy $E^{(\mathrm{n})}$ is of course
+\[
+	E^{(\mathrm{n})} = 2 \sum_\mathcal{F} \xi_\mathbf{k}
+\]
+Their difference is the \textbf{condensation energy}: we use again the continuous approximation,
+\[
+\begin{aligned}
+	E^{(\mathrm{s})} - E^{(\mathrm{n})} &= \sum_\mathcal{S} \lrS{\xi_\mathbf{k} - \sqrt{\xi_\mathbf{k}^2 + \Delta^2} + \frac{\Delta^2}{2\sqrt{\xi_\mathbf{k}^2 + \Delta^2}}}
+	+ 2 \sum_\mathcal{S} \xi_\mathbf{k} \\
+	&\simeq \rho_0 \int_{-\hbar\omega_D}^{\hbar\omega_D} d\xi \lrS{\xi - \sqrt{\xi^2 + \Delta^2} + \frac{\Delta^2}{2\sqrt{\xi^2 + \Delta^2}}} + 2 \rho_0 \int_{-\hbar\omega_D}^0 d\xi \, \xi
+\end{aligned}
+\]
+The first term of the first integral vanishes. We rewrite
+\[
+\begin{aligned}
+	- \sqrt{\xi^2 + \Delta^2} + \frac{\Delta^2}{2\sqrt{\xi^2 + \Delta^2}} &= - \frac{\xi^2 + \Delta^2}{\sqrt{\xi^2 + \Delta^2}} + \frac{\Delta^2}{2\sqrt{\xi^2 + \Delta^2}}\\
+	&= - \frac{2\xi^2 + \Delta^2}{2\sqrt{\xi^2 + \Delta^2}}
+\end{aligned}
+\]
+and since
+\[
+	\int \frac{2\xi^2 + \Delta^2}{2\sqrt{\xi^2 + \Delta^2}} = \frac{\xi}{2} \sqrt{\xi^2 + \Delta^2}
+\]
+we solve the integral, implementing a Taylor expansion for the weak binding limit $\Delta\ll\hbar\omega_D$
+\[
+	E^{(\mathrm{s})} - E^{(\mathrm{n})} = \rho_0 \lrS{-\hbar\omega_D\sqrt{\lrR{\hbar\omega_D}^2 + \Delta^2} + \lrR{\hbar\omega_D}^2} \simeq - \frac{1}{2} \rho_0 \Delta^2
+\]
 
+This result is of great importance (and can be obtained equivalently by the means of the variational approach). First, it highlights a quadratic dependence of the condensation energy on the gap $\Delta$, and this will become relevant later. Second, it gives a fundamental information on how we interpret a Cooper pair in the BCS ground state.
 
-It is time, now, to pass to the announced comment about the meaning of $\Delta$. All we said so far works for $T=0$, of course.
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/the bcs theory/pictures/condensation energy shell}
+	\caption{}
+	\label{fig:condensation energy shell}
+\end{figure}
 
-\section[The Importance of Being Gapped]{The Importance of Being Gapped \newline \small (a Trivial Comedy for Superconducting People)}
+%As \citeauthor{goodstein2014states} correctly points out (his notation is: $\Delta \leftrightarrow \Delta_0$):
+%
+%\begin{cit}{goodstein2014states}{5.3.d}
+%	If $\Delta_0$ were the binding energy per electron in the pairing process, we would expect the energy of the superconducting ground state to be lower than the normal ground state by $N\Delta_0$. Instead the difference in energy
+%\end{cit}
+
+\section[The Importance of Being Gapped]{The Importance of Being Gapped \newline \small (a Trivial Comedy for Superconducting People)}\label{sec:the importance of being gapped}
 
 The first thing we need to understand is what the Bogoliubov $\gamma$ fermions are and why their appearance makes sense in the context of superconductivity. So: how to imagine them?
 
-\subsection{A closer look to the quasiparticle operators}
+\subsection{A closer look to the quasiparticle operators}\label{subsec:a closer look the quasiparticle operators}
 
 Take the $\hat{\gamma}$ operators:
 \[
@@ -624,18 +852,19 @@ Take the $\hat{\gamma}$ operators:
 	\end{cases}
 	\qquad
 	\begin{cases}
-		\hat{\gamma}_{\mathbf{k}\downarrow} = \cos\theta_\mathbf{k} \hat{c}_{\mathbf{k}\downarrow} + \sin\theta_\mathbf{k} \hat{c}_{-\mathbf{k}\uparrow}^\dagger \\
-		\hat{\gamma}_{\mathbf{k}\downarrow}^\dagger = \cos\theta_\mathbf{k} \hat{c}_{\mathbf{k}\downarrow}^\dagger + \sin\theta_\mathbf{k} \hat{c}_{-\mathbf{k}\uparrow}
+		\hat{\gamma}_{-\mathbf{k}\downarrow} = \cos\theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow} + \sin\theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger \\
+		\hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger = \cos\theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger + \sin\theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}
 	\end{cases}
 \]
-The system ground state will be evidently one with zero $\gamma$ particles.
-How do they act on the BCS ground state $\ket{\Psi}$? Take, say, $\hat{\gamma}_{\mathbf{k}\uparrow}$,
+We want to deepen our understanding of them. We said, at the end of Sec.~\ref{subsec:the bogoliubov fermions}, that outside the shell $\mathcal{S}$ they can be identified with the ordinary $\hat{c}$ operators. But how are they made in general?
+
+One good starting point is their action on the BCS state $\ket{\Psi}$. The system ground state will be evidently one with zero $\gamma$ particles (we have already used this result), so this property $\ket{\Psi}$ should present. Take, say, $\hat{\gamma}_{\mathbf{k}\uparrow}$,
 \begin{multline*}
 	\hat{\gamma}_{\mathbf{k}\uparrow} \bigotimes_\mathbf{q} \lrS{u_\mathbf{q} + v_\mathbf{q} \hat{\phi}_\mathbf{q}^\dagger} \ket{\Omega} \\ = \bigotimes_{\mathbf{q}\neq\mathbf{k}} \lrS{u_\mathbf{q} + v_\mathbf{q} \hat{\phi}_\mathbf{q}^\dagger} \lrS{\cos\theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} - \sin\theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger} \lrS{u_\mathbf{k} + v_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger} \ket{\Omega}
 \end{multline*}
 with $\hat{\phi}_\mathbf{k}^\dagger = \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger$ the paring operator. The cosine term can only couple with the $v$ term, otherwise it would annihilate the vacuum; the sine term cannot couple with the $v$ term, because it fills the $-\mathbf{k}\downarrow$ state. Then we are left with
 \[
-	\bigotimes_{\mathbf{q}\neq\mathbf{k}} \lrS{u_\mathbf{q} + v_\mathbf{q} \hat{\phi}_\mathbf{q}^\dagger} \lrS{- u_\mathbf{k} \sin\theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger + v_\mathbf{k} \cos\theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger} \ket{\Omega}
+	\bigotimes_{\mathbf{q}\neq\mathbf{k}} \lrS{u_\mathbf{q} + v_\mathbf{q} \hat{\phi}_\mathbf{q}^\dagger} \lrS{- \sin\theta_\mathbf{k} u_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}^\dagger + \cos_\mathbf{k} v_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger} \ket{\Omega}
 \]
 Since $\hat{c}_{\mathbf{k}\uparrow} \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{-\mathbf{k}\downarrow}^\dagger = (1 - \hat{c}_{\mathbf{k}\uparrow}^\dagger \hat{c}_{\mathbf{k}\uparrow}) \hat{c}_{-\mathbf{k}\downarrow}^\dagger$ and $\ket{\Omega}$ is empty in the state $\mathbf{k}\uparrow$,
 \[
@@ -645,7 +874,7 @@ Then $\ket{\Psi}$ is the ground state if
 \[
 	u_\mathbf{k} \sin\theta_\mathbf{k} = v_\mathbf{k} \cos\theta_\mathbf{k}
 \]
-In principle the angle in Eq.~\eqref{eq:u,v normalization conditions sin cos}  is not the same as here. Though, due to Eq.~\eqref{eq:delta variational definition}, that angle is exactly the one here, defined back in Eq.~\eqref{eq:tangent self consistent definition}. Then the above equation is satisfied. Thus $\hat{\gamma}_{\mathbf{k}\uparrow} \ket{\Psi} = 0$, as expected. Similarly one shows $\hat{\gamma}_{\mathbf{k}\downarrow} \ket{\Psi} = 0$.
+which is evidently satisfied by what we know from the variational solution in Sec.~\ref{sec:the variational method}. Thus $\hat{\gamma}_{\mathbf{k}\uparrow} \ket{\Psi} = 0$, as expected. Similarly one shows $\hat{\gamma}_{-\mathbf{k}\downarrow} \ket{\Psi} = 0$.
 
 \begin{figure}
 	\centering
@@ -654,7 +883,7 @@ In principle the angle in Eq.~\eqref{eq:u,v normalization conditions sin cos}  i
 	\label{fig:bogoliubov fermions}
 \end{figure}
 
-What about $\hat{\gamma}_{\mathbf{k}\uparrow}^\dagger$ and $\hat{\gamma}_{\mathbf{k}\uparrow}^\dagger$? By inspection
+What about $\hat{\gamma}_{\mathbf{k}\uparrow}^\dagger$ and $\hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger$? By inspection
 \begin{multline*}
 	\hat{\gamma}_{\mathbf{k}\uparrow}^\dagger \bigotimes_\mathbf{q} \lrS{u_\mathbf{q} + v_\mathbf{q} \hat{\phi}_\mathbf{q}^\dagger} \ket{\Omega} \\ = \bigotimes_{\mathbf{q}\neq\mathbf{k}} \lrS{u_\mathbf{q} + v_\mathbf{q} \hat{\phi}_\mathbf{q}^\dagger} \lrS{\cos\theta_\mathbf{k} \hat{c}_{\mathbf{k}\uparrow}^\dagger - \sin\theta_\mathbf{k} \hat{c}_{-\mathbf{k}\downarrow}} \lrS{u_\mathbf{k} + v_\mathbf{k} \hat{\phi}_\mathbf{k}^\dagger} \ket{\Omega}
 \end{multline*}
@@ -670,7 +899,7 @@ In Fig.~\ref{fig:bogoliubov fermions} the action of the Bogoliubov operators is 
 
 Now it is time to check if the Bogoliubov approach is self-consistent. In order for the mean-field approach to be coherent, we want the pairing operator to fluctuate negligibly 
 
-\subsection{Elementary excitations}
+\subsection{Elementary excitations}\label{subsec:elementary excitations}
 
 We start by taking a normal metal at zero temperature, described by a filled Fermi sphere. In this context we have a band,
 \[
@@ -680,12 +909,12 @@ where $\abs{\mathbf{k}} = k_F + \delta k$. The system ground state is $\ket{\mat
 
 The same thing can be said if, starting from $\ket{\mathrm{F}}$, we annihilate one electron inside the sphere. The resulting state is not the ground state of the system of $N-1$ electrons. The same operation is interpreted as adding one hole to the Fermi sphere. Taking the zero of energy at $\epsilon_F$, the holes can only be added below the surface (where there are electrons to remove) and have energy $-\xi_\mathbf{k} = \abs{\xi_\mathbf{k}}$.
 
-The elementary excitations of the free Fermi gas in the low spectrum are these two. To move an electron from inside the Fermi sphere to outside, even if it seems more ``elementary'' of modifying the number of particles, is in grand-canonical formalism equivalent to adding one electron outside the sphere and one hole inside. The energy costs for doing both the operations add up to the energy difference of the starting and the target state for the moving electron. Notice that, even if the formalism allow for fluctuations of the particle number, a very different thing are fluctuations of total charge: in absence of external interactions, the electric charge is conserved. So the excitation of a filled Fermi sphere occurs in real world, as one correctly expects, by moving one electron from inside to outside. The real-world basic excitation can be thought formally as the insurgence of a particle-hole couple. So, by ``elementary excitation'' we intend some configuration that has the lowest amount of additional energy above the ground state, that can happen under certain conditions, but that is not necessarily possible under the symmetries of the problem. In other words: we can describe coherently an isolated Fermi sea as something where the number of particles fluctuates, as well as the number of holes, but their difference (the charge) is preserved.
+The elementary excitations of the free Fermi gas in the low spectrum are these two. To move an electron from inside the Fermi sphere to outside, even if it seems more ``elementary'' of modifying the number of particles, is in grand-canonical formalism equivalent to adding one electron outside the sphere and one hole inside. The energy costs for doing both the operations add up to the energy difference of the starting and the target state for the moving electron. Notice that, even if the formalism allows for fluctuations of the particle number, a very different thing are fluctuations of total charge: in absence of external interactions, the electric charge is conserved. So the excitation of a filled Fermi sphere occurs in real world, as one correctly expects, by moving one electron from inside to outside. The real-world basic excitation can be thought formally as the insurgence of a particle-hole couple. So, by ``elementary excitation'' we intend some configuration that has the lowest amount of additional energy above the ground state, that can happen under certain conditions, but that is not necessarily possible under the symmetries of the problem. In other words: we can describe coherently an isolated Fermi sea as something where the number of particles fluctuates, as well as the number of holes, but their difference (the charge) is preserved.
 
 \begin{figure}
 	\centering
 	\input{chapters/superconductivity/the bcs theory/pictures/excitation spectrum}
-	\caption{Sketch of the elementary excitation spectrum for the superconductor (solid line) compared to the spectrum of a normal metal (dashed line).}
+	\caption{Sketch of the elementary excitation spectrum for the superconductor (solid line) compared to the spectrum of a normal metal (dashed line). This plot, as in Fig.~\ref{fig:actual variational solutions}, was realized with th arbitrary choice $\Delta=\hbar\omega_D/6$.}
 	\label{fig:excitation spectrum}
 \end{figure}
 
@@ -699,10 +928,6 @@ Now, in Fig.~\ref{fig:excitation spectrum} the solid line represents the excitat
 
 But the binding energy of a Cooper pair is $2\Delta$, so, why does the pair even breaks if the available energy is $\Delta$? The reason is our mean-field approach. $\Delta$ is the binding energy per electron, which means, each electron is bound to something by an energy $\Delta$. An external action capable of changing the charge of the system will excite it by converting one pair to a free electron, now not bound to anything. This is an \textit{elementary excitation}, it is born by the vanishing of one Cooper pair, and has the correct energy gap $\Delta$. If such external action is not at work, as it is for an isolated superconductor, charge must be conserved, and the physical excitation we observe by breaking a Cooper pair is made of two particle-hole excitations floating somewhere. That is a broken pair as we intend it naively, and to reach such state we need at least an energy $2\Delta$, and that makes sense with physical intuition. The final state will be populated by two elementary excitations: with this perspective Fig.~\ref{fig:excitation spectrum} must be interpreted. The fact that the first excited state of the system is not a single elementary excitation is not at all incoherent, on the contrary it is the manifestation of symmetry.
 
-Take now the single-particle density of states,
-\[
-	\rho(\epsilon) = 2 \sum_\mathbf{k} \delta \lrR{\epsilon-\epsilon_\mathbf{k}}
-\]
-
 \subsection{Why do we even need a gap?}
 
+To be fair, during the very long explanation of the basics of BCS theory throughout Chap.~\ref{chap: cooper pairs how electrons form bound states} and this chapter the only reference to superconductivity and all the concepts explained in the first part, more phenomenological, was the observation that the charge-carrier in superconductors seems to be a couple of electrons. We then developed a theory describing electrons coupling and the microscopic structure of the collective state, which lead us to the existence of the discussed gap $\Delta$. A very well posed question now would be: if a gap in the excitation spectrum is the typical feature of insulators, those systems that do not conduct electrical current, why the existence of a gap would ever be a symptom of superconductivity? 

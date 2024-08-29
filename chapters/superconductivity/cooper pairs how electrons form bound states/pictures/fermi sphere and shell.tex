@@ -1,8 +1,8 @@
 \begin{tikzpicture}	
 	\fill[color=lev!60,fill=lev!30,fill opacity=0.5] 
-			circle[radius=5.5em];
+			circle[radius=7em];
 	\fill[even odd rule,fill=lev!45,fill opacity=0.5] 
-			circle[radius=8.5em] circle[radius=5.5em];
+			circle[radius=8.5em] circle[radius=7em];
 	\draw[color=lev!60,
 		pattern={Dots[angle=45,distance={3pt/sqrt(2)}]},
 		pattern color=lev!45,
@@ -25,11 +25,9 @@
 	\draw[color=lev,-stealth,dashed] (0,0)--(230:8.3em);
 	\node[color=lev,anchor=north west] at (230:6.4em) {\small $-\mathbf{k}'$};
 	
-	\draw[color=lev!60,stealth-stealth] (0,0)--(-20:7em);
-	\node[color=lev!60,anchor=north] at (-20:3.5em) {\small $k_F$};	
+	\draw[color=lev!60,stealth-stealth] (0,0)--(0:7em);
+	\node[color=lev!60,anchor=north] at (0:3.5em) {\small $k_F$};	
 	
 	\draw[color=lev!60,stealth-stealth] (0:7em)--(0:8.5em);
-	\draw[color=lev!60,stealth-stealth] (0:5.5em)--(0:7em);
-	\node[color=lev!60,anchor=north] at (0:7.75em) {\small $\delta k^\star$};
-	\node[color=lev!60,anchor=north] at (0:6.25em) {\small $\delta k^\star$};	
+	\node[color=lev!60,anchor=north] at (0:7.75em) {\small $\delta k^\star$};	
 \end{tikzpicture}

@@ -1,0 +1,37 @@
+\def\Cutoff{6}
+\def\Scale{1}
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=center,
+		axis y line=center,
+		axis on top,
+		xlabel={$x$},
+		ylabel={$f(x)$},
+		xlabel style={below,yshift=-0.1em},
+		ylabel style=above,
+		xtick={\Scale,\Cutoff},
+		ytick={0.3},
+		xticklabels={$x_0$,$L$},
+		yticklabel={$\displaystyle \frac{1}{3x_0}$},
+		xticklabel style=below,
+		yticklabel style=\empty,
+		xmin=-0.2, xmax=\Cutoff+1,
+		ymin=-0.1, ymax=1.1
+		]
+		
+%		% Fill
+%		\fill[color=lev!60,opacity=0.5]
+%		(axis cs:-\BoundaryA,-2.5) rectangle (\BoundaryA,2.5);
+%		\fill[color=lev!30,opacity=0.5]
+%		(axis cs:-\BoundaryB,-2.5) rectangle (-\BoundaryA,2.5);
+%		\fill[color=lev!30,opacity=0.5]
+%		(axis cs:\BoundaryA,-2.5) rectangle (\BoundaryB,2.5);
+		
+		% Function
+		\addplot[color=lev,
+			domain=0:\Cutoff,restrict y to domain=0:1, name path=function, smooth] 
+				{1/(2*x + 1)};
+		\node[color=lev,anchor=center] (label) at (axis cs:2.5,0.5) 
+			{$f(x) = \displaystyle\frac{1}{2x+x_0}$};
+	\end{axis}
+\end{tikzpicture}
