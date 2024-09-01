@@ -51,10 +51,10 @@
 \contentsline {subsection}{\numberline {4.1.4}{Some considerations on the single Cooper pair problem}}{71}{subsection.4.1.4}%
 \contentsline {subsection}{\numberline {4.1.5}{(In)Stability of the Fermi Sea}}{73}{subsection.4.1.5}%
 \contentsline {subsection}{\numberline {4.1.6}{Some final remarks}}{76}{subsection.4.1.6}%
-\contentsline {section}{\numberline {4.2}{How the phonon pairing works}}{76}{section.4.2}%
+\contentsline {section}{\numberline {4.2}{How the phonon pairing works}}{77}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}{Born-Oppenheimer quantization}}{77}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}{Electron-phonon interactions}}{78}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}{The effective interaction hamiltonian: Schrieffer-Wolff transformation}}{79}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.2}{Electron-phonon interactions}}{79}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}{The effective interaction hamiltonian: Schrieffer-Wolff transformation}}{80}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}{Effective form of the phonon-assisted interaction}}{82}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}{A few assumptions, and Cooper pairs}}{84}{subsection.4.2.5}%
 \contentsline {subsection}{\numberline {4.2.6}{What does a Cooper pair look like?}}{86}{subsection.4.2.6}%
@@ -74,7 +74,18 @@
 \contentsline {subsection}{\numberline {5.3.4}{The Bogoliubov fermions}}{105}{subsection.5.3.4}%
 \contentsline {subsection}{\numberline {5.3.5}{Gap equation}}{106}{subsection.5.3.5}%
 \contentsline {subsection}{\numberline {5.3.6}{The condensation energy}}{108}{subsection.5.3.6}%
-\contentsline {section}{\numberline {5.4}{The Importance of Being Gapped}}{109}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}{A closer look to the quasiparticle operators}}{109}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}{Elementary excitations}}{111}{subsection.5.4.2}%
-\contentsline {subsection}{\numberline {5.4.3}{Why do we even need a gap?}}{113}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.4}{The Importance of Being Gapped}}{110}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}{A closer look to the quasiparticle operators}}{111}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}{Elementary excitations}}{112}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}{Why do we even need a gap?}}{114}{subsection.5.4.3}%
+\contentsline {chapter}{\numberline {6}{From BCS to conventional superconductors}}{115}{chapter.6}%
+\etoc@startlocaltoc {7}
+\contentsline {section}{\numberline {6.1}{BCS theory at finite temperature}}{115}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}{Another look to Bogoliubov-Vitalin solution}}{116}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}{Gap equation, again}}{117}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}{The critical temperature}}{117}{subsection.6.1.3}%
+\contentsline {section}{\numberline {6.2}{It quacks like a superconductor, but is it?}}{119}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}{Peierls approach}}{120}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}{First order expansion of the hamiltonian}}{121}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}{First order contribution: paramagnetic current}}{123}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}{Second order: diamagnetic current}}{124}{subsection.6.2.4}%

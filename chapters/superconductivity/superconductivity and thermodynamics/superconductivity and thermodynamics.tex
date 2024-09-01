@@ -102,7 +102,7 @@ The same limit, $\omega\to 0$, now poses a difference: any magnetic flux density
 
 The reason is of thermodynamic stability. Consider the a system at temperature $T_0 > T_c$, under the influence of an external field $H_0$, as sketched in Fig.~\ref{fig:perfect conductors and thermodynamics}. Suppose we work at suitably low fields to neglect the $H$ dependence of the superconducting region (as it will turn out, such a region will exhibit a critical boundary $H_c(T)$). Suppose, also, to change the parameters adiabatically: at any given instant $H$ (and thus $B$) is static. If we follow the solid path, entering the superconducting region at $H=0$: then we expect the final state to show $B=0$. If, instead, we follow the dashed path, we enter the superconducting region at $H\neq 0$; then the magnetic flux density $B\neq 0$ is trapped in the following. Then the final state is ill-defined, being its thermodynamic quantities ambivalent. It follows that a perfect conductor is \textbf{not} a stable state, thus it doesn't exist.
 
-\subsection{The land where magnetic fields are not welcome}
+\subsection{The land where magnetic fields are not welcome}\label{subsec:the land where magnetic fields are not welcome}
 
 Evidently, our first attempt to describe superconductivity needs some refinement, and superconductors are something more than very good conductors.
 
@@ -164,9 +164,11 @@ thus defining the so-called \textbf{London gauge}. In this gauge we completely i
     - \pdv{\mathbf{A}_s}{t} = \Lambda \pdv{\mathbf{J}_s}{t} = \mathbf{E}
 \]
 which is the correct potential equation for the electric field, provided a null electric potential gradient. Then Eq.~\eqref{eq:London1} and Eq.~\eqref{eq:London2} can be summarized in
-\begin{equation}\label{eq:LondonPotential}
-    \mathbf{A}_s = - \Lambda \mathbf{J}_s
-\end{equation}
+\begin{eqbox}
+	\begin{equation}\label{eq:LondonPotential}
+		\mathbf{A}_s = - \Lambda \mathbf{J}_s
+	\end{equation}
+\end{eqbox}
 which is coherent because gauge was fixed. London's gauge, essentially, expresses the conservation of the particles number.
 
 \section{Thermodynamics}

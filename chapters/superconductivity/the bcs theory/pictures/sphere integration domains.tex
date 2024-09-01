@@ -1,0 +1,11 @@
+\begin{tikzpicture}[scale=0.9]
+	\fill[fill=lev!45,opacity=0.5] 
+		circle[radius=7em] node[anchor=center] {$\small\mathcal{F}$};
+	\fill[fill=lev!30,opacity=0.5,even odd rule]
+		circle[radius=8.5em] circle[radius=7em] node[anchor=center,yshift=0.9*7.6em] {$\small\mathcal{S}\setminus\mathcal{F}$};
+		
+	\fill[fill=lev!30,opacity=0.5] 
+		(20em,0) circle[radius=5.5em] node[anchor=center] {$\small\mathcal{F}\setminus\mathcal{S}$};
+	\fill[fill=lev!45,opacity=0.5,even odd rule]
+		(20em,0) circle[radius=8.5em] circle[radius=5.5em] node[anchor=center,yshift=0.9*6.8em] {$\small\mathcal{S}$};
+\end{tikzpicture}

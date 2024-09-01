@@ -273,11 +273,13 @@ Since $\delta k^\star \ll k_F$ by the assumption of thinness of the shell, to th
 \]
 We make use of the $D$-dimensional density of states $\rho_D(\epsilon)$ to convert this to an energy integral,
 \[
-	1 = \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} d\epsilon \, \rho_D(\epsilon) \frac{V_0}{2 \epsilon - E}
+	1 = \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} d\epsilon \, \frac{\rho_D(\epsilon)}{2} \frac{V_0}{2 \epsilon - E}
 \]
-For $D=3$, the density of states depends on energy as $\sqrt{\epsilon}$, approximately horizontal around the Fermi energy. Then for any energy in the range of interest we can approximate $\rho_3 (\epsilon) \simeq \rho_3 (\epsilon_F) \equiv \rho_0$,
+The factor $2$ at the denominator is included in order not to count the same states twice. The reason is the following: we are summing over the relative momentum, which is defined as the difference in momenta of the particles. In order to define it, we need to take one as reference; to do so, we need to distinguish them. Even if the states $\ket{\mathbf{k}} \otimes \ket{-\mathbf{k}}$ and $\ket{-\mathbf{k}} \otimes \ket{\mathbf{k}}$ have opposite relative momentum due to our choice of notation, they represent the same state. Thus we must consider half the DoS.
+
+Also, we are using spinless fermions; as it will turn out, including spin the same idea holds: it will turn out that $s$-wave pairing is favorite, thus we will choose as reference the one electron with $\uparrow$ spin and for this reason we will need to count half the states. For $D=3$, the density of states depends on energy as $\sqrt{\epsilon}$, approximately horizontal around the Fermi energy. Then for any energy in the range of interest we can approximate $\rho_3 (\epsilon) \simeq \rho_3 (\epsilon_F) \equiv \rho_0$,
 \[
-	1 = \rho_0 V_0 \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} \frac{d\epsilon}{2 \epsilon - E}
+	1 = \frac{\rho_0 V_0}{2} \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} \frac{d\epsilon}{2 \epsilon - E}
 \]
 
 Since we are near the Fermi surface, it is reasonable to assume that in absence of the interaction both electrons would have energy $\epsilon_F$. Note that here we are assuming to have not only electrons with zero net momentum, but also both \textbf{deep in the shell} (which means: far from both the internal and the external shell boundaries). Thus the deviation from the value $2\epsilon_F$ is all binding energy $E^{(\mathrm{b})}$,
@@ -286,19 +288,19 @@ Since we are near the Fermi surface, it is reasonable to assume that in absence 
 \]
 It follows
 \[
-	1 \simeq \rho_0 V_0 \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} \frac{d\epsilon}{2\lrR{\epsilon-\epsilon_F} + E^{(\mathrm{b})}}
+	1 \simeq \frac{\rho_0 V_0}{2} \int_{\epsilon_F}^{\epsilon_F+\delta\epsilon^\star} \frac{d\epsilon}{2\lrR{\epsilon-\epsilon_F} + E^{(\mathrm{b})}}
 \]
 This integral is analogous to the $D=1$ integral of the Sec.~\ref{subsec:bound states}. Then for any given $\kappa$ a binding energy $E^{(\mathrm{b})}$ exists such that the above equation is satisfied. The integral can be solved, giving
 \[
-	1 \simeq \frac{\rho_0 V_0}{2} \log \lrR{1+ \frac{2\delta\epsilon^\star}{E^{(\mathrm{b})}}}
+	1 \simeq \frac{\rho_0 V_0}{4} \log \lrR{1+ \frac{2\delta\epsilon^\star}{E^{(\mathrm{b})}}}
 \]
 Then:
 \[
-	\frac{2\delta\epsilon^\star}{E^{(\mathrm{b})}} \simeq e^{2/V_0 \rho_0} - 1
+	\frac{2\delta\epsilon^\star}{E^{(\mathrm{b})}} \simeq e^{4/V_0 \rho_0} - 1
 \]
 and for small potentials $e^{2/V_0 \rho_0}$ dominates, so
 \[
-	E^{(\mathrm{b})} \simeq 2\delta\epsilon^\star e^{-2/V_0 \rho_0}
+	E^{(\mathrm{b})} \simeq 2\delta\epsilon^\star e^{-4/V_0 \rho_0}
 \]
 which is the desired expression for the binding energy. The whole argument holds for $D=2$, for which the density of states is a constant, and $D=1$, for which it goes like $\epsilon^{-1/2}$. This section lets us conclude that a ``shell interaction'' of strength $V_0$ creates electron pairs quite independently of $V_0$, as long as it is not too small. This is an astonishing result: not only it effectively corrects the incoherence of the above section, but it also demonstrates that the pairing of electrons observed in superconductors is a collective phenomenon arising from the presence of an entire electron liquid.
 
@@ -380,9 +382,17 @@ as in Fig.~\ref{fig:fermi sphere and shell extended}. Now the shell $\mathcal{S}
 \[
 	N \frac{4\pi k_F^2 \delta k^\star}{\displaystyle \frac{4}{3} \pi k_F^3} = 3N \frac{\delta k^\star}{k_F} = 3N \frac{\delta \epsilon^\star}{\epsilon_F} \ll N
 \]
-The system is not so different from the one before: there is a rigid bulk, this time of radius $k_F - \delta k^\star$, and an interaction shell, this time of width $2 \delta k^\star$. If inside the shell the number of electrons was $2$, the binding energy should double. But the number of electrons participating and feeling each other attraction is now very big. What happens?
+The system is not so different from the one before: there is a rigid bulk, this time of radius $k_F - \delta k^\star$, and an interaction shell, this time of width $2 \delta k^\star$. If inside the shell the number of electrons was $2$, the binding energy should change to
+\[
+	E^{(\mathrm{b})} = 2\lrS{2\delta\epsilon^\star e^{-4/V_0 \rho_0}}
+\]
+Remember, we are using spinless fermions: if we include spin, for $s$-wave pairing the DoS must be doubled, leading to
+\[
+	E^{(\mathrm{b})} = 2\lrS{2\delta\epsilon^\star e^{-2/V_0 \rho_0}} \equiv 2\Delta
+\]
+This is in principle the value of the binding energy for coupled electrons in a shell wide $2\delta\epsilon^\star$ excluded from the rigid bulk. The quantity $\Delta$ is the binding energy per electron. But the problem we aim to investigate is different: the number of electrons participating and feeling each other attraction is now very big. Therefore, there is no argument \textit{a priori} that should lead us to conclude that the energy scale $\Delta$ has some relevance. What happens?
 
-The ground state must be equivalent to a perfectly degenerate Fermi gas for $\mathbf{k} \not\in \mathcal{S}$: so we expect perfect filling up until the boundary $k_F - \delta k^\star$ and perfect vacuum from $k_F + \delta k^\star$ on. Inside the shell, it is very difficult and misleading to think in terms of individual electrons or isolated couples of electrons, for the phase space availability depends directly on the behavior of all fermions. But some general features of the Cooper pairing mechanism must survive: first, attraction should be enhanced for antipodal electrons. For a single Cooper pair, the best thing to do for the pair was to distribute the wavefunction as much as possible at low wavevector, maintaining a small kinetic contribution to energy and taking the advantage of the many states available in phase space. The resulting wavefunction was made of a distribution spread in momentum space, with major contribution within a range $\Delta = E^{(\mathrm{b})}$ from the Fermi surface. Said distribution ``touched'' a lot of states to get potential gain, but did not \textit{fill} many states due to normalization. This means: if other fermions are added, they should not feel any relevant exclusion from the states the couple is spread over.
+The ground state must be equivalent to a perfectly degenerate Fermi gas for $\mathbf{k} \not\in \mathcal{S}$: so we expect perfect filling up until the boundary $k_F - \delta k^\star$ and perfect vacuum from $k_F + \delta k^\star$ on. Inside the shell, it is very difficult and misleading to think in terms of individual electrons or isolated couples of electrons, for the phase space availability depends directly on the behavior of all fermions. But some general features of the Cooper pairing mechanism must survive: first, attraction should be enhanced for antipodal electrons. For a single Cooper pair, the best thing to do for the pair was to distribute the wavefunction as much as possible at low wavevector, maintaining a small kinetic contribution to energy and taking the advantage of the many states available in phase space. The resulting wavefunction was made of a distribution spread in momentum space, with major contribution within a range $E^{(\mathrm{b})}$ from the Fermi surface. Said distribution ``touched'' a lot of states to get potential gain, but did not \textit{fill} many states due to normalization. This means: if other fermions are added, they should not feel any relevant exclusion from the states the couple is spread over.
 
 \begin{figure}
 	\centering
@@ -406,7 +416,9 @@ This \textit{naive} and intuitive picture is confirmed by BCS theory: it will tu
 \[
 	- \Delta < \xi_\mathbf{k} < \Delta
 \]
-with $\xi_\mathbf{k} = \epsilon_\mathbf{k} - \epsilon_F$. Electrons below this shell are compressed by statistics and exclusion, and do not form pair even if they feel the interaction potential. It is interesting to notice that the width of the distribution has doubled, thus if we think about pairs they have lowered their energy both by acceding to lower kinetic state and by occupying more states to gain potential advantage. Then the conclusion that reveals to be correct (see next Chapter) is that the ``binding energy'', or its analogous defined as the amount of energy to be given to the system to get two electrons outside of the ground state, is $2\Delta$ -- as if we had two electrons in a free interaction shell of double width compared to the one of Fig.~\ref{fig:fermi sphere and shell} analyzed in Sec.~\ref{subsec:bound states, considering statistics}.
+with $\xi_\mathbf{k} = \epsilon_\mathbf{k} - \epsilon_F$ and $\Delta$ the binding energy per electron as defined as before. Electrons below this shell are compressed by statistics and exclusion, and do not form pairs even if they feel the interaction potential. It is interesting to notice that the width of the distribution has doubled, thus if we think about pairs they have lowered their energy both by acceding to lower kinetic state and by occupying more states to gain potential advantage. Then the conclusion that reveals to be correct (see next Chapter) is that the ``binding energy'', or its analogous defined as the amount of energy to be given to the system to get two electrons outside of the ground state, is $2\Delta$ -- as if we had just two electrons (with spin) in a free interaction shell of double width compared to the one of Fig.~\ref{fig:fermi sphere and shell} analyzed in Sec.~\ref{subsec:bound states, considering statistics}.
+
+But the fact that the result is the same must not confuse: after all, if the exclusion principle actually compresses many electrons preventing them to form pairs and precluding the access a lot of the intern of the sphere, the accessible part of the interaction shell has not actually doubled. One could imagine that, with respect to the Cooper problem, the interaction shell has penetrated a little the sphere; the electrons, although, are able to form bindings stronger than they would in an equivalently wide and free interaction shell. The key intuition for that, as we will see, is that what we interpret as the binding energy in the many-body problem is actually a collective property, not one of the specific electrons involved.
 
 Even if we cannot see intuitively why the binding energy should be doubled, the fact that it is indeed is a very important clue in the direction of interpreting the role of pairing in this problem. In fact, if the problem could have thought as a system of many independent isolated Cooper pairs (as the one of Sec.~\ref{subsec:bound states, considering statistics}) plus a rigid bulk, the binding energy should have remained approximately the same. Instead the way the collective wavefunction is spread in momentum space, and the way the occupation numbers turn out to be, demonstrate that the binding energy is bigger than the one of the single Cooper pair because two mechanisms occur: the Cooper mechanism for allowing pairs populating many states and take advantage of the energy gain, and the self-interacting exclusion principle that shapes the occupation probabilities of the low-momentum states in such a way to let a big number of pairs lower their kinetic energy by an additional amount of order $-\Delta$. It is very difficult and rather futile to search for more intuitive explanations: the key point is that for the collective system is more convenient to have many pairs a little more distributed, but with a lower global kinetic contribution, than a little pairs distributed in the best way possible by themselves.
 
@@ -749,7 +761,7 @@ This function clearly can be approximated as flat in the dark region and null in
 	\label{fig:quasi-lorentzian function bcs}
 \end{figure}
 
-Be careful, now: $\hbar\Omega_\mathbf{q}$ ($\Delta$ in the figure) controls the width of the darker region $\hbar\Omega_\mathbf{q}$; $\kappa_\mathbf{q}^2$ is the approximate value of the plateau. The function $f(x)$ is dimensionless and modulates the value $\hbar\omega_D \ll \epsilon_F$.
+Be careful, now: $\hbar\Omega_\mathbf{q}$ ($a$ in the figure) controls the width of the darker region $\hbar\Omega_\mathbf{q}$; $\kappa_\mathbf{q}^2$ is the approximate value of the plateau. The function $f(x)$ is dimensionless and modulates the value $\hbar\omega_D \ll \epsilon_F$.
 Remember that we are in a simple monoatomic crystal. For such crystal the acoustic phononic band vanishes linearly at the center of the Brillouin Zone and is approximately flat at the boundaries. If, say, the relevant part of the dispersion is at low wavevector, then $\hbar\Omega_{\mathbf{q}\to\mathbf{0}}\to0$ and the width of the interaction zone vanishes. You can imagine that this is not the case, if we have gone through this whole chapter.
 So, we need to understand why the mapping onto the situation in Sec.~\ref{subsec:bound states, considering statistics} makes sense. The argument is rather rough, but reasonable.
 

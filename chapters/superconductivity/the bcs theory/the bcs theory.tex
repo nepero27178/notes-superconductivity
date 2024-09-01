@@ -241,7 +241,7 @@ We use this result immediately.
 \begin{figure}
 	\centering
 	\input{chapters/superconductivity/the bcs theory/pictures/variational solutions pairing amplitude}
-	\caption{}
+	\caption{Plot of the pairing amplitude, $u_\mathbf{k} v_\mathbf{k}$, as described at the end of Sec.~\ref{subsec:the variational solutions for the bcs parameters}. As evident this quantity has a peak in the region $-\Delta < \xi_\mathbf{k} < \Delta$.}
 	\label{fig:variational solutions pairing amplitude}
 \end{figure}
 
@@ -275,7 +275,7 @@ with $\delta\epsilon^\star = \hbar\omega_D$, as explained in Sec.~\ref{subsec:a 
 \[
 	\sum_{\xi_\mathbf{k}} \lrR{\cdots} \to \int d\xi \tilde{\rho}(\epsilon_F+\xi) \lrR{\cdots}
 \]
-with $\tilde{\rho}$ the density of states and $\lrR{\cdots}$ is \textit{something}. The most important detail to notice here, that caused a lot of trouble to the lazy and distracted author, is that $\tilde{\rho}(\epsilon_F+\xi)$ counts how many states available for the pair there are in the energy range $[\xi,\xi+\delta\xi]$. Take the standard single-electron density of states $\rho$. The point is that $\xi_\mathbf{k} = \xi_{-\mathbf{k}}$, so the states $\ket{\mathbf{k}}$ and $\ket{-\mathbf{k}}$ contribute separately to $\rho$, since the electron finds independently the two states; counting spin, the electron finds independently the four states. It is not the same here. Here we are dealing with pairs, for which the couple $\ket{\mathbf{k}\uparrow} \otimes \ket{-\mathbf{k}\downarrow}$ represents \textbf{one} state and so does $\ket{\mathbf{k}\downarrow} \otimes \ket{-\mathbf{k}\uparrow}$. This means that here we need to use
+with $\tilde{\rho}$ the density of states and $\lrR{\cdots}$ is \textit{something}. The most important detail to notice here, that caused a lot of trouble to the lazy and distracted author when first writing this notes, is that $\tilde{\rho}(\epsilon_F+\xi)$ counts how many states available for the pair there are in the energy range $[\xi,\xi+\delta\xi]$. Take the standard single-electron density of states $\rho$. The point is that $\xi_\mathbf{k} = \xi_{-\mathbf{k}}$, so the states $\ket{\mathbf{k}}$ and $\ket{-\mathbf{k}}$ contribute separately to $\rho$, since the electron finds independently the two states; counting spin, the electron finds independently the four states. It is not the same here. Here we are dealing with pairs, for which the couple $\ket{\mathbf{k}\uparrow} \otimes \ket{-\mathbf{k}\downarrow}$ represents \textbf{one} state and so does $\ket{\mathbf{k}\downarrow} \otimes \ket{-\mathbf{k}\uparrow}$. This means that here we need to use
 \[
 	\tilde{\rho}(\epsilon_F+\xi) = \frac{\rho(\epsilon_F+\xi)}{2}
 \]
@@ -713,8 +713,8 @@ and it is easy to check
 \]
 This implies:
 \begin{align}
-	\ev{\hat{\phi}_\mathbf{k}} = \frac{1}{2} \lrS{ \big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle - i \ev{\hat{\sigma}_\mathbf{k}^2} } \label{eq:pairing expectation value via pseudospin} \\
-	\big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle = \frac{1}{2} \lrS{ \big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle + i \ev{\hat{\sigma}_\mathbf{k}^2} } \label{eq:unpairing expectation value via pseudospin}
+	\ev{\hat{\phi}_\mathbf{k}} = \frac{1}{2} \lrS{ \big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle - i \ev{\hat{\sigma}_\mathbf{k}^2} } \label{eq:unpairing expectation value via pseudospin} \\
+	\big\langle \hat{\phi}_\mathbf{k}^\dagger \big\rangle = \frac{1}{2} \lrS{ \big\langle \hat{\sigma}_\mathbf{k}^1 \big\rangle + i \ev{\hat{\sigma}_\mathbf{k}^2} } \label{eq:pairing expectation value via pseudospin}
 \end{align}
 We also know the transformed version of the spinors,
 \[
@@ -761,13 +761,20 @@ Heuristically, this makes sense. Recalling Fig.~\ref{fig:pseudo magnetic field},
 \[
 	\big\langle \hat{\sigma}_\mathbf{k}^2 \big\rangle = 0
 \]
-By inserting these result in Eq.~\eqref{eq:pairing expectation value via pseudospin} and then in Eq.~\eqref{eq:delta mean field definition}, we have
+By inserting these result in Eq.~\eqref{eq:unpairing expectation value via pseudospin} and then in Eq.~\eqref{eq:delta mean field definition}, we have
 \[
 	\Delta_\mathbf{k} = - \frac{1}{2} \sum_{\mathbf{k}'} V_{\mathbf{k}-\mathbf{k}'}  \frac{\Delta_{\mathbf{k}'}}{\lambda_{\mathbf{k}'}}
 \]
 and this is precisely Eq.~\eqref{eq:mean field self consistency equation}. From now on, the calculation is the same and leads to the identical result as the variational solution. This argument allows us to perfectly identify the two procedures and use them interchangeably. It represents also a important self-consistency check of the mean-field approach.
 
-\subsection{The condensation energy}
+\subsection{The condensation energy}\label{subsec:the condensation energy}
+
+\begin{figure}
+	\centering
+	\input{chapters/superconductivity/the bcs theory/pictures/sphere integration domains}
+	\caption{Sketch of the two sum domains cited in Sec.~\ref{subsec:the condensation energy}: $\mathcal{F}$ is the Fermi sphere, and $\mathcal{S}$ is the interaction shell of width $2\hbar\omega_D$.}
+	\label{fig:sphere integration domains}
+\end{figure}
 
 Take $\hat{\mathcal{H}}$: we reintroduce the mean-field constant contribution to energy,
 \[
@@ -794,7 +801,7 @@ If we evaluate over the BCS ground-state, we get the superconductor ground-state
 	+ 2 \sum_{\mathcal{F}\setminus\mathcal{S}} \xi_\mathbf{k}
 \end{aligned}
 \]
-where $\mathcal{F}\setminus\mathcal{S}$ indicates the internal portion of the Fermi sphere, obtained by excluding from the full sphere $\mathcal{F}$ the internal part of the shell.
+where $\mathcal{F}\setminus\mathcal{S}$ indicates the internal portion of the Fermi sphere, obtained by excluding from the full sphere $\mathcal{F}$ the internal part of the shell. These domains are represented in Fig.~\ref{fig:sphere integration domains}.
 For a normal metal the ground state energy $E^{(\mathrm{n})}$ is of course
 \[
 	E^{(\mathrm{n})} = 2 \sum_\mathcal{F} \xi_\mathbf{k}
@@ -823,20 +830,34 @@ we solve the integral, implementing a Taylor expansion for the weak binding limi
 	E^{(\mathrm{s})} - E^{(\mathrm{n})} = \rho_0 \lrS{-\hbar\omega_D\sqrt{\lrR{\hbar\omega_D}^2 + \Delta^2} + \lrR{\hbar\omega_D}^2} \simeq - \frac{1}{2} \rho_0 \Delta^2
 \]
 
-This result is of great importance (and can be obtained equivalently by the means of the variational approach). First, it highlights a quadratic dependence of the condensation energy on the gap $\Delta$, and this will become relevant later. Second, it gives a fundamental information on how we interpret a Cooper pair in the BCS ground state.
-
 \begin{figure}
 	\centering
 	\input{chapters/superconductivity/the bcs theory/pictures/condensation energy shell}
-	\caption{}
+	\caption{The shell and sub-shell discussed in Sec.~\ref{subsec:the condensation energy}; the onion-like shell of width $2\Delta$ includes those single-particle states highly connected via the Cooper pairing mechanism. Proportions are exaggerated.}
 	\label{fig:condensation energy shell}
 \end{figure}
 
-%As \citeauthor{goodstein2014states} correctly points out (his notation is: $\Delta \leftrightarrow \Delta_0$):
-%
-%\begin{cit}{goodstein2014states}{5.3.d}
-%	If $\Delta_0$ were the binding energy per electron in the pairing process, we would expect the energy of the superconducting ground state to be lower than the normal ground state by $N\Delta_0$. Instead the difference in energy
-%\end{cit}
+This result is of great importance (and can be obtained equivalently by the means of the variational approach). First, it highlights a quadratic dependence of the condensation energy on the gap $\Delta$, and this will become relevant later. Second, it gives us another proof for interpreting the energy range
+\[
+	- \Delta < \xi_\mathbf{k} < \Delta
+\]
+as the one relevant for pairing. In fact, consider Fig.~\ref{fig:condensation energy shell}: momentum space is represented. The darker shell of width $2\hbar\omega_D$ is the interaction shell $\mathcal{S}$, while the dotted onion-like sub-shell of width $2\Delta$ is the region of momentum space where the pairing amplitude is significantly different from zero, as discussed in Sec.~\ref{subsec:the variational solutions for the bcs parameters}; from Sec.~\ref{subsec:cooper pairs in the collective state} we know that it is in this region -- which means: for the single-particle states inside this region -- that the Cooper pairing mechanism is mainly at work.
+
+Now, apart from the factor $1/2$, of order $1$, for a filled shell in a range $\Delta$ just below the Fermi energy there are approximately $\rho_0 \Delta$ electrons; if those are the electrons scattered in Cooper bound states, each one gains an energy $-\Delta$, leading to a global energy gain
+\[
+	- \rho \Delta^2
+\]
+while if the whole big shell down to $-\hbar\omega_D$ participated, the functional form of the condensation energy should have been something like
+\[
+	- \rho \hbar\omega_D \Delta
+\]
+which is much smaller, being $\hbar\omega_D \ll \Delta$. The functional form would have been linear in $\Delta$. So, to represent the BCS ground state as something pretty similar to a filled Fermi sphere up to $\xi_\mathbf{k} = - \Delta$ and a thin shell $- \Delta < \xi_\mathbf{k} < \Delta$ of complicated collective Cooper pairing with statistical couple correlation between states is pictorial, but reasonable. But, while reasonable, this picture can also be misleading, if we confuse condensation with conduction properties. After all we are talking about a superconductor -- so, are the electrons in the shell of width $2\Delta$ those carrying superconducting current?
+
+As \citeauthor{goodstein2014states} correctly points out (his notation is: $\Delta \leftrightarrow \Delta_0$):
+
+\begin{cit}{goodstein2014states}{5.3.d}
+	If $\Delta_0$ were the binding energy per electron in the pairing process, we would expect the energy of the superconducting ground state to be lower than the normal ground state by $N\Delta_0$. Instead the difference in energy [...] {\color{red}go on...}
+\end{cit}
 
 \section[The Importance of Being Gapped]{The Importance of Being Gapped \newline \small (a Trivial Comedy for Superconducting People)}\label{sec:the importance of being gapped}
 
@@ -895,9 +916,9 @@ and with analogous arguments one finds
 \]
 Then to add one $\gamma$ excitation to the ground-state is precisely to substitute one Cooper pair occupying two antipodal single-particle states, with just one electron precisely in one of the two states. The other state is empty (there is one hole): if it was not, a Cooper pair would form.
 
-In Fig.~\ref{fig:bogoliubov fermions} the action of the Bogoliubov operators is represented, omitting the amplitude. The filled dot represents a particle creation, the hollow dot represents a hole creation. The operators are grouped by the following classification: $\lbrace \hat{\gamma}_{\mathbf{k}\uparrow}, \hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger \rbrace$ increase the total momentum by $\mathbf{k}$ and the total spin by $\hbar/2$, then create a particle-like excitation. $\lbrace \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger, \hat{\gamma}_{-\mathbf{k}\downarrow} \rbrace$ decrease the total momentum by $\mathbf{k}$ and the total spin by $\hbar/2$, then create a hole-like excitation. 
+In Fig.~\ref{fig:bogoliubov fermions} the action of the Bogoliubov operators is represented, omitting the amplitude. The filled dot represents a particle creation, the hollow dot represents a hole creation. The operators are grouped by the following classification: $\lbrace \hat{\gamma}_{\mathbf{k}\uparrow}^\dagger, \hat{\gamma}_{-\mathbf{k}\downarrow} \rbrace$ increase the total momentum by $\mathbf{k}$ and the total spin by $\hbar/2$, then create a particle-like excitation. On the contrary $\lbrace \hat{\gamma}_{\mathbf{k}\uparrow}, \hat{\gamma}_{-\mathbf{k}\downarrow}^\dagger \rbrace$  decrease the total momentum by $\mathbf{k}$ and the total spin by $\hbar/2$, then create a hole-like excitation. 
 
-Now it is time to check if the Bogoliubov approach is self-consistent. In order for the mean-field approach to be coherent, we want the pairing operator to fluctuate negligibly 
+{\color{red}Now it is time to check if the Bogoliubov approach is self-consistent. In order for the mean-field approach to be coherent, we want the pairing operator to fluctuate negligibly}
 
 \subsection{Elementary excitations}\label{subsec:elementary excitations}
 
@@ -930,4 +951,6 @@ But the binding energy of a Cooper pair is $2\Delta$, so, why does the pair even
 
 \subsection{Why do we even need a gap?}
 
-To be fair, during the very long explanation of the basics of BCS theory throughout Chap.~\ref{chap: cooper pairs how electrons form bound states} and this chapter the only reference to superconductivity and all the concepts explained in the first part, more phenomenological, was the observation that the charge-carrier in superconductors seems to be a couple of electrons. We then developed a theory describing electrons coupling and the microscopic structure of the collective state, which lead us to the existence of the discussed gap $\Delta$. A very well posed question now would be: if a gap in the excitation spectrum is the typical feature of insulators, those systems that do not conduct electrical current, why the existence of a gap would ever be a symptom of superconductivity? 
+To be fair, during the very long explanation of the basics of BCS theory throughout Chap.~\ref{chap: cooper pairs how electrons form bound states} and this chapter the only reference to superconductivity and all the concepts explained in the first part, more phenomenological, was the observation that the charge-carrier in superconductors seems to be a couple of electrons. We then developed a theory describing electrons coupling and the microscopic structure of the collective state, which lead us to the existence of the discussed gap $\Delta$. A very well posed question now would be: if a gap in the excitation spectrum is the typical feature of insulators, those systems that do not conduct electrical current, why the existence of a gap would ever be a symptom of superconductivity?
+
+{\color{red}go on...}

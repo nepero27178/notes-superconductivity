@@ -1,0 +1,31 @@
+\begin{tikzpicture}
+	\begin{axis}[
+		axis x line=center,
+		axis y line=center,
+		axis on top,,
+		axis equal image,
+		xlabel={$x$},
+		ylabel={$f(x)$},
+		xlabel style=right,
+		ylabel style=above,
+		xtick={1},
+		ytick={1},
+		xticklabel style=\empty,
+		yticklabel style=\empty,
+		xmin=-0.2, xmax=2.7,
+		ymin=-0.2, ymax=1.2,
+		scale=1.2
+		]
+		
+		\addplot[color=red,domain=0:1]
+			{x};
+		\node[color=red,anchor=south] at (1.8,1) 
+			{$x \theta(1-x) + \theta(x-1)$};
+		\addplot[color=red,domain=1:2.5]
+			{1};
+		\addplot[color=lev,domain=0:2.5,smooth]
+			{tanh(x)};
+		\node[color=lev,anchor=west] at (0.6,0.45) 
+			{$\tanh(x)$};
+	\end{axis}
+\end{tikzpicture}
