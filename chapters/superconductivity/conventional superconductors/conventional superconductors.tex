@@ -621,7 +621,8 @@ The two integrals give the same result due to exchange symmetry. Therefore we ca
 \[
 	\epsilon^{(2)} = 2 \lrS{ \epsilon^{(1)} + \frac{\lambda^2}{2\mu_0} \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \mathbf{B}_2 \bm{\times} \lrR{\curl\mathbf{B}_1 } } }
 \]
-We now calculate the integral, even if we have already approximated it in the above calculations. We want to obtain the same result directly. First, we get rid of the off-center field,
+We still do not know this integral (we don't know the value of $\Phi_{\sigma_1}(\mathbf{B}_1)$, being $\lambda$ the penetration depth of the fields).
+First, we get rid of the off-center field,
 \[
 	\frac{\lambda^2}{2\mu_0} B(\abs{\mathbf{r}_1-\mathbf{r}_2}) \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \versor{z}\cdot \lrR{\curl\mathbf{B}_1 } }
 \]
@@ -635,31 +636,31 @@ This quantity is clearly constant along $\partial\sigma_1$; being $d\bm\eta_1 = 
 	\frac{\lambda^2}{2\mu_0} &B(\abs{\mathbf{r}_2}) \oint_{\partial\sigma_1} d\bm\eta_1 \cdot \lrS{ \versor{z}\cdot \lrR{\curl\mathbf{B}_1 } } \\
 	&= \frac{\lambda^2}{2\mu_0} \lrS{ \frac{\Phi_0}{2\pi\lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_2}}{\lambda}} } \int_0^{2\pi} (-\xi) d\theta \lrS{\pdv{}{r} \frac{\Phi_0}{2\pi\lambda^2} K_0 \lrR{\frac{r}{\lambda}} }_{r=\xi} \\
 	&\simeq \frac{\Phi_0^2}{8\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_2}}{\lambda}} \int_0^{2\pi} \xi d\theta \lrS{\pdv{}{r} \log\lrR{\frac{r}{\lambda}} }_{r=\xi} \\
-	&= \frac{\Phi_0^2}{4\pi\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_2}}{\lambda}}
+	&= \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_2}}{\lambda}}
 \end{aligned}
 \]
 The obvious, general result for $\mathbf{r}_1 \neq \mathbf{0}$ is simply
 \[
-	\epsilon^{(2)} = 2 \lrS{ \epsilon^{(1)} + \frac{\Phi_0^2}{4\pi\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} }
+	\epsilon^{(2)} = 2 \lrS{ \epsilon^{(1)} + \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} }
 \]
 then, going back to Eq.~\eqref{eq:two fluxons free energy intermediate passage}, and noting that the total flux through $S$ is simply $2\Phi_0$ (each vortex carries one quantum of flux),
 \[
 \begin{aligned}
 	F^{(2)} - F^{(0)} &= L \lrS{\epsilon^{(2)}- 2H\Phi_0} \\
-	&= 2L \lrS{\epsilon^{(1)} + \frac{\Phi_0^2}{4\pi\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} - H\Phi_0} \\
-	&= 2 \lrS{F^{(1)} - F^{(0)}} + 2L \frac{\Phi_0^2}{4\pi\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}}
+	&= 2L \lrS{\epsilon^{(1)} + \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} - H\Phi_0} \\
+	&= 2 \lrS{F^{(1)} - F^{(0)}} + 2L \frac{\Phi_0^2}{4\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}}
 \end{aligned}
 \]
 where we made use of Eq.~\eqref{eq:one fluxon free energy intermediate passage}. We finally have an expression for the interaction energy $F^{(\mathrm{int})} \equiv F^{(2)} - 2F^{(1)}$,
 \begin{align}
-	F^{(\mathrm{int})} &= - F^{(0)} + \frac{L \Phi_0^2}{2\pi\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} \nonumber \\
-	&\simeq - F^{(0)} + \frac{L \Phi_0^2}{2\pi\mu_0 \lambda^2} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} } \label{eq:two fluxons interaction free energy}
+	F^{(\mathrm{int})} &= - F^{(0)} + \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda}} \nonumber \\
+	&\simeq - F^{(0)} + \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^2} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} } \label{eq:two fluxons interaction free energy}
 \end{align}
 In the last passage we used the approximation for distant fluxons $\abs{\mathbf{r}_1-\mathbf{r}_2} \gg \lambda$. The term $- F^{(0)}$ is a mere shift and can be neglected. It is evident that two fluxons with the same charge repel each other, being the interaction contribution in Eq.~\eqref{eq:two fluxons interaction free energy} inherently positive and steadily decreasing for increasing distance $\abs{\mathbf{r}_1-\mathbf{r}_2}$.
 
 It is now trivial to compute the force exerted from one vortex onto the other: by defining $\mathbf{r}_{12} \equiv \mathbf{r}_1-\mathbf{r}_2$, $\versor{r}_{12} \equiv \lrR{\mathbf{r}_1-\mathbf{r}_2}/\abs{\mathbf{r}_1-\mathbf{r}_2}$ and $\grad_{12}$ the gradient taken with respect to $\versor{r}_{12}$, it is
 \[
-	\mathbf{f}_{12} = - \grad_{12} F^{(\mathrm{int})} = \versor{r}_{12} \frac{L \Phi_0^2}{2\pi\mu_0 \lambda^3} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} }
+	\mathbf{f}_{12} = - \grad_{12} F^{(\mathrm{int})} = \versor{r}_{12} \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^3} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} }
 \]
 which is repulsive, correctly.
 
@@ -674,7 +675,7 @@ The computation for two \textbf{distant} fluxons with opposite charge is rather 
 \]
 By going through all the above calculation once again, it is easy to see that an \textbf{attractive} force emerges between the two fluxons,
 \[
-	\mathbf{f}_{12} = -\versor{r}_{12} \frac{L \Phi_0^2}{2\pi\mu_0 \lambda^3} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} }
+	\mathbf{f}_{12} = -\versor{r}_{12} \frac{L \Phi_0^2}{2\pi^2\mu_0 \lambda^3} \exp \lrR{- \frac{\abs{\mathbf{r}_1-\mathbf{r}_2}}{\lambda} }
 \]
 We need to be careful. While in the above section two fluxons repel each other, letting us use the distant fluxons approximation all the way through the evolution, in this case all our approximations will break at some point when the two fluxons get near enough. To determine the exact behavior of the fluxons is rather difficult, so we shall not go in that direction.
 
@@ -721,7 +722,7 @@ We get
 \]
 Check the above section: we already carried out a the calculation for $f$. It is easy to recognize that
 \[
-	f(i,j) = \frac{\Phi_0^2}{2\pi\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_i-\mathbf{r}_j}}{\lambda}}
+	f(i,j) = \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{\abs{\mathbf{r}_i-\mathbf{r}_j}}{\lambda}}
 \]
 
 Now: each vortex carries a flux $\Phi_0$. Since $F^{(1)} - F^{(0)} = L[ \epsilon^{(1)}-H\Phi_0 ]$, we have
@@ -754,7 +755,7 @@ Now: we wish to confront two simple two-dimensional lattices: square and triangu
 The factor $N$ comes from translational invariance across the lattice, since the same contribution arises from any of the $N$ sites. Any of those sites will have the same number of nearest neighbors, $k$; finally, for any couple of nearest neighbors $i,j$ the function $f$ has the same value, which we called $f^\star$.
 To calculate $f^\star$, we consider two fluxons at a distance $d$. We have
 \[
-	f^\star = \frac{\Phi_0^2}{2\pi\mu_0 \lambda^2} K_0 \lrR{\frac{d}{\lambda}} \simeq \frac{\Phi_0^2}{2\pi\mu_0 \lambda^2} \exp \lrR{-\frac{d}{\lambda}}
+	f^\star = \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} K_0 \lrR{\frac{d}{\lambda}} \simeq \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} \exp \lrR{-\frac{d}{\lambda}}
 \]
 At a first sight, a lattice with a lower coordination number $k$ (i.e. the square one) might seem energetically convenient. However we did not specify the value of $d$, and it needs not to be equal in the two situations. In fact, it is not. For a given lattice, we call $s$ the Wigner-Seitz unit cell -- which is, the surface containing exactly one vortex. It is easy to see that its numerical value is
 \[
@@ -774,8 +775,8 @@ We can also connect $n$ with the average flux density per unit surface across th
 a simpler quantity to be measured with respect to the fluxons number. Then, putting everything together,
 \[
 \begin{aligned}
-	F^{(\mathrm{int})} &= NL \frac{\Phi_0^2}{2\pi\mu_0 \lambda^2} \lrS{4\exp \lrR{-\sqrt{\frac{\Phi_0}{\ev{B}\lambda^2}}}} &&\qq{(square lattice)}\\
-	F^{(\mathrm{int})} &= NL \frac{\Phi_0^2}{2\pi\mu_0 \lambda^2} \lrS{6\exp \lrR{-\sqrt{\frac{2\Phi_0}{\sqrt{3}\ev{B}\lambda^2}}}} &&\qq{(triangular lattice)}
+	F^{(\mathrm{int})} &= NL \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} \lrS{4\exp \lrR{-\sqrt{\frac{\Phi_0}{\ev{B}\lambda^2}}}} &&\qq{(square lattice)}\\
+	F^{(\mathrm{int})} &= NL \frac{\Phi_0^2}{2\pi^2\mu_0 \lambda^2} \lrS{6\exp \lrR{-\sqrt{\frac{2\Phi_0}{\sqrt{3}\ev{B}\lambda^2}}}} &&\qq{(triangular lattice)}
 \end{aligned}
 \]
 
